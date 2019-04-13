@@ -1,32 +1,30 @@
 fileFormatVersion: 2
-guid: e82e6c759f8e28847ba44895294a1129
+guid: 44fae88f6bd106947ba73b041eb509c0
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: directionalLight1
-    100002: //RootNode
-    100004: group1
-    100006: group2
-    100008: pCube2
-    100010: pCube3
-    100012: pCube4
-    100014: pCube5
-    100016: pCube6
-    100018: pCube7
-    100020: pCylinder1
-    100022: pCylinder2
-    400000: directionalLight1
-    400002: //RootNode
-    400004: group1
-    400006: group2
-    400008: pCube2
-    400010: pCube3
-    400012: pCube4
-    400014: pCube5
-    400016: pCube6
-    400018: pCube7
-    400020: pCylinder1
-    400022: pCylinder2
+    100000: //RootNode
+    100002: group1
+    100004: group2
+    100006: pCube2
+    100008: pCube3
+    100010: pCube4
+    100012: pCube5
+    100014: pCube6
+    100016: pCube7
+    100018: pCylinder1
+    100020: pCylinder2
+    400000: //RootNode
+    400002: group1
+    400004: group2
+    400006: pCube2
+    400008: pCube3
+    400010: pCube4
+    400012: pCube5
+    400014: pCube6
+    400016: pCube7
+    400018: pCylinder1
+    400020: pCylinder2
     2100000: lambert1
     2300000: pCube2
     2300002: pCube3
@@ -52,7 +50,6 @@ ModelImporter:
     4300010: pCube4
     4300012: pCylinder1
     4300014: pCube3
-    10800000: directionalLight1
   externalObjects: {}
   materials:
     importMaterials: 1
