@@ -5,23 +5,22 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     public float speed;
-
-    private Rigidbody rb;
+    public float rotatespeed;
+    float smooth = 5.0f;
+    float tiltAngle = 60.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        float moveHorizontal = Input.GetAxis ("Horizontal");
-        float moveVertical = Input.GetAxis ("Vertical");
+        //Moves character along one axis
+        transform.Translate(0f, 0f, speed * Input.GetAxis("Vertical") * Time.deltaTime);
 
-        Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-
-        rb.AddForce (movement * speed);
+        transform.Rotate(0f, rotatespeed*Input.GetAxis("Horizontal")*Time.deltaTime, 0f, Space.Self);
     }
 }
