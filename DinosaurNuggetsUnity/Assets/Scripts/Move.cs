@@ -6,9 +6,7 @@ public class Move : MonoBehaviour
 {
     public float speed;
     public float rotatespeed;
-    float smooth = 5.0f;
-    float tiltAngle = 60.0f;
-
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +14,11 @@ public class Move : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //Moves character along one axis
-        transform.Translate(0f, 0f, speed * Input.GetAxis("Vertical") * Time.deltaTime);
+        transform.Translate(0f, 0f, speed * Input.GetAxis("Vertical") * Time.fixedDeltaTime);
 
-        transform.Rotate(0f, rotatespeed*Input.GetAxis("Horizontal")*Time.deltaTime, 0f, Space.Self);
+        transform.Rotate(0f, rotatespeed*Input.GetAxis("Horizontal") * Time.fixedDeltaTime, 0f, Space.Self);
     }
 }
