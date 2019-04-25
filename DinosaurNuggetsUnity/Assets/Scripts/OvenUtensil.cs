@@ -2,27 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ingredient : MonoBehaviour
+public class OvenUtensil : MonoBehaviour
 {
+  
+    
     //if it is in the hand, Held = true
     public static bool GlobalHeldLeft = false;
     public static bool GlobalHeldRight = false;
     public static bool OvenInUse = false;
+    public static bool PickUpOven = false;
+
     private bool ThisItemIsBeingCarried = false;
-    private bool Dead = false;
     private int HeldLeft = 0;
     private int HeldRight = 0;
     private int WhichHand = 0;
-    public float TargetScale = 0.001f;
-    public float ShrinkSpeed = 100f;
 
     private Rigidbody ThisRigidBody = null;
+    public GameObject Burner;
     public GameObject HandLeft;
     public GameObject HandRight;
     public GameObject Name;
     public GameObject Character;
     Collider ObjectCollider;
-    public GameObject Burner;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,10 @@ public class Ingredient : MonoBehaviour
         ObjectCollider = GetComponent<Collider>();
         //Here the GameObject's Collider is not a trigger
         ObjectCollider.isTrigger = false;
+        Name = this.gameObject;
+        HandLeft = GameObject.Find("Character_Model_01/HandLeft");
+        HandRight = GameObject.Find("Character_Model_01/HandRight");
+        Character = GameObject.Find("Character_Model_01");
         Burner = GameObject.Find("Oven_001/Burner");
     }
 
@@ -43,15 +48,33 @@ public class Ingredient : MonoBehaviour
         {
             Drop();
         }
+        if (PickUpOven == true)
+        {
+            Debug.Log("Error");
+        }
+        if ((PickUpOven == true) && (GlobalHeldLeft == false))
+        {
+            PickupLeft();
+            PickUpOven = false;
+            OvenInUse = false;
+        }
 
-        if(Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             HeldLeft++;
+            
         }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
             HeldRight++;
+            if((PickUpOven == true) && (GlobalHeldRight == false))
+            {
+                PickupRight();
+                PickUpOven = false;
+                OvenInUse = false;
+                Debug.Log("Pickup Right Hand");
+            }
         }
 
         if (Input.GetKeyUp(KeyCode.E))
@@ -78,12 +101,7 @@ public class Ingredient : MonoBehaviour
             WhichHand = 2;
         }
 
-        if (Dead == true)
-        {
-            Name.transform.localScale = new Vector3(0.15f, 0.7f, 0.15f);
-            Name.transform.localScale = Vector3.Lerp(Name.transform.localScale, new Vector3(TargetScale, TargetScale, TargetScale), Time.deltaTime * ShrinkSpeed);
-            ObjectCollider.enabled = false;
-        }
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -94,30 +112,27 @@ public class Ingredient : MonoBehaviour
             HeldRight++;
         }
 
-        if((collision.gameObject.tag == "Oven") && (OvenUtensil.OvenInUse == true))
+        if ((collision.gameObject.tag == "Oven") && OvenInUse == false)
         {
             ThisItemIsBeingCarried = false;
-            Dead = true;
-            if (WhichHand == 1)
-            {
-                Name.transform.position = HandLeft.transform.position;
-                GlobalHeldLeft = false;
-            }
-            if (WhichHand == 2)
-            {
-                Name.transform.position = HandRight.transform.position;
-                GlobalHeldRight = false;
-            }
-            HeldLeft = 0;
-            HeldRight = 0;
-            WhichHand = 0;
+            OvenInUse = true;
+            Debug.Log("Oven in use = " + OvenInUse);
             Name.transform.position = Burner.transform.position;
             Name.transform.rotation = Burner.transform.rotation;
             Name.transform.SetParent(Burner.transform);
-            ThisRigidBody.isKinematic = false;
-            Name.transform.localPosition = new Vector3(0f, 4f, 0f);
-            ThisRigidBody.velocity = new Vector3(0f, -0.25f, 0f);
-            Destroy(this.gameObject,2.5f);
+            HeldLeft = 0;
+            HeldRight = 0;
+            if (WhichHand == 1)
+            {
+                GlobalHeldLeft = false;
+                Debug.Log("GlobalHeldLeft = false");
+            }
+            if (WhichHand == 2)
+            {
+                GlobalHeldRight = false;
+                Debug.Log("GlobalHeldRight = false");
+            }
+            WhichHand = 0;
         }
     }
     private void OnCollisionExit(Collision collision)
@@ -153,12 +168,12 @@ public class Ingredient : MonoBehaviour
         ThisRigidBody.useGravity = true;
         ThisRigidBody.isKinematic = false;
         transform.parent = null;
-        if(WhichHand == 1)
+        if (WhichHand == 1)
         {
             Name.transform.position = HandLeft.transform.position;
             GlobalHeldLeft = false;
         }
-        if(WhichHand == 2)
+        if (WhichHand == 2)
         {
             Name.transform.position = HandRight.transform.position;
             GlobalHeldRight = false;
