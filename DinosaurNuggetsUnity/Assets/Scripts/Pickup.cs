@@ -2,27 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OvenUtensil : MonoBehaviour
+public class Pickup : MonoBehaviour
 {
-    //if it is in the hand, Held = true
+    //These are global variables. all objects using scripts with these variables know if they are true or false. this is so that 
+    //the player cannot pick up more than one thing per hand
     public static bool GlobalHeldLeft = false;
     public static bool GlobalHeldRight = false;
-    public static bool OvenInUse = false;
-    public static bool PickUpOven = false;
 
     private bool ThisItemIsBeingCarried = false;
-    private bool Dead = false; 
 
+    //tells which hand the object is in and if there is something being held
     private int HeldLeft = 0;
     private int HeldRight = 0;
     private int WhichHand = 0;
 
     private Rigidbody ThisRigidBody = null;
-    public GameObject Burner;
+
+    //the different game objects that this script can interact with. Name is this item in particular
     public GameObject HandLeft;
     public GameObject HandRight;
     public GameObject Name;
     public GameObject Character;
+
     Collider ObjectCollider;
 
     // Start is called before the first frame update
@@ -30,15 +31,18 @@ public class OvenUtensil : MonoBehaviour
     {
         gameObject.tag = "Interactable";
         ThisRigidBody = GetComponent<Rigidbody>();
+
         //Fetch the GameObject's Collider (make sure they have a Collider component)
         ObjectCollider = GetComponent<Collider>();
+
         //Here the GameObject's Collider is not a trigger
         ObjectCollider.isTrigger = false;
+
+        //initialise which game objects are connected
         Name = this.gameObject;
         HandLeft = GameObject.Find("Character_Model_01/HandLeft");
         HandRight = GameObject.Find("Character_Model_01/HandRight");
         Character = GameObject.Find("Character_Model_01");
-        Burner = GameObject.Find("Oven_001/Burner");
     }
 
     // Update is called once per frame
@@ -49,30 +53,21 @@ public class OvenUtensil : MonoBehaviour
             Drop();
         }
 
+        /*if the item is to be picked up, it needs to meet two conditions: it is in contact with the player controller AND the player is pressing a key
+        this is accomplished by using a two part boolean in the form of an int (HeldLeft and HeldRight). for each of the conditions, the int is increased
+        by one, so the item can only be interacted with when the int == 2 */
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             HeldLeft++;
-            //this isn't working at the moment
-            if ((PickUpOven == true) && (GlobalHeldLeft == false))
-            {
-                PickupLeft();
-                PickUpOven = false;
-                OvenInUse = false;
-            }
         }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
             HeldRight++;
-            //this isn't working at the moment
-            if((PickUpOven == true) && (GlobalHeldRight == false))
-            {
-                PickupRight();
-                PickUpOven = false;
-                OvenInUse = false;
-            }
         }
 
+        //condition = false
         if (Input.GetKeyUp(KeyCode.E))
         {
             HeldLeft--;
@@ -105,30 +100,8 @@ public class OvenUtensil : MonoBehaviour
             HeldLeft++;
             HeldRight++;
         }
-
-        if ((collision.gameObject.tag == "Oven") && OvenInUse == false)
-        {
-            ThisItemIsBeingCarried = false;
-            OvenInUse = true;
-            Debug.Log("Oven in use = " + OvenInUse);
-            Name.transform.position = Burner.transform.position;
-            Name.transform.rotation = Burner.transform.rotation;
-            Name.transform.SetParent(Burner.transform);
-            HeldLeft = 0;
-            HeldRight = 0;
-            if (WhichHand == 1)
-            {
-                GlobalHeldLeft = false;
-                Debug.Log("GlobalHeldLeft = false");
-            }
-            if (WhichHand == 2)
-            {
-                GlobalHeldRight = false;
-                Debug.Log("GlobalHeldRight = false");
-            }
-            WhichHand = 0;
-        }
     }
+
     private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.name == "Character_Model_01")
@@ -159,19 +132,22 @@ public class OvenUtensil : MonoBehaviour
     private void Drop()
     {
         ThisItemIsBeingCarried = false;
-        ThisRigidBody.useGravity = true;
         ThisRigidBody.isKinematic = false;
+        ThisRigidBody.useGravity = true;
         transform.parent = null;
+
         if (WhichHand == 1)
         {
             Name.transform.position = HandLeft.transform.position;
             GlobalHeldLeft = false;
         }
+
         if (WhichHand == 2)
         {
             Name.transform.position = HandRight.transform.position;
             GlobalHeldRight = false;
         }
+
         HeldLeft = 0;
         HeldRight = 0;
         WhichHand = 0;
