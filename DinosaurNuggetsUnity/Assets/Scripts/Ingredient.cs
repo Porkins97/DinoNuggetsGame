@@ -68,33 +68,36 @@ public class Ingredient : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.Space)) && ThisItemIsBeingCarried == true)
-        {
-            Drop();
-        }
-
         /*if the item is to be picked up, it needs to meet two conditions: it is in contact with the player controller AND the player is pressing a key
         this is accomplished by using a two part boolean in the form of an int (HeldLeft and HeldRight). for each of the conditions, the int is increased
         by one, so the item can only be interacted with when the int == 2 */
         
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             HeldLeft++;
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             HeldRight++;
         }
 
         //condition = false
-        if (Input.GetKeyUp(KeyCode.E))
+        if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             HeldLeft--;
+            if(ThisItemIsBeingCarried == true)
+            {
+                Drop();
+            }
         }
-        if (Input.GetKeyUp(KeyCode.R))
+        if (Input.GetKeyUp(KeyCode.Mouse1))
         {
             HeldRight--;
+           if(ThisItemIsBeingCarried == true)
+            {
+                Drop();
+            }
         }
 
         if ((HeldLeft == 2) && GlobalHeldLeft == false)
