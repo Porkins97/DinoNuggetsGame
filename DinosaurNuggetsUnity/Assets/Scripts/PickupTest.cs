@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pickup : MonoBehaviour
+public class PickupTest : MonoBehaviour
 {
-    //These are global variables. all objects using scripts with these variables know if they are true or false. this is so that 
-    //the player cannot pick up more than one thing per hand
+    //These are global variables. all objects using scripts with these variables know if they are true or false. this is so that.
+    //the player cannot pick up more than one thing per hand.
     public static bool GlobalHeldLeft = false;
     public static bool GlobalHeldRight = false;
 
-    private bool ThisItemIsBeingCarried = false;
-
+    public bool ThisItemIsBeingCarried = false;
+   
     //tells which hand the object is in and if there is something being held
-    private int HeldLeft = 0;
-    private int HeldRight = 0;
-    private int WhichHand = 0;
+    public int HeldLeft = 0;
+    public int HeldRight = 0;
+    public int WhichHand = 0;
 
     private Rigidbody ThisRigidBody = null;
 
@@ -29,7 +29,6 @@ public class Pickup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.tag = "Interactable";
         ThisRigidBody = GetComponent<Rigidbody>();
 
         //Fetch the GameObject's Collider (make sure they have a Collider component)
@@ -43,6 +42,7 @@ public class Pickup : MonoBehaviour
         HandLeft = GameObject.Find("Character_Model_01/HandLeft");
         HandRight = GameObject.Find("Character_Model_01/HandRight");
         Character = GameObject.Find("Character_Model_01");
+        OvenUtensilTest OvenUtensilScript = this.gameObject.GetComponent<OvenUtensilTest>();
     }
 
     // Update is called once per frame
@@ -51,34 +51,41 @@ public class Pickup : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.Space)) && ThisItemIsBeingCarried == true)
         {
             Drop();
+            Debug.Log("Drop");
         }
 
         /*if the item is to be picked up, it needs to meet two conditions: it is in contact with the player controller AND the player is pressing a key
         this is accomplished by using a two part boolean in the form of an int (HeldLeft and HeldRight). for each of the conditions, the int is increased
         by one, so the item can only be interacted with when the int == 2 */
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             HeldLeft++;
+            Debug.Log("Left Mouse Down and left hand = " +GlobalHeldLeft);
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             HeldRight++;
+            Debug.Log("Right Mouse Down");
         }
 
         //condition = false
-        if (Input.GetKeyUp(KeyCode.E))
+        if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             HeldLeft--;
+            //Drop();
         }
-        if (Input.GetKeyUp(KeyCode.R))
+        if (Input.GetKeyUp(KeyCode.Mouse1))
         {
             HeldRight--;
+            //Drop();
         }
 
-        if ((HeldLeft == 2) && GlobalHeldLeft == false)
+        if ((HeldLeft == 2) && (GlobalHeldLeft == false))
         {
+            //This is triggering and preventing the player from picking something else up, after the object is placed on the oven
+            //i think the issue is because it is being called in the update part, if there's another way to do it the problem will be fixed
             GlobalHeldLeft = true;
             ThisItemIsBeingCarried = true;
             PickupLeft();
@@ -118,7 +125,6 @@ public class Pickup : MonoBehaviour
         Name.transform.position = HandLeft.transform.position;
         Name.transform.rotation = HandLeft.transform.rotation;
         Name.transform.SetParent(HandLeft.transform);
-        HeldRight = 0;
     }
     private void PickupRight()
     {
@@ -127,14 +133,11 @@ public class Pickup : MonoBehaviour
         Name.transform.position = HandRight.transform.position;
         Name.transform.rotation = HandRight.transform.rotation;
         Name.transform.SetParent(HandRight.transform);
-        HeldLeft = 0;
     }
     private void Drop()
     {
         ThisItemIsBeingCarried = false;
         ThisRigidBody.isKinematic = false;
-        ThisRigidBody.useGravity = true;
-        transform.parent = null;
 
         if (WhichHand == 1)
         {
@@ -151,5 +154,8 @@ public class Pickup : MonoBehaviour
         HeldLeft = 0;
         HeldRight = 0;
         WhichHand = 0;
+
+        ThisRigidBody.useGravity = true;
+        transform.parent = null;
     }
 }

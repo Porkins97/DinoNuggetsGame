@@ -46,7 +46,6 @@ public class Ingredient : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.tag = "Interactable";
         ThisRigidBody = GetComponent<Rigidbody>();
        
         //Fetch the GameObject's Collider (make sure they have a Collider component)
