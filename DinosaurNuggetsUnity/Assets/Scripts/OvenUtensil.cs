@@ -49,7 +49,7 @@ public class OvenUtensil : MonoBehaviour
             Drop();
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             HeldLeft++;
             //this isn't working at the moment
@@ -61,7 +61,7 @@ public class OvenUtensil : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             HeldRight++;
             //this isn't working at the moment
@@ -73,13 +73,23 @@ public class OvenUtensil : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.E))
+        if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             HeldLeft--;
+
+            if(ThisItemIsBeingCarried == true)
+            {
+                Drop();
+            }
+            
         }
-        if (Input.GetKeyUp(KeyCode.R))
+        if (Input.GetKeyUp(KeyCode.Mouse1))
         {
             HeldRight--;
+            if(ThisItemIsBeingCarried == true)
+            {
+                Drop();
+            }
         }
 
         if ((HeldLeft == 2) && GlobalHeldLeft == false)

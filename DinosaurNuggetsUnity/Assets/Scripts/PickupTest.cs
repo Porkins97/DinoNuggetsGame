@@ -75,6 +75,7 @@ public class PickupTest : MonoBehaviour
         {
             HeldLeft--;
             //Drop();
+
         }
         if (Input.GetKeyUp(KeyCode.Mouse1))
         {
