@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interactable
   - Oven
+  - Cupboard
   layers:
   - Default
   - TransparentFX

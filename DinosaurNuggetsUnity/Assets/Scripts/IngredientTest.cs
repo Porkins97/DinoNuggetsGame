@@ -70,7 +70,9 @@ public class IngredientTest : MonoBehaviour
         if((collision.gameObject.tag == "Cupboard") && (gameObject.GetComponent<PickupTest>().ThisItemIsBeingCarried == true))
         {
             CupboardInUse = true;
+            OnCupboard = true;
             Drop();
+            Debug.Log("This should be on cupboard");
         }
     }
 
