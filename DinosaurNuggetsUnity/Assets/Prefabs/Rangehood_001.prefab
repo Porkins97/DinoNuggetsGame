@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 515287109400662876}
   - component: {fileID: 4006305837224284297}
   m_Layer: 0
-  m_Name: Rangehood_Player_2
+  m_Name: Rangehood_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
