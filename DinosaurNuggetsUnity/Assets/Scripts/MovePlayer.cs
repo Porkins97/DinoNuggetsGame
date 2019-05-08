@@ -5,13 +5,9 @@ using UnityEngine;
 public class MovePlayer : MonoBehaviour
 {
 
-     Rigidbody rb;
-    bool grounded = true;
+    Rigidbody rb;
     public float walkspeed = 6.0F;
     public float turnspeed = 3.0f;
-    public float jumpSpeed = 8.0F;
-    public int numJumps = 2;
-    private int jumpsUsed = 0;
 
     // Use this for initialization
     void Start()
@@ -24,11 +20,8 @@ public class MovePlayer : MonoBehaviour
     {
         float fwd = Input.GetAxis("Vertical");
         float trn = Input.GetAxis("Horizontal"); 
-        float effectiveSpeed;
 
-        effectiveSpeed = walkspeed;
-
-        rb.velocity = (transform.forward * fwd * effectiveSpeed) + (transform.up * rb.velocity.y);
+        rb.velocity = (transform.forward * fwd * walkspeed) + (transform.up * rb.velocity.y);
 
         transform.Rotate( Vector3.up * trn * turnspeed);
 

@@ -51,7 +51,6 @@ public class PickupTest : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.Space)) && ThisItemIsBeingCarried == true)
         {
             Drop();
-            Debug.Log("Drop");
         }
 
         /*if the item is to be picked up, it needs to meet two conditions: it is in contact with the player controller AND the player is pressing a key
@@ -61,13 +60,11 @@ public class PickupTest : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             HeldLeft++;
-            Debug.Log("Left Mouse Down and left hand = " +GlobalHeldLeft);
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             HeldRight++;
-            Debug.Log("Right Mouse Down and Right Hand =" +GlobalHeldRight);
         }
 
         //condition = false
@@ -82,16 +79,21 @@ public class PickupTest : MonoBehaviour
             HeldRight--;
             //Drop();
         }
-
+    
+        if(HandLeft.transform.childCount == 0)
+        {
+            GlobalHeldLeft = false;
+        }
+        if(HandRight.transform.childCount == 0)
+        {
+            GlobalHeldRight = false;
+        }
 
         if ((HeldLeft == 2) && (GlobalHeldLeft == false))
         {
-            Debug.Log("Held Left == " +HeldLeft);
-            Debug.Log("and Global Held Left == " +GlobalHeldLeft);
             //This is triggering and preventing the player from picking something else up, after the object is placed on the oven
             //i think the issue is because it is being called in the update part, if there's another way to do it the problem will be fixed
             GlobalHeldLeft = true;
-            Debug.Log("Global Held Left Triggered True");
             ThisItemIsBeingCarried = true;
             PickupLeft();
             WhichHand = 1;
@@ -99,7 +101,6 @@ public class PickupTest : MonoBehaviour
         if ((HeldRight == 2) && (GlobalHeldRight == false))
         {
             GlobalHeldRight = true;
-            Debug.Log("Global Held Right Triggered True");
             ThisItemIsBeingCarried = true;
             PickupRight();
             WhichHand = 2;
@@ -108,19 +109,17 @@ public class PickupTest : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Character_Model_01")
+        if ((collision.gameObject.name == "Character_Model_01") && (ThisItemIsBeingCarried == false))
         {
-            Debug.Log("Hit Character Collider");
             HeldLeft++;
             HeldRight++;
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnCollisionExit(Collision collision)   
     {
         if (collision.gameObject.name == "Character_Model_01")
         {
-            Debug.Log("Left Character Collider");
             HeldLeft--;
             HeldRight--;
         }
@@ -128,7 +127,6 @@ public class PickupTest : MonoBehaviour
 
     private void PickupLeft()
     {
-        Debug.Log("Pickup Left Triggered");
         ThisRigidBody.useGravity = false;
         ThisRigidBody.isKinematic = true;
         Name.transform.position = HandLeft.transform.position;
@@ -138,7 +136,6 @@ public class PickupTest : MonoBehaviour
     }
     private void PickupRight()
     {
-        Debug.Log("PickUpRight Triggered");
         ThisRigidBody.useGravity = false;
         ThisRigidBody.isKinematic = true;
         Name.transform.position = HandRight.transform.position;
@@ -148,22 +145,19 @@ public class PickupTest : MonoBehaviour
     }
     private void Drop()
     {
-        Debug.Log("Drop Triggered");
-        ThisItemIsBeingCarried = false;
+
         ThisRigidBody.isKinematic = false;
 
         if (WhichHand == 1)
         {
             Name.transform.position = HandLeft.transform.position;
             GlobalHeldLeft = false;
-            Debug.Log("LeftHand Drop");
         }
 
         if (WhichHand == 2)
         {
             Name.transform.position = HandRight.transform.position;
             GlobalHeldRight = false;
-            Debug.Log("RightHand Drop");
         }
 
         HeldLeft = 0;
@@ -172,6 +166,6 @@ public class PickupTest : MonoBehaviour
 
         ThisRigidBody.useGravity = true;
         transform.parent = null;
-        Debug.Log("Drop Finished");
+        ThisItemIsBeingCarried = false;
     }
 }

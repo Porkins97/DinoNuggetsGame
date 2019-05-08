@@ -11,11 +11,15 @@ public class OvenUtensilTest : MonoBehaviour
     public static bool PickUpOven = false;
 
     public bool ThisIsOnOven = false;
+    private bool OnCupboard = false;
 
     private Rigidbody ThisRigidBody = null;
     public GameObject Burner;
     public GameObject Name;
     public GameObject Character;
+    public GameObject CupboardTest;
+    public GameObject Cupboard;
+    public GameObject Cupboard1;
     Collider ObjectCollider;
 
     // Start is called before the first frame update
@@ -28,7 +32,7 @@ public class OvenUtensilTest : MonoBehaviour
         //Here the GameObject's Collider is not a trigger
         ObjectCollider.isTrigger = false;
         Name = this.gameObject;
-        Character = GameObject.Find("Character_Model_001");
+        Character = GameObject.Find("Character_Model_01");
         Burner = GameObject.Find("Oven_001/Burner");
         PickupTest PickupScript = this.gameObject.GetComponent<PickupTest>();
         StaticBoolScript StaticBool = GameObject.Find("Character_Model_01").GetComponent<StaticBoolScript>();
@@ -67,5 +71,43 @@ public class OvenUtensilTest : MonoBehaviour
 
             ThisIsOnOven = true;
         }
+        if ((collision.gameObject.tag == "Cupboard") && (gameObject.GetComponent<PickupTest>().ThisItemIsBeingCarried == true))
+        {
+            CupboardTest = collision.transform.root.gameObject;
+            Cupboard = CupboardTest.transform.Find("CuttingSpot").gameObject;
+            Cupboard1 = CupboardTest.transform.Find("CuttingSpot (1)").gameObject;
+            DoubleCupboard DoubleCupboardScript = CupboardTest.gameObject.GetComponent<DoubleCupboard>();
+            if ((CupboardTest.GetComponent<DoubleCupboard>().Spot1 == false) || (CupboardTest.GetComponent<DoubleCupboard>().Spot1 == false))
+            {
+                OnCupboard = true;
+                Drop();
+                Debug.Log("Ingredient on cupboard");
+            }
+        }
+    }
+    private void Drop()
+    {
+        this.gameObject.GetComponent<PickupTest>().ThisItemIsBeingCarried = false;
+
+        if (CupboardTest.GetComponent<DoubleCupboard>().Spot1 == false)
+        {
+            //ThisRigidBody.isKinematic = true;
+            Name.transform.position = Cupboard.transform.position;
+            Name.transform.rotation = Cupboard.transform.rotation;
+            Name.transform.SetParent(Cupboard.transform);
+            Debug.Log("Error Travis");
+        }
+
+        if (CupboardTest.GetComponent<DoubleCupboard>().Spot2 == false)
+        {
+            //ThisRigidBody.isKinematic = true;
+            Name.transform.position = Cupboard1.transform.position;
+            Name.transform.rotation = Cupboard1.transform.rotation;
+            Name.transform.SetParent(Cupboard1.transform);
+        }
+
+        //if not on cupboard, it is assumed that it is in the pot. Dead only toggles on collider with oven. Could tidy this code a bit 
+        //but it is functional for now.
+
     }
 }
