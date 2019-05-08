@@ -21,6 +21,10 @@ public class Move : MonoBehaviour
         //Moves character along one axis
         transform.Translate(0f, 0f, speed * Input.GetAxis("Vertical") * Time.fixedDeltaTime);
 
+        if(Input.GetAxis("Vertical") > 0.02)
+        {
+
+        }
         transform.Rotate(0f, rotatespeed*Input.GetAxis("Horizontal") * Time.fixedDeltaTime, 0f, Space.Self);
     }
     private void Update()

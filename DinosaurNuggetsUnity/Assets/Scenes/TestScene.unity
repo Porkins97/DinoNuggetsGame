@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 923625864}
   - component: {fileID: 923625866}
   - component: {fileID: 27630059}
+  - component: {fileID: 27630061}
   m_Layer: 0
   m_Name: Character_Model_01
   m_TagString: Untagged
@@ -243,6 +244,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &27630061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27630058}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 490fbde5031d5f24bba05fc232f3c01b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &27630062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,6 +500,7 @@ MonoBehaviour:
   ThisIsOnOven: 0
   Burner: {fileID: 0}
   Name: {fileID: 0}
+  Character: {fileID: 0}
 --- !u!1001 &615045159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -794,6 +808,7 @@ MonoBehaviour:
   ThisIsOnOven: 0
   Burner: {fileID: 0}
   Name: {fileID: 0}
+  Character: {fileID: 0}
 --- !u!1 &950341468
 GameObject:
   m_ObjectHideFlags: 0
