@@ -6,9 +6,6 @@ public class PickupTest : MonoBehaviour
 {
     //These are global variables. all objects using scripts with these variables know if they are true or false. this is so that.
     //the player cannot pick up more than one thing per hand.
-    public static bool GlobalHeldLeft = false;
-    public static bool GlobalHeldRight = false;
-
     public bool ThisItemIsBeingCarried = false;
    
     //tells which hand the object is in and if there is something being held
@@ -43,6 +40,7 @@ public class PickupTest : MonoBehaviour
         HandRight = GameObject.Find("Character_Model_01/HandRight");
         Character = GameObject.Find("Character_Model_01");
         OvenUtensilTest OvenUtensilScript = this.gameObject.GetComponent<OvenUtensilTest>();
+        StaticBoolScript staticBool = Character.GetComponent<StaticBoolScript>();
     }
 
     // Update is called once per frame
@@ -61,13 +59,13 @@ public class PickupTest : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             HeldLeft++;
-            Debug.Log("Left Mouse Down and left hand = " +GlobalHeldLeft);
+            Debug.Log("Left Mouse Down and left hand = " + Character.GetComponent<StaticBoolScript>().GlobalHeldLeft);
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             HeldRight++;
-            Debug.Log("Right Mouse Down");
+            Debug.Log("Right Mouse Down and Right Hand =" + Character.GetComponent<StaticBoolScript>().GlobalHeldRight);
         }
 
         //condition = false
@@ -83,18 +81,23 @@ public class PickupTest : MonoBehaviour
             //Drop();
         }
 
-        if ((HeldLeft == 2) && (GlobalHeldLeft == false))
+
+        if ((HeldLeft == 2) && (Character.GetComponent<StaticBoolScript>().GlobalHeldLeft == false))
         {
+            Debug.Log("Held Left == " +HeldLeft);
+            Debug.Log("and Global Held Left == " +Character.GetComponent<StaticBoolScript>().GlobalHeldLeft);
             //This is triggering and preventing the player from picking something else up, after the object is placed on the oven
             //i think the issue is because it is being called in the update part, if there's another way to do it the problem will be fixed
-            GlobalHeldLeft = true;
+            Character.GetComponent<StaticBoolScript>().GlobalHeldLeft = true;
+            Debug.Log("Global Held Left Triggered True");
             ThisItemIsBeingCarried = true;
             PickupLeft();
             WhichHand = 1;
         }
-        if ((HeldRight == 2) && GlobalHeldRight == false)
+        if ((HeldRight == 2) && (Character.GetComponent<StaticBoolScript>().GlobalHeldRight == false))
         {
-            GlobalHeldRight = true;
+            Character.GetComponent<StaticBoolScript>().GlobalHeldRight = true;
+            Debug.Log("Global Held Right Triggered True");
             ThisItemIsBeingCarried = true;
             PickupRight();
             WhichHand = 2;
@@ -105,6 +108,7 @@ public class PickupTest : MonoBehaviour
     {
         if (collision.gameObject.name == "Character_Model_01")
         {
+            Debug.Log("Hit Character Collider");
             HeldLeft++;
             HeldRight++;
         }
@@ -114,6 +118,7 @@ public class PickupTest : MonoBehaviour
     {
         if (collision.gameObject.name == "Character_Model_01")
         {
+            Debug.Log("Left Character Collider");
             HeldLeft--;
             HeldRight--;
         }
@@ -121,35 +126,42 @@ public class PickupTest : MonoBehaviour
 
     private void PickupLeft()
     {
+        Debug.Log("Pickup Left Triggered");
         ThisRigidBody.useGravity = false;
         ThisRigidBody.isKinematic = true;
         Name.transform.position = HandLeft.transform.position;
         Name.transform.rotation = HandLeft.transform.rotation;
         Name.transform.SetParent(HandLeft.transform);
+        Debug.Log("PickUp Left Finished");
     }
     private void PickupRight()
     {
+        Debug.Log("PickUpRight Triggered");
         ThisRigidBody.useGravity = false;
         ThisRigidBody.isKinematic = true;
         Name.transform.position = HandRight.transform.position;
         Name.transform.rotation = HandRight.transform.rotation;
         Name.transform.SetParent(HandRight.transform);
+        Debug.Log("PickUpRight Finished");
     }
     private void Drop()
     {
+        Debug.Log("Drop Triggered");
         ThisItemIsBeingCarried = false;
         ThisRigidBody.isKinematic = false;
 
         if (WhichHand == 1)
         {
             Name.transform.position = HandLeft.transform.position;
-            GlobalHeldLeft = false;
+            Character.GetComponent<StaticBoolScript>().GlobalHeldLeft = false;
+            Debug.Log("LeftHand Drop");
         }
 
         if (WhichHand == 2)
         {
             Name.transform.position = HandRight.transform.position;
-            GlobalHeldRight = false;
+            Character.GetComponent<StaticBoolScript>().GlobalHeldRight = false;
+            Debug.Log("RightHand Drop");
         }
 
         HeldLeft = 0;
@@ -158,5 +170,6 @@ public class PickupTest : MonoBehaviour
 
         ThisRigidBody.useGravity = true;
         transform.parent = null;
+        Debug.Log("Drop Finished");
     }
 }

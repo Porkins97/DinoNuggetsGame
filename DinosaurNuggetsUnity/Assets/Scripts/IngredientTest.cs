@@ -48,6 +48,7 @@ public class IngredientTest : MonoBehaviour
             Name.transform.localScale = new Vector3(0.15f, 0.7f, 0.15f);
             //Name.transform.localScale = Vector3.Lerp (Name.transform.localScale, new Vector3(TargetScale, TargetScale, TargetScale), Time.deltaTime * ShrinkSpeed);
             ObjectCollider.enabled = false;
+            Debug.Log("Ingredient shrinking");
         }
 
        /* if((OnCupboard == true) && (DoubleCupboard.Cut == true))
@@ -64,7 +65,6 @@ public class IngredientTest : MonoBehaviour
         {
             Dead = true;
             Drop();
-            Debug.Log("Attention");
         }
 
         if((collision.gameObject.tag == "Cupboard") && (gameObject.GetComponent<PickupTest>().ThisItemIsBeingCarried == true))
@@ -72,7 +72,7 @@ public class IngredientTest : MonoBehaviour
             CupboardInUse = true;
             OnCupboard = true;
             Drop();
-            Debug.Log("This should be on cupboard");
+            Debug.Log("Ingredient on cupboard");
         }
     }
 
@@ -86,6 +86,8 @@ public class IngredientTest : MonoBehaviour
             Name.transform.SetParent(Cupboard.transform);
         }
         
+        //if not on cupboard, it is assumed that it is in the pot. Dead only toggles on collider with oven. Could tidy this code a bit 
+        //but it is functional for now.
         if(Dead == true)
         {
             ThisRigidBody.isKinematic = false;
@@ -96,6 +98,7 @@ public class IngredientTest : MonoBehaviour
             Name.transform.localPosition = new Vector3(0f, 4f, 0f);
             ThisRigidBody.velocity = new Vector3(0f, -1f, 0f);
             //Destroy(this.gameObject, 2.5f);
+            Debug.Log("Ingredient in pot");
         }
     }
 }

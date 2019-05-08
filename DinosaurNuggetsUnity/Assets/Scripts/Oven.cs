@@ -26,19 +26,19 @@ public class Oven : MonoBehaviour
     {
         Distance = Vector3.Distance(OvenObject.transform.position, Player.transform.position);
 
-        if ((Input.GetKeyDown(KeyCode.E)) || (Input.GetKeyDown(KeyCode.R)))
+        if ((Input.GetKeyDown(KeyCode.Mouse0)) || (Input.GetKeyDown(KeyCode.Mouse1)))
         {
             Pickup++;
         }
 
-        if ((Input.GetKeyUp(KeyCode.E)) || (Input.GetKeyUp(KeyCode.R)))
+        if ((Input.GetKeyUp(KeyCode.Mouse0)) || (Input.GetKeyUp(KeyCode.Mouse1)))
         {
             Pickup--;
         } 
        
         if(Distance <= 1)
         {
-            L_OvenInUse = OvenUtensil.OvenInUse;
+            L_OvenInUse = OvenUtensilTest.OvenInUse;
         }
             
 
@@ -50,7 +50,7 @@ public class Oven : MonoBehaviour
 
         if (Pickup >= 2)
         {
-           OvenUtensil.PickUpOven = true;
+           OvenUtensilTest.PickUpOven = true;
         }
     }
 

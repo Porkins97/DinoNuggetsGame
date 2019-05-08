@@ -6,14 +6,13 @@ public class OvenUtensilTest : MonoBehaviour
 {
     public static bool OvenInUse = false;
     public static bool PickUpOven = false;
-    public static bool GlobalHeldLeft = false;
-    public static bool GlobalHeldRight = false;
 
     public bool ThisIsOnOven = false;
 
     private Rigidbody ThisRigidBody = null;
     public GameObject Burner;
     public GameObject Name;
+    public GameObject Character;
     Collider ObjectCollider;
 
     // Start is called before the first frame update
@@ -26,8 +25,10 @@ public class OvenUtensilTest : MonoBehaviour
         //Here the GameObject's Collider is not a trigger
         ObjectCollider.isTrigger = false;
         Name = this.gameObject;
+        Character = GameObject.Find("Character_Model_001");
         Burner = GameObject.Find("Oven_001/Burner");
         PickupTest PickupScript = this.gameObject.GetComponent<PickupTest>();
+        StaticBoolScript StaticBool = GameObject.Find("Character_Model_01").GetComponent<StaticBoolScript>();
     }
 
     // Update is called once per frame
@@ -49,13 +50,15 @@ public class OvenUtensilTest : MonoBehaviour
 
             if (gameObject.GetComponent<PickupTest>().WhichHand == 1)
             {
-                GlobalHeldLeft = false;
-                Debug.Log("Test GlobalHeldLeft = " +GlobalHeldLeft);
+                Character.GetComponent<StaticBoolScript>().GlobalHeldLeft = false;
+                Debug.Log("Test GlobalHeldLeft (Utensil Script) = " +Character.GetComponent<StaticBoolScript>().GlobalHeldLeft);
+                gameObject.GetComponent<PickupTest>().HeldLeft = 0;
             }
             if (gameObject.GetComponent<PickupTest>().WhichHand == 2)
             {
-                GlobalHeldRight = false;
-                Debug.Log("GlobalHeldRight = false");
+                Character.GetComponent<StaticBoolScript>().GlobalHeldRight = false;
+                Debug.Log("GlobalHeldRight (Utensil Script) = false");
+                gameObject.GetComponent<PickupTest>().HeldRight = 0;
             }
             gameObject.GetComponent<PickupTest>().WhichHand = 0;
 
