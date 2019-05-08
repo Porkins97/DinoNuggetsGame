@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class OvenUtensilTest : MonoBehaviour
 {
+    public static bool GlobalHeldLeft = false;
+    public static bool GlobalHeldRight = false;
+
     public static bool OvenInUse = false;
     public static bool PickUpOven = false;
 
@@ -50,13 +53,13 @@ public class OvenUtensilTest : MonoBehaviour
 
             if (gameObject.GetComponent<PickupTest>().WhichHand == 1)
             {
-                Character.GetComponent<StaticBoolScript>().GlobalHeldLeft = false;
-                Debug.Log("Test GlobalHeldLeft (Utensil Script) = " +Character.GetComponent<StaticBoolScript>().GlobalHeldLeft);
+                GlobalHeldLeft = false;
+                Debug.Log("Test GlobalHeldLeft (Utensil Script) = " +GlobalHeldLeft);
                 gameObject.GetComponent<PickupTest>().HeldLeft = 0;
             }
             if (gameObject.GetComponent<PickupTest>().WhichHand == 2)
             {
-                Character.GetComponent<StaticBoolScript>().GlobalHeldRight = false;
+                GlobalHeldRight = false;
                 Debug.Log("GlobalHeldRight (Utensil Script) = false");
                 gameObject.GetComponent<PickupTest>().HeldRight = 0;
             }

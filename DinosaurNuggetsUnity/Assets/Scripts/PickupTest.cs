@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PickupTest : MonoBehaviour
 {
+    public static bool GlobalHeldLeft;
+    public static bool GlobalHeldRight;
+
     //These are global variables. all objects using scripts with these variables know if they are true or false. this is so that.
     //the player cannot pick up more than one thing per hand.
     public bool ThisItemIsBeingCarried = false;
@@ -40,7 +43,6 @@ public class PickupTest : MonoBehaviour
         HandRight = GameObject.Find("Character_Model_01/HandRight");
         Character = GameObject.Find("Character_Model_01");
         OvenUtensilTest OvenUtensilScript = this.gameObject.GetComponent<OvenUtensilTest>();
-        StaticBoolScript staticBool = Character.GetComponent<StaticBoolScript>();
     }
 
     // Update is called once per frame
@@ -59,13 +61,13 @@ public class PickupTest : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             HeldLeft++;
-            Debug.Log("Left Mouse Down and left hand = " + Character.GetComponent<StaticBoolScript>().GlobalHeldLeft);
+            Debug.Log("Left Mouse Down and left hand = " +GlobalHeldLeft);
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             HeldRight++;
-            Debug.Log("Right Mouse Down and Right Hand =" + Character.GetComponent<StaticBoolScript>().GlobalHeldRight);
+            Debug.Log("Right Mouse Down and Right Hand =" +GlobalHeldRight);
         }
 
         //condition = false
@@ -82,21 +84,21 @@ public class PickupTest : MonoBehaviour
         }
 
 
-        if ((HeldLeft == 2) && (Character.GetComponent<StaticBoolScript>().GlobalHeldLeft == false))
+        if ((HeldLeft == 2) && (GlobalHeldLeft == false))
         {
             Debug.Log("Held Left == " +HeldLeft);
-            Debug.Log("and Global Held Left == " +Character.GetComponent<StaticBoolScript>().GlobalHeldLeft);
+            Debug.Log("and Global Held Left == " +GlobalHeldLeft);
             //This is triggering and preventing the player from picking something else up, after the object is placed on the oven
             //i think the issue is because it is being called in the update part, if there's another way to do it the problem will be fixed
-            Character.GetComponent<StaticBoolScript>().GlobalHeldLeft = true;
+            GlobalHeldLeft = true;
             Debug.Log("Global Held Left Triggered True");
             ThisItemIsBeingCarried = true;
             PickupLeft();
             WhichHand = 1;
         }
-        if ((HeldRight == 2) && (Character.GetComponent<StaticBoolScript>().GlobalHeldRight == false))
+        if ((HeldRight == 2) && (GlobalHeldRight == false))
         {
-            Character.GetComponent<StaticBoolScript>().GlobalHeldRight = true;
+            GlobalHeldRight = true;
             Debug.Log("Global Held Right Triggered True");
             ThisItemIsBeingCarried = true;
             PickupRight();
@@ -153,14 +155,14 @@ public class PickupTest : MonoBehaviour
         if (WhichHand == 1)
         {
             Name.transform.position = HandLeft.transform.position;
-            Character.GetComponent<StaticBoolScript>().GlobalHeldLeft = false;
+            GlobalHeldLeft = false;
             Debug.Log("LeftHand Drop");
         }
 
         if (WhichHand == 2)
         {
             Name.transform.position = HandRight.transform.position;
-            Character.GetComponent<StaticBoolScript>().GlobalHeldRight = false;
+            GlobalHeldRight = false;
             Debug.Log("RightHand Drop");
         }
 

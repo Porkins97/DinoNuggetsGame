@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class StaticBoolScript : MonoBehaviour
 {
-    public bool GlobalHeldLeft = false;
-    public bool GlobalHeldRight = false;
+    public static bool GlobalHeldLeft = false;
+    public static bool GlobalHeldRight = false;
 
     // Start is called before the first frame update
     void Start()
