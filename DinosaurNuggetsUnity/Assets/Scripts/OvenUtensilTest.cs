@@ -7,7 +7,6 @@ public class OvenUtensilTest : MonoBehaviour
     public static bool GlobalHeldLeft = false;
     public static bool GlobalHeldRight = false;
 
-    public static bool OvenInUse = false;
     public static bool PickUpOven = false;
 
     public bool ThisIsOnOven = false;
@@ -20,6 +19,7 @@ public class OvenUtensilTest : MonoBehaviour
     public GameObject CupboardTest;
     public GameObject Cupboard;
     public GameObject Cupboard1;
+    public GameObject Oven;
     Collider ObjectCollider;
 
     // Start is called before the first frame update
@@ -46,11 +46,17 @@ public class OvenUtensilTest : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if ((collision.gameObject.tag == "Oven") && OvenInUse == false)
+        if(collision.gameObject.tag == "Oven")
+        {
+            Oven = collision.transform.root.gameObject;
+            Debug.Log("Hit Oven and OvenInUse = " +Oven.gameObject.GetComponent<Oven>().OvenInUse);
+        }
+
+        if ((collision.gameObject.tag == "Oven") && Oven.gameObject.GetComponent<Oven>().OvenInUse == false)
         {
             gameObject.GetComponent<PickupTest>().ThisItemIsBeingCarried = false;
-            OvenInUse = true;
-            Debug.Log("Oven in use = " + OvenInUse);
+            //OvenInUse = true;
+            Debug.Log("Oven in use = " +Oven.gameObject.GetComponent<Oven>().OvenInUse);
             Name.transform.position = Burner.transform.position;
             Name.transform.rotation = Burner.transform.rotation;
             Name.transform.SetParent(Burner.transform);

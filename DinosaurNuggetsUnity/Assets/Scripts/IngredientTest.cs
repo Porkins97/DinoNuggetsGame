@@ -7,7 +7,7 @@ public class IngredientTest : MonoBehaviour
     //States whether you can cut the object on the cupboard. Pulled value from DoubleCupboard script.
     public static bool Cut = false;
     public static bool CupboardInUse = false;
-    public static bool OvenInUse = false;
+    public static bool OvenInUse;
 
     private bool Dead = false;
     private bool OnCupboard = false;
@@ -23,7 +23,7 @@ public class IngredientTest : MonoBehaviour
     public GameObject Name;
     public GameObject CutIngredient;
     public GameObject Burner;
-
+    public GameObject Oven;
 
 
     Collider ObjectCollider;
@@ -36,7 +36,7 @@ public class IngredientTest : MonoBehaviour
         Name = this.gameObject;
         ThisRigidBody = GetComponent<Rigidbody>();
         ObjectCollider = GetComponent<Collider>();
-        Burner = GameObject.Find("Oven_001/Burner");
+
         PickupTest PickupScript = this.gameObject.GetComponent<PickupTest>();
         OvenUtensilTest OvenUtensilScript = this.gameObject.GetComponent<OvenUtensilTest>();
     }
@@ -62,10 +62,17 @@ public class IngredientTest : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if((collision.gameObject.tag == "Oven") && (OvenUtensilTest.OvenInUse == true))
+        if(collision.gameObject.tag == "Oven")
         {
-            Dead = true;
-            Drop();
+            Debug.Log("Ingredient Hit Oven");
+            Oven = collision.transform.root.gameObject;
+            Burner = Oven.gameObject.transform.Find("Burner").gameObject;
+        
+            if(Oven.gameObject.GetComponent<Oven>().OvenInUse == true)
+            {
+                Dead = true;
+                Drop();
+            }
         }
 
         if((collision.gameObject.tag == "Cupboard") && (gameObject.GetComponent<PickupTest>().ThisItemIsBeingCarried == true))
@@ -74,7 +81,7 @@ public class IngredientTest : MonoBehaviour
             Cupboard = CupboardTest.transform.Find("CuttingSpot").gameObject;
             Cupboard1 = CupboardTest.transform.Find("CuttingSpot (1)").gameObject;
             DoubleCupboard DoubleCupboardScript = CupboardTest.gameObject.GetComponent<DoubleCupboard>();
-            if ((CupboardTest.GetComponent<DoubleCupboard>().Spot1 == false)||(CupboardTest.GetComponent<DoubleCupboard>().Spot1 == false))
+            if ((CupboardTest.GetComponent<DoubleCupboard>().Spot1 == false)||(CupboardTest.GetComponent<DoubleCupboard>().Spot2 == false))
             {
                 OnCupboard = true;
                 Drop();

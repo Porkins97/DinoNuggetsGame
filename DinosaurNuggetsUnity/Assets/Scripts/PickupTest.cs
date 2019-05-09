@@ -93,15 +93,13 @@ public class PickupTest : MonoBehaviour
         {
             //This is triggering and preventing the player from picking something else up, after the object is placed on the oven
             //i think the issue is because it is being called in the update part, if there's another way to do it the problem will be fixed
-            GlobalHeldLeft = true;
-            ThisItemIsBeingCarried = true;
+
             PickupLeft();
             WhichHand = 1;
         }
         if ((HeldRight == 2) && (GlobalHeldRight == false))
         {
-            GlobalHeldRight = true;
-            ThisItemIsBeingCarried = true;
+
             PickupRight();
             WhichHand = 2;
         }
@@ -125,8 +123,11 @@ public class PickupTest : MonoBehaviour
         }
     }
 
-    private void PickupLeft()
+    public void PickupLeft()
     {
+        GlobalHeldLeft = true;
+        ThisItemIsBeingCarried = true;
+
         ThisRigidBody.useGravity = false;
         ThisRigidBody.isKinematic = true;
         Name.transform.position = HandLeft.transform.position;
@@ -134,8 +135,11 @@ public class PickupTest : MonoBehaviour
         Name.transform.SetParent(HandLeft.transform);
         Debug.Log("PickUp Left Finished");
     }
-    private void PickupRight()
+    public void PickupRight()
     {
+        GlobalHeldRight = true;
+        ThisItemIsBeingCarried = true;
+
         ThisRigidBody.useGravity = false;
         ThisRigidBody.isKinematic = true;
         Name.transform.position = HandRight.transform.position;

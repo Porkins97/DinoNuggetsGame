@@ -281,6 +281,7 @@ GameObject:
   - component: {fileID: 33506340}
   - component: {fileID: 33506339}
   - component: {fileID: 33506343}
+  - component: {fileID: 33506344}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -376,6 +377,18 @@ MonoBehaviour:
   L_GLobalHeldRight: 0
   L_OvenInUse: 0
   L_PickUpOven: 0
+--- !u!114 &33506344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33506338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9b5ebf6d36102f4c8e50d9df19487d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &156958386
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +406,7 @@ GameObject:
   - component: {fileID: 156958387}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -439,6 +452,7 @@ MonoBehaviour:
   Name: {fileID: 0}
   CutIngredient: {fileID: 0}
   Burner: {fileID: 0}
+  Oven: {fileID: 0}
 --- !u!54 &156958389
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -525,7 +539,7 @@ Transform:
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &406352063
 GameObject:
@@ -655,6 +669,7 @@ MonoBehaviour:
   CupboardTest: {fileID: 0}
   Cupboard: {fileID: 0}
   Cupboard1: {fileID: 0}
+  Oven: {fileID: 0}
 --- !u!1001 &615045159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -712,83 +727,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5e4a573f70668c42bc133a8977e31f8, type: 3}
---- !u!1001 &846356231
-PrefabInstance:
+--- !u!1 &757378023
+GameObject:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 429025055, guid: 1e117ea9ed0d97d41a66ceae0c8a700d, type: 3}
-      propertyPath: m_Name
-      value: Cupboard_Double_001 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 429025055, guid: 1e117ea9ed0d97d41a66ceae0c8a700d, type: 3}
-      propertyPath: m_TagString
-      value: Cupboard
-      objectReference: {fileID: 0}
-    - target: {fileID: 2008466078339493829, guid: 1e117ea9ed0d97d41a66ceae0c8a700d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 2008466078339493829, guid: 1e117ea9ed0d97d41a66ceae0c8a700d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2008466078339493829, guid: 1e117ea9ed0d97d41a66ceae0c8a700d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.49
-      objectReference: {fileID: 0}
-    - target: {fileID: 2008466078339493829, guid: 1e117ea9ed0d97d41a66ceae0c8a700d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2008466078339493829, guid: 1e117ea9ed0d97d41a66ceae0c8a700d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2008466078339493829, guid: 1e117ea9ed0d97d41a66ceae0c8a700d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2008466078339493829, guid: 1e117ea9ed0d97d41a66ceae0c8a700d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2008466078339493829, guid: 1e117ea9ed0d97d41a66ceae0c8a700d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2008466078339493829, guid: 1e117ea9ed0d97d41a66ceae0c8a700d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2008466078339493829, guid: 1e117ea9ed0d97d41a66ceae0c8a700d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 2008466078339493829, guid: 1e117ea9ed0d97d41a66ceae0c8a700d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7695551103443025044, guid: 1e117ea9ed0d97d41a66ceae0c8a700d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.764
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1e117ea9ed0d97d41a66ceae0c8a700d, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 757378024}
+  m_Layer: 0
+  m_Name: Ingredient
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &757378024
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757378023}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 907601044}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &907601038
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,7 +774,7 @@ GameObject:
   - component: {fileID: 907601045}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -832,6 +800,7 @@ MonoBehaviour:
   Name: {fileID: 0}
   CutIngredient: {fileID: 0}
   Burner: {fileID: 0}
+  Oven: {fileID: 0}
 --- !u!54 &907601040
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -916,7 +885,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.023, y: -0.1478029, z: -1.25}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_Children: []
+  m_Children:
+  - {fileID: 757378024}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1045,6 +1015,7 @@ MonoBehaviour:
   CupboardTest: {fileID: 0}
   Cupboard: {fileID: 0}
   Cupboard1: {fileID: 0}
+  Oven: {fileID: 0}
 --- !u!1 &950341468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,32 +1151,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 965917680, guid: ecb3a65fa8c86664097f90b458c293fb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecb3a65fa8c86664097f90b458c293fb, type: 3}
---- !u!1 &1125496999 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 429025055, guid: 1e117ea9ed0d97d41a66ceae0c8a700d,
-    type: 3}
-  m_PrefabInstance: {fileID: 846356231}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1125497000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125496999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ff19eeccf577ee42a6da3bf69828f3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Spot1: 0
-  Spot2: 0
-  Knife: {fileID: 0}
-  Cupboard: {fileID: 0}
-  Cuttingspot1: {fileID: 0}
-  Cuttingspot2: {fileID: 0}
 --- !u!1 &1179380951
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,7 +1324,7 @@ GameObject:
   - component: {fileID: 1271998404}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1419,6 +1370,7 @@ MonoBehaviour:
   Name: {fileID: 0}
   CutIngredient: {fileID: 0}
   Burner: {fileID: 0}
+  Oven: {fileID: 0}
 --- !u!54 &1271998406
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1505,7 +1457,7 @@ Transform:
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1735962174
 GameObject:

@@ -4,62 +4,95 @@ using UnityEngine;
 
 public class Oven : MonoBehaviour
 {
+    public static bool GlobalHeldLeft;
+    public static bool GlobalHeldRight;
+
+
+    public bool OvenInUse;
     public bool L_GlobalHeldLeft = false;
     public bool L_GlobalHeldRight = false;
     public bool L_OvenInUse = false;
     public bool L_PickUpOven = false;
 
     private int Pickup = 0;
+
     public GameObject OvenObject;
     public GameObject Player;
-    private float Distance; 
+    public GameObject Burner;
+    public GameObject Utensil;
+    public GameObject HandLeft;
+    public GameObject HandRight;
+    private float Distance;
+
+    Rigidbody Rb;
+    Collider ThisCollider;
+    Collider UtensilCollider;
 
     // Start is called before the first frame update
     void Start()
     {
-       Player = GameObject.Find("Character_Model_01");
-       OvenObject = this.gameObject;
+        Player = GameObject.Find("Character_Model_01");
+        HandLeft = GameObject.Find("Character_Model_01/HandLeft");
+        HandRight = GameObject.Find("Character_Model_01/HandRight");
+        OvenObject = this.gameObject;
+        Burner = this.gameObject.transform.Find("Burner").gameObject;
+        ThisCollider = this.gameObject.GetComponent<Collider>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Distance = Vector3.Distance(OvenObject.transform.position, Player.transform.position);
-
-        if ((Input.GetKeyDown(KeyCode.Mouse0)) || (Input.GetKeyDown(KeyCode.Mouse1)))
+        if (Burner.transform.childCount >= 1)
         {
-            Pickup++;
+            OvenInUse = true;
+            Utensil = Burner.gameObject.transform.GetChild(0).gameObject;
+            UtensilCollider = Utensil.GetComponent<Collider>();
+            PickupTest PickupScript = Utensil.gameObject.GetComponent<PickupTest>();
+            Rb = Utensil.GetComponent<Rigidbody>();
         }
-
-        if ((Input.GetKeyUp(KeyCode.Mouse0)) || (Input.GetKeyUp(KeyCode.Mouse1)))
+        if(Burner.transform.childCount == 0)
         {
-            Pickup--;
-        } 
-       
-        if(Distance <= 1)
-        {
-            L_OvenInUse = OvenUtensilTest.OvenInUse;
-        }
-            
-
-        if (L_OvenInUse == true)
-        {
-            Pickup++;
-            Debug.Log("Distance is less than 1");
-        }
-
-        if (Pickup >= 2)
-        {
-           OvenUtensilTest.PickUpOven = true;
+            OvenInUse = false;
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Character_Model_01")
+        if((collision.gameObject.name == "Character_Model_01") && (OvenInUse == true) && (HandLeft.transform.childCount == 0))
         {
-            Pickup--;
-            Debug.Log("You Should not be able to pick this up");
+            Debug.Log("GlobalHeld Left ==" + GlobalHeldLeft);
+
+            GlobalHeldLeft = true;
+            Utensil.GetComponent<PickupTest>().ThisItemIsBeingCarried = true;
+
+            Rb.useGravity = false;
+            Rb.isKinematic = true;
+            Utensil.transform.position = HandLeft.transform.position;
+            Utensil.transform.rotation = HandLeft.transform.rotation;
+            Utensil.transform.SetParent(HandLeft.transform);
+            Debug.Log("Pickup Oven");
+            StartCoroutine(Delay());
+
+            /*if((Input.GetKeyDown(KeyCode.Mouse1)) && (GlobalHeldRight == false))
+            {
+                GlobalHeldLeft = true;
+                Utensil.GetComponent<PickupTest>().ThisItemIsBeingCarried = true;
+
+                Rb.useGravity = false;
+                Rb.isKinematic = true;
+                Utensil.transform.position = HandRight.transform.position;
+                Utensil.transform.rotation = HandRight.transform.rotation;
+                Utensil.transform.SetParent(HandRight.transform);
+                Debug.Log("Pickup Oven");
+            }*/
         }
+    }
+    IEnumerator Delay()
+    {
+        print(Time.time);
+        UtensilCollider.enabled = false;
+        yield return new WaitForSeconds(2);
+        print(Time.time);
+        UtensilCollider.enabled = true;
     }
 }
