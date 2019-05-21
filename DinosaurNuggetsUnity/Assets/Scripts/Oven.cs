@@ -58,7 +58,7 @@ public class Oven : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if((collision.gameObject.name == "Character_Model_01") && (OvenInUse == true) && (HandLeft.transform.childCount == 0))
+        /*if((collision.gameObject.name == "Character_Model_01") && (OvenInUse == true) && (HandLeft.transform.childCount == 0))
         {
             Debug.Log("GlobalHeld Left ==" + GlobalHeldLeft);
 
@@ -73,7 +73,7 @@ public class Oven : MonoBehaviour
             Debug.Log("Pickup Oven");
             StartCoroutine(Delay());
 
-            /*if((Input.GetKeyDown(KeyCode.Mouse1)) && (GlobalHeldRight == false))
+            if((Input.GetKeyDown(KeyCode.Mouse1)) && (GlobalHeldRight == false))
             {
                 GlobalHeldLeft = true;
                 Utensil.GetComponent<PickupTest>().ThisItemIsBeingCarried = true;
@@ -84,8 +84,8 @@ public class Oven : MonoBehaviour
                 Utensil.transform.rotation = HandRight.transform.rotation;
                 Utensil.transform.SetParent(HandRight.transform);
                 Debug.Log("Pickup Oven");
-            }*/
-        }
+            }
+         }*/
     }
     IEnumerator Delay()
     {

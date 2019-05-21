@@ -13,6 +13,7 @@ public class Move : MonoBehaviour
     void Start()
     {
         ThisRigidBody = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame

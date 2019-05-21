@@ -36,6 +36,7 @@ public class IngredientTest : MonoBehaviour
         Name = this.gameObject;
         ThisRigidBody = GetComponent<Rigidbody>();
         ObjectCollider = GetComponent<Collider>();
+        CupboardTest = null;
 
         PickupTest PickupScript = this.gameObject.GetComponent<PickupTest>();
         OvenUtensilTest OvenUtensilScript = this.gameObject.GetComponent<OvenUtensilTest>();
@@ -47,7 +48,7 @@ public class IngredientTest : MonoBehaviour
         if(Dead == true)
         {
             //reduce in size and shrink as it descends into the pot
-            Name.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+            Name.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             //Name.transform.localScale = Vector3.Lerp (Name.transform.localScale, new Vector3(TargetScale, TargetScale, TargetScale), Time.deltaTime * ShrinkSpeed);
             ObjectCollider.enabled = false;
         }
@@ -77,9 +78,9 @@ public class IngredientTest : MonoBehaviour
 
         if((collision.gameObject.tag == "Cupboard") && (gameObject.GetComponent<PickupTest>().ThisItemIsBeingCarried == true))
         {
-            CupboardTest = collision.transform.root.gameObject;
-            Cupboard = CupboardTest.transform.Find("CuttingSpot").gameObject;
-            Cupboard1 = CupboardTest.transform.Find("CuttingSpot (1)").gameObject;
+            CupboardTest = collision.gameObject;
+            Cupboard = CupboardTest.transform.Find("CuttingSpot1").gameObject;
+            Cupboard1 = CupboardTest.transform.Find("CuttingSpot2").gameObject;
             DoubleCupboard DoubleCupboardScript = CupboardTest.gameObject.GetComponent<DoubleCupboard>();
             if ((CupboardTest.GetComponent<DoubleCupboard>().Spot1 == false)||(CupboardTest.GetComponent<DoubleCupboard>().Spot2 == false))
             {
@@ -107,7 +108,7 @@ public class IngredientTest : MonoBehaviour
             Debug.Log("Ingredient in pot");
         }
 
-        if (CupboardTest.GetComponent<DoubleCupboard>().Spot1 == false)
+        if (CupboardTest != null && CupboardTest.GetComponent<DoubleCupboard>().Spot1 == false)
         {
             //ThisRigidBody.isKinematic = true;
             Name.transform.position = Cupboard.transform.position;
@@ -116,7 +117,7 @@ public class IngredientTest : MonoBehaviour
             Debug.Log("Error Travis");
         }
 
-        if (CupboardTest.GetComponent<DoubleCupboard>().Spot2 == false)
+        if (CupboardTest != null && CupboardTest.GetComponent<DoubleCupboard>().Spot2 == false)
         {
         //ThisRigidBody.isKinematic = true;
         Name.transform.position = Cupboard1.transform.position;

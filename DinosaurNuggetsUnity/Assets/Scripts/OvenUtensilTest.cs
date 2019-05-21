@@ -25,7 +25,6 @@ public class OvenUtensilTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.tag = "Interactable";
         ThisRigidBody = GetComponent<Rigidbody>();
         //Fetch the GameObject's Collider (make sure they have a Collider component)
         ObjectCollider = GetComponent<Collider>();
@@ -48,7 +47,8 @@ public class OvenUtensilTest : MonoBehaviour
     {
         if(collision.gameObject.tag == "Oven")
         {
-            Oven = collision.transform.root.gameObject;
+            Oven = collision.gameObject;//collision.transform.root.gameObject;
+            Burner = collision.transform.GetChild(0).gameObject;
             Debug.Log("Hit Oven and OvenInUse = " +Oven.gameObject.GetComponent<Oven>().OvenInUse);
         }
 

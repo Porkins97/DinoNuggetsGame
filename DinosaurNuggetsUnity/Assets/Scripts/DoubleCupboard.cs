@@ -32,7 +32,7 @@ public class DoubleCupboard : MonoBehaviour
     private Rigidbody Rb;
     private Collider ThisCollider;
     private Collider IngredientCollider;
-    private float distance;
+    public float distance;
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +41,10 @@ public class DoubleCupboard : MonoBehaviour
         Cupboard = this.gameObject;
         ThisRigidBody = GetComponent<Rigidbody>();
         ThisCollider = GetComponent<Collider>();
-        Cuttingspot1 = this.gameObject.transform.Find("CuttingSpot").gameObject;
-        Cuttingspot2 = this.gameObject.transform.Find("CuttingSpot (1)").gameObject;
+        if (Cuttingspot1 == null)
+            Cuttingspot1 = this.gameObject.transform.Find("CuttingSpot").gameObject;
+        if (Cuttingspot2 == null)
+            Cuttingspot2 = this.gameObject.transform.Find("CuttingSpot (1)").gameObject;
         HandLeft = GameObject.Find("Character_Model_01/HandLeft");
         HandRight = GameObject.Find("Character_Model_01/HandRight");
         Player = GameObject.Find("Character_Model_01");
@@ -51,6 +53,8 @@ public class DoubleCupboard : MonoBehaviour
 
     private void Update()
     {
+        if (Player == null)
+            return;
         float distance = Vector3.Distance(Cupboard.transform.position, Player.transform.position);
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -61,6 +65,15 @@ public class DoubleCupboard : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.Mouse0))
         {
             Mouse0Down = false;
+        }
+                if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            Mouse1Down = true;
+        }
+
+        if(Input.GetKeyUp(KeyCode.Mouse1))
+        {
+            Mouse1Down = false;
         }
 
         if (Cuttingspot1.transform.childCount == 1)
@@ -82,7 +95,7 @@ public class DoubleCupboard : MonoBehaviour
             Spot2 = false;
         }
 
-        Debug.Log("Distance = " + distance);
+        //Debug.Log("Distance = " + distance);
 
         if(distance <= 1.5f)
         {
@@ -91,7 +104,16 @@ public class DoubleCupboard : MonoBehaviour
                 Debug.Log("MouseKey0 Down");
                 if ((Spot1 == true) || (Spot2 == true))
                 {
-                    PickupLeft();
+                    //PickupLeft();
+                }
+            }
+
+            if(Mouse1Down == true)
+            {
+                Debug.Log("MouseKey1 Down");
+                if ((Spot1 == true) || (Spot2 == true))
+                {
+                    //PickupRight();
                 }
             }
         }
@@ -113,6 +135,15 @@ public class DoubleCupboard : MonoBehaviour
                 if ((Spot1 == true) || (Spot2 == true))
                 {
                     PickupLeft();
+                }
+            }
+            
+            if(Mouse1Down == true)
+            {
+                Debug.Log("MouseKey1 Down");
+                if ((Spot1 == true) || (Spot2 == true))
+                {
+                    PickupRight();
                 }
             }
         }
@@ -141,34 +172,70 @@ public class DoubleCupboard : MonoBehaviour
     }
     public void PickupLeft()
     {
-        HandLeft = GameObject.Find("Character_Model_01/HandLeft");
-        Debug.Log("Pickup Works");
-        GlobalHeldLeft = true;
+        if(GlobalHeldLeft == false)
+        {
+            HandLeft = GameObject.Find("Character_Model_01/HandLeft");
+            Debug.Log("Pickup Works");
+            GlobalHeldLeft = true;
 
-        if(Ingredient1 != null)
-        {
-            Name = Ingredient1.gameObject;
-            Rb = Ingredient1.gameObject.GetComponent<Rigidbody>();
-            Ingredient1 = null;
-        }
-        else
-        {
-            if(Ingredient2 != null)
+            if (Ingredient1 != null)
             {
-                Name = Ingredient2.gameObject;
-                Rb = Ingredient2.gameObject.GetComponent<Rigidbody>();
-                Ingredient2 = null;
+                Name = Ingredient1.gameObject;
+                Rb = Ingredient1.gameObject.GetComponent<Rigidbody>();
+                Ingredient1 = null;
             }
-        }
+            else
+            {
+                if (Ingredient2 != null)
+                {
+                    Name = Ingredient2.gameObject;
+                    Rb = Ingredient2.gameObject.GetComponent<Rigidbody>();
+                    Ingredient2 = null;
+                }
+            }
+            Name.gameObject.GetComponent<PickupTest>().ThisItemIsBeingCarried = true;
 
+            Rb.useGravity = false;
+            Rb.isKinematic = true;
+            Name.transform.position = HandLeft.transform.position;
+            Name.transform.rotation = HandLeft.transform.rotation;
+            Name.transform.SetParent(HandLeft.transform);
+            Debug.Log("PickUp Left Finished");
+        }
+    }
+
+    public void PickupRight()
+    {
+        if(GlobalHeldRight == false)
+        {
+            HandRight = GameObject.Find("Character_Model_01/HandRight");
+            Debug.Log("Pickup Works");
+            GlobalHeldRight = true;
+
+            if (Ingredient1 != null)
+            {
+                Name = Ingredient1.gameObject;
+                Rb = Ingredient1.gameObject.GetComponent<Rigidbody>();
+                Ingredient1 = null;
+            }
+            else
+            {
+                if (Ingredient2 != null)
+                {
+                    Name = Ingredient2.gameObject;
+                    Rb = Ingredient2.gameObject.GetComponent<Rigidbody>();
+                    Ingredient2 = null;
+                }
+            }
+            Name.gameObject.GetComponent<PickupTest>().ThisItemIsBeingCarried = true;
+
+            Rb.useGravity = false;
+            Rb.isKinematic = true;
+            Name.transform.position = HandRight.transform.position;
+            Name.transform.rotation = HandRight.transform.rotation;
+            Name.transform.SetParent(HandRight.transform);
+            Debug.Log("PickUp Right Finished");
+        }
+    }
         
-        Name.gameObject.GetComponent<PickupTest>().ThisItemIsBeingCarried = true;
-
-        Rb.useGravity = false;
-        Rb.isKinematic = true;
-        Name.transform.position = HandLeft.transform.position;
-        Name.transform.rotation = HandLeft.transform.rotation;
-        Name.transform.SetParent(HandLeft.transform);
-        Debug.Log("PickUp Left Finished");
-        }
 }
