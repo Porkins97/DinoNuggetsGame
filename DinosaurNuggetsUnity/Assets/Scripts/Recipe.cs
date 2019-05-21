@@ -60,10 +60,7 @@ public class Recipe : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Pot = this.gameObject;
-        //Burner = this.gameObject.transform.parent.gameObject;
-        Reset();
-        
+        Reset();   
     }
 
     
@@ -80,16 +77,6 @@ public class Recipe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if(this.gameObject.transform.parent.gameObject != null)
-        {
-            Burner = this.gameObject.transform.parent.gameObject;
-        }
-        else
-        {
-            Burner = null;
-        }
-        */
 
     }
 

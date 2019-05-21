@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class IngredientTest : MonoBehaviour
-{
+{ 
     //States whether you can cut the object on the cupboard. Pulled value from DoubleCupboard script.
     public static bool Cut = false;
     public static bool CupboardInUse = false;
@@ -24,7 +24,8 @@ public class IngredientTest : MonoBehaviour
     public GameObject CutIngredient;
     public GameObject Burner;
     public GameObject Oven;
-
+    public GameObject Character;
+    public GameObject Position;
 
     Collider ObjectCollider;
     private Rigidbody ThisRigidBody = null;
@@ -33,6 +34,7 @@ public class IngredientTest : MonoBehaviour
     {
         Knife = GameObject.Find("Knife_001");
         CutIngredient = GameObject.Find("CutTomato_001");
+        Character = GameObject.Find("Character_Model_01");
         Name = this.gameObject;
         ThisRigidBody = GetComponent<Rigidbody>();
         ObjectCollider = GetComponent<Collider>();
@@ -40,8 +42,8 @@ public class IngredientTest : MonoBehaviour
 
         PickupTest PickupScript = this.gameObject.GetComponent<PickupTest>();
         OvenUtensilTest OvenUtensilScript = this.gameObject.GetComponent<OvenUtensilTest>();
-    }
 
+    }
     // Update is called once per frame
     void Update()
     {
@@ -61,13 +63,15 @@ public class IngredientTest : MonoBehaviour
             Destroy(this.gameObject);
         } */
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Oven")
         {
             Debug.Log("Ingredient Hit Oven");
-            Oven = collision.transform.root.gameObject;
-            Burner = Oven.gameObject.transform.Find("Burner").gameObject;
+            Oven = collision.gameObject;
+            Burner = Oven.gameObject.transform.GetChild(0).gameObject;
+            Position = Oven.gameObject.transform.GetChild(1).gameObject;
         
             if(Oven.gameObject.GetComponent<Oven>().OvenInUse == true)
             {
@@ -99,13 +103,25 @@ public class IngredientTest : MonoBehaviour
         {
             ThisRigidBody.isKinematic = false;
             Debug.Log("Dead == " + Dead);
-            Name.transform.position = Burner.transform.position;
-            Name.transform.rotation = Burner.transform.rotation;
+            Name.transform.position = Position.transform.position;
+            Name.transform.rotation = Position.transform.rotation;
             Name.transform.SetParent(Burner.transform);
-            Name.transform.localPosition = new Vector3(0f, 1f, 0f);
+            //Name.transform.localPosition = new Vector3(0f, 1f, 0f);
             ThisRigidBody.velocity = new Vector3(0f, -0.5f, 0f);
             //Destroy(this.gameObject, 2.5f);
             Debug.Log("Ingredient in pot");
+
+            //Test code to test out recipes
+            Ingredient ingredient = GetComponent<Ingredient>();
+            Recipe recipe = null;
+            if (Character != null)
+                recipe = Character.GetComponent<Recipe>();
+            if (ingredient != null && recipe != null)
+            {
+                bool was_correct = recipe.AddIngredient(ingredient);
+               // if (was_correct)
+                    //Destroy(ingredient.gameObject);
+            }
         }
 
         if (CupboardTest != null && CupboardTest.GetComponent<DoubleCupboard>().Spot1 == false)

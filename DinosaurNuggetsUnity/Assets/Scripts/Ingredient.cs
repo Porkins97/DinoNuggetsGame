@@ -5,14 +5,16 @@ using UnityEngine;
 [System.Serializable]
 public enum IngredientType
 {
-    BREAD,
+    BREAD_WHOLE,
+    BREAD_SLICED,
     FLOUR,
     MILK,
     LETTUCE,
     ONION_WHOLE,
     ONION_CHOPPED,
     STEAK,
-    FISH,
+    FISH_WHOLE,
+    FISH_SLICED,
     EGG,
     TOMATO_WHOLE,
     TOMATO_CHOPPED,

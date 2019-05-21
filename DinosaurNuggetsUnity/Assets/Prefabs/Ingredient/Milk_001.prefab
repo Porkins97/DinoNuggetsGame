@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1053744346310302031}
   - component: {fileID: 6348436010686143312}
   - component: {fileID: 1497256361048638435}
+  - component: {fileID: 4377335579185190631}
   m_Layer: 0
   m_Name: Milk_001
   m_TagString: Ingredient
@@ -120,7 +121,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 6164678057872477304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d17e3566fe89494f8dfbd110fc942bf, type: 3}
+  m_Script: {fileID: 11500000, guid: a30156b4db513194c9e6ef5d191919cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itype: 2
+--- !u!114 &1497256361048638435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164678057872477304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74dc92ec0d146c341a153be093e930c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ThisItemIsBeingCarried: 0
@@ -131,7 +145,7 @@ MonoBehaviour:
   HandRight: {fileID: 0}
   Name: {fileID: 0}
   Character: {fileID: 0}
---- !u!114 &1497256361048638435
+--- !u!114 &4377335579185190631
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,7 +154,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6164678057872477304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 988ecc00f6b8edb4e9fa7f123d93644d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5929bda0602de0445a273d675c71a9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TargetSpeed: 0.001

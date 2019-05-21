@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6489219905181347396}
   - component: {fileID: 4495380787539344870}
   - component: {fileID: 99025757448267885}
+  - component: {fileID: 5351447497797496069}
   m_Layer: 0
   m_Name: Tomato_001
   m_TagString: Ingredient
@@ -74,7 +75,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 646365474162776922}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d17e3566fe89494f8dfbd110fc942bf, type: 3}
+  m_Script: {fileID: 11500000, guid: a30156b4db513194c9e6ef5d191919cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itype: 10
+--- !u!114 &99025757448267885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646365474162776922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74dc92ec0d146c341a153be093e930c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ThisItemIsBeingCarried: 0
@@ -85,7 +99,7 @@ MonoBehaviour:
   HandRight: {fileID: 0}
   Name: {fileID: 0}
   Character: {fileID: 0}
---- !u!114 &99025757448267885
+--- !u!114 &5351447497797496069
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,7 +108,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 646365474162776922}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 988ecc00f6b8edb4e9fa7f123d93644d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5929bda0602de0445a273d675c71a9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TargetSpeed: 0.001

@@ -48,6 +48,10 @@ public class PickupTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(ThisItemIsBeingCarried == true)
+        {
+            //Debug.Log("This Item is being carried");
+        }
         if ((Input.GetKeyDown(KeyCode.Space)) && ThisItemIsBeingCarried == true)
         {
             Drop();
@@ -172,16 +176,6 @@ public class PickupTest : MonoBehaviour
         transform.parent = null;
         ThisItemIsBeingCarried = false;
 
-        //Test code to test out recipes
-        Ingredient ingredient = GetComponent<Ingredient>();
-        Recipe recipe = null;
-        if (Character != null)
-            recipe = Character.GetComponent<Recipe>();
-        if (ingredient != null && recipe != null)
-        {
-            bool was_correct = recipe.AddIngredient(ingredient);
-            if (was_correct)
-                Destroy(ingredient.gameObject);
-        } 
+
     }
 }

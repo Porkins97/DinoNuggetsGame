@@ -66,7 +66,7 @@ public class DoubleCupboard : MonoBehaviour
         {
             Mouse0Down = false;
         }
-                if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             Mouse1Down = true;
         }
