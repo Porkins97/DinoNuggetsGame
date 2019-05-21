@@ -171,5 +171,17 @@ public class PickupTest : MonoBehaviour
         ThisRigidBody.useGravity = true;
         transform.parent = null;
         ThisItemIsBeingCarried = false;
+
+        //Test code to test out recipes
+        Ingredient ingredient = GetComponent<Ingredient>();
+        Recipe recipe = null;
+        if (Character != null)
+            recipe = Character.GetComponent<Recipe>();
+        if (ingredient != null && recipe != null)
+        {
+            bool was_correct = recipe.AddIngredient(ingredient);
+            if (was_correct)
+                Destroy(ingredient.gameObject);
+        } 
     }
 }

@@ -120,19 +120,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2597873341460636915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 988ecc00f6b8edb4e9fa7f123d93644d, type: 3}
+  m_Script: {fileID: 11500000, guid: a30156b4db513194c9e6ef5d191919cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetSpeed: 0.001
-  ShrinkSpeed: 0.1
-  CupboardTest: {fileID: 0}
-  Cupboard: {fileID: 0}
-  Cupboard1: {fileID: 0}
-  Knife: {fileID: 0}
-  Name: {fileID: 0}
-  CutIngredient: {fileID: 0}
-  Burner: {fileID: 0}
-  Oven: {fileID: 0}
+  itype: 12
 --- !u!114 &649593258067999977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,7 +133,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2597873341460636915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d17e3566fe89494f8dfbd110fc942bf, type: 3}
+  m_Script: {fileID: 11500000, guid: 74dc92ec0d146c341a153be093e930c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ThisItemIsBeingCarried: 0
