@@ -27,6 +27,7 @@ public class Oven : MonoBehaviour
     Rigidbody Rb;
     Collider ThisCollider;
     Collider UtensilCollider;
+    GameObject UICamera;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,9 @@ public class Oven : MonoBehaviour
         OvenObject = this.gameObject;
         Burner = this.gameObject.transform.Find("Burner").gameObject;
         ThisCollider = this.gameObject.GetComponent<Collider>();
+        UICamera = GameObject.Find("UI/UICamera");
+        CameraUIScript m_CameraUIScript = UICamera.GetComponent<CameraUIScript>();
+
     }
 
     // Update is called once per frame
@@ -49,10 +53,12 @@ public class Oven : MonoBehaviour
             UtensilCollider = Utensil.GetComponent<Collider>();
             PickupTest PickupScript = Utensil.gameObject.GetComponent<PickupTest>();
             Rb = Utensil.GetComponent<Rigidbody>();
+            UICamera.GetComponent<CameraUIScript>().m_camera.enabled = true;
         }
         if(Burner.transform.childCount == 0)
         {
             OvenInUse = false;
+            UICamera.GetComponent<CameraUIScript>().m_camera.enabled = false;
         }
     }
 

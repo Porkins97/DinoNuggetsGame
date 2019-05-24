@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a30156b4db513194c9e6ef5d191919cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itype: 9
+  itype: 10
 --- !u!114 &5432420061078822795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,3 +166,5 @@ MonoBehaviour:
   CutIngredient: {fileID: 0}
   Burner: {fileID: 0}
   Oven: {fileID: 0}
+  Character: {fileID: 0}
+  Position: {fileID: 0}

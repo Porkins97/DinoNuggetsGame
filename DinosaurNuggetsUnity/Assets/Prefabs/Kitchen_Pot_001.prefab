@@ -303,6 +303,7 @@ GameObject:
   - component: {fileID: 1851170351526601034}
   - component: {fileID: 6244681345888995055}
   - component: {fileID: 4009067481484881601}
+  - component: {fileID: 3379296686013256555}
   m_Layer: 0
   m_Name: Kitchen_Pot_001
   m_TagString: Untagged
@@ -338,17 +339,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1359464450}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d17e3566fe89494f8dfbd110fc942bf, type: 3}
+  m_Script: {fileID: 11500000, guid: 80cde7be3f0d9c749b980beab982814f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisItemIsBeingCarried: 0
-  HeldLeft: 0
-  HeldRight: 0
-  WhichHand: 0
-  HandLeft: {fileID: 0}
-  HandRight: {fileID: 0}
+  ThisIsOnOven: 0
+  Burner: {fileID: 0}
   Name: {fileID: 0}
   Character: {fileID: 0}
+  CupboardTest: {fileID: 0}
+  Cupboard: {fileID: 0}
+  Cupboard1: {fileID: 0}
+  Oven: {fileID: 0}
 --- !u!54 &6244681345888995055
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -378,6 +379,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.4107477, y: 0.28095233, z: 0.46723005}
   m_Center: {x: 0.0012264848, y: 0.18109602, z: -0.016748413}
+--- !u!114 &3379296686013256555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359464450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74dc92ec0d146c341a153be093e930c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThisItemIsBeingCarried: 0
+  HeldLeft: 0
+  HeldRight: 0
+  WhichHand: 0
+  HandLeft: {fileID: 0}
+  HandRight: {fileID: 0}
+  Name: {fileID: 0}
+  Character: {fileID: 0}
 --- !u!1 &1976927372
 GameObject:
   m_ObjectHideFlags: 0
