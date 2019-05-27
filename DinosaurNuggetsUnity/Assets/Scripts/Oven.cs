@@ -15,6 +15,7 @@ public class Oven : MonoBehaviour
     public bool L_PickUpOven = false;
 
     private int Pickup = 0;
+    private bool deletetitle = false;
 
     public GameObject OvenObject;
     public GameObject Player;
@@ -22,6 +23,7 @@ public class Oven : MonoBehaviour
     public GameObject Utensil;
     public GameObject HandLeft;
     public GameObject HandRight;
+    public GameObject Title;
     private float Distance;
 
     Rigidbody Rb;
@@ -46,6 +48,13 @@ public class Oven : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if ((deletetitle == false) && (Input.anyKeyDown))
+        {
+            GameObject.Destroy(Title);
+            deletetitle = true;
+            
+        }
+
         if (Burner.transform.childCount >= 1)
         {
             OvenInUse = true;
@@ -55,7 +64,7 @@ public class Oven : MonoBehaviour
             Rb = Utensil.GetComponent<Rigidbody>();
             UICamera.GetComponent<CameraUIScript>().m_camera.enabled = true;
         }
-        if(Burner.transform.childCount == 0)
+        if((Burner.transform.childCount == 0)&&(deletetitle == true))
         {
             OvenInUse = false;
             UICamera.GetComponent<CameraUIScript>().m_camera.enabled = false;

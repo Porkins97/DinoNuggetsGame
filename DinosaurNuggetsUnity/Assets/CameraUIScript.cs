@@ -8,18 +8,26 @@ public class CameraUIScript : MonoBehaviour
     public GameObject m_oven;
     public Transform pot;
     public GameObject burner;
-    public GameObject UIElements;
+    public GameObject Recipe;
+    public GameObject Title;
+    private bool deletetitle = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        m_camera.enabled = false;
         pot = null;
+        m_camera.enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if((deletetitle == false) &&(Input.anyKeyDown))
+        {
+            GameObject.Destroy(Title);
+            deletetitle = true;
+        }
+
         if(burner.transform.childCount > 0)
         {
             pot = burner.transform.GetChild(0);
