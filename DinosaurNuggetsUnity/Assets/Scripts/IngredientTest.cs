@@ -108,7 +108,7 @@ public class IngredientTest : MonoBehaviour
             Name.transform.SetParent(Burner.transform);
             //Name.transform.localPosition = new Vector3(0f, 1f, 0f);
             ThisRigidBody.velocity = new Vector3(0f, -0.5f, 0f);
-            //Destroy(this.gameObject, 2.5f);
+            Destroy(this.gameObject, 2.5f);
             Debug.Log("Ingredient in pot");
 
             //Test code to test out recipes
@@ -119,8 +119,8 @@ public class IngredientTest : MonoBehaviour
             if (ingredient != null && recipe != null)
             {
                 bool was_correct = recipe.AddIngredient(ingredient);
-               // if (was_correct)
-                    //Destroy(ingredient.gameObject);
+                if (was_correct)
+                    Destroy(ingredient.gameObject,2.5f);
             }
         }
 

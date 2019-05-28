@@ -16,7 +16,7 @@ public class RespawnIngredient : MonoBehaviour
     void Start()
     {
         ThisGameObject = this.gameObject;
-        if(ThisGameObject.transform.childCount > 0 )
+        if (ThisGameObject.transform.childCount > 0)
         {
             Ingredient = ThisGameObject.transform.GetChild(0).gameObject;
             Debug.Log("ChildObject = " + Ingredient);
@@ -25,6 +25,8 @@ public class RespawnIngredient : MonoBehaviour
             y = Ingredient.transform.localScale.y;
             z = Ingredient.transform.localScale.z;
         }
+        else
+            Ingredient = null;
     }
 
     // Update is called once per frame
@@ -35,7 +37,7 @@ public class RespawnIngredient : MonoBehaviour
             Timer += Time.deltaTime;
 
             //Debug.Log("Timer = " + Timer);
-            NewIngredient = Ingredient.gameObject;
+            //NewIngredient = Ingredient.gameObject;
 
             if((Timer>4) && (Ingredient.GetComponent<PickupTest>().ThisItemIsBeingCarried == false))
             {
@@ -44,6 +46,9 @@ public class RespawnIngredient : MonoBehaviour
                 NewIngredient.transform.SetParent(ThisGameObject.transform);
                 NewIngredient.transform.position = ThisGameObject.transform.position;
                 NewIngredient.transform.localScale = new Vector3(x, y, z);
+                NewIngredient.GetComponent<Collider>().enabled = true;
+                NewIngredient.GetComponent<Rigidbody>().useGravity = true;
+                Ingredient = NewIngredient.gameObject;
             }
             if(Timer>10)
             {

@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 530296c2f1d50224f89466973fbf6506, type: 3}
+  - {fileID: 2100000, guid: 411b2ddddeabb5546af88f5e59ee2dfb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -146,6 +146,8 @@ MonoBehaviour:
   CutIngredient: {fileID: 0}
   Burner: {fileID: 0}
   Oven: {fileID: 0}
+  Character: {fileID: 0}
+  Position: {fileID: 0}
 --- !u!114 &3620549352753462583
 MonoBehaviour:
   m_ObjectHideFlags: 0
