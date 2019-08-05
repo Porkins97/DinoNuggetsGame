@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!65 &9028339291539152881
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2027057989718706802}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.035371166, y: 0.025983151, z: 0.07637692}
-  m_Center: {x: 0, y: 0.0016539968, z: 0}
 --- !u!54 &8266489072502376083
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29,19 +16,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5400696582972781285
-MonoBehaviour:
+--- !u!65 &9028339291539152881
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027057989718706802}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a30156b4db513194c9e6ef5d191919cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itype: 0
+  serializedVersion: 2
+  m_Size: {x: 0.035371166, y: 0.025983151, z: 0.07637692}
+  m_Center: {x: 0, y: 0.0016539968, z: 0}
 --- !u!114 &1476662291769943434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,6 +71,21 @@ MonoBehaviour:
   CutIngredient: {fileID: 0}
   Burner: {fileID: 0}
   Oven: {fileID: 0}
+  Character: {fileID: 0}
+  Position: {fileID: 0}
+--- !u!114 &5400696582972781285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027057989718706802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30156b4db513194c9e6ef5d191919cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itype: 0
 --- !u!1001 &2027057989718674642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93,7 +95,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 6d2ba91358a355549a74311b1faa5c3b, type: 3}
       propertyPath: m_Name
-      value: Ingredients_Bread_001 Variant
+      value: Ingredients_Bread_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6d2ba91358a355549a74311b1faa5c3b, type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6d2ba91358a355549a74311b1faa5c3b, type: 3}
       propertyPath: m_LocalPosition.x

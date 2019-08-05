@@ -39,21 +39,29 @@ public class RespawnIngredient : MonoBehaviour
             //Debug.Log("Timer = " + Timer);
             //NewIngredient = Ingredient.gameObject;
 
-            if((Timer>4) && (Ingredient.GetComponent<PickupTest>().ThisItemIsBeingCarried == false))
+            if((Timer>4) || (Ingredient.GetComponent<PickupTest>().ThisItemIsBeingCarried == false))
             {
                 Timer = 0f;
-                NewIngredient = Instantiate(Ingredient,ThisPosition);
-                NewIngredient.transform.SetParent(ThisGameObject.transform);
-                NewIngredient.transform.position = ThisGameObject.transform.position;
-                NewIngredient.transform.localScale = new Vector3(x, y, z);
-                NewIngredient.GetComponent<Collider>().enabled = true;
-                NewIngredient.GetComponent<Rigidbody>().useGravity = true;
-                Ingredient = NewIngredient.gameObject;
+                Spawn();
             }
-            if(Timer>10)
-            {
-                Timer = 0;
-            }
+        }
+    }
+
+    private void Spawn()
+    {
+        NewIngredient = Instantiate(Ingredient, ThisPosition);
+        NewIngredient.transform.SetParent(ThisGameObject.transform);
+        NewIngredient.transform.position = ThisGameObject.transform.position;
+        NewIngredient.transform.localScale = new Vector3(x, y, z);
+        NewIngredient.GetComponent<Collider>().enabled = true;
+        NewIngredient.GetComponent<Rigidbody>().useGravity = true;
+        Ingredient = NewIngredient.gameObject;
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if((collision.gameObject.tag == "Ingredient") && (collision.gameObject.transform.parent == this.gameObject))
+        {
+            Spawn();
         }
     }
 }

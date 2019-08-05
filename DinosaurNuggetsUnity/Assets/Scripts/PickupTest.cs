@@ -151,7 +151,7 @@ public class PickupTest : MonoBehaviour
         Name.transform.SetParent(HandRight.transform);
         Debug.Log("PickUpRight Finished");
     }
-    private void Drop()
+    public void Drop()
     {
 
         ThisRigidBody.isKinematic = false;

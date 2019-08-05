@@ -84,6 +84,8 @@ MonoBehaviour:
   CutIngredient: {fileID: 0}
   Burner: {fileID: 0}
   Oven: {fileID: 0}
+  Character: {fileID: 0}
+  Position: {fileID: 0}
 --- !u!1001 &3574115499621387534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -94,6 +96,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 34b3f693f3ef0a84bbd4686bd121af2c, type: 3}
       propertyPath: m_Name
       value: Ingredients_Bread_Cut_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 34b3f693f3ef0a84bbd4686bd121af2c, type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 34b3f693f3ef0a84bbd4686bd121af2c, type: 3}
       propertyPath: m_LocalPosition.x
