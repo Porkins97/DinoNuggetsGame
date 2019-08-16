@@ -52,6 +52,7 @@ public class Recipe : MonoBehaviour
     public GameObject Ingredient;
     public GameObject Pot;
     public GameObject Burner;
+    public GameObject UICamera;
     
     public RecipeStep[] steps;
     private int currentStep;
@@ -90,6 +91,11 @@ public class Recipe : MonoBehaviour
         if (steps.Length > 0)
             progress = currentStep / (1.0f * steps.Length);
         Debug.Log("Progress is " + progress * 100.0f + "%");
+        if (progress == 1)
+        {
+            UICamera.GetComponent<CameraUIScript>().WinUI();
+            Debug.Log("Should show win screen now");
+        }
         return progress;
     }
 

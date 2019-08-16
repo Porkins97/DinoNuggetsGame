@@ -1933,6 +1933,7 @@ MonoBehaviour:
   Ingredient: {fileID: 0}
   Pot: {fileID: 0}
   Burner: {fileID: 0}
+  UICamera: {fileID: 1172095333}
   steps:
   - amountNeeded: 1
     ingredient: 13
@@ -2170,6 +2171,12 @@ Transform:
   m_Father: {fileID: 108285312}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &1172095333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1038699441480929396, guid: be6f4412504e8534b82e1545de18077b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1038699441737937397}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1191461129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4250,6 +4257,53 @@ PrefabInstance:
       propertyPath: burner
       value: 
       objectReference: {fileID: 1544222743}
+    - target: {fileID: 7778516651509428693, guid: be6f4412504e8534b82e1545de18077b,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Congratulations
+
+        You Win!!!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778516651509428693, guid: be6f4412504e8534b82e1545de18077b,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778516651509428693, guid: be6f4412504e8534b82e1545de18077b,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778516651509428693, guid: be6f4412504e8534b82e1545de18077b,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778516651509428693, guid: be6f4412504e8534b82e1545de18077b,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778516651509428693, guid: be6f4412504e8534b82e1545de18077b,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541742350802191359, guid: be6f4412504e8534b82e1545de18077b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541742350802191359, guid: be6f4412504e8534b82e1545de18077b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541742350802191359, guid: be6f4412504e8534b82e1545de18077b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be6f4412504e8534b82e1545de18077b, type: 3}
 --- !u!1001 &6303640129845276451

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraUIScript : MonoBehaviour
 {
@@ -11,12 +12,14 @@ public class CameraUIScript : MonoBehaviour
     public GameObject Recipe;
     public GameObject Title;
     private bool deletetitle = false;
+    public Text WinText;
 
     // Start is called before the first frame update
     void Start()
     {
         pot = null;
         m_camera.enabled = true;
+        WinText.enabled = false;
     }
 
     // Update is called once per frame
@@ -41,5 +44,9 @@ public class CameraUIScript : MonoBehaviour
         }
     }    
     
-
+    public void WinUI()
+    {
+        WinText.enabled = true;
+        Debug.Log("Test Test Test");
+    }
 }
