@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 420417624}
   - component: {fileID: 420417623}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Gameobject with menu script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -289,12 +289,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayButton: {fileID: 1170072922}
   LevelSelectButton: {fileID: 2054385540}
-  CreditsButton: {fileID: 1443879282}
+  ControlsButton: {fileID: 1443879282}
   HomeLevel: {fileID: 803854605}
-  HomeCredits: {fileID: 607116163}
+  HomeControls: {fileID: 607116163}
   Homescreen: {fileID: 364188574}
   LevelSelectScreen: {fileID: 247380587}
-  CreditsScreen: {fileID: 1334405161}
+  ControlsScreen: {fileID: 1334405161}
 --- !u!4 &420417624
 Transform:
   m_ObjectHideFlags: 0
@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 534555801}
   - component: {fileID: 534555800}
   m_Layer: 5
-  m_Name: CreditsText
+  m_Name: ControlsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -379,7 +379,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Credits
+  m_Text: Controls
 --- !u!222 &534555801
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 607116164}
   - component: {fileID: 607116163}
   m_Layer: 0
-  m_Name: HomeButtonCredits
+  m_Name: HomeButtonControls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1208,7 +1208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1334405162}
   m_Layer: 0
-  m_Name: Credits
+  m_Name: Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1243,7 +1243,7 @@ GameObject:
   - component: {fileID: 1443879283}
   - component: {fileID: 1443879282}
   m_Layer: 5
-  m_Name: CreditsButton
+  m_Name: ControlsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

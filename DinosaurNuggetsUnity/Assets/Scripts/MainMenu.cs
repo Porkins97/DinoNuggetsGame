@@ -8,19 +8,19 @@ public class MainMenu : MonoBehaviour
 {
     public Button PlayButton;
     public Button LevelSelectButton;
-    public Button CreditsButton;
+    public Button ControlsButton;
     public Button HomeLevel;
-    public Button HomeCredits;
+    public Button HomeControls;
 
     string Kitchen = "DinoNuggetsPrototypeScene2";
 
     public GameObject Homescreen;
     public GameObject LevelSelectScreen;
-    public GameObject CreditsScreen;
+    public GameObject ControlsScreen;
 
     bool MainMenuActive = true;
     bool LevelSelectActive = false;
-    bool CreditsActive = false;
+    bool ControlsActive = false;
 
 	void Start () 
     {
@@ -30,14 +30,14 @@ public class MainMenu : MonoBehaviour
         Button btnSelect = LevelSelectButton.GetComponent<Button>();
         btnSelect.onClick.AddListener(TaskOnClickLevel);
 
-        Button btnCredit = CreditsButton.GetComponent<Button>();
-        btnCredit.onClick.AddListener(TaskOnClickCredit);
+        Button btnControls = ControlsButton.GetComponent<Button>();
+        btnControls.onClick.AddListener(TaskOnClickControls);
 
         Button btnHomeLevel = HomeLevel.GetComponent<Button>();
         btnHomeLevel.onClick.AddListener(TaskOnClickHome);
 
-        Button btnHomeCredits = HomeCredits.GetComponent<Button>();
-        btnHomeCredits.onClick.AddListener(TaskOnClickHome);
+        Button btnHomeControls = HomeControls.GetComponent<Button>();
+        btnHomeControls.onClick.AddListener(TaskOnClickHome);
 
         UpdateUI();
     }
@@ -52,15 +52,15 @@ public class MainMenu : MonoBehaviour
         Debug.Log("You have clicked the Level Select button!");
         MainMenuActive = false;
         LevelSelectActive = true;
-        CreditsActive = false;
+        ControlsActive = false;
         UpdateUI();
     }
-    void TaskOnClickCredit()
+    void TaskOnClickControls()
     {
-        Debug.Log("You have clicked the Credit button!");
+        Debug.Log("You have clicked the Controls button!");
         MainMenuActive = false;
         LevelSelectActive = false;
-        CreditsActive = true;
+        ControlsActive = true;
         UpdateUI();
     }
     void TaskOnClickHome()
@@ -68,7 +68,7 @@ public class MainMenu : MonoBehaviour
         Debug.Log("You have clicked the Home button!");
         MainMenuActive = true;
         LevelSelectActive = false;
-        CreditsActive = false;
+        ControlsActive = false;
         UpdateUI();
     }
 
@@ -98,13 +98,13 @@ public class MainMenu : MonoBehaviour
             LevelSelectScreen.SetActive(false);
         }
 
-        if(CreditsActive == true)
+        if(ControlsActive == true)
         {
-            CreditsScreen.SetActive(true);
+            ControlsScreen.SetActive(true);
         }
         else
         {
-            CreditsScreen.SetActive(false);
+            ControlsScreen.SetActive(false);
         }
     }
 }
