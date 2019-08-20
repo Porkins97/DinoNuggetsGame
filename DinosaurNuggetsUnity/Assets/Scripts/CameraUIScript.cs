@@ -36,12 +36,12 @@ public class CameraUIScript : MonoBehaviour
             pot = burner.transform.GetChild(0);
         }
 
-        if (pot != null)
+        /*if (pot != null)
         {
             Vector3 screenPos = m_camera.WorldToScreenPoint(pot.position);
             //Debug.Log("Pot is " + screenPos.x + "Pixels from the left");
             //UIElements.transform.position = screenPos;
-        }
+        }*/
     }    
     
     public void WinUI()
