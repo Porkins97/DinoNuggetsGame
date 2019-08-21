@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: f2616cd70f0a7564089ee90c51b0ee90
+labels:
+- Ingredient
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
@@ -98,7 +100,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.099999994
+    globalScale: 10
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

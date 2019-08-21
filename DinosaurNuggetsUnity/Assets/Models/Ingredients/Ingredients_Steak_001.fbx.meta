@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 0d026b27b68189d4e81240914a5bde35
+labels:
+- Ingredient
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
