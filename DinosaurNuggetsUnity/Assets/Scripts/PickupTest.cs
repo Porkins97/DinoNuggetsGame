@@ -24,6 +24,8 @@ public class PickupTest : MonoBehaviour
     public GameObject Name;
     public GameObject Character;
 
+    public Collider colLeftHand;
+    public Collider colRightHand;
     Collider ObjectCollider;
 
     // Start is called before the first frame update
@@ -111,7 +113,7 @@ public class PickupTest : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if ((collision.gameObject.name == "Character_Model_01") && (ThisItemIsBeingCarried == false))
+        if ((collision.gameObject.name == "Character_Model_01")  && (ThisItemIsBeingCarried == false))
         {
             HeldLeft++;
             HeldRight++;
@@ -120,7 +122,7 @@ public class PickupTest : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)   
     {
-        if (collision.gameObject.name == "Character_Model_01")
+      if ((collision.gameObject.name == "Character_Model_01")  && (ThisItemIsBeingCarried == false))
         {
             HeldLeft--;
             HeldRight--;

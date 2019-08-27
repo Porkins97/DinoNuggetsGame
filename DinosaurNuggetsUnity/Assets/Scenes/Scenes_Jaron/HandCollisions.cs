@@ -13,7 +13,7 @@ public class HandCollisions : MonoBehaviour
     {
         if(col.tag == "Ingredient")
         {
-            PickItUp.
+            
         }
         //if (collider == playerCollider) CollideWithPlayer();
     }

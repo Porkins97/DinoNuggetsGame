@@ -11,16 +11,18 @@ public enum IngredientType
     MILK,
     LETTUCE,
     ONION_WHOLE,
-    ONION_CHOPPED,
+    ONION_SLICED,
     STEAK,
     FISH_WHOLE,
     FISH_SLICED,
     EGG,
     TOMATO_WHOLE,
-    TOMATO_CHOPPED,
+    TOMATO_SLICED,
     CHEESE,
     BROCOLLI,
-    CHICKEN
+    CHICKEN,
+    MUSHROOM,
+    MUSHROOM_SLICED
 }
 
 public class Ingredient : MonoBehaviour

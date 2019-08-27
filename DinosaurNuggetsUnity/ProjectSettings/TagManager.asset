@@ -8,6 +8,9 @@ TagManager:
   - Oven
   - Cupboard
   - Ingredient
+  - List
+  - Knife
+  - Utensil
   layers:
   - Default
   - TransparentFX
