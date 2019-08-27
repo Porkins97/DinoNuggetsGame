@@ -55,13 +55,13 @@ public class IngredientTest : MonoBehaviour
             ObjectCollider.enabled = false;
         }
 
-       /* if((OnCupboard == true) && (DoubleCupboard.Cut == true))
+        if((OnCupboard == true) && (DoubleCupboard.Cut == true))
         {
             Instantiate(CutIngredient);
             CutIngredient.transform.position = Cupboard.transform.position;
             CutIngredient.transform.SetParent(Cupboard.transform);
             Destroy(this.gameObject);
-        } */
+        } 
     }
 
     private void OnCollisionEnter(Collision collision)

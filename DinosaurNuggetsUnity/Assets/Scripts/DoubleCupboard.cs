@@ -121,10 +121,10 @@ public class DoubleCupboard : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        /*if (collision.gameObject.name == "Knife_001")
+        if (collision.gameObject.name == "Knife_001")
         {
             Cut = true;
-        }*/
+        }
 
         if (collision.gameObject.name == "Character_Model_01")
         {
@@ -165,10 +165,10 @@ public class DoubleCupboard : MonoBehaviour
     }
     private void OnCollisionExit(Collision collision)
     {
-        /*if(collision.gameObject.name == "Knife_001")
+        if(collision.gameObject.name == "Knife_001")
         {
             Cut = false;
-        }*/
+        }
     }
     public void PickupLeft()
     {
