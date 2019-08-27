@@ -352,6 +352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 938351360}
   - component: {fileID: 938351361}
+  - component: {fileID: 4811900192729476238}
   m_Layer: 0
   m_Name: Kitchen_Cupboard_Double
   m_TagString: Untagged
@@ -375,6 +376,8 @@ Transform:
   - {fileID: 2049026584}
   - {fileID: 1006706173}
   - {fileID: 127783491}
+  - {fileID: 1648771527793828834}
+  - {fileID: 7600302551071973918}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -391,6 +394,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.66152537, z: 0.60453194}
   m_Center: {x: 0, y: 0.27385694, z: 0.049093157}
+--- !u!114 &4811900192729476238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938351359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af65d6ac456f77949908edce2ec7fce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spot1: 0
+  Spot2: 0
+  Knife: {fileID: 0}
+  Cupboard: {fileID: 0}
+  Cuttingspot1: {fileID: 7094769956861800574}
+  Cuttingspot2: {fileID: 752519355494245214}
+  Ingredient1: {fileID: 0}
+  Ingredient2: {fileID: 0}
+  HandLeft: {fileID: 0}
+  HandRight: {fileID: 0}
+  placeholder1: {fileID: 0}
+  placeholder2: {fileID: 0}
+  Name: {fileID: 0}
+  Player: {fileID: 0}
+  distance: 0
 --- !u!1 &1006706172
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,7 +632,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 46fd5ab5d9ff79a4498bd2f6e9bd7dcb, type: 3}
+  - {fileID: 2100000, guid: 74e36fedf4081b54f9c030ead74c2a0d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -866,7 +896,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 46fd5ab5d9ff79a4498bd2f6e9bd7dcb, type: 3}
+  - {fileID: 2100000, guid: 74e36fedf4081b54f9c030ead74c2a0d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -886,3 +916,63 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &752519355494245214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7600302551071973918}
+  m_Layer: 0
+  m_Name: CuttingSpot (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7600302551071973918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752519355494245214}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.224, y: 0.606, z: 0.038}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 938351360}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7094769956861800574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1648771527793828834}
+  m_Layer: 0
+  m_Name: CuttingSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1648771527793828834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7094769956861800574}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: -0.23702848, y: 0.606, z: 0.038}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 938351360}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

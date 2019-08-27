@@ -10,8 +10,6 @@ public class DoubleCupboard : MonoBehaviour
 
     public bool Spot1 = false;
     public bool Spot2 = false;
-    private int value1 = 0;
-    private int value2 = 0;
     private bool Mouse0Down = false;
     private bool Mouse1Down = false;
 
@@ -23,9 +21,8 @@ public class DoubleCupboard : MonoBehaviour
     public GameObject Ingredient2;
     public GameObject HandLeft;
     public GameObject HandRight;
-    public GameObject placeholder1;
-    public GameObject placeholder2;
     public GameObject Name;
+    //name refers to the ingredient on the cutting spot. If Name collides with knife it cuts. I hate myself for using the word name
     public GameObject Player;
 
     private Rigidbody ThisRigidBody;
