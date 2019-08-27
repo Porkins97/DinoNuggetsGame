@@ -475,43 +475,9 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
-      copied configuration does not match position in animation file:\n\t'Hip_L' :
-      position error = 356.470917 mm\n\t'Knee_L' : position error = 302.247467 mm\n\t'Ankle_L'
-      : position error = 341.471771 mm\n\t'Heel_L' : position error = 198.316269 mm\n\t'Toes_L'
-      : position error = 127.629013 mm\n\t'joint1' : position error = 148.957474 mm\n\t'Clavicle'
-      : position error = 138.661758 mm\n\t'Neck_1' : position error = 173.276047 mm\n\t'Neck_2'
-      : position error = 212.823532 mm\n\t'Head' : position error = 200.307220 mm\n\t'Nose'
-      : position error = 498.065125 mm\n\t'Shoulder_L' : position error = 311.585693
-      mm\n\t'Elbow_L' : position error = 287.846527 mm\n\t'Wrist_L' : position error
-      = 323.250824 mm\n\t'Thumb_L_1' : position error = 67.484566 mm\n\t'Thumb_L_2'
-      : position error = 71.971619 mm\n\t'Finger_1_L_1' : position error = 131.074768
-      mm\n\t'Finger_1_L_2' : position error = 78.840149 mm\n\t'Finger_1_L_3' : position
-      error = 53.834763 mm\n\t'Finger_2_L_1' : position error = 138.433212 mm\n\t'Finger_2_L_2'
-      : position error = 68.895210 mm\n\t'Finger_2_L_3' : position error = 59.248287
-      mm\n\t'Finger_3_L_1' : position error = 132.711029 mm\n\t'Finger_3_L_2' : position
-      error = 71.001175 mm\n\t'Finger_3_L_3' : position error = 57.588348 mm\n\t'Shoulder_R'
-      : position error = 311.584900 mm\n\t'Elbow_R' : position error = 287.846527
-      mm\n\t'Wrist_R' : position error = 323.250824 mm\n\t'Thumb_R_1' : position error
-      = 67.484535 mm\n\t'Thumb_R_2' : position error = 71.971649 mm\n\t'Finger_1_R_1'
-      : position error = 131.074738 mm\n\t'Finger_1_R_2' : position error = 78.839943
-      mm\n\t'Finger_1_R_3' : position error = 53.834736 mm\n\t'Finger_2_R_1' : position
-      error = 138.433212 mm\n\t'Finger_2_R_2' : position error = 68.895210 mm\n\t'Finger_2_R_3'
-      : position error = 59.248310 mm\n\t'Finger_3_R_1' : position error = 132.711105
-      mm\n\t'Finger_3_R_2' : position error = 71.001213 mm\n\t'Finger_3_R_3' : position
-      error = 57.588390 mm\n\t'Hip_R' : position error = 356.470520 mm\n\t'Knee_R'
-      : position error = 302.247284 mm\n\t'Ankle_R' : position error = 341.471802
-      mm\n\t'Heel_R' : position error = 198.316498 mm\n\t'Toes_R' : position error
-      = 127.628448 mm\nCopied Avatar Rig Configuration mis-match. Inbetween bone rotation
-      in copied configuration does not match rotation in animation file:\n\t'Heel_L'
-      : rotation error = 17.690563 deg\n\t'Heel_R' : rotation error = 23.692905 deg\n"
+    rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
-      improve retargeting quality.\n\t'Heel_L' is inbetween humanoid transforms and
-      has rotation animation that will be discarded.\n\t'Neck_2' is inbetween humanoid
-      transforms and has rotation animation that will be discarded.\n\t'Heel_R' is
-      inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -589,7 +555,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 1
   humanDescription:
     serializedVersion: 3

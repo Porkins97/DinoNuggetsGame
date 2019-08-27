@@ -2,19 +2,42 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class HandCollisions : MonoBehaviour
 {
-    private Collider boxCol;
-    void start()
+    [SerializeField] private GameObject PickupGO = null;
+    private Quaternion _iniRot;
+
+    void Start()
     {
-        boxCol = gameObject.GetComponent<Collider>();
+        _iniRot = transform.rotation;
     }
+    
+    void LateUpdate()
+    {
+        transform.rotation = _iniRot;
+    }
+
+
+
+    
     void OnTriggerEnter (Collider col) 
     {
         if(col.tag == "Ingredient")
         {
-            PickItUp.
+            PickupGO.GetComponent<PickupScript>().PickItUp(gameObject, col.gameObject);
         }
-        //if (collider == playerCollider) CollideWithPlayer();
     }
+    void OnTriggerExit (Collider col) 
+    {
+        if(col.tag == "Ingredient")
+        {
+            PickupGO.GetComponent<PickupScript>().PickItUpExit(gameObject, col.gameObject);
+        }
+    }
+    
+
+    
+
+
 }
