@@ -1,31 +1,8 @@
 fileFormatVersion: 2
 guid: 530296c2f1d50224f89466973fbf6506
-labels:
-- Ingredient
 ModelImporter:
   serializedVersion: 25
-  internalIDToNameTable:
-  - first:
-      1: 100000
-    second: //RootNode
-  - first:
-      4: 400000
-    second: //RootNode
-  - first:
-      21: 2100000
-    second: lambert1
-  - first:
-      21: 2100002
-    second: FishSlicedTex
-  - first:
-      23: 2300000
-    second: //RootNode
-  - first:
-      33: 3300000
-    second: //RootNode
-  - first:
-      43: 4300000
-    second: pCylinder1
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -54,10 +31,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 10
+    globalScale: 9
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -103,7 +80,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 10
+    globalScale: 0.089999996
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &362492218953947609
+--- !u!1 &8902914029581274528
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,50 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8618824715579584344}
-  - component: {fileID: 3089496158875112951}
-  - component: {fileID: 3070912267762317515}
-  - component: {fileID: 658365335163530708}
-  - component: {fileID: 100711348556957842}
-  - component: {fileID: 8737716548984178403}
-  - component: {fileID: 3994183938233780662}
-  - component: {fileID: 5594076962936622744}
+  - component: {fileID: 7764200575801556721}
+  - component: {fileID: 1340933572115896708}
+  - component: {fileID: 2714783638369719399}
+  - component: {fileID: 4660915511260019825}
+  - component: {fileID: 233453106091249103}
+  - component: {fileID: 3907738982319010713}
+  - component: {fileID: 532431670269625012}
+  - component: {fileID: 3620549352753462583}
   m_Layer: 0
-  m_Name: Onion_001
+  m_Name: Ingredient_Fish_Sliced_001
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8618824715579584344
+--- !u!4 &7764200575801556721
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362492218953947609}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 8902914029581274528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3089496158875112951
+--- !u!33 &1340933572115896708
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362492218953947609}
-  m_Mesh: {fileID: 4300000, guid: c1c70ed3eefb9464785093416baa304d, type: 3}
---- !u!23 &3070912267762317515
+  m_GameObject: {fileID: 8902914029581274528}
+  m_Mesh: {fileID: 8360479256576595352, guid: 530296c2f1d50224f89466973fbf6506, type: 3}
+--- !u!23 &2714783638369719399
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362492218953947609}
+  m_GameObject: {fileID: 8902914029581274528}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,8 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8e571eef4f4811a4d9678bf9992c1a86, type: 2}
-  - {fileID: 2100000, guid: 8e571eef4f4811a4d9678bf9992c1a86, type: 2}
+  - {fileID: 2100000, guid: bf2e8de617223784abcc9dfc352f2544, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,26 +82,26 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &658365335163530708
+--- !u!65 &4660915511260019825
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362492218953947609}
+  m_GameObject: {fileID: 8902914029581274528}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.19999999, y: 0.39019638, z: 0.19999999}
-  m_Center: {x: 0, y: 0.10581449, z: 0.0000000037252903}
---- !u!54 &100711348556957842
+  m_Size: {x: 0.08870396, y: 0.021017736, z: 0.15739912}
+  m_Center: {x: -0.0000000055879354, y: 0.010508846, z: -0.0022053681}
+--- !u!54 &233453106091249103
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362492218953947609}
+  m_GameObject: {fileID: 8902914029581274528}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -112,46 +111,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8737716548984178403
+--- !u!114 &3907738982319010713
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362492218953947609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74dc92ec0d146c341a153be093e930c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ThisItemIsBeingCarried: 0
-  HeldLeft: 0
-  HeldRight: 0
-  WhichHand: 0
-  HandLeft: {fileID: 0}
-  HandRight: {fileID: 0}
-  Name: {fileID: 0}
-  Character: {fileID: 0}
---- !u!114 &3994183938233780662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362492218953947609}
+  m_GameObject: {fileID: 8902914029581274528}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a30156b4db513194c9e6ef5d191919cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itype: 5
---- !u!114 &5594076962936622744
+  itype: 9
+--- !u!114 &532431670269625012
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362492218953947609}
+  m_GameObject: {fileID: 8902914029581274528}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5929bda0602de0445a273d675c71a9eb, type: 3}
@@ -169,3 +148,23 @@ MonoBehaviour:
   Oven: {fileID: 0}
   Character: {fileID: 0}
   Position: {fileID: 0}
+--- !u!114 &3620549352753462583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8902914029581274528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74dc92ec0d146c341a153be093e930c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThisItemIsBeingCarried: 0
+  HeldLeft: 0
+  HeldRight: 0
+  WhichHand: 0
+  HandLeft: {fileID: 0}
+  HandRight: {fileID: 0}
+  Name: {fileID: 0}
+  Character: {fileID: 0}

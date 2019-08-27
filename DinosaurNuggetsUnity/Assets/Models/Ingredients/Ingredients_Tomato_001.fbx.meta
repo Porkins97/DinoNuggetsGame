@@ -1,52 +1,8 @@
 fileFormatVersion: 2
 guid: 06ec56ba4c4d5be43a17dcf1b90ccd0c
-labels:
-- Ingredient
 ModelImporter:
   serializedVersion: 25
-  internalIDToNameTable:
-  - first:
-      1: 100000
-    second: pSphere1
-  - first:
-      1: 100002
-    second: pSphere3
-  - first:
-      1: 100004
-    second: //RootNode
-  - first:
-      4: 400000
-    second: pSphere1
-  - first:
-      4: 400002
-    second: pSphere3
-  - first:
-      4: 400004
-    second: //RootNode
-  - first:
-      21: 2100000
-    second: lambert1
-  - first:
-      21: 2100002
-    second: lambert2
-  - first:
-      23: 2300000
-    second: pSphere1
-  - first:
-      23: 2300002
-    second: pSphere3
-  - first:
-      33: 3300000
-    second: pSphere1
-  - first:
-      33: 3300002
-    second: pSphere3
-  - first:
-      43: 4300000
-    second: pSphere1
-  - first:
-      43: 4300002
-    second: pSphere3
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -75,10 +31,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 10
+    globalScale: 2
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -124,7 +80,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 10
+    globalScale: 0.02
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
