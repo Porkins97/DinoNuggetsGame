@@ -1,0 +1,71 @@
+{
+    "name": "PlayerControls",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "2b5224c5-1e5b-4a87-a3f2-b25fc4a4a43c",
+            "actions": [
+                {
+                    "name": "Grow",
+                    "type": "Button",
+                    "id": "db8c2117-c683-4617-9858-0c7eaa732150",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Move",
+                    "type": "Button",
+                    "id": "98b8a0f7-d89a-4c5c-9fd0-92d3f64ae720",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Arms",
+                    "type": "Button",
+                    "id": "0ff17543-f65e-4f7a-9e24-31ef0c8cc021",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "be66f344-21ca-4e26-880b-c11bca2e7d34",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Grow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "25606353-4785-42d2-bf3f-d9e2bac6f4ad",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3fc4869f-bf3e-48a1-be18-ed2b77fed8a5",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Arms",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
