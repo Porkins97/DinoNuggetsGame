@@ -15,6 +15,5 @@ public class HandCollisions : MonoBehaviour
         {
             
         }
-        //if (collider == playerCollider) CollideWithPlayer();
     }
 }

@@ -53,20 +53,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        //transform.Rotate(0, Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime, 0);
-        //Vector3 vel= transform.forward * Input.GetAxis("Vertical") * speed;
-        //var controller = GetComponent<CharacterController>();
-        //controller.SimpleMove(vel);
-/*
-      
-
-        _inputs = Vector3.zero;
-        _inputs.x = Input.GetAxis("Horizontal");
-        _inputs.z = Input.GetAxis("Vertical");
-
-        _inputs = _inputs.normalized;
- */
-
         Vector3 m = new Vector3(move.x, 0.0f, move.y) * speed * Time.deltaTime;
         transform.Translate(m, Space.World);
 
