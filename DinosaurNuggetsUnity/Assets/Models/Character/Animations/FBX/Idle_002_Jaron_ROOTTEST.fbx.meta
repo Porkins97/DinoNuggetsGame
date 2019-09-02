@@ -5,7 +5,7 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: Take 001
+    second: Idle_Walk
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -35,7 +35,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: Idle_Walk
       takeName: Take 001
       internalID: 1827226128182048838
       firstFrame: 1
@@ -66,14 +66,14 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 25
+    globalScale: 12
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
-    importVisibility: 1
+    importVisibility: 0
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -117,347 +117,347 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_Pelvis_JNT
       parentName: Dino_ROOT_JNT
-      position: {x: -1.2576498, y: 0.15375137, z: 0}
+      position: {x: -0.6036719, y: 0.07380065, z: 0}
       rotation: {x: -0.8412765, y: 0.5406027, z: 0.0003337562, w: 0.0015402734}
       scale: {x: 0.99999994, y: 0.9999999, z: 0.9999998}
     - name: Dino_Backbone_JNT
       parentName: Dino_Pelvis_JNT
-      position: {x: -0.27574524, y: -0.009021586, z: 0.0001731066}
+      position: {x: -0.13235772, y: -0.0043303613, z: 0.00008309116}
       rotation: {x: -0.0011988177, y: 0.0010230182, z: -0.07800693, w: 0.9969516}
       scale: {x: 0.99999994, y: 1.0000001, z: 0.9999998}
     - name: Dino_Clavicle_JNT
       parentName: Dino_Backbone_JNT
-      position: {x: -0.2665085, y: -1.110223e-16, z: -3.3827108e-17}
+      position: {x: -0.12792407, y: -5.3290704e-17, z: -1.6237011e-17}
       rotation: {x: 0.000000016181732, y: 0.000000037485737, z: -0.12294905, w: 0.992413}
       scale: {x: 1, y: 0.9999998, z: 1.0000002}
     - name: Dino_L_Shoulder_JNT_FK
       parentName: Dino_Clavicle_JNT
-      position: {x: 0.0132027175, y: 0.08002983, z: -0.3103515}
+      position: {x: 0.0063373037, y: 0.038414318, z: -0.14896871}
       rotation: {x: 0.09848947, y: -0.36583558, z: 0.7396329, w: 0.55624396}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_Elbow_JNT_FK
       parentName: Dino_L_Shoulder_JNT_FK
-      position: {x: -0.46226788, y: 0, z: 1.9428903e-16}
+      position: {x: -0.22188856, y: 0, z: 9.325873e-17}
       rotation: {x: 0.09161273, y: 0.40384322, z: -0.38763878, w: 0.8235617}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_Wrist_JNT_FK
       parentName: Dino_L_Elbow_JNT_FK
-      position: {x: -0.46587008, y: 2.220446e-15, z: 2.220446e-16}
+      position: {x: -0.22361763, y: 1.065814e-15, z: 1.0658141e-16}
       rotation: {x: -1.110223e-16, y: 1.0061396e-16, z: -1.2906343e-15, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_Shoulder_JNT_IK
       parentName: Dino_Clavicle_JNT
-      position: {x: 0.0132027175, y: 0.08002983, z: -0.3103515}
+      position: {x: 0.0063373037, y: 0.038414318, z: -0.14896871}
       rotation: {x: 0.09848947, y: -0.36583558, z: 0.7396329, w: 0.55624396}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_Elbow_JNT_IK
       parentName: Dino_L_Shoulder_JNT_IK
-      position: {x: -0.46226788, y: 0, z: 1.9428903e-16}
+      position: {x: -0.22188856, y: 0, z: 9.325873e-17}
       rotation: {x: 0.09161273, y: 0.40384322, z: -0.38763878, w: 0.8235617}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_Wrist_JNT_IK
       parentName: Dino_L_Elbow_JNT_IK
-      position: {x: -0.46587008, y: 2.220446e-15, z: 2.220446e-16}
+      position: {x: -0.22361763, y: 1.065814e-15, z: 1.0658141e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_Shoulder_JNT_MASTER
       parentName: Dino_Clavicle_JNT
-      position: {x: 0.0132027175, y: 0.08002983, z: -0.3103515}
+      position: {x: 0.0063373037, y: 0.038414318, z: -0.14896871}
       rotation: {x: 0.4626446, y: -0.5193343, z: 0.4884049, w: 0.5269844}
       scale: {x: 1.0000004, y: 1.0000005, z: 1.0000002}
     - name: Dino_L_Elbow_JNT
       parentName: Dino_L_Shoulder_JNT_MASTER
-      position: {x: -0.46226788, y: 0, z: 1.9428903e-16}
+      position: {x: -0.22188856, y: 0, z: 9.325873e-17}
       rotation: {x: 0.0988294, y: -0.0071122637, z: -0.017330868, w: 0.9949281}
       scale: {x: 1.0000006, y: 0.99999976, z: 1.0000002}
     - name: Dino_L_Wrist_JNT
       parentName: Dino_L_Elbow_JNT
-      position: {x: -0.46587008, y: 2.220446e-15, z: 2.220446e-16}
+      position: {x: -0.22361763, y: 1.065814e-15, z: 1.0658141e-16}
       rotation: {x: -0.000000104308135, y: -0.032369405, z: -0.06156595, w: 0.997578}
       scale: {x: 1.0000007, y: 1.0000001, z: 1.0000008}
     - name: Dino_L_ForeFinger_01_JNT
       parentName: Dino_L_Wrist_JNT
-      position: {x: -0.15655012, y: -0.05173623, z: 0.04454377}
+      position: {x: -0.07514406, y: -0.024833387, z: 0.021381008}
       rotation: {x: 0.024515623, y: 0.01706284, z: 0.20164959, w: 0.97900224}
       scale: {x: 1.0000012, y: 1.0000001, z: 1.0000011}
     - name: Dino_L_ForeFinger_02_JNT
       parentName: Dino_L_ForeFinger_01_JNT
-      position: {x: -0.09562658, y: 6.661338e-16, z: -6.661338e-16}
+      position: {x: -0.045900755, y: 3.1974422e-16, z: -3.1974422e-16}
       rotation: {x: -0.0023055035, y: -0.010963649, z: 0.013255716, w: 0.99984944}
       scale: {x: 1, y: 0.9999997, z: 1.0000002}
     - name: Dino_L_ForeFinger_03_JNT
       parentName: Dino_L_ForeFinger_02_JNT
-      position: {x: -0.07482827, y: 4.440892e-16, z: -2.220446e-16}
+      position: {x: -0.035917565, y: 2.1316282e-16, z: -1.0658141e-16}
       rotation: {x: -0, y: -0, z: 2.9649525e-10, w: 1}
       scale: {x: 1.0000006, y: 1.0000004, z: 1.0000006}
     - name: Dino_L_MiddleFinger_01_JNT
       parentName: Dino_L_Wrist_JNT
-      position: {x: -0.1726243, y: -0.072973736, z: -0.024521291}
+      position: {x: -0.082859665, y: -0.035027392, z: -0.01177022}
       rotation: {x: 0.0015099421, y: -0.067186356, z: 0.19271743, w: 0.9789503}
       scale: {x: 1.0000005, y: 1.0000002, z: 1.0000007}
     - name: Dino_L_MiddleFinger_02_JNT
       parentName: Dino_L_MiddleFinger_01_JNT
-      position: {x: -0.102017954, y: -2.220446e-16, z: 2.220446e-16}
+      position: {x: -0.048968613, y: -1.0658141e-16, z: 1.0658141e-16}
       rotation: {x: -0.008420777, y: -0.03218474, z: 0.025443356, w: 0.9991226}
       scale: {x: 1.000001, y: 1, z: 1.0000011}
     - name: Dino_L_MiddleFinger_03_JNT
       parentName: Dino_L_MiddleFinger_02_JNT
-      position: {x: -0.09380573, y: -6.661338e-16, z: -3.330669e-16}
+      position: {x: -0.04502675, y: -3.1974422e-16, z: -1.5987211e-16}
       rotation: {x: -0, y: -0, z: 9.0221863e-10, w: 1}
       scale: {x: 1, y: 0.9999998, z: 1.0000005}
     - name: Dino_L_Pinky_01_JNT
       parentName: Dino_L_Wrist_JNT
-      position: {x: -0.113538206, y: -0.06528936, z: -0.07989149}
+      position: {x: -0.054498337, y: -0.031338893, z: -0.03834791}
       rotation: {x: -0.03242702, y: -0.14394227, z: 0.22546172, w: 0.96301407}
       scale: {x: 1.0000005, y: 1.0000002, z: 1.0000007}
     - name: Dino_L_Pinky_02_JNT
       parentName: Dino_L_Pinky_01_JNT
-      position: {x: -0.103186786, y: 8.881784e-16, z: -5.551115e-16}
+      position: {x: -0.049529657, y: 4.2632563e-16, z: -2.664535e-16}
       rotation: {x: -0.0023919716, y: -0.006023421, z: -0.040439352, w: 0.999161}
       scale: {x: 1.0000002, y: 0.9999999, z: 0.9999998}
     - name: Dino_L_Pinky_03_JNT
       parentName: Dino_L_Pinky_02_JNT
-      position: {x: -0.11870026, y: -6.661338e-16, z: 0}
+      position: {x: -0.05697612, y: -3.1974422e-16, z: 0}
       rotation: {x: -0, y: -0, z: 0.0000000059462764, w: 1}
       scale: {x: 1.0000001, y: 1.0000002, z: 1}
     - name: Dino_L_Thumb_01_JNT
       parentName: Dino_L_Wrist_JNT
-      position: {x: -0.041684087, y: -0.0028368554, z: 0.08752336}
+      position: {x: -0.020008361, y: -0.0013616905, z: 0.042011213}
       rotation: {x: -0.105413035, y: 0.33780336, z: 0.03368371, w: 0.93468845}
       scale: {x: 1.0000014, y: 1.0000004, z: 1.0000013}
     - name: Dino_L_Thumb_02_JNT
       parentName: Dino_L_Thumb_01_JNT
-      position: {x: -0.09899998, y: 8.881784e-16, z: -5.551115e-16}
+      position: {x: -0.047519986, y: 4.2632563e-16, z: -2.664535e-16}
       rotation: {x: 0.000000014901163, y: -0, z: 0.0000000037252907, w: 1}
       scale: {x: 1.0000001, y: 1.0000002, z: 0.99999976}
     - name: Dino_Neck_01_JNT
       parentName: Dino_Clavicle_JNT
-      position: {x: -0.2386578, y: -5.551115e-17, z: 8.380966e-10}
+      position: {x: -0.11455574, y: -2.6645352e-17, z: 4.0228637e-10}
       rotation: {x: -0.00000003928993, y: 0.00000013911243, z: -0.1327705, w: 0.99114686}
       scale: {x: 1.0000006, y: 1.0000006, z: 1.0000002}
     - name: Dino_Neck_02_JNT
       parentName: Dino_Neck_01_JNT
-      position: {x: -0.25135306, y: 2.7755576e-16, z: 5.421011e-20}
+      position: {x: -0.120649464, y: 1.3322676e-16, z: 2.6020852e-20}
       rotation: {x: -0.00000004607047, y: 0.0000000048633098, z: 0.11602509, w: 0.9932464}
       scale: {x: 1.0000002, y: 0.99999994, z: 1.0000002}
     - name: Dino_Head_JNT
       parentName: Dino_Neck_02_JNT
-      position: {x: -0.29695964, y: -3.330669e-16, z: -0.0000000035510472}
+      position: {x: -0.14254062, y: -1.5987211e-16, z: -0.0000000017045025}
       rotation: {x: -0.000000011850204, y: 0.00000005827552, z: 0.7059305, w: 0.70828116}
       scale: {x: 1.0000007, y: 1.0000005, z: 1.0000006}
     - name: Dino_Nose_JNT
       parentName: Dino_Head_JNT
-      position: {x: -0.6713567, y: 0, z: 2.7105054e-19}
+      position: {x: -0.32225117, y: 0, z: 1.3010425e-19}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Shoulder_JNT_FK
       parentName: Dino_Clavicle_JNT
-      position: {x: 0.013203209, y: 0.080029614, z: 0.31035104}
+      position: {x: 0.00633754, y: 0.038414214, z: 0.14896849}
       rotation: {x: -0.36583555, y: -0.09848953, z: -0.55624396, w: 0.7396329}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Elbow_JNT_FK
       parentName: Dino_R_Shoulder_JNT_FK
-      position: {x: 0.46226814, y: -0.0000010978712, z: 0.000001065279}
+      position: {x: 0.22188869, y: -0.00000052697817, z: 0.00000051133384}
       rotation: {x: 0.09161273, y: 0.40384322, z: -0.38763878, w: 0.8235617}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Wrist_JNT_FK
       parentName: Dino_R_Elbow_JNT_FK
-      position: {x: 0.46586916, y: -0.00000061632164, z: 0.000000034278262}
+      position: {x: 0.22361718, y: -0.00000029583438, z: 0.000000016453566}
       rotation: {x: -5.0532154e-16, y: -2.8327693e-16, z: 7.166659e-15, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Shoulder_JNT_IK
       parentName: Dino_Clavicle_JNT
-      position: {x: 0.013203209, y: 0.080029614, z: 0.31035104}
+      position: {x: 0.00633754, y: 0.038414214, z: 0.14896849}
       rotation: {x: -0.36583555, y: -0.09848953, z: -0.55624396, w: 0.7396329}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Elbow_JNT_IK
       parentName: Dino_R_Shoulder_JNT_IK
-      position: {x: 0.46226814, y: -0.0000010978712, z: 0.000001065279}
+      position: {x: 0.22188869, y: -0.00000052697817, z: 0.00000051133384}
       rotation: {x: 0.09161273, y: 0.40384322, z: -0.38763878, w: 0.8235617}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Wrist_JNT_IK
       parentName: Dino_R_Elbow_JNT_IK
-      position: {x: 0.46586916, y: -0.00000061632164, z: 0.000000034278262}
+      position: {x: 0.22361718, y: -0.00000029583438, z: 0.000000016453566}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Shoulder_JNT_MASTER
       parentName: Dino_Clavicle_JNT
-      position: {x: 0.013203209, y: 0.080029614, z: 0.31035104}
+      position: {x: 0.00633754, y: 0.038414214, z: 0.14896849}
       rotation: {x: 0.5193344, y: 0.46264312, z: 0.52698463, w: -0.488406}
       scale: {x: 1.0000002, y: 1.0000008, z: 1.000001}
     - name: Dino_R_Elbow_JNT
       parentName: Dino_R_Shoulder_JNT_MASTER
-      position: {x: 0.46226814, y: -0.0000010978712, z: 0.000001065279}
+      position: {x: 0.22188869, y: -0.00000052697817, z: 0.00000051133384}
       rotation: {x: 0.09882782, y: -0.0071137105, z: -0.017331036, w: 0.9949282}
       scale: {x: 0.9999998, y: 0.99999964, z: 1}
     - name: Dino_R_Wrist_JNT
       parentName: Dino_R_Elbow_JNT
-      position: {x: 0.46586916, y: -0.00000061632164, z: 0.000000034278262}
+      position: {x: 0.22361718, y: -0.00000029583438, z: 0.000000016453566}
       rotation: {x: -0.0000000074505815, y: -0.03237057, z: -0.061568767, w: 0.9975778}
       scale: {x: 1.0000005, y: 1.0000004, z: 1.0000002}
     - name: Dino_R_ForeFinger_01_JNT
       parentName: Dino_R_Wrist_JNT
-      position: {x: 0.15655056, y: 0.051736012, z: -0.04454459}
+      position: {x: 0.07514426, y: 0.024833286, z: -0.0213814}
       rotation: {x: -0.017063476, y: 0.024517676, z: -0.9790013, w: 0.20165393}
       scale: {x: 1.0000005, y: 1, z: 1.0000002}
     - name: Dino_R_ForeFinger_02_JNT
       parentName: Dino_R_ForeFinger_01_JNT
-      position: {x: -0.09562687, y: 1.110223e-15, z: -6.661338e-16}
+      position: {x: -0.045900892, y: 5.32907e-16, z: -3.1974422e-16}
       rotation: {x: 0.0023059216, y: 0.010965352, z: 0.013246458, w: 0.9998495}
       scale: {x: 1, y: 0.9999999, z: 1}
     - name: Dino_R_ForeFinger_03_JNT
       parentName: Dino_R_ForeFinger_02_JNT
-      position: {x: -0.07482827, y: -2.220446e-16, z: 3.330669e-16}
+      position: {x: -0.035917565, y: -1.0658141e-16, z: 1.5987211e-16}
       rotation: {x: -2.328307e-10, y: -0, z: -7.6215667e-10, w: 1}
       scale: {x: 0.9999997, y: 1.0000001, z: 1.0000001}
     - name: Dino_R_MiddleFinger_01_JNT
       parentName: Dino_R_Wrist_JNT
-      position: {x: 0.17262426, y: 0.07297415, z: 0.024521083}
+      position: {x: 0.08285964, y: 0.035027593, z: 0.011770119}
       rotation: {x: 0.06718031, y: 0.0015094049, z: -0.97894967, w: 0.192723}
       scale: {x: 1.0000011, y: 1.0000006, z: 1.0000002}
     - name: Dino_R_MiddleFinger_02_JNT
       parentName: Dino_R_MiddleFinger_01_JNT
-      position: {x: -0.10201873, y: 0, z: 1.110223e-16}
+      position: {x: -0.048968986, y: 0, z: 5.3290704e-17}
       rotation: {x: 0.008423644, y: 0.03219638, z: 0.02543881, w: 0.9991223}
       scale: {x: 1.0000008, y: 1, z: 1.0000006}
     - name: Dino_R_MiddleFinger_03_JNT
       parentName: Dino_R_MiddleFinger_02_JNT
-      position: {x: -0.09380624, y: -4.440892e-16, z: 2.220446e-16}
+      position: {x: -0.04502699, y: -2.1316282e-16, z: 1.0658141e-16}
       rotation: {x: -0, y: -0, z: 0.0000000014551913, w: 1}
       scale: {x: 1.0000005, y: 1.0000004, z: 1.0000005}
     - name: Dino_R_Pinky_01_JNT
       parentName: Dino_R_Wrist_JNT
-      position: {x: 0.11353906, y: 0.06528948, z: 0.07989111}
+      position: {x: 0.054498743, y: 0.03133895, z: 0.038347732}
       rotation: {x: 0.14393996, y: -0.032424554, z: -0.96301425, w: 0.22546303}
       scale: {x: 1.0000014, y: 1.0000001, z: 1.0000005}
     - name: Dino_R_Pinky_02_JNT
       parentName: Dino_R_Pinky_01_JNT
-      position: {x: -0.10318669, y: 0, z: -3.330669e-16}
+      position: {x: -0.04952961, y: 0, z: -1.5987211e-16}
       rotation: {x: 0.0023973908, y: 0.0060379757, z: -0.04043819, w: 0.999161}
       scale: {x: 0.9999997, y: 1.0000004, z: 1.0000004}
     - name: Dino_R_Pinky_03_JNT
       parentName: Dino_R_Pinky_02_JNT
-      position: {x: -0.11870062, y: -2.220446e-16, z: -1.9428903e-16}
+      position: {x: -0.056976296, y: -1.0658141e-16, z: -9.325873e-17}
       rotation: {x: -0, y: -0, z: -7.457856e-11, w: 1}
       scale: {x: 1, y: 1.0000004, z: 0.9999997}
     - name: Dino_R_Thumb_01_JNT
       parentName: Dino_R_Wrist_JNT
-      position: {x: 0.041683953, y: 0.0028372617, z: -0.08752336}
+      position: {x: 0.020008298, y: 0.0013618856, z: -0.042011213}
       rotation: {x: -0.337806, y: -0.10541232, z: -0.9346875, w: 0.033685543}
       scale: {x: 1.0000006, y: 1.0000004, z: 1.0000005}
     - name: Dino_R_Thumb_02_JNT
       parentName: Dino_R_Thumb_01_JNT
-      position: {x: -0.09900155, y: 6.661338e-16, z: -4.440892e-16}
+      position: {x: -0.04752074, y: 3.1974422e-16, z: -2.1316282e-16}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1.0000001, y: 1, z: 0.9999999}
     - name: Dino_L_Hip_JNT
       parentName: Dino_Pelvis_JNT
-      position: {x: -0.011704332, y: -0.13416761, z: -0.34931928}
+      position: {x: -0.005618079, y: -0.06440045, z: -0.16767325}
       rotation: {x: 0.04352227, y: 0.08455078, z: 0.874628, w: 0.4753766}
       scale: {x: 1.0000007, y: 1.0000002, z: 1.0000006}
     - name: Dino_L_Knee_JNT
       parentName: Dino_L_Hip_JNT
-      position: {x: -0.4201131, y: -6.1062266e-16, z: -1.110223e-16}
+      position: {x: -0.20165427, y: -2.9309886e-16, z: -5.3290704e-17}
       rotation: {x: -0.94132215, y: -0.30904546, z: -0.013534935, w: -0.13498294}
       scale: {x: 1.0000001, y: 1, z: 1.0000001}
     - name: Dino_L_Ankle_JNT
       parentName: Dino_L_Knee_JNT
-      position: {x: -0.4746336, y: 4.440892e-16, z: 5.551115e-17}
+      position: {x: -0.2278241, y: 2.1316282e-16, z: 2.6645352e-17}
       rotation: {x: 0.9432726, y: 0.3266434, z: 0.04780008, w: 0.03544162}
       scale: {x: 0.99999994, y: 1.0000001, z: 1.0000004}
     - name: Dino_L_Heel_JNT
       parentName: Dino_L_Ankle_JNT
-      position: {x: -0.27565265, y: 8.3266727e-16, z: 4.440892e-16}
+      position: {x: -0.13231327, y: 3.9968028e-16, z: 2.1316282e-16}
       rotation: {x: 0.06231015, y: 0.080511734, z: -0.60333157, w: 0.79096544}
       scale: {x: 1.0000007, y: 1.0000001, z: 1.0000008}
     - name: Dino_L_Toes_JNT
       parentName: Dino_L_Heel_JNT
-      position: {x: -0.1774003, y: 8.326673e-17, z: 1.110223e-16}
+      position: {x: -0.08515214, y: 3.9968027e-17, z: 5.3290704e-17}
       rotation: {x: -0.000000003725291, y: -0, z: -0.00000001303852, w: 1}
       scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
     - name: Dino_L_Toe_01_JNT
       parentName: Dino_L_Toes_JNT
-      position: {x: -0.2039287, y: -0.0029623702, z: 0.13471921}
+      position: {x: -0.097885765, y: -0.0014219376, z: 0.06466522}
       rotation: {x: 0.0035942781, y: 0.28777975, z: 0.0052475454, w: 0.9576755}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_Toe_02_JNT
       parentName: Dino_L_Toes_JNT
-      position: {x: -0.2195317, y: -0.003051502, z: -0.018602926}
+      position: {x: -0.105375215, y: -0.0014647208, z: -0.008929404}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_Toe_03_JNT
       parentName: Dino_L_Toes_JNT
-      position: {x: -0.20116185, y: -0.00114772, z: -0.16255817}
+      position: {x: -0.09655768, y: -0.0005509056, z: -0.07802792}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Hip_JNT
       parentName: Dino_Pelvis_JNT
-      position: {x: -0.010147153, y: -0.13260771, z: 0.34996265}
+      position: {x: -0.004870633, y: -0.0636517, z: 0.16798206}
       rotation: {x: -0.08154068, y: 0.042634845, z: 0.4754654, w: -0.8749092}
       scale: {x: 1.0000005, y: 1.0000002, z: 1.0000002}
     - name: Dino_R_Knee_JNT
       parentName: Dino_R_Hip_JNT
-      position: {x: 0.4201131, y: -7.2164497e-16, z: 4.440892e-16}
+      position: {x: 0.20165427, y: -3.4638957e-16, z: 2.1316282e-16}
       rotation: {x: -0.9413221, y: -0.3090454, z: -0.013534984, w: -0.13498312}
       scale: {x: 1.0000007, y: 1.0000007, z: 1.0000001}
     - name: Dino_R_Ankle_JNT
       parentName: Dino_R_Knee_JNT
-      position: {x: 0.4746336, y: -0.0000000012130456, z: 4.5124127e-11}
+      position: {x: 0.2278241, y: -5.8226185e-10, z: 2.165958e-11}
       rotation: {x: 0.9432727, y: 0.32664317, z: 0.047800146, w: 0.035441417}
       scale: {x: 1.0000007, y: 1.000001, z: 1.0000011}
     - name: Dino_R_Heel_JNT
       parentName: Dino_R_Ankle_JNT
-      position: {x: 0.27565265, y: 2.1834351e-10, z: 2.6461777e-11}
+      position: {x: 0.13231327, y: 1.0480488e-10, z: 1.2701652e-11}
       rotation: {x: 0.062310115, y: 0.080511734, z: -0.6033316, w: 0.79096544}
       scale: {x: 1.0000004, y: 1.000001, z: 1.0000004}
     - name: Dino_R_Toes_JNT
       parentName: Dino_R_Heel_JNT
-      position: {x: 0.1774003, y: 1.4223046e-10, z: -1.9572066e-11}
+      position: {x: 0.08515214, y: 6.827062e-11, z: -9.394592e-12}
       rotation: {x: -0, y: -0, z: -0.00000001071021, w: 1}
       scale: {x: 1.0000002, y: 1.0000011, z: 1.0000004}
     - name: Dino_R_Toe_01_JNT
       parentName: Dino_R_Toes_JNT
-      position: {x: 0.20392868, y: 0.0029623704, z: -0.1347187}
+      position: {x: 0.097885765, y: 0.0014219377, z: -0.064664975}
       rotation: {x: 0.0035942781, y: 0.28777975, z: 0.0052475454, w: 0.9576755}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Toe_02_JNT
       parentName: Dino_R_Toes_JNT
-      position: {x: 0.2195317, y: 0.0030515022, z: 0.018602926}
+      position: {x: 0.105375215, y: 0.0014647209, z: 0.008929404}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Toe_03_JNT
       parentName: Dino_R_Toes_JNT
-      position: {x: 0.20116185, y: 0.0011477201, z: 0.16255817}
+      position: {x: 0.09655768, y: 0.00055090565, z: 0.07802792}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_Tail_01_JNT
       parentName: Dino_Pelvis_JNT
-      position: {x: 0.22034621, y: 0.08200936, z: -0.002036537}
+      position: {x: 0.10576617, y: 0.03936449, z: -0.0009775377}
       rotation: {x: 0.22570954, y: -0.97419465, z: 0.000109970926, w: 0.00017592766}
       scale: {x: 1, y: 1.0000002, z: 1.0000001}
     - name: Dino_Tail_02_JNT
       parentName: Dino_Tail_01_JNT
-      position: {x: -0.31462818, y: -4.440892e-16, z: -5.6499944e-15}
+      position: {x: -0.15102153, y: -2.1316282e-16, z: -2.7119973e-15}
       rotation: {x: 0.00092897966, y: 0.0048073614, z: -0.13957424, w: 0.99019957}
       scale: {x: 1.0000005, y: 1.0000002, z: 1.0000001}
     - name: Dino_Tail_03_JNT
       parentName: Dino_Tail_02_JNT
-      position: {x: -0.27535364, y: 2.220446e-16, z: -3.469447e-18}
+      position: {x: -0.13216974, y: 1.0658141e-16, z: -1.6653345e-18}
       rotation: {x: -0.00039894902, y: 0.002974391, z: -0.18314625, w: 0.9830811}
       scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
     - name: Dino_Tail_04_JNT
       parentName: Dino_Tail_03_JNT
-      position: {x: -0.2532155, y: 1.110223e-16, z: 6.938894e-18}
+      position: {x: -0.12154343, y: 5.3290704e-17, z: 3.330669e-18}
       rotation: {x: 0.012033895, y: -0.017146407, z: -0.29014337, w: 0.9567539}
       scale: {x: 1.0000005, y: 1.0000002, z: 1.0000005}
     - name: Dino_Tail_05_JNT
       parentName: Dino_Tail_04_JNT
-      position: {x: -0.22661413, y: -3.330669e-16, z: 0}
+      position: {x: -0.108774774, y: -1.5987211e-16, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: DinoMesh
       parentName: Default_NOANIM(Clone)
-      position: {x: -0, y: -0.024910104, z: 0}
+      position: {x: -0, y: -0.011956849, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Master
@@ -467,17 +467,17 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Controller
       parentName: Master
-      position: {x: -1.5206374, y: 0, z: 0}
+      position: {x: -0.7299059, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_Hand_Offset
       parentName: Master
-      position: {x: -0.53139853, y: 1.110055, z: 0.69562113}
+      position: {x: -0.25507128, y: 0.53282636, z: 0.33389813}
       rotation: {x: -1.3877788e-17, y: 5.551115e-17, z: -6.938894e-18, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_ForeFinger_01_JNT_offset
       parentName: Dino_L_Hand_Offset
-      position: {x: 0.05699415, y: -0.016842837, z: 0.16011469}
+      position: {x: 0.02735719, y: -0.008084561, z: 0.07685505}
       rotation: {x: 0.0797303, y: 0.81936866, z: 0.054981053, w: 0.56502676}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_ForeFinger_01_BR_MAIN
@@ -487,7 +487,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_ForeFinger_01_B
       parentName: Dino_L_ForeFinger_01_BR_MAIN
-      position: {x: 1.110223e-16, y: 0, z: 1.110223e-16}
+      position: {x: 5.3290704e-17, y: 0, z: 5.3290704e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_ForeFinger_01_JNT_CTRL
@@ -497,7 +497,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_ForeFinger_02_JNT_offset
       parentName: Dino_L_ForeFinger_01_JNT_CTRL
-      position: {x: -0.09562658, y: 0, z: -5.551115e-16}
+      position: {x: -0.045900755, y: 0, z: -2.664535e-16}
       rotation: {x: -0.002305458, y: -0.010963764, z: 0.013255718, w: 0.9998494}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_ForeFinger_02_B_MAIN
@@ -517,12 +517,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_Hand_CTRL
       parentName: Dino_L_Hand_Offset
-      position: {x: -0.054601464, y: 0.26394504, z: 0.119378865}
+      position: {x: -0.0262087, y: 0.12669362, z: 0.05730185}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_MiddleFinger_01_JNT_offset
       parentName: Dino_L_Hand_Offset
-      position: {x: -0.010312716, y: -0.03412462, z: 0.18561997}
+      position: {x: -0.0049501033, y: -0.016379816, z: 0.089097574}
       rotation: {x: 0.05892608, y: 0.6838732, z: 0.062429525, w: 0.7245328}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_MiddleFinger_01_BR_MAIN
@@ -532,7 +532,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_MiddleFinger_01_B
       parentName: Dino_L_MiddleFinger_01_BR_MAIN
-      position: {x: -0, y: 0, z: -5.551115e-17}
+      position: {x: -0, y: 0, z: -2.6645352e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_MiddleFinger_01_JNT_CTRL
@@ -542,7 +542,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_MiddleFinger_02_JNT_offset
       parentName: Dino_L_MiddleFinger_01_JNT_CTRL
-      position: {x: -0.102017954, y: 0, z: 4.9960036e-16}
+      position: {x: -0.048968613, y: 0, z: 2.3980816e-16}
       rotation: {x: -0.008416747, y: -0.040666655, z: 0.032148533, w: 0.99862}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_MiddleFinger_02_B_MAIN
@@ -552,7 +552,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_MiddleFinger_02_B
       parentName: Dino_L_MiddleFinger_02_B_MAIN
-      position: {x: -1.110223e-16, y: 0, z: -5.551115e-17}
+      position: {x: -5.3290704e-17, y: 0, z: -2.6645352e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_MiddleFinger_02_JNT_CTRL
@@ -562,7 +562,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_Pinky_01_JNT_offset
       parentName: Dino_L_Hand_Offset
-      position: {x: -0.07007296, y: -0.039332595, z: 0.13068669}
+      position: {x: -0.033635017, y: -0.018879645, z: 0.062729605}
       rotation: {x: 0.09337715, y: 0.5402825, z: 0.14242418, w: 0.82406974}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_Pinky_02_BR_MAIN
@@ -572,7 +572,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_Pinky_01_B
       parentName: Dino_L_Pinky_02_BR_MAIN
-      position: {x: -1.110223e-16, y: 2.220446e-16, z: 8.326673e-17}
+      position: {x: -5.3290704e-17, y: 1.0658141e-16, z: 3.9968027e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_Pinky_01_JNT_CTRL
@@ -582,7 +582,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_Pinky_02_JNT_offset
       parentName: Dino_L_Pinky_01_JNT_CTRL
-      position: {x: -0.103186786, y: 6.661338e-16, z: -3.8857806e-16}
+      position: {x: -0.049529657, y: 3.1974422e-16, z: -1.8651746e-16}
       rotation: {x: -0.002390309, y: -0.008066015, z: -0.054152224, w: 0.99849725}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_Pinky_02_B_MAIN
@@ -592,7 +592,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_Pinky_02_B
       parentName: Dino_L_Pinky_02_B_MAIN
-      position: {x: -1.110223e-16, y: 2.220446e-16, z: -1.110223e-16}
+      position: {x: -5.3290704e-17, y: 1.0658141e-16, z: -5.3290704e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_Pinky_02_JNT_CTRL
@@ -602,7 +602,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_Thumb_01_JNT_offset
       parentName: Dino_L_Hand_Offset
-      position: {x: 0.090435, y: 0.0061978954, z: 0.034482557}
+      position: {x: 0.043408796, y: 0.0029749898, z: 0.016551627}
       rotation: {x: -0.045640755, y: 0.9943593, z: -0.0043899096, w: 0.095641434}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_L_Thumb_01_BR_MAIN
@@ -617,12 +617,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Hand_Offset
       parentName: Master
-      position: {x: 0.5304775, y: 1.1100554, z: 0.69562}
+      position: {x: 0.2546292, y: 0.5328266, z: 0.3338976}
       rotation: {x: -7.166659e-15, y: 1.6081226e-16, z: 6.123234e-17, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_ForeFinger_01_JNT_offset
       parentName: Dino_R_Hand_Offset
-      position: {x: -0.056995023, y: -0.016842492, z: 0.160115}
+      position: {x: -0.02735761, y: -0.008084396, z: 0.0768552}
       rotation: {x: 0.05498615, y: 0.56502485, z: 0.07973797, w: 0.81936884}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_ForeFinger_01_BR_MAIN
@@ -632,7 +632,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_ForeFinger_01_B
       parentName: Dino_R_ForeFinger_01_BR_MAIN
-      position: {x: -0, y: 0, z: 1.110223e-16}
+      position: {x: -0, y: 0, z: 5.3290704e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_ForeFinger_01_JNT_CTRL
@@ -642,7 +642,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_ForeFinger_02_JNT_offset
       parentName: Dino_R_ForeFinger_01_JNT_CTRL
-      position: {x: -0.09562687, y: 1.7763568e-15, z: -4.440892e-16}
+      position: {x: -0.045900892, y: 8.5265126e-16, z: -2.1316282e-16}
       rotation: {x: 0.0023059195, y: 0.010965456, z: 0.013246452, w: 0.9998495}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_ForeFinger_02_B_MAIN
@@ -652,7 +652,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_ForeFinger_02_B
       parentName: Dino_R_ForeFinger_02_B_MAIN
-      position: {x: -1.6653345e-16, y: -2.220446e-16, z: 0}
+      position: {x: -7.9936054e-17, y: -1.0658141e-16, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_ForeFinger_02_JNT_CTRL
@@ -662,12 +662,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Hand_CTRL
       parentName: Dino_R_Hand_Offset
-      position: {x: 0.055567935, y: 0.26389697, z: 0.11931629}
+      position: {x: 0.026672607, y: 0.12667054, z: 0.057271816}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_MiddleFinger_01_JNT_offset
       parentName: Dino_R_Hand_Offset
-      position: {x: 0.010312476, y: -0.034124993, z: 0.18562001}
+      position: {x: 0.0049499883, y: -0.016379995, z: 0.0890976}
       rotation: {x: 0.06243325, y: 0.7245282, z: 0.058930326, w: 0.68387735}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_MiddleFinger_01_BR_MAIN
@@ -677,7 +677,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_MiddleFinger_01_B
       parentName: Dino_R_MiddleFinger_01_BR_MAIN
-      position: {x: -0, y: 0, z: 5.551115e-17}
+      position: {x: -0, y: 0, z: 2.6645352e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_MiddleFinger_01_JNT_CTRL
@@ -687,7 +687,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_MiddleFinger_02_JNT_offset
       parentName: Dino_R_MiddleFinger_01_JNT_CTRL
-      position: {x: -0.10201873, y: 4.440892e-16, z: -1.6653345e-16}
+      position: {x: -0.048968986, y: 2.1316282e-16, z: -7.9936054e-17}
       rotation: {x: 0.008419356, y: 0.040678583, z: 0.032140564, w: 0.99861974}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_MiddleFinger_02_B_MAIN
@@ -697,7 +697,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_MiddleFinger_02_B
       parentName: Dino_R_MiddleFinger_02_B_MAIN
-      position: {x: 1.110223e-16, y: 0, z: 1.6653345e-16}
+      position: {x: 5.3290704e-17, y: 0, z: 7.9936054e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_MiddleFinger_02_JNT_CTRL
@@ -707,7 +707,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Pinky_01_JNT_offset
       parentName: Dino_R_Hand_Offset
-      position: {x: 0.07007248, y: -0.039332494, z: 0.1306875}
+      position: {x: 0.03363479, y: -0.018879596, z: 0.06273}
       rotation: {x: 0.14242095, y: 0.82406527, z: 0.093376875, w: 0.5402902}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Pinky_02_BR_MAIN
@@ -717,7 +717,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Pinky_01_B
       parentName: Dino_R_Pinky_02_BR_MAIN
-      position: {x: -0, y: 0, z: -2.220446e-16}
+      position: {x: -0, y: 0, z: -1.0658141e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Pinky_01_JNT_CTRL
@@ -727,7 +727,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Pinky_02_JNT_offset
       parentName: Dino_R_Pinky_01_JNT_CTRL
-      position: {x: -0.10318669, y: -4.440892e-16, z: -1.6653345e-16}
+      position: {x: -0.04952961, y: -2.1316282e-16, z: -7.9936054e-17}
       rotation: {x: 0.0023957232, y: 0.008084203, z: -0.054143615, w: 0.9984976}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Pinky_02_B_MAIN
@@ -737,7 +737,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Pinky_02_B
       parentName: Dino_R_Pinky_02_B_MAIN
-      position: {x: -1.110223e-16, y: -2.220446e-16, z: 8.326673e-17}
+      position: {x: -5.3290704e-17, y: -1.0658141e-16, z: 3.9968027e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Pinky_02_JNT_CTRL
@@ -747,7 +747,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Thumb_01_JNT_offset
       parentName: Dino_R_Hand_Offset
-      position: {x: -0.09043502, y: 0.0061975075, z: 0.0344825}
+      position: {x: -0.043408807, y: 0.0029748036, z: 0.0165516}
       rotation: {x: -0.0043907147, y: 0.09565017, z: -0.04564491, w: 0.99435824}
       scale: {x: 1, y: 1, z: 1}
     - name: Dino_R_Thumb_01_BR_MAIN
@@ -762,22 +762,22 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: L_Foot_CTRL
       parentName: Master
-      position: {x: -0.3032779, y: 0, z: -0.238751}
+      position: {x: -0.14557339, y: 0, z: -0.11460048}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: L_Heel_PIV
       parentName: L_Foot_CTRL
-      position: {x: -0, y: 0.051499974, z: 0}
+      position: {x: -0, y: 0.024719987, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: L_ToeTip_PIV
       parentName: L_Heel_PIV
-      position: {x: -0.0015649796, y: -0.051499974, z: 0.54461324}
+      position: {x: -0.0007511901, y: -0.024719987, z: 0.26141435}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: L_Swivel_PIV
       parentName: L_ToeTip_PIV
-      position: {x: 0.009172499, y: 0.050256476, z: -0.36738047}
+      position: {x: 0.0044027995, y: 0.024123108, z: -0.1763426}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: L_HeelPeel_PIV
@@ -787,7 +787,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: L_Ankle_IK
       parentName: L_HeelPeel_PIV
-      position: {x: -0.0076075066, y: 0.0012434983, z: -0.17723276}
+      position: {x: -0.0036516031, y: 0.0005968791, z: -0.08507172}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: L_ToeTap_PIV
@@ -797,12 +797,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: L_Ball_IK
       parentName: L_ToeTap_PIV
-      position: {x: -0.000000006811434, y: -0.0000000015339582, z: -0.0000000011082659}
+      position: {x: -0.0000000032694882, y: -7.362999e-10, z: -5.3196764e-10}
       rotation: {x: 0.002530855, y: 0.7221051, z: 0.0024245514, w: 0.6917745}
       scale: {x: 1, y: 1, z: 1}
     - name: L_Toe_IK
       parentName: L_ToeTap_PIV
-      position: {x: -0.009172507, y: -0.0045902515, z: 0.22010075}
+      position: {x: -0.0044028033, y: -0.0022033206, z: 0.105648346}
       rotation: {x: 0.002530855, y: 0.7221051, z: 0.0024245514, w: 0.6917745}
       scale: {x: 1, y: 1, z: 1}
     - name: L_Leg_IK_CON
@@ -812,132 +812,132 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: L_Leg_IK_CTRL
       parentName: L_Leg_IK_CON
-      position: {x: -0.23404352, y: 0.6318539, z: 0.51598597}
+      position: {x: -0.11234089, y: 0.30328986, z: 0.24767324}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Pelvis_CTRL
       parentName: Master
-      position: {x: 1.0504513e-20, y: 0.8723901, z: -0.2964107}
+      position: {x: 5.042166e-21, y: 0.41874722, z: -0.14227714}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Back_CTRL
       parentName: Pelvis_CTRL
-      position: {x: -0.0004610522, y: 0.18877763, z: 0.20119557}
+      position: {x: -0.00022130505, y: 0.09061325, z: 0.09657387}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: L_Shoulder_FK_CTRL
       parentName: Back_CTRL
-      position: {x: -0.3103515, y: 0.23317337, z: 0.0774713}
+      position: {x: -0.14896871, y: 0.11192322, z: 0.037186224}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: L_Arm_Elbow_FK_CTRL
       parentName: L_Shoulder_FK_CTRL
-      position: {x: -0.25548613, y: -0.28451824, z: 0.25974572}
+      position: {x: -0.12263333, y: -0.13656874, z: 0.124677934}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: L_Arm_Write_FK_CRTL
       parentName: L_Arm_Elbow_FK_CTRL
-      position: {x: 0.03490013, y: 0.100232124, z: 0.45361927}
+      position: {x: 0.016752062, y: 0.048111416, z: 0.21773723}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Neck_1_CTRL
       parentName: Back_CTRL
-      position: {x: 0.000000019936124, y: 0.43707502, z: 0.24558616}
+      position: {x: 0.000000009569339, y: 0.20979601, z: 0.11788135}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Neck_2_CTRL
       parentName: Neck_1_CTRL
-      position: {x: 0.00000005826587, y: 0.24967825, z: 0.028967842}
+      position: {x: 0.000000027967614, y: 0.119845554, z: 0.013904563}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Neck_3_CTRL
       parentName: Neck_2_CTRL
-      position: {x: 0.000000055821147, y: 0.27915096, z: 0.101290524}
+      position: {x: 0.000000026794151, y: 0.13399245, z: 0.04861945}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: R_Shoulder_FK_CTRL
       parentName: Back_CTRL
-      position: {x: 0.31035104, y: 0.23317277, z: 0.0774713}
+      position: {x: 0.14896849, y: 0.11192293, z: 0.037186224}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: R_Arm_Elbow_FK_CTRL
       parentName: R_Shoulder_FK_CTRL
-      position: {x: 0.25548747, y: -0.28451753, z: 0.2597456}
+      position: {x: 0.122633986, y: -0.13656841, z: 0.124677874}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: R_Arm_Write_FK_CRTL
       parentName: R_Arm_Elbow_FK_CTRL
-      position: {x: -0.03489995, y: 0.10023248, z: 0.45361823}
+      position: {x: -0.016751975, y: 0.048111588, z: 0.21773675}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: L_Wrist_IK_CTRL
       parentName: Pelvis_CTRL
-      position: {x: -0.53139853, y: 0.23766488, z: 0.9920318}
+      position: {x: -0.25507128, y: 0.11407913, z: 0.47617528}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: L_Elbow_IK_CTRL
       parentName: L_Wrist_IK_CTRL
-      position: {x: -0.12121727, y: -0.21459895, z: -0.5112481}
+      position: {x: -0.058184292, y: -0.10300749, z: -0.24539907}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: L_Wrist_IK
       parentName: L_Wrist_IK_CTRL
-      position: {x: -0.0000000026517393, y: -0.000000030501624, z: 0.000000012421943}
+      position: {x: -0.0000000012728348, y: -0.000000014640779, z: 0.000000005962532}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: R_Wrist_IK_CTRL
       parentName: Pelvis_CTRL
-      position: {x: 0.5304775, y: 0.23766536, z: 0.99203074}
+      position: {x: 0.2546292, y: 0.11407936, z: 0.4761747}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: R_Elbow_IK_CTRL
       parentName: R_Wrist_IK_CTRL
-      position: {x: 0.12734774, y: -0.22272149, z: -0.51533955}
+      position: {x: 0.06112691, y: -0.10690631, z: -0.24736297}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: R_Wrist_IK
       parentName: R_Wrist_IK_CTRL
-      position: {x: -0.000000023798862, y: 0.000000007417428, z: 0.0000000028775626}
+      position: {x: -0.000000011423453, y: 0.0000000035603651, z: 0.00000000138123}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Tail_1_CTRL
       parentName: Pelvis_CTRL
-      position: {x: -0.0013629185, y: -0.098005295, z: -0.21371767}
+      position: {x: -0.00065420085, y: -0.047042537, z: -0.102584474}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Tail_2_CTRL
       parentName: Tail_1_CTRL
-      position: {x: 0.0008144305, y: -0.102229, z: -0.2975558}
+      position: {x: 0.0003909266, y: -0.04906992, z: -0.14282678}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Tail_3_CTRL
       parentName: Tail_2_CTRL
-      position: {x: -0.0019402222, y: -0.0139988065, z: -0.27499068}
+      position: {x: -0.0009313067, y: -0.0067194267, z: -0.13199553}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Tail_4_CTRL
       parentName: Tail_3_CTRL
-      position: {x: -0.0031410314, y: 0.07905495, z: -0.240538}
+      position: {x: -0.0015076951, y: 0.037946373, z: -0.115458235}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: R_Foot_CTRL
       parentName: Master
-      position: {x: 0.3032775, y: 0, z: -0.238751}
+      position: {x: 0.1455732, y: 0, z: -0.11460048}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: R_Heel_PIV
       parentName: R_Foot_CTRL
-      position: {x: -0, y: 0.05149996, z: 0}
+      position: {x: -0, y: 0.02471998, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: R_ToeTip_PIV
       parentName: R_Heel_PIV
-      position: {x: 0.0015650094, y: -0.05149996, z: 0.54461324}
+      position: {x: 0.0007512045, y: -0.02471998, z: 0.26141435}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: R_Swivel_PIV
       parentName: R_ToeTip_PIV
-      position: {x: -0.009172499, y: 0.050256457, z: -0.36738047}
+      position: {x: -0.0044027995, y: 0.024123099, z: -0.1763426}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: R_HeelPeel_PIV
@@ -947,7 +947,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: R_Ankle_IK
       parentName: R_HeelPeel_PIV
-      position: {x: 0.0076074973, y: 0.001243501, z: -0.17723276}
+      position: {x: 0.0036515987, y: 0.00059688045, z: -0.08507172}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: R_ToeTap_PIV
@@ -957,12 +957,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: R_Ball_IK
       parentName: R_ToeTap_PIV
-      position: {x: -0.0000000026988967, y: 9.993368e-10, z: -8.352e-10}
+      position: {x: -0.0000000012954703, y: 4.796817e-10, z: -4.0089598e-10}
       rotation: {x: 0.69177455, y: -0.0024245502, z: 0.72210515, w: -0.0025308537}
       scale: {x: 1, y: 1, z: 1}
     - name: R_Toe_IK
       parentName: R_ToeTap_PIV
-      position: {x: 0.009172497, y: -0.004590249, z: 0.22010075}
+      position: {x: 0.0044027986, y: -0.0022033195, z: 0.105648346}
       rotation: {x: 0.69177455, y: -0.0024245502, z: 0.72210515, w: -0.0025308537}
       scale: {x: 1, y: 1, z: 1}
     - name: R_Leg_IK_CON
@@ -972,7 +972,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: R_Leg_IK_CTRL
       parentName: R_Leg_IK_CON
-      position: {x: 0.2338136, y: 0.6323833, z: 0.5178051}
+      position: {x: 0.11223052, y: 0.30354396, z: 0.24854644}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
@@ -982,7 +982,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 25
+    globalScale: 12
     rootMotionBoneName: Dino_ROOT_JNT
     hasTranslationDoF: 0
     hasExtraRoot: 0

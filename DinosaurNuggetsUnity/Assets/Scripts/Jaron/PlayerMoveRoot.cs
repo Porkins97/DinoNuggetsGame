@@ -4,16 +4,35 @@ using UnityEngine;
 
 public class PlayerMoveRoot : MonoBehaviour
 {
-    [SerializeField]private float desiredRotationSpeed;
-    [SerializeField]private float allowPlayerRotation;
+    [SerializeField]private float desiredRotationSpeed = 0.2f;
+    [SerializeField]private float allowPlayerRotation = 0.0f;
 
-    private CharacterController controller;
-    private Animator anim;
+    private CharacterController _controller;
+    private Animator _anim;
     
+    private PlayerControls _controls;
+    private Vector2 _move;
+
+    void Awake()
+    {
+        _controls = new PlayerControls();
+        //_controls.Gameplay.Grow.performed += ctx => Grow();
+        _controls.Gameplay.Move.performed += ctx => _move = ctx.ReadValue<Vector2>();
+        _controls.Gameplay.Move.canceled += ctx => _move = Vector2.zero;
+
+    }
+    void OnEnable()
+    {
+        _controls.Gameplay.Enable();
+    }
+    void OnDisable()
+    {
+        _controls.Gameplay.Disable();
+    }
     void Start()
     {
-        anim = this.GetComponent<Animator>();
-        controller = this.GetComponent<CharacterController>();
+        _anim = this.GetComponent<Animator>();
+        _controller = this.GetComponent<CharacterController>();
     }
 
     void Update()
@@ -24,21 +43,21 @@ public class PlayerMoveRoot : MonoBehaviour
 
     private void Ground()
     {
-        bool isGrounded = controller.isGrounded;
+        bool isGrounded = _controller.isGrounded;
         float verticalVel = 0.0f;
         if(isGrounded)
             verticalVel -= 0.0f;
         else
-            verticalVel -= 2.0f;
+            verticalVel -= 0.5f;
         Vector3 moveVector = new Vector3(0, verticalVel, 0);
-        controller.Move(moveVector);
+        _controller.Move(moveVector);
     }
 
     void InputMagnitude()
     {
         //Calulate Input Vectors
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        float h = _move.x;
+        float v = _move.y;
 
         //Calculate Input Magnitude
         float speed = new Vector2(h, v).sqrMagnitude;
@@ -46,15 +65,15 @@ public class PlayerMoveRoot : MonoBehaviour
         //Move the method
         if(speed > allowPlayerRotation)
         {
-            anim.SetFloat("InputMagnitude", speed, 0.0f, Time.deltaTime);
+            _anim.SetFloat("InputMagnitude", speed, 0.0f, Time.deltaTime);
             PlayerMoveAndRotation(h, v);
         }
         else
         {
-            anim.SetFloat("InputMagnitude", 0.0f, 0.0f, Time.deltaTime);
+            _anim.SetFloat("InputMagnitude", 0.0f, 0.0f, Time.deltaTime);
         }
     }
-    
+
     void PlayerMoveAndRotation(float h, float v)
     {
         float angle = Mathf.Atan2(h, v);
