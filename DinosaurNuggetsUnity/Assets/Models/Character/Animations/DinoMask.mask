@@ -1,0 +1,359 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DinoMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_FK
+    m_Weight: 0
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_FK/Dino_L_Elbow_JNT_FK
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_FK/Dino_L_Elbow_JNT_FK/Dino_L_Wrist_JNT_FK
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_IK
+    m_Weight: 0
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_IK/Dino_L_Elbow_JNT_IK
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_IK/Dino_L_Elbow_JNT_IK/Dino_L_Wrist_JNT_IK
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_MASTER
+    m_Weight: 0
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_MASTER/Dino_L_Elbow_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_MASTER/Dino_L_Elbow_JNT/Dino_L_Wrist_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_MASTER/Dino_L_Elbow_JNT/Dino_L_Wrist_JNT/Dino_L_ForeFinger_01_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_MASTER/Dino_L_Elbow_JNT/Dino_L_Wrist_JNT/Dino_L_ForeFinger_01_JNT/Dino_L_ForeFinger_02_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_MASTER/Dino_L_Elbow_JNT/Dino_L_Wrist_JNT/Dino_L_ForeFinger_01_JNT/Dino_L_ForeFinger_02_JNT/Dino_L_ForeFinger_03_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_MASTER/Dino_L_Elbow_JNT/Dino_L_Wrist_JNT/Dino_L_MiddleFinger_01_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_MASTER/Dino_L_Elbow_JNT/Dino_L_Wrist_JNT/Dino_L_MiddleFinger_01_JNT/Dino_L_MiddleFinger_02_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_MASTER/Dino_L_Elbow_JNT/Dino_L_Wrist_JNT/Dino_L_MiddleFinger_01_JNT/Dino_L_MiddleFinger_02_JNT/Dino_L_MiddleFinger_03_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_MASTER/Dino_L_Elbow_JNT/Dino_L_Wrist_JNT/Dino_L_Pinky_01_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_MASTER/Dino_L_Elbow_JNT/Dino_L_Wrist_JNT/Dino_L_Pinky_01_JNT/Dino_L_Pinky_02_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_MASTER/Dino_L_Elbow_JNT/Dino_L_Wrist_JNT/Dino_L_Pinky_01_JNT/Dino_L_Pinky_02_JNT/Dino_L_Pinky_03_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_MASTER/Dino_L_Elbow_JNT/Dino_L_Wrist_JNT/Dino_L_Thumb_01_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_MASTER/Dino_L_Elbow_JNT/Dino_L_Wrist_JNT/Dino_L_Thumb_01_JNT/Dino_L_Thumb_02_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_Neck_01_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_Neck_01_JNT/Dino_Neck_02_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_Neck_01_JNT/Dino_Neck_02_JNT/Dino_Head_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_Neck_01_JNT/Dino_Neck_02_JNT/Dino_Head_JNT/Dino_Nose_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_FK
+    m_Weight: 0
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_FK/Dino_R_Elbow_JNT_FK
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_FK/Dino_R_Elbow_JNT_FK/Dino_R_Wrist_JNT_FK
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_IK
+    m_Weight: 0
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_IK/Dino_R_Elbow_JNT_IK
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_IK/Dino_R_Elbow_JNT_IK/Dino_R_Wrist_JNT_IK
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_MASTER
+    m_Weight: 0
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_MASTER/Dino_R_Elbow_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_MASTER/Dino_R_Elbow_JNT/Dino_R_Wrist_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_MASTER/Dino_R_Elbow_JNT/Dino_R_Wrist_JNT/Dino_R_ForeFinger_01_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_MASTER/Dino_R_Elbow_JNT/Dino_R_Wrist_JNT/Dino_R_ForeFinger_01_JNT/Dino_R_ForeFinger_02_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_MASTER/Dino_R_Elbow_JNT/Dino_R_Wrist_JNT/Dino_R_ForeFinger_01_JNT/Dino_R_ForeFinger_02_JNT/Dino_R_ForeFinger_03_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_MASTER/Dino_R_Elbow_JNT/Dino_R_Wrist_JNT/Dino_R_MiddleFinger_01_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_MASTER/Dino_R_Elbow_JNT/Dino_R_Wrist_JNT/Dino_R_MiddleFinger_01_JNT/Dino_R_MiddleFinger_02_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_MASTER/Dino_R_Elbow_JNT/Dino_R_Wrist_JNT/Dino_R_MiddleFinger_01_JNT/Dino_R_MiddleFinger_02_JNT/Dino_R_MiddleFinger_03_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_MASTER/Dino_R_Elbow_JNT/Dino_R_Wrist_JNT/Dino_R_Pinky_01_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_MASTER/Dino_R_Elbow_JNT/Dino_R_Wrist_JNT/Dino_R_Pinky_01_JNT/Dino_R_Pinky_02_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_MASTER/Dino_R_Elbow_JNT/Dino_R_Wrist_JNT/Dino_R_Pinky_01_JNT/Dino_R_Pinky_02_JNT/Dino_R_Pinky_03_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_MASTER/Dino_R_Elbow_JNT/Dino_R_Wrist_JNT/Dino_R_Thumb_01_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_MASTER/Dino_R_Elbow_JNT/Dino_R_Wrist_JNT/Dino_R_Thumb_01_JNT/Dino_R_Thumb_02_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_L_Hip_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_L_Hip_JNT/Dino_L_Knee_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_L_Hip_JNT/Dino_L_Knee_JNT/Dino_L_Ankle_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_L_Hip_JNT/Dino_L_Knee_JNT/Dino_L_Ankle_JNT/Dino_L_Heel_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_L_Hip_JNT/Dino_L_Knee_JNT/Dino_L_Ankle_JNT/Dino_L_Heel_JNT/Dino_L_Toes_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_L_Hip_JNT/Dino_L_Knee_JNT/Dino_L_Ankle_JNT/Dino_L_Heel_JNT/Dino_L_Toes_JNT/Dino_L_Toe_01_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_L_Hip_JNT/Dino_L_Knee_JNT/Dino_L_Ankle_JNT/Dino_L_Heel_JNT/Dino_L_Toes_JNT/Dino_L_Toe_02_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_L_Hip_JNT/Dino_L_Knee_JNT/Dino_L_Ankle_JNT/Dino_L_Heel_JNT/Dino_L_Toes_JNT/Dino_L_Toe_03_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_R_Hip_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_R_Hip_JNT/Dino_R_Knee_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_R_Hip_JNT/Dino_R_Knee_JNT/Dino_R_Ankle_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_R_Hip_JNT/Dino_R_Knee_JNT/Dino_R_Ankle_JNT/Dino_R_Heel_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_R_Hip_JNT/Dino_R_Knee_JNT/Dino_R_Ankle_JNT/Dino_R_Heel_JNT/Dino_R_Toes_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_R_Hip_JNT/Dino_R_Knee_JNT/Dino_R_Ankle_JNT/Dino_R_Heel_JNT/Dino_R_Toes_JNT/Dino_R_Toe_01_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_R_Hip_JNT/Dino_R_Knee_JNT/Dino_R_Ankle_JNT/Dino_R_Heel_JNT/Dino_R_Toes_JNT/Dino_R_Toe_02_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_R_Hip_JNT/Dino_R_Knee_JNT/Dino_R_Ankle_JNT/Dino_R_Heel_JNT/Dino_R_Toes_JNT/Dino_R_Toe_03_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Tail_01_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Tail_01_JNT/Dino_Tail_02_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Tail_01_JNT/Dino_Tail_02_JNT/Dino_Tail_03_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Tail_01_JNT/Dino_Tail_02_JNT/Dino_Tail_03_JNT/Dino_Tail_04_JNT
+    m_Weight: 1
+  - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Tail_01_JNT/Dino_Tail_02_JNT/Dino_Tail_03_JNT/Dino_Tail_04_JNT/Dino_Tail_05_JNT
+    m_Weight: 1
+  - m_Path: DinoMesh
+    m_Weight: 1
+  - m_Path: Master
+    m_Weight: 0
+  - m_Path: Master/Controller
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_ForeFinger_01_JNT_offset
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_ForeFinger_01_JNT_offset/Dino_L_ForeFinger_01_BR_MAIN
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_ForeFinger_01_JNT_offset/Dino_L_ForeFinger_01_BR_MAIN/Dino_L_ForeFinger_01_B
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_ForeFinger_01_JNT_offset/Dino_L_ForeFinger_01_BR_MAIN/Dino_L_ForeFinger_01_B/Dino_L_ForeFinger_01_JNT_CTRL
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_ForeFinger_01_JNT_offset/Dino_L_ForeFinger_01_BR_MAIN/Dino_L_ForeFinger_01_B/Dino_L_ForeFinger_01_JNT_CTRL/Dino_L_ForeFinger_02_JNT_offset
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_ForeFinger_01_JNT_offset/Dino_L_ForeFinger_01_BR_MAIN/Dino_L_ForeFinger_01_B/Dino_L_ForeFinger_01_JNT_CTRL/Dino_L_ForeFinger_02_JNT_offset/Dino_L_ForeFinger_02_B_MAIN
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_ForeFinger_01_JNT_offset/Dino_L_ForeFinger_01_BR_MAIN/Dino_L_ForeFinger_01_B/Dino_L_ForeFinger_01_JNT_CTRL/Dino_L_ForeFinger_02_JNT_offset/Dino_L_ForeFinger_02_B_MAIN/Dino_L_ForeFinger_02_B
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_ForeFinger_01_JNT_offset/Dino_L_ForeFinger_01_BR_MAIN/Dino_L_ForeFinger_01_B/Dino_L_ForeFinger_01_JNT_CTRL/Dino_L_ForeFinger_02_JNT_offset/Dino_L_ForeFinger_02_B_MAIN/Dino_L_ForeFinger_02_B/Dino_L_ForeFinger_02_JNT_CTRL
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_Hand_CTRL
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_MiddleFinger_01_JNT_offset
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_MiddleFinger_01_JNT_offset/Dino_L_MiddleFinger_01_BR_MAIN
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_MiddleFinger_01_JNT_offset/Dino_L_MiddleFinger_01_BR_MAIN/Dino_L_MiddleFinger_01_B
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_MiddleFinger_01_JNT_offset/Dino_L_MiddleFinger_01_BR_MAIN/Dino_L_MiddleFinger_01_B/Dino_L_MiddleFinger_01_JNT_CTRL
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_MiddleFinger_01_JNT_offset/Dino_L_MiddleFinger_01_BR_MAIN/Dino_L_MiddleFinger_01_B/Dino_L_MiddleFinger_01_JNT_CTRL/Dino_L_MiddleFinger_02_JNT_offset
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_MiddleFinger_01_JNT_offset/Dino_L_MiddleFinger_01_BR_MAIN/Dino_L_MiddleFinger_01_B/Dino_L_MiddleFinger_01_JNT_CTRL/Dino_L_MiddleFinger_02_JNT_offset/Dino_L_MiddleFinger_02_B_MAIN
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_MiddleFinger_01_JNT_offset/Dino_L_MiddleFinger_01_BR_MAIN/Dino_L_MiddleFinger_01_B/Dino_L_MiddleFinger_01_JNT_CTRL/Dino_L_MiddleFinger_02_JNT_offset/Dino_L_MiddleFinger_02_B_MAIN/Dino_L_MiddleFinger_02_B
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_MiddleFinger_01_JNT_offset/Dino_L_MiddleFinger_01_BR_MAIN/Dino_L_MiddleFinger_01_B/Dino_L_MiddleFinger_01_JNT_CTRL/Dino_L_MiddleFinger_02_JNT_offset/Dino_L_MiddleFinger_02_B_MAIN/Dino_L_MiddleFinger_02_B/Dino_L_MiddleFinger_02_JNT_CTRL
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_Pinky_01_JNT_offset
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_Pinky_01_JNT_offset/Dino_L_Pinky_02_BR_MAIN
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_Pinky_01_JNT_offset/Dino_L_Pinky_02_BR_MAIN/Dino_L_Pinky_01_B
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_Pinky_01_JNT_offset/Dino_L_Pinky_02_BR_MAIN/Dino_L_Pinky_01_B/Dino_L_Pinky_01_JNT_CTRL
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_Pinky_01_JNT_offset/Dino_L_Pinky_02_BR_MAIN/Dino_L_Pinky_01_B/Dino_L_Pinky_01_JNT_CTRL/Dino_L_Pinky_02_JNT_offset
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_Pinky_01_JNT_offset/Dino_L_Pinky_02_BR_MAIN/Dino_L_Pinky_01_B/Dino_L_Pinky_01_JNT_CTRL/Dino_L_Pinky_02_JNT_offset/Dino_L_Pinky_02_B_MAIN
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_Pinky_01_JNT_offset/Dino_L_Pinky_02_BR_MAIN/Dino_L_Pinky_01_B/Dino_L_Pinky_01_JNT_CTRL/Dino_L_Pinky_02_JNT_offset/Dino_L_Pinky_02_B_MAIN/Dino_L_Pinky_02_B
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_Pinky_01_JNT_offset/Dino_L_Pinky_02_BR_MAIN/Dino_L_Pinky_01_B/Dino_L_Pinky_01_JNT_CTRL/Dino_L_Pinky_02_JNT_offset/Dino_L_Pinky_02_B_MAIN/Dino_L_Pinky_02_B/Dino_L_Pinky_02_JNT_CTRL
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_Thumb_01_JNT_offset
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_Thumb_01_JNT_offset/Dino_L_Thumb_01_BR_MAIN
+    m_Weight: 1
+  - m_Path: Master/Dino_L_Hand_Offset/Dino_L_Thumb_01_JNT_offset/Dino_L_Thumb_01_BR_MAIN/Dino_L_Thumb_01_JNT_CTRL
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_ForeFinger_01_JNT_offset
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_ForeFinger_01_JNT_offset/Dino_R_ForeFinger_01_BR_MAIN
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_ForeFinger_01_JNT_offset/Dino_R_ForeFinger_01_BR_MAIN/Dino_R_ForeFinger_01_B
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_ForeFinger_01_JNT_offset/Dino_R_ForeFinger_01_BR_MAIN/Dino_R_ForeFinger_01_B/Dino_R_ForeFinger_01_JNT_CTRL
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_ForeFinger_01_JNT_offset/Dino_R_ForeFinger_01_BR_MAIN/Dino_R_ForeFinger_01_B/Dino_R_ForeFinger_01_JNT_CTRL/Dino_R_ForeFinger_02_JNT_offset
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_ForeFinger_01_JNT_offset/Dino_R_ForeFinger_01_BR_MAIN/Dino_R_ForeFinger_01_B/Dino_R_ForeFinger_01_JNT_CTRL/Dino_R_ForeFinger_02_JNT_offset/Dino_R_ForeFinger_02_B_MAIN
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_ForeFinger_01_JNT_offset/Dino_R_ForeFinger_01_BR_MAIN/Dino_R_ForeFinger_01_B/Dino_R_ForeFinger_01_JNT_CTRL/Dino_R_ForeFinger_02_JNT_offset/Dino_R_ForeFinger_02_B_MAIN/Dino_R_ForeFinger_02_B
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_ForeFinger_01_JNT_offset/Dino_R_ForeFinger_01_BR_MAIN/Dino_R_ForeFinger_01_B/Dino_R_ForeFinger_01_JNT_CTRL/Dino_R_ForeFinger_02_JNT_offset/Dino_R_ForeFinger_02_B_MAIN/Dino_R_ForeFinger_02_B/Dino_R_ForeFinger_02_JNT_CTRL
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_Hand_CTRL
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_MiddleFinger_01_JNT_offset
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_MiddleFinger_01_JNT_offset/Dino_R_MiddleFinger_01_BR_MAIN
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_MiddleFinger_01_JNT_offset/Dino_R_MiddleFinger_01_BR_MAIN/Dino_R_MiddleFinger_01_B
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_MiddleFinger_01_JNT_offset/Dino_R_MiddleFinger_01_BR_MAIN/Dino_R_MiddleFinger_01_B/Dino_R_MiddleFinger_01_JNT_CTRL
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_MiddleFinger_01_JNT_offset/Dino_R_MiddleFinger_01_BR_MAIN/Dino_R_MiddleFinger_01_B/Dino_R_MiddleFinger_01_JNT_CTRL/Dino_R_MiddleFinger_02_JNT_offset
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_MiddleFinger_01_JNT_offset/Dino_R_MiddleFinger_01_BR_MAIN/Dino_R_MiddleFinger_01_B/Dino_R_MiddleFinger_01_JNT_CTRL/Dino_R_MiddleFinger_02_JNT_offset/Dino_R_MiddleFinger_02_B_MAIN
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_MiddleFinger_01_JNT_offset/Dino_R_MiddleFinger_01_BR_MAIN/Dino_R_MiddleFinger_01_B/Dino_R_MiddleFinger_01_JNT_CTRL/Dino_R_MiddleFinger_02_JNT_offset/Dino_R_MiddleFinger_02_B_MAIN/Dino_R_MiddleFinger_02_B
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_MiddleFinger_01_JNT_offset/Dino_R_MiddleFinger_01_BR_MAIN/Dino_R_MiddleFinger_01_B/Dino_R_MiddleFinger_01_JNT_CTRL/Dino_R_MiddleFinger_02_JNT_offset/Dino_R_MiddleFinger_02_B_MAIN/Dino_R_MiddleFinger_02_B/Dino_R_MiddleFinger_02_JNT_CTRL
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_Pinky_01_JNT_offset
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_Pinky_01_JNT_offset/Dino_R_Pinky_02_BR_MAIN
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_Pinky_01_JNT_offset/Dino_R_Pinky_02_BR_MAIN/Dino_R_Pinky_01_B
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_Pinky_01_JNT_offset/Dino_R_Pinky_02_BR_MAIN/Dino_R_Pinky_01_B/Dino_R_Pinky_01_JNT_CTRL
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_Pinky_01_JNT_offset/Dino_R_Pinky_02_BR_MAIN/Dino_R_Pinky_01_B/Dino_R_Pinky_01_JNT_CTRL/Dino_R_Pinky_02_JNT_offset
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_Pinky_01_JNT_offset/Dino_R_Pinky_02_BR_MAIN/Dino_R_Pinky_01_B/Dino_R_Pinky_01_JNT_CTRL/Dino_R_Pinky_02_JNT_offset/Dino_R_Pinky_02_B_MAIN
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_Pinky_01_JNT_offset/Dino_R_Pinky_02_BR_MAIN/Dino_R_Pinky_01_B/Dino_R_Pinky_01_JNT_CTRL/Dino_R_Pinky_02_JNT_offset/Dino_R_Pinky_02_B_MAIN/Dino_R_Pinky_02_B
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_Pinky_01_JNT_offset/Dino_R_Pinky_02_BR_MAIN/Dino_R_Pinky_01_B/Dino_R_Pinky_01_JNT_CTRL/Dino_R_Pinky_02_JNT_offset/Dino_R_Pinky_02_B_MAIN/Dino_R_Pinky_02_B/Dino_R_Pinky_02_JNT_CTRL
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_Thumb_01_JNT_offset
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_Thumb_01_JNT_offset/Dino_R_Thumb_01_BR_MAIN
+    m_Weight: 1
+  - m_Path: Master/Dino_R_Hand_Offset/Dino_R_Thumb_01_JNT_offset/Dino_R_Thumb_01_BR_MAIN/Dino_R_Thumb_01_JNT_CTRL
+    m_Weight: 1
+  - m_Path: Master/L_Foot_CTRL
+    m_Weight: 1
+  - m_Path: Master/L_Foot_CTRL/L_Heel_PIV
+    m_Weight: 1
+  - m_Path: Master/L_Foot_CTRL/L_Heel_PIV/L_ToeTip_PIV
+    m_Weight: 1
+  - m_Path: Master/L_Foot_CTRL/L_Heel_PIV/L_ToeTip_PIV/L_Swivel_PIV
+    m_Weight: 1
+  - m_Path: Master/L_Foot_CTRL/L_Heel_PIV/L_ToeTip_PIV/L_Swivel_PIV/L_HeelPeel_PIV
+    m_Weight: 1
+  - m_Path: Master/L_Foot_CTRL/L_Heel_PIV/L_ToeTip_PIV/L_Swivel_PIV/L_HeelPeel_PIV/L_Ankle_IK
+    m_Weight: 1
+  - m_Path: Master/L_Foot_CTRL/L_Heel_PIV/L_ToeTip_PIV/L_Swivel_PIV/L_ToeTap_PIV
+    m_Weight: 1
+  - m_Path: Master/L_Foot_CTRL/L_Heel_PIV/L_ToeTip_PIV/L_Swivel_PIV/L_ToeTap_PIV/L_Ball_IK
+    m_Weight: 1
+  - m_Path: Master/L_Foot_CTRL/L_Heel_PIV/L_ToeTip_PIV/L_Swivel_PIV/L_ToeTap_PIV/L_Toe_IK
+    m_Weight: 1
+  - m_Path: Master/L_Leg_IK_CON
+    m_Weight: 1
+  - m_Path: Master/L_Leg_IK_CON/L_Leg_IK_CTRL
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL/Back_CTRL
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL/Back_CTRL/L_Shoulder_FK_CTRL
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL/Back_CTRL/L_Shoulder_FK_CTRL/L_Arm_Elbow_FK_CTRL
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL/Back_CTRL/L_Shoulder_FK_CTRL/L_Arm_Elbow_FK_CTRL/L_Arm_Write_FK_CRTL
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL/Back_CTRL/Neck_1_CTRL
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL/Back_CTRL/Neck_1_CTRL/Neck_2_CTRL
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL/Back_CTRL/Neck_1_CTRL/Neck_2_CTRL/Neck_3_CTRL
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL/Back_CTRL/R_Shoulder_FK_CTRL
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL/Back_CTRL/R_Shoulder_FK_CTRL/R_Arm_Elbow_FK_CTRL
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL/Back_CTRL/R_Shoulder_FK_CTRL/R_Arm_Elbow_FK_CTRL/R_Arm_Write_FK_CRTL
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL/L_Wrist_IK_CTRL
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL/L_Wrist_IK_CTRL/L_Elbow_IK_CTRL
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL/L_Wrist_IK_CTRL/L_Wrist_IK
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL/R_Wrist_IK_CTRL
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL/R_Wrist_IK_CTRL/R_Elbow_IK_CTRL
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL/R_Wrist_IK_CTRL/R_Wrist_IK
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL/Tail_1_CTRL
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL/Tail_1_CTRL/Tail_2_CTRL
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL/Tail_1_CTRL/Tail_2_CTRL/Tail_3_CTRL
+    m_Weight: 1
+  - m_Path: Master/Pelvis_CTRL/Tail_1_CTRL/Tail_2_CTRL/Tail_3_CTRL/Tail_4_CTRL
+    m_Weight: 1
+  - m_Path: Master/R_Foot_CTRL
+    m_Weight: 1
+  - m_Path: Master/R_Foot_CTRL/R_Heel_PIV
+    m_Weight: 1
+  - m_Path: Master/R_Foot_CTRL/R_Heel_PIV/R_ToeTip_PIV
+    m_Weight: 1
+  - m_Path: Master/R_Foot_CTRL/R_Heel_PIV/R_ToeTip_PIV/R_Swivel_PIV
+    m_Weight: 1
+  - m_Path: Master/R_Foot_CTRL/R_Heel_PIV/R_ToeTip_PIV/R_Swivel_PIV/R_HeelPeel_PIV
+    m_Weight: 1
+  - m_Path: Master/R_Foot_CTRL/R_Heel_PIV/R_ToeTip_PIV/R_Swivel_PIV/R_HeelPeel_PIV/R_Ankle_IK
+    m_Weight: 1
+  - m_Path: Master/R_Foot_CTRL/R_Heel_PIV/R_ToeTip_PIV/R_Swivel_PIV/R_ToeTap_PIV
+    m_Weight: 1
+  - m_Path: Master/R_Foot_CTRL/R_Heel_PIV/R_ToeTip_PIV/R_Swivel_PIV/R_ToeTap_PIV/R_Ball_IK
+    m_Weight: 1
+  - m_Path: Master/R_Foot_CTRL/R_Heel_PIV/R_ToeTip_PIV/R_Swivel_PIV/R_ToeTap_PIV/R_Toe_IK
+    m_Weight: 1
+  - m_Path: Master/R_Leg_IK_CON
+    m_Weight: 1
+  - m_Path: Master/R_Leg_IK_CON/R_Leg_IK_CTRL
+    m_Weight: 1
