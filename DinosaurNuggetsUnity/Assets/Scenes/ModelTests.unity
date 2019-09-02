@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17723882, g: 0.22188261, b: 0.30412725, a: 1}
+  m_IndirectSpecularColor: {r: 0.17723922, g: 0.22188331, b: 0.3041284, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -136,6 +136,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 59fefc3cad8ce164a8417496f5afe22a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 59fefc3cad8ce164a8417496f5afe22a,
         type: 3}
@@ -212,11 +217,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[3]
       value: 
       objectReference: {fileID: 2100000, guid: 4cfc6fcb65031174aa1a7e0f87c56759, type: 2}
-    - target: {fileID: -6057140222963153312, guid: 59fefc3cad8ce164a8417496f5afe22a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59fefc3cad8ce164a8417496f5afe22a, type: 3}
 --- !u!1 &88031531
@@ -1474,7 +1474,7 @@ PrefabInstance:
     - target: {fileID: 2964598708867049652, guid: a23b39882e9be1645b86756f8b32f1d8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2964598708867049652, guid: a23b39882e9be1645b86756f8b32f1d8,
         type: 3}
@@ -3051,7 +3051,7 @@ PrefabInstance:
     - target: {fileID: 1081331877938066272, guid: 7902a7e311e7f1f419ba33a073bf1b84,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1081331877938066272, guid: 7902a7e311e7f1f419ba33a073bf1b84,
         type: 3}
@@ -3713,7 +3713,7 @@ PrefabInstance:
     - target: {fileID: 7925659080331323548, guid: 60a569736f9394d4f9d68abbde6d0cd4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7925659080331323548, guid: 60a569736f9394d4f9d68abbde6d0cd4,
         type: 3}
