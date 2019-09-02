@@ -6,12 +6,15 @@ public class PlayerMoveRoot : MonoBehaviour
 {
     [SerializeField]private float desiredRotationSpeed = 0.2f;
     [SerializeField]private float allowPlayerRotation = 0.0f;
+    [SerializeField]private Transform rightArm;
+    [SerializeField]private Transform leftArm;
 
     private CharacterController _controller;
     private Animator _anim;
     
     private PlayerControls _controls;
     private Vector2 _move;
+    private Vector2 _armMove;
 
     void Awake()
     {
@@ -20,6 +23,8 @@ public class PlayerMoveRoot : MonoBehaviour
         _controls.Gameplay.Move.performed += ctx => _move = ctx.ReadValue<Vector2>();
         _controls.Gameplay.Move.canceled += ctx => _move = Vector2.zero;
 
+        _controls.Gameplay.Arms.performed += ctx => _armMove = ctx.ReadValue<Vector2>();
+        _controls.Gameplay.Arms.canceled += ctx => _armMove = Vector2.zero;
     }
     void OnEnable()
     {
@@ -41,6 +46,14 @@ public class PlayerMoveRoot : MonoBehaviour
         Ground();
     }
 
+    void LateUpdate()
+    {
+        if(_armMove.x > 0.5)
+        {
+            rightArm.rotation = Quaternion.Euler(80f, rightArm.rotation.y, rightArm.rotation.z);
+        }
+    }
+
     private void Ground()
     {
         bool isGrounded = _controller.isGrounded;
@@ -48,7 +61,7 @@ public class PlayerMoveRoot : MonoBehaviour
         if(isGrounded)
             verticalVel -= 0.0f;
         else
-            verticalVel -= 0.5f;
+            verticalVel -= 2.0f;
         Vector3 moveVector = new Vector3(0, verticalVel, 0);
         _controller.Move(moveVector);
     }

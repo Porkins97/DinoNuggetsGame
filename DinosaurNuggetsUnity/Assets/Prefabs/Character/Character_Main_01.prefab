@@ -384,7 +384,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 1a871c8d9d9f2d844acc668df57e0f2b, type: 3}
   m_Controller: {fileID: 9100000, guid: 135062ecfbd63914bae0a77ff5e30b2d, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
@@ -436,6 +436,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desiredRotationSpeed: 0.2
   allowPlayerRotation: 0
+  rightArm: {fileID: 8714139270431558574}
+  leftArm: {fileID: 6995479963222895000}
 --- !u!1 &677308967448589824
 GameObject:
   m_ObjectHideFlags: 0

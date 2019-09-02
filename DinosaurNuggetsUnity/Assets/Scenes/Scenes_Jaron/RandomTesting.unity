@@ -621,3 +621,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45.703003, y: 0, z: 0}
+--- !u!1 &2113316030 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 629889763687028381, guid: 9d6061e90ade7364ca8790e72c334a02,
+    type: 3}
+  m_PrefabInstance: {fileID: 1215334070}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2113316031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113316030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127624270449184499209919d219a125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableFeetIK: 1
+  heightFromGroundRayCast: 1.14
+  rayCastDownDist: 1.5
+  envLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  pelvisOffset: 0
+  pelvisUpAndDownSpeed: 0.28
+  feetToIkPosSpeed: 0.5
+  leftFootAnimVarName: LeftFootCurve
+  rightFootAnimVarName: RightFootCurve
+  useProIKFeature: 0
+  showSolverDebug: 1

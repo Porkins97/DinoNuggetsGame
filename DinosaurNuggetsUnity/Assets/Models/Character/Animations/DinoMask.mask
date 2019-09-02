@@ -20,19 +20,19 @@ AvatarMask:
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT
     m_Weight: 1
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_FK
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_FK/Dino_L_Elbow_JNT_FK
     m_Weight: 1
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_FK/Dino_L_Elbow_JNT_FK/Dino_L_Wrist_JNT_FK
     m_Weight: 1
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_IK
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_IK/Dino_L_Elbow_JNT_IK
     m_Weight: 1
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_IK/Dino_L_Elbow_JNT_IK/Dino_L_Wrist_JNT_IK
     m_Weight: 1
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_MASTER
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_MASTER/Dino_L_Elbow_JNT
     m_Weight: 1
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_L_Shoulder_JNT_MASTER/Dino_L_Elbow_JNT/Dino_L_Wrist_JNT
@@ -68,19 +68,19 @@ AvatarMask:
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_Neck_01_JNT/Dino_Neck_02_JNT/Dino_Head_JNT/Dino_Nose_JNT
     m_Weight: 1
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_FK
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_FK/Dino_R_Elbow_JNT_FK
     m_Weight: 1
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_FK/Dino_R_Elbow_JNT_FK/Dino_R_Wrist_JNT_FK
     m_Weight: 1
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_IK
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_IK/Dino_R_Elbow_JNT_IK
     m_Weight: 1
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_IK/Dino_R_Elbow_JNT_IK/Dino_R_Wrist_JNT_IK
     m_Weight: 1
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_MASTER
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_MASTER/Dino_R_Elbow_JNT
     m_Weight: 1
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Backbone_JNT/Dino_Clavicle_JNT/Dino_R_Shoulder_JNT_MASTER/Dino_R_Elbow_JNT/Dino_R_Wrist_JNT
@@ -140,9 +140,9 @@ AvatarMask:
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_R_Hip_JNT/Dino_R_Knee_JNT/Dino_R_Ankle_JNT/Dino_R_Heel_JNT/Dino_R_Toes_JNT/Dino_R_Toe_03_JNT
     m_Weight: 1
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Tail_01_JNT
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Tail_01_JNT/Dino_Tail_02_JNT
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Tail_01_JNT/Dino_Tail_02_JNT/Dino_Tail_03_JNT
     m_Weight: 1
   - m_Path: Dino_ROOT_JNT/Dino_Pelvis_JNT/Dino_Tail_01_JNT/Dino_Tail_02_JNT/Dino_Tail_03_JNT/Dino_Tail_04_JNT
