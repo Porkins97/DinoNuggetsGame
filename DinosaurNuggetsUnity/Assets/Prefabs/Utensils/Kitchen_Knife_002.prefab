@@ -445,7 +445,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6738269932185918559}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74dc92ec0d146c341a153be093e930c7, type: 3}
   m_Name: 
@@ -458,6 +458,8 @@ MonoBehaviour:
   HandRight: {fileID: 0}
   Name: {fileID: 0}
   Character: {fileID: 0}
+  colLeftHand: {fileID: 0}
+  colRightHand: {fileID: 0}
 --- !u!1 &7367679257745050103
 GameObject:
   m_ObjectHideFlags: 0
