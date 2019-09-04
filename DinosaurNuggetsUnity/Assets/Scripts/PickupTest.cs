@@ -85,12 +85,12 @@ public class PickupTest : MonoBehaviour
             HeldRight--;
             //Drop();
         }
-    
-        if(HandLeft.transform.childCount == 0)
+
+        if (HandLeft != null && HandLeft.transform.childCount == 0)
         {
             GlobalHeldLeft = false;
         }
-        if(HandRight.transform.childCount == 0)
+        if(HandRight != null && HandRight.transform.childCount == 0)
         {
             GlobalHeldRight = false;
         }

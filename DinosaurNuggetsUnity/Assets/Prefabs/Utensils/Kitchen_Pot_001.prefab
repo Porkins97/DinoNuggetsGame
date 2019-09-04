@@ -121,7 +121,8 @@ GameObject:
   - component: {fileID: 8492481881078591443}
   - component: {fileID: 645365780008270918}
   - component: {fileID: 8267246596760532174}
-  - component: {fileID: 8622828728274431228}
+  - component: {fileID: 3092231016623142988}
+  - component: {fileID: 3092231016623142990}
   m_Layer: 0
   m_Name: Kitchen_Pot_001
   m_TagString: Utensil
@@ -201,7 +202,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.39762783, y: 0.29487967, z: 0.39054114}
   m_Center: {x: 0, y: 0.18115509, z: 0.000000037252903}
---- !u!54 &8622828728274431228
+--- !u!54 &3092231016623142988
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -217,6 +218,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &3092231016623142990
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9108824629631596772}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40856493, y: 0.2848236, z: 0.4011165}
+  m_Center: {x: 0.0016160607, y: 0.17862186, z: -0.0010656714}
 --- !u!1 &9108824629631596774
 GameObject:
   m_ObjectHideFlags: 0
