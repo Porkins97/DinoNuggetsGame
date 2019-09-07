@@ -39,7 +39,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 224477251844988754}
-  m_Mesh: {fileID: -323370586509719225, guid: e5d177e50ed0e8c42b61f4ee63596f1c, type: 3}
+  m_Mesh: {fileID: -323370586509719225, guid: f944dc057d5f0844190eb203e29775ab, type: 3}
 --- !u!23 &7071229602968507828
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -86,7 +86,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5559349472601401392}
-  - component: {fileID: 602481977697214853}
+  - component: {fileID: 8236985319827328829}
   m_Layer: 0
   m_Name: Outside_Rock_003
   m_TagString: Untagged
@@ -101,7 +101,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8898443522814745123}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.479, y: 0.3, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -109,8 +109,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &602481977697214853
-BoxCollider:
+--- !u!64 &8236985319827328829
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -119,6 +119,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.37755537, y: 0.731375, z: 0.49320078}
-  m_Center: {x: -0.0017006397, y: -0.0017002821, z: 0.0017006397}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -323370586509719225, guid: f944dc057d5f0844190eb203e29775ab, type: 3}
