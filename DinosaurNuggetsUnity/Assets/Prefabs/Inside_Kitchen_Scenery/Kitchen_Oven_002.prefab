@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7718630786246635531}
   - component: {fileID: 7015736574400620995}
   - component: {fileID: 5509954346678168653}
+  - component: {fileID: 6136486377174858390}
   m_Layer: 0
   m_Name: Oven_Main
   m_TagString: Untagged
@@ -77,6 +78,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6136486377174858390
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300938228290883060}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4150845596877911429, guid: e7fc2b6834199ac40b35cb10107959cf, type: 3}
 --- !u!1 &5744704363212873837
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,7 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8782604173081727614}
   m_Layer: 0
-  m_Name: Kitchen_Oven_002 (1)
+  m_Name: Kitchen_Oven_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,6 +135,7 @@ GameObject:
   - component: {fileID: 8117809281053737302}
   - component: {fileID: 5436240460163922604}
   - component: {fileID: 4225296989253761950}
+  - component: {fileID: 5907930009829052258}
   m_Layer: 0
   m_Name: Oven_Door
   m_TagString: Untagged
@@ -186,3 +202,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5907930009829052258
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8884954333271065780}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.79999995, y: 0.39999998, z: 0.095}
+  m_Center: {x: 0, y: 0.19999999, z: 0.0475}
