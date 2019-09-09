@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 236708ad3c6f90b44992d04da9a85074, type: 3}
-  m_Name: New SO_Recipes
+  m_Name: GrilledCheese
   m_EditorClassIdentifier: 
   ingredients:
-  - {fileID: 7531801113949621296, guid: 60b8ee4f5536dab469d39af16800f113, type: 3}
-  - {fileID: 8306103852994637129, guid: e85a68ad536b86544af909c26781c1d2, type: 3}
+  - {fileID: 4807630029287183367, guid: 5ddda76795c6d0547bd66239d5f20b3f, type: 3}
+  - {fileID: 6435015172207553778, guid: 9c0d7a73c1909ca4aadb0fd6ec8dd262, type: 3}
   - {fileID: 5954392682723371429, guid: 264b50b5075b306468060a13d06886c5, type: 3}
-  meal: {fileID: 2870125672551433267, guid: de50850ba0628d54e8ba38afb1267413, type: 3}
+  meal: {fileID: 1034502773513545976, guid: 86226b1b0da954d4ebad35beb019b26e, type: 3}
