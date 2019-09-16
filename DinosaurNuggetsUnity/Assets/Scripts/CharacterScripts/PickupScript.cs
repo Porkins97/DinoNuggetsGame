@@ -20,16 +20,14 @@ public class PickupScript : MonoBehaviour
         if(hand.name == "RightHand")
         {
             RH_Hover = true;
-            RH_Object = obj; //obj.GetComponent<GameObject>();
+            RH_Object = obj;
             RH = hand;
-            //Debug.Log(hand.name + " Entered");
         }
         else if(hand.name == "LeftHand")
         {
             LH_Hover = true;
-            LH_Object = obj; //obj.GetComponent<GameObject>();
+            LH_Object = obj;
             LH = hand;
-            //Debug.Log(hand.name + " Entered");
         }
     }
 
@@ -40,18 +38,16 @@ public class PickupScript : MonoBehaviour
             RH_Hover = false;
             RH_Object = null;
             RH = null;
-            //Debug.Log(hand.name + " Exited");
         }
         else if(hand.name == "LeftHand")
         {
             LH_Hover = false;
             LH_Object = null;
-            RH = null;
-            //Debug.Log(hand.name + " Exited");
+            LH = null;
         }
     }
 
-    void Update()
+    protected virtual void  Update()
     {
         if (Input.GetMouseButton(0))
         {
