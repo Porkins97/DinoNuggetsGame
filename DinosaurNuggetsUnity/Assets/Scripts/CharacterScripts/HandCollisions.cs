@@ -5,11 +5,11 @@ using UnityEngine.Events;
 
 public class HandCollisions : MonoBehaviour
 {
-    private Collider boxCol;
+    private Collider currentCollider;
     public PickupScript pickupScript;
     void Start()
     {
-        boxCol = gameObject.GetComponent<Collider>();
+        currentCollider = gameObject.GetComponent<Collider>();
     }
 
     void OnTriggerEnter (Collider col) 

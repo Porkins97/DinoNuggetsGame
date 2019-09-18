@@ -4,85 +4,97 @@ using UnityEngine;
 
 public class PickupScript : MonoBehaviour
 {
-    private bool RH_Carrying = false;
-    private bool LH_Carrying = false;
-    private bool RH_Hover = false;
-    private bool LH_Hover = false;
+    private bool RightHand_Carrying = false;
+    private bool LeftHand_Carrying = false;
+    private bool RightHand_Hover = false;
+    private bool LeftHand_Hover = false;
 
-    private GameObject RH_Object;
-    private GameObject LH_Object;
-    private GameObject RH;
-    private GameObject LH;
+    private GameObject RightHand_Object;
+    private GameObject LeftHand_Object;
+    private GameObject RightHand;
+    private GameObject LeftHand;
 
 
     public void PickItUp(GameObject hand, GameObject obj)
     {
-        if(hand.name == "RightHand")
+        if(hand.name == "RightHand" && RightHand_Carrying == false)
         {
-            RH_Hover = true;
-            RH_Object = obj;
-            RH = hand;
+            RightHand_Hover = true;
+            RightHand_Object = obj;
+            RightHand = hand;
         }
-        else if(hand.name == "LeftHand")
+        else if(hand.name == "LeftHand" && LeftHand_Carrying == false)
         {
-            LH_Hover = true;
-            LH_Object = obj;
-            LH = hand;
+            LeftHand_Hover = true;
+            LeftHand_Object = obj;
+            LeftHand = hand;
         }
     }
 
     public void PickItUpExit(GameObject hand, GameObject obj)
     {
-        if(hand.name == "RightHand")
+        if(hand.name == "RightHand" && RightHand_Carrying == false)
         {
-            RH_Hover = false;
-            RH_Object = null;
-            RH = null;
+            RightHand_Hover = false;
+            RightHand_Object = null;
+            RightHand = null;
         }
-        else if(hand.name == "LeftHand")
+        else if(hand.name == "LeftHand" && LeftHand_Carrying == false)
         {
-            LH_Hover = false;
-            LH_Object = null;
-            LH = null;
+            LeftHand_Hover = false;
+            LeftHand_Object = null;
+            LeftHand = null;
         }
     }
 
-    protected virtual void  Update()
+    private void  Update()
     {
         if (Input.GetMouseButton(0))
         {
-            if(RH_Hover && RH_Object != null) 
+            if(RightHand_Hover && RightHand_Object != null) 
             {
-                RH_Object.GetComponent<Rigidbody>().isKinematic = true;
-                RH_Object.transform.SetParent(RH.transform);
-                RH_Object.transform.localPosition = new Vector3(0,0,0);
+                if (!RightHand_Carrying)
+                {
+                    RightHand_Object.GetComponent<Rigidbody>().isKinematic = true;
+                    RightHand_Object.transform.SetParent(RightHand.transform);
+                    RightHand_Object.transform.localPosition = new Vector3(0, 0, 0);
+                    RightHand_Carrying = true;
+                }
             }
         }
         else
         {
-            if(RH_Object != null)
+            if(RightHand_Object != null)
             {
-                RH_Object.GetComponent<Rigidbody>().isKinematic = false;
-                RH_Object.transform.SetParent(null);
+                RightHand_Object.GetComponent<Rigidbody>().isKinematic = false;
+                RightHand_Object.transform.SetParent(null);
+                RightHand_Carrying = false;
             }
         }
         
         if (Input.GetMouseButton(1))
         {
-            if(LH_Hover && LH_Object != null)
+            if (LeftHand_Hover && LeftHand_Object != null)
             {
-                LH_Object.GetComponent<Rigidbody>().isKinematic = true;
-                LH_Object.transform.SetParent(LH.transform);
-                LH_Object.transform.localPosition = new Vector3(0,0,0);
+                if (!LeftHand_Carrying)
+                {
+                    LeftHand_Object.GetComponent<Rigidbody>().isKinematic = true;
+                    LeftHand_Object.transform.SetParent(LeftHand.transform);
+                    LeftHand_Object.transform.localPosition = new Vector3(0, 0, 0);
+                    LeftHand_Carrying = true;
+                }
             }
+            Debug.Log(LeftHand_Carrying);
         }
         else
         {
-            if(LH_Object != null)
+            if(LeftHand_Object != null)
             {
-                LH_Object.GetComponent<Rigidbody>().isKinematic = false;
-                LH_Object.transform.SetParent(null);
+                LeftHand_Object.GetComponent<Rigidbody>().isKinematic = false;
+                LeftHand_Object.transform.SetParent(null);
+                LeftHand_Carrying = false;
             }
+            Debug.Log(LeftHand_Carrying);
         }
     }
 }
