@@ -9,13 +9,16 @@ public class InverseKin : MonoBehaviour
     enum IKSystems
     {
         CustomIK,
-        FabricIK
+        FabricIK,
+        CCD_IK
     }
 
     [Header("Solver Settings")]
     [SerializeField] public int iterations = 20;
     [SerializeField] public Transform Target;
     [SerializeField] public Transform Pole;
+    [Range(0f, 1f)] [SerializeField] public float weight;
+    [SerializeField] public float DistError = 0.01f;
     //[SerializeField] public bool IKSystems = false;
     [SerializeField] IKSystems ikSystems;
 
@@ -28,11 +31,25 @@ public class InverseKin : MonoBehaviour
     private Quaternion B_initRot;
     private Quaternion C_initRot;
 
+    List<Transform> ccd_Bones;
+
     private void Start()
     {
         A_initRot = A_Joint.rotation;
         B_initRot = B_Joint.rotation;
         C_initRot = C_Joint.rotation;
+
+        ccd_Bones = new List<Transform>();
+        Transform current = C_Joint;
+
+        while (current != null && current != A_Joint.parent)
+        {
+            ccd_Bones.Add(current);
+            current = current.parent;
+        }
+        if (current == null)
+            throw new UnityException("IK failing");
+
     }
 
 
@@ -42,6 +59,8 @@ public class InverseKin : MonoBehaviour
             IKSystemCustom();
         else if(ikSystems == IKSystems.FabricIK)
             IKSystemFabrick();
+        else if (ikSystems == IKSystems.CCD_IK)
+            CCD_IK();
     }
 
     private void IKSystemCustom()
@@ -82,6 +101,59 @@ public class InverseKin : MonoBehaviour
         Vector3 dir = target_ - joint_;
         dir = dir.normalized * length_;
         return dir;
+    }
+
+    //----------------------------------
+
+    private void CCD_IK()
+    {
+        Vector3 goalPos = Target.position;
+        Vector3 EffPos = ccd_Bones[0].position;
+
+        Vector3 targetPos = Vector3.Lerp(EffPos, goalPos, weight);
+        float sqrDist;
+
+        int interationCount = 0;
+        do
+        {
+            for (int i = 0; i < ccd_Bones.Count - 2; i++)
+            {
+                for (int j = 1; j < i + 3 && j < ccd_Bones.Count; j++)
+                {
+                    RotateBone(ccd_Bones[0], ccd_Bones[j], targetPos);
+
+                    sqrDist = (ccd_Bones[0].position - targetPos).sqrMagnitude;
+                    if (sqrDist <= DistError)
+                        return;
+                }
+            }
+
+
+
+            sqrDist = (ccd_Bones[0].position - targetPos).sqrMagnitude;
+            interationCount++;
+        }
+        while (sqrDist > DistError && interationCount <= iterations);
+
+    }
+
+
+    private void RotateBone(Transform effector, Transform bone, Vector3 goalPos)
+    {
+        Vector3 effPos = effector.position;
+        Vector3 bonePos = bone.position;
+        Quaternion boneRot = bone.rotation;
+
+        Vector3 boneToEff = effPos - bonePos;
+        Vector3 boneToGoal = goalPos - bonePos;
+
+
+        Quaternion fromToRot = Quaternion.FromToRotation(boneToEff, boneToGoal);
+        Quaternion newRot = fromToRot * boneRot;
+
+
+        bone.rotation = newRot;
+
     }
 
     //------------------------------------

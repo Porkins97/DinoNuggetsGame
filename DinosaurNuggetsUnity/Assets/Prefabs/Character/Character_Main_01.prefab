@@ -735,7 +735,9 @@ MonoBehaviour:
   iterations: 20
   Target: {fileID: 389358336}
   Pole: {fileID: 1375394694}
-  ikSystems: 0
+  weight: 1
+  DistError: 0.01
+  ikSystems: 2
   A_Joint: {fileID: 6995479963222895000}
   B_Joint: {fileID: 2071103697975904809}
   C_Joint: {fileID: 7985724999658804297}
@@ -754,6 +756,8 @@ MonoBehaviour:
   iterations: 20
   Target: {fileID: 0}
   Pole: {fileID: 0}
+  weight: 0
+  DistError: 0.01
   ikSystems: 0
   A_Joint: {fileID: 0}
   B_Joint: {fileID: 0}
