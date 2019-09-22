@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7925713806520846373}
   - component: {fileID: 6840960392768578546}
   - component: {fileID: 6840960392768578545}
+  - component: {fileID: 7126666249842990471}
   m_Layer: 11
   m_Name: Cookware_Pot_PF
   m_TagString: Utensil
@@ -122,5 +123,18 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5257347, y: 0.33890152, z: 0.6422226}
-  m_Center: {x: 0.0059805214, y: 0.16945076, z: -0.008104026}
+  m_Size: {x: 0.5257347, y: 0.41588736, z: 0.6422226}
+  m_Center: {x: 0.0059805214, y: 0.13095784, z: -0.008104026}
+--- !u!114 &7126666249842990471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542592511382244446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8560b6c91bfed4789568902439cd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beingUsed: 0

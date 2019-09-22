@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4644082612977499148}
   - component: {fileID: 4644082612977499149}
   - component: {fileID: 651418590}
+  - component: {fileID: 8018613604544895841}
   m_Layer: 11
   m_Name: Kitchen_ChoppingBoard_001
   m_TagString: Utensil
@@ -143,5 +144,18 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.054257598, y: 0.18039669, z: 0.04968314}
-  m_Center: {x: 0.0022558942, y: 0.07019835, z: 0.00071322423}
+  m_Size: {x: 0.054257598, y: 0.28709212, z: 0.04968314}
+  m_Center: {x: 0.0022558942, y: 0.016850635, z: 0.00071322423}
+--- !u!114 &8018613604544895841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6126225395924018030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8560b6c91bfed4789568902439cd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beingUsed: 1
