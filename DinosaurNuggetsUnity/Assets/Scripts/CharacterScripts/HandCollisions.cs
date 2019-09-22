@@ -14,14 +14,16 @@ public class HandCollisions : MonoBehaviour
 
     void OnTriggerEnter (Collider col) 
     {
-        if(col.tag == "Ingredient")
+        Debug.Log("hit");
+        if(col.tag == "Ingredient" || col.tag == "Utensil")
         {
+            
             pickupScript.PickItUp(gameObject, col.gameObject);
         }
     }
     void OnTriggerExit(Collider col)
     {
-        if(col.tag == "Ingredient")
+        if(col.tag == "Ingredient" || col.tag == "Utensil")
         {
             pickupScript.PickItUpExit(gameObject, col.gameObject);
         }

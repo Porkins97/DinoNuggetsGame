@@ -19,6 +19,7 @@ public class InverseKin : MonoBehaviour
     [SerializeField] public Transform Pole;
     [Range(0f, 1f)] [SerializeField] public float weight;
     [SerializeField] public float DistError = 0.01f;
+    [SerializeField] public Vector3 UpVector = new Vector3(0f, 1f,0f);
     //[SerializeField] public bool IKSystems = false;
     [SerializeField] IKSystems ikSystems;
 
@@ -75,11 +76,10 @@ public class InverseKin : MonoBehaviour
             Vector3 jnt_B_pos = Target.position + (jnt_B_rot * -1);
             Vector3 jnt_A_rot = FollowMouse(A_Joint.position, jnt_B_pos, arm_length_a);
 
-            Vector3 up = Vector3.up;
             Vector3 rotate = PoleVector(B_Joint.position, A_Joint.position, C_Joint.position);
-            
-            A_Joint.rotation = Quaternion.LookRotation((jnt_A_rot + (rotate)) * Mathf.Rad2Deg, up) * (A_initRot);
-            B_Joint.rotation = Quaternion.LookRotation(jnt_B_rot * Mathf.Rad2Deg, up) * (B_initRot);
+
+            A_Joint.rotation = Quaternion.LookRotation((jnt_A_rot + (rotate)) * Mathf.Rad2Deg, UpVector) * (A_initRot);
+            B_Joint.rotation = Quaternion.LookRotation(jnt_B_rot * Mathf.Rad2Deg, UpVector) * (B_initRot);
         }
     }
 
@@ -212,9 +212,9 @@ public class InverseKin : MonoBehaviour
 
         Pos_B = PoleVector(Pos_B, Pos_A, Pos_C);
         
-        //A_Joint.LookAt(B_Joint);
-        //B_Joint.LookAt(C_Joint);
-        //C_Joint.rotation = Target.rotation;
+        A_Joint.LookAt(B_Joint);
+        B_Joint.LookAt(C_Joint);
+        C_Joint.rotation = Target.rotation;
 
         B_Joint.position = Pos_B;
         C_Joint.position = Pos_C; 

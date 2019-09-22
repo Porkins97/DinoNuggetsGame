@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 389358336}
   - component: {fileID: 389358337}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Left_Arm_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 1145546023}
   - component: {fileID: 1145546024}
   - component: {fileID: 1145546025}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1375394694}
   - component: {fileID: 1375394695}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Left_Arm_Pole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 1844567205}
   - component: {fileID: 1844567206}
   - component: {fileID: 1844567207}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1933132724}
   - component: {fileID: 1933132725}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Right_Arm_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8851030450553506915}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Thumb_01_JNT_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7254264275313613085}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_Ball_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2456807467995660662}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_ForeFinger_01_BR_MAIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2787609725559329641}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_Tail_03_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,7 +384,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3907168343315784187}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Pinky_02_JNT_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,7 +414,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1254888776765372444}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Thumb_01_JNT_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3395354999132555967}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Thumb_01_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +475,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7270876525868553435}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_MiddleFinger_02_JNT_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6995479963222895000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Shoulder_JNT_MASTER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -536,7 +536,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 328531879088154076}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_MiddleFinger_02_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,7 +567,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7713158236318157480}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_Ball_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -601,10 +601,9 @@ GameObject:
   - component: {fileID: 8907060620977180552}
   - component: {fileID: 8907060620977180567}
   - component: {fileID: 8907060620977180566}
-  - component: {fileID: 2113316031}
   - component: {fileID: 1215334073}
   - component: {fileID: 1215334074}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Character_Main_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -695,31 +694,6 @@ MonoBehaviour:
   allowPlayerRotation: 0
   rightArm: {fileID: 8714139270431558574}
   leftArm: {fileID: 6995479963222895000}
---- !u!114 &2113316031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 629889763687028381}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 127624270449184499209919d219a125, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enableFeetIK: 1
-  heightFromGroundRayCast: 1.14
-  rayCastDownDist: 1.5
-  envLayer:
-    serializedVersion: 2
-    m_Bits: 1
-  pelvisOffset: 0
-  pelvisUpAndDownSpeed: 0.28
-  feetToIkPosSpeed: 0.5
-  leftFootAnimVarName: LeftFootCurve
-  rightFootAnimVarName: RightFootCurve
-  useProIKFeature: 0
-  showSolverDebug: 1
 --- !u!114 &1215334073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,7 +701,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629889763687028381}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9808f4bcbb5b0f94daf001180646031a, type: 3}
   m_Name: 
@@ -737,6 +711,7 @@ MonoBehaviour:
   Pole: {fileID: 1375394694}
   weight: 1
   DistError: 0.01
+  UpVector: {x: 0, y: 1, z: 0}
   ikSystems: 2
   A_Joint: {fileID: 6995479963222895000}
   B_Joint: {fileID: 2071103697975904809}
@@ -758,6 +733,7 @@ MonoBehaviour:
   Pole: {fileID: 0}
   weight: 0
   DistError: 0.01
+  UpVector: {x: 0, y: 1, z: 0}
   ikSystems: 0
   A_Joint: {fileID: 0}
   B_Joint: {fileID: 0}
@@ -771,7 +747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1167353091075925769}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_ForeFinger_02_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -802,7 +778,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7691883632936977448}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Knee_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -833,7 +809,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8396582457609421448}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_ForeFinger_01_BR_MAIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -864,7 +840,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7467085769354285655}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tail_1_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -895,7 +871,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3055518655071150723}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Pinky_01_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -927,7 +903,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2741051300013658426}
   - component: {fileID: 8304923112558758803}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DinoMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1054,7 +1030,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3741156826171731202}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Wrist_JNT_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1084,7 +1060,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3709154690067865668}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Shoulder_JNT_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1115,7 +1091,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7190803459881316031}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_ForeFinger_01_JNT_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1146,7 +1122,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8714139270431558574}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Shoulder_JNT_MASTER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1177,7 +1153,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 704162819685497220}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_Ankle_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1207,7 +1183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8307071773431695541}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_Arm_Elbow_FK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1238,7 +1214,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2632489230746726883}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_ToeTip_PIV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1269,7 +1245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6863876069953303222}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Toe_01_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1299,7 +1275,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4877920915703310191}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_Arm_Elbow_FK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1330,7 +1306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6615582455275688256}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Knee_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1361,7 +1337,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1136337420252599286}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_MiddleFinger_01_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1392,7 +1368,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4959077410236322993}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Elbow_JNT_FK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1423,7 +1399,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2854788425055040309}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_Toe_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1453,7 +1429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6515004241825027603}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Hip_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1484,7 +1460,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3289707936146919239}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Pinky_02_JNT_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1515,7 +1491,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7932162917014873438}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neck_1_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1546,7 +1522,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1213768582219598664}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_MiddleFinger_02_B_MAIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1577,7 +1553,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1029114864294288068}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Pinky_03_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1607,7 +1583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3093764294014546496}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_HeelPeel_PIV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1638,7 +1614,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7985724999658804297}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Wrist_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1673,7 +1649,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2071103697975904809}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Elbow_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1704,7 +1680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1355208770316902694}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_ROOT_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1735,7 +1711,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4527576745032040491}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_MiddleFinger_01_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1766,7 +1742,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5266478634580703885}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_Arm_Write_FK_CRTL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1796,7 +1772,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3720786721737015348}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_Wrist_IK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1828,7 +1804,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6881294659589231038}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Shoulder_JNT_FK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1859,7 +1835,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 221511940505011858}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_ForeFinger_01_JNT_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1890,7 +1866,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8320015550423887258}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Thumb_02_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1920,7 +1896,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4800448695730144758}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_MiddleFinger_01_JNT_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1951,7 +1927,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6696323255709882811}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_Swivel_PIV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1983,7 +1959,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7463619629688815985}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_Foot_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2014,7 +1990,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6379536658704621386}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tail_4_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2044,7 +2020,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9014920882794838783}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Pinky_02_BR_MAIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2075,7 +2051,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1975718182300308631}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_Elbow_IK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2105,7 +2081,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 851143500717889944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_ForeFinger_02_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2136,7 +2112,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7268028572682938077}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_ForeFinger_02_B_MAIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2167,7 +2143,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9162388378669782562}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Heel_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2198,7 +2174,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3298186925161929477}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tail_2_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2229,7 +2205,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6501167286634986343}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pelvis_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2263,7 +2239,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7163959790670115733}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_Pelvis_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2297,7 +2273,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6022142506502843508}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Thumb_01_BR_MAIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2328,7 +2304,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3992820736508785762}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_Tail_05_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2358,7 +2334,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 813948761110101476}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Thumb_01_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2389,7 +2365,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6806799199590587720}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_Head_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2420,7 +2396,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1461379722977126154}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2450,7 +2426,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4839187683135738410}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_ToeTap_PIV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2482,7 +2458,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7718084473668762550}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Pinky_02_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2513,7 +2489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4788032415492416599}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Elbow_JNT_FK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2544,7 +2520,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7893585903905797552}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_Heel_PIV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2575,7 +2551,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4947993811620119696}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Thumb_01_JNT_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2606,7 +2582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8224307913923800511}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_ForeFinger_01_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2637,7 +2613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3671159800102554596}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_HeelPeel_PIV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2668,7 +2644,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8876887679328761315}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_Heel_PIV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2699,7 +2675,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6055892770743849308}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Thumb_02_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2729,7 +2705,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7190651215421079290}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_Tail_04_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2760,7 +2736,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8797750642670952911}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_Leg_IK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2790,7 +2766,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5287295612986572059}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_Tail_01_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2821,7 +2797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2969296097104577784}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Thumb_01_BR_MAIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2852,7 +2828,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5676349493959976223}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_Foot_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2883,7 +2859,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4188855097035398297}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Wrist_JNT_FK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2913,7 +2889,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456046423834762719}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_MiddleFinger_01_JNT_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2944,7 +2920,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4142738392725588023}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_MiddleFinger_02_JNT_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2975,7 +2951,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8122944941788015299}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_Leg_IK_CON
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3006,7 +2982,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3033891001975687797}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_Arm_Write_FK_CRTL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3036,7 +3012,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3111748098759965736}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_Neck_02_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3067,7 +3043,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1756082321750413462}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_MiddleFinger_02_JNT_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3097,7 +3073,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 380137775667035798}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_Backbone_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3128,7 +3104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 66213102184310817}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_ForeFinger_01_JNT_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3159,7 +3135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3925919730965630486}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Back_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3192,7 +3168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3030597347391602933}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_MiddleFinger_01_JNT_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3223,7 +3199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7520712758255513124}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Toe_02_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3253,7 +3229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8494799536023475130}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Pinky_02_JNT_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3284,7 +3260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3560156838032915234}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Pinky_01_JNT_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3315,7 +3291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1162490737379380843}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_Ankle_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3345,7 +3321,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 255428942182377623}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Master
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3383,7 +3359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4998852668134774857}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Toe_02_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3413,7 +3389,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6529772116143396902}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Toe_03_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3443,7 +3419,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7063029067732151160}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_Tail_02_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3474,7 +3450,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6578138102150229505}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Pinky_02_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3505,7 +3481,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 327126294582308113}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Toe_03_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3535,7 +3511,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 558014851022807108}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_Clavicle_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3574,7 +3550,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2846100800402741468}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_MiddleFinger_02_JNT_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3605,7 +3581,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3650250312912793741}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Pinky_01_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3636,7 +3612,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8860330190534588121}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_MiddleFinger_02_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3667,7 +3643,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 434359463033468799}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Shoulder_JNT_FK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3698,7 +3674,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6458737334793593215}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_ForeFinger_02_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3729,7 +3705,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2626160357143958795}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_MiddleFinger_03_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3759,7 +3735,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1807759390529287808}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Hand_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3789,7 +3765,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6681235626920370005}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Pinky_01_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3820,7 +3796,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5466094762540820081}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_Toe_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3850,7 +3826,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8648589805220796255}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Pinky_02_B_MAIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3881,7 +3857,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6748607596576915290}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Hand_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3911,7 +3887,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2338045646454275813}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_Nose_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3941,7 +3917,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6328571937017815088}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Toes_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3974,7 +3950,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5044090903665027195}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_ForeFinger_01_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4005,7 +3981,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2965795519071083283}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tail_3_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4036,7 +4012,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8180659355801310153}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_ForeFinger_01_JNT_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4067,7 +4043,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1182427751708083692}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_ToeTip_PIV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4098,7 +4074,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 205413015780151818}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Pinky_01_JNT_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4129,7 +4105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7110361719466411701}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Elbow_JNT_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4160,7 +4136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5302874649103168063}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Pinky_01_JNT_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4191,7 +4167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3317307007088506661}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Hip_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4222,7 +4198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6915295228915203076}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_Shoulder_FK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4253,7 +4229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1767663952551037313}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Ankle_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4284,7 +4260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1994811466140087465}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Toe_01_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4314,7 +4290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8557088229644441894}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Wrist_JNT_FK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4344,7 +4320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 553577462034103260}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Shoulder_JNT_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4375,7 +4351,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4702566209250346171}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Elbow_JNT_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4406,7 +4382,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 928836009007745166}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_Shoulder_FK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4437,7 +4413,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5012047533899978281}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Pinky_02_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4468,7 +4444,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8965888247128375972}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_Wrist_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4498,7 +4474,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1311764732407347896}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Pinky_02_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4529,7 +4505,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5012969966889191845}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_MiddleFinger_01_BR_MAIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4560,7 +4536,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 173947644304391413}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Hand_Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4595,7 +4571,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5447063683442161087}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_MiddleFinger_01_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4626,7 +4602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7554652622661819350}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_ForeFinger_02_JNT_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4656,7 +4632,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 757984780024388131}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_ForeFinger_02_JNT_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4687,7 +4663,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4700136103211267138}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Heel_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4718,7 +4694,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5305464973618810420}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_ForeFinger_02_JNT_offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4749,7 +4725,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8754499351875362496}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_Swivel_PIV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4781,7 +4757,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 37992078782718487}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Toes_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4815,7 +4791,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3440684600420690079}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_Neck_01_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4846,7 +4822,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4653330827635780745}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_MiddleFinger_01_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4877,7 +4853,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3146189264073032904}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_MiddleFinger_01_BR_MAIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4908,7 +4884,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6184031034659566757}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_ForeFinger_03_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4938,7 +4914,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4639990530973888029}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_ForeFinger_01_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4969,7 +4945,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4748915522182339724}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_Wrist_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4999,7 +4975,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1151642423560025792}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_ForeFinger_02_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5030,7 +5006,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3151798966455187994}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_MiddleFinger_03_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5060,7 +5036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4001300836736191020}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Pinky_01_JNT_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5091,7 +5067,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5890652374766833311}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Elbow_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5122,7 +5098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8832545414727760703}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_MiddleFinger_02_B_MAIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5153,7 +5129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2097253512525132264}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_ForeFinger_02_B_MAIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5184,7 +5160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4476523828364029617}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Pinky_02_BR_MAIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5215,7 +5191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3844293834637051654}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neck_2_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5246,7 +5222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1877129752791123545}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Wrist_JNT_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5276,7 +5252,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5518764612130676680}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Pinky_01_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5307,7 +5283,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1947990520830851255}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_MiddleFinger_02_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5338,7 +5314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1245376743827613775}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Ankle_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5369,7 +5345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6338293722533056913}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_Leg_IK_CON
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5400,7 +5376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9036707744429999338}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_ForeFinger_02_JNT_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5430,7 +5406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7747327817297807399}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Wrist_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5465,7 +5441,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2987760551522075508}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_MiddleFinger_01_JNT_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5496,7 +5472,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6494696798092306840}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_Wrist_IK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5528,7 +5504,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 610090275750263919}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Pinky_03_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5558,7 +5534,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8749054997786468093}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_Elbow_IK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5588,7 +5564,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3093476176655384081}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_ForeFinger_03_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5618,7 +5594,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1930610000524167863}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: R_ToeTap_PIV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5650,7 +5626,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4883053047248656207}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_Pinky_02_B_MAIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5681,7 +5657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8555882725196602125}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_R_MiddleFinger_02_JNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5712,7 +5688,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5986985856653325436}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_ForeFinger_01_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5743,7 +5719,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8111175909675875474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Hand_Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5778,7 +5754,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3997334294541970850}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Thumb_01_JNT_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5808,7 +5784,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3876438058751691272}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: L_Leg_IK_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5838,7 +5814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1662066862499068926}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dino_L_Pinky_02_JNT_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5868,7 +5844,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7164925414415580483}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neck_3_CTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}

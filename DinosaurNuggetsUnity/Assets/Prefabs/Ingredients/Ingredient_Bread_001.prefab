@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 6396888887496788285}
   - component: {fileID: 2419097471842866602}
   - component: {fileID: 5180457760107230718}
-  m_Layer: 0
-  m_Name: Ingredients_Bread_001
+  m_Layer: 11
+  m_Name: Ingredient_Bread_001
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
