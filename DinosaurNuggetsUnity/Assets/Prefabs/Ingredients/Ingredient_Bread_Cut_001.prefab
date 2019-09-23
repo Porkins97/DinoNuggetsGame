@@ -29,30 +29,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2590128, y: 0.18190259, z: 0.61884546}
   m_Center: {x: 0.0008325726, y: 0.09158707, z: -0.0034721494}
---- !u!114 &5391045205173950873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4807630029287183367}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5929bda0602de0445a273d675c71a9eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TargetSpeed: 0.001
-  ShrinkSpeed: 0.1
-  CupboardTest: {fileID: 0}
-  Cupboard: {fileID: 0}
-  Cupboard1: {fileID: 0}
-  Knife: {fileID: 0}
-  Name: {fileID: 0}
-  CutIngredient: {fileID: 0}
-  Burner: {fileID: 0}
-  Oven: {fileID: 0}
-  Character: {fileID: 0}
-  Position: {fileID: 0}
 --- !u!114 &6257604049534643022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,28 +42,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itype: 1
---- !u!114 &8899368242870925537
+--- !u!114 &6217105866510031571
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4807630029287183367}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74dc92ec0d146c341a153be093e930c7, type: 3}
+  m_Script: {fileID: 11500000, guid: fe8560b6c91bfed4789568902439cd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisItemIsBeingCarried: 0
-  HeldLeft: 0
-  HeldRight: 0
-  WhichHand: 0
-  HandLeft: {fileID: 0}
-  HandRight: {fileID: 0}
-  Name: {fileID: 0}
-  Character: {fileID: 0}
-  colLeftHand: {fileID: 0}
-  colRightHand: {fileID: 0}
+  beingUsed: 0
+  onStove: 0
+  type: 0
 --- !u!1001 &3574115499621387534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -128,7 +97,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 34b3f693f3ef0a84bbd4686bd121af2c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 34b3f693f3ef0a84bbd4686bd121af2c,
         type: 3}

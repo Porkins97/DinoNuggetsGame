@@ -14,9 +14,8 @@ GameObject:
   - component: {fileID: 1138689965459398587}
   - component: {fileID: 1053744346310302031}
   - component: {fileID: 6348436010686143312}
-  - component: {fileID: 1497256361048638435}
-  - component: {fileID: 4377335579185190631}
-  m_Layer: 0
+  - component: {fileID: 6555881931126840016}
+  m_Layer: 11
   m_Name: Ingredient_Milk_001
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
@@ -32,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 6164678057872477304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.7316349, y: 1.7316318, z: 1.7316349}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -125,49 +124,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itype: 3
---- !u!114 &1497256361048638435
+--- !u!114 &6555881931126840016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6164678057872477304}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74dc92ec0d146c341a153be093e930c7, type: 3}
+  m_Script: {fileID: 11500000, guid: fe8560b6c91bfed4789568902439cd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisItemIsBeingCarried: 0
-  HeldLeft: 0
-  HeldRight: 0
-  WhichHand: 0
-  HandLeft: {fileID: 0}
-  HandRight: {fileID: 0}
-  Name: {fileID: 0}
-  Character: {fileID: 0}
-  colLeftHand: {fileID: 0}
-  colRightHand: {fileID: 0}
---- !u!114 &4377335579185190631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6164678057872477304}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5929bda0602de0445a273d675c71a9eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TargetSpeed: 0.001
-  ShrinkSpeed: 0.1
-  CupboardTest: {fileID: 0}
-  Cupboard: {fileID: 0}
-  Cupboard1: {fileID: 0}
-  Knife: {fileID: 0}
-  Name: {fileID: 0}
-  CutIngredient: {fileID: 0}
-  Burner: {fileID: 0}
-  Oven: {fileID: 0}
-  Character: {fileID: 0}
-  Position: {fileID: 0}
+  beingUsed: 0
+  onStove: 0
+  type: 0

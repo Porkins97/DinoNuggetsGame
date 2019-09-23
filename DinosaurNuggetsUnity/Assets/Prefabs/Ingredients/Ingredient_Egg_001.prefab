@@ -11,12 +11,11 @@ GameObject:
   - component: {fileID: 6253587714507623276}
   - component: {fileID: 4117482946300968183}
   - component: {fileID: 76022263279819966}
-  - component: {fileID: 1750779427008591316}
   - component: {fileID: 356550910910571247}
   - component: {fileID: 8104263277683111549}
-  - component: {fileID: 5432420061078822795}
-  - component: {fileID: 2741057670332500261}
-  m_Layer: 0
+  - component: {fileID: 4142342844201446875}
+  - component: {fileID: 2071830725}
+  m_Layer: 11
   m_Name: Ingredient_Egg_001
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
@@ -32,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 7011493206116273044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1544244, y: 1.1544212, z: 1.1544244}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -82,19 +81,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1750779427008591316
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7011493206116273044}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.27175796, y: 0.32698625, z: 0.271758}
-  m_Center: {x: -0.000000007450581, y: 0.16312736, z: 0.000000029802322}
 --- !u!54 &356550910910571247
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -124,49 +110,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itype: 10
---- !u!114 &5432420061078822795
+--- !u!114 &4142342844201446875
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7011493206116273044}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74dc92ec0d146c341a153be093e930c7, type: 3}
+  m_Script: {fileID: 11500000, guid: fe8560b6c91bfed4789568902439cd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThisItemIsBeingCarried: 0
-  HeldLeft: 0
-  HeldRight: 0
-  WhichHand: 0
-  HandLeft: {fileID: 0}
-  HandRight: {fileID: 0}
-  Name: {fileID: 0}
-  Character: {fileID: 0}
-  colLeftHand: {fileID: 0}
-  colRightHand: {fileID: 0}
---- !u!114 &2741057670332500261
-MonoBehaviour:
+  beingUsed: 0
+  onStove: 0
+  type: 0
+--- !u!64 &2071830725
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7011493206116273044}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5929bda0602de0445a273d675c71a9eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TargetSpeed: 0.001
-  ShrinkSpeed: 0.1
-  CupboardTest: {fileID: 0}
-  Cupboard: {fileID: 0}
-  Cupboard1: {fileID: 0}
-  Knife: {fileID: 0}
-  Name: {fileID: 0}
-  CutIngredient: {fileID: 0}
-  Burner: {fileID: 0}
-  Oven: {fileID: 0}
-  Character: {fileID: 0}
-  Position: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 8048870288576412449, guid: b41c9659848d3674f869e59f6bddcf1f, type: 3}

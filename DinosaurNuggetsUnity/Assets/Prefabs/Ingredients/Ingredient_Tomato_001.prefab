@@ -11,11 +11,10 @@ GameObject:
   - component: {fileID: 1049534831664384403}
   - component: {fileID: 3070482303780158509}
   - component: {fileID: 3485146096717491546}
-  - component: {fileID: 1807347065078550167}
-  - component: {fileID: 3653128803676246147}
   - component: {fileID: 416867891334563059}
-  m_Layer: 0
-  m_Name: Ingredients_Tomato_001
+  - component: {fileID: 3138103081446083133}
+  m_Layer: 11
+  m_Name: Ingredient_Tomato_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4092623649492155264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.06271553, y: -0.19755563, z: -2.8551192}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1544217, y: 1.1544212, z: 1.1544217}
   m_Children:
   - {fileID: 825386840187148921}
   m_Father: {fileID: 0}
@@ -65,52 +64,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1807347065078550167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4092623649492155264}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5929bda0602de0445a273d675c71a9eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TargetSpeed: 0.001
-  ShrinkSpeed: 0.1
-  CupboardTest: {fileID: 0}
-  Cupboard: {fileID: 0}
-  Cupboard1: {fileID: 0}
-  Knife: {fileID: 0}
-  Name: {fileID: 0}
-  CutIngredient: {fileID: 0}
-  Burner: {fileID: 0}
-  Oven: {fileID: 0}
-  Character: {fileID: 0}
-  Position: {fileID: 0}
---- !u!114 &3653128803676246147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4092623649492155264}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74dc92ec0d146c341a153be093e930c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ThisItemIsBeingCarried: 0
-  HeldLeft: 0
-  HeldRight: 0
-  WhichHand: 0
-  HandLeft: {fileID: 0}
-  HandRight: {fileID: 0}
-  Name: {fileID: 0}
-  Character: {fileID: 0}
-  colLeftHand: {fileID: 0}
-  colRightHand: {fileID: 0}
 --- !u!114 &416867891334563059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +77,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itype: 11
+--- !u!114 &3138103081446083133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4092623649492155264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8560b6c91bfed4789568902439cd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beingUsed: 0
+  onStove: 0
+  type: 0
 --- !u!1 &8629521551446798236
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +103,7 @@ GameObject:
   - component: {fileID: 825386840187148921}
   - component: {fileID: 6867044459298718899}
   - component: {fileID: 1312758097858526561}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Tomato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
