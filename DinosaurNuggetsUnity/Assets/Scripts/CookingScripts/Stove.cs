@@ -26,6 +26,7 @@ public class Stove : MonoBehaviour
             stoveAGameObject = objectPlaced;
             objectPlaced.GetComponent<Rigidbody>().isKinematic = true;
             objectPlaced.GetComponent<BeingUsed>().beingUsed = true;
+            objectPlaced.GetComponent<BeingUsed>().onStove = true;
             objectPlaced.transform.position = stoveTopA_Loc.position;
             objectPlaced.transform.rotation = Quaternion.identity;
 
@@ -36,6 +37,7 @@ public class Stove : MonoBehaviour
     {
         if(objectPlaced == stoveAGameObject)
         {
+            stoveAGameObject.GetComponent<BeingUsed>().onStove = false;
             stoveAGameObject = null;
             stoveTopA_Used = false;
         }
