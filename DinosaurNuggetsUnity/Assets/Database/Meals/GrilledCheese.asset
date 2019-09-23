@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GrilledCheese
   m_EditorClassIdentifier: 
   ingredients:
-  - {fileID: 4807630029287183367, guid: 5ddda76795c6d0547bd66239d5f20b3f, type: 3}
-  - {fileID: 2999031713807822612, guid: 16836f4eb4e0d9e44ba061c10d5a6d16, type: 3}
-  - {fileID: 2269540474065574567, guid: a23b39882e9be1645b86756f8b32f1d8, type: 3}
+  - {fileID: 11400000, guid: cbb5e5c1bfe1b8b448cf3489826b77b4, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   meal: {fileID: 1034502773513545976, guid: 86226b1b0da954d4ebad35beb019b26e, type: 3}
