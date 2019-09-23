@@ -7,17 +7,6 @@ public class Stove : MonoBehaviour
     public Transform stoveTopA_Loc = null;
     public bool stoveTopA_Used = false;
     private GameObject stoveAGameObject = null;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void Placed(GameObject objectPlaced)
     {
@@ -29,7 +18,6 @@ public class Stove : MonoBehaviour
             objectPlaced.GetComponent<BeingUsed>().onStove = true;
             objectPlaced.transform.position = stoveTopA_Loc.position;
             objectPlaced.transform.rotation = Quaternion.identity;
-
             stoveTopA_Used = true;
         }
     }

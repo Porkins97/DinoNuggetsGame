@@ -7,7 +7,7 @@ public class RecipeStep
 {
     public int amountNeeded;
     private int amountProvided = 0;
-    public IngredientType ingredient;
+    //public IngredientType ingredient;
     bool is_complete = false;
 
     public void ResetStep()
@@ -28,6 +28,7 @@ public class RecipeStep
 
     //returns true if adding the ingredient was OK.
     //returns false if there's a problem
+    /* 
     public bool AddIngredient(IngredientType itype)
     {
         bool retval = false;
@@ -44,7 +45,7 @@ public class RecipeStep
             }
         }
         return retval;
-    }
+    }*/
 }
 
 public class Recipe : MonoBehaviour
@@ -98,7 +99,7 @@ public class Recipe : MonoBehaviour
         }
         return progress;
     }
-
+/* 
     public bool AddIngredient(Ingredient ingredient)
     {
         bool correct = GetCurrentStep().AddIngredient(ingredient.itype);
@@ -118,5 +119,5 @@ public class Recipe : MonoBehaviour
             Reset();
         }
         return correct;
-    }
+    }*/
 }

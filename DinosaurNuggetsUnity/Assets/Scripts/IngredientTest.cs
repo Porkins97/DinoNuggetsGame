@@ -57,10 +57,10 @@ public class IngredientTest : MonoBehaviour
 
         if((OnCupboard == true) && (DoubleCupboard.Cut == true))
         {
-            Instantiate(CutIngredient);
-            CutIngredient.transform.position = Cupboard.transform.position;
-            CutIngredient.transform.SetParent(Cupboard.transform);
-            Destroy(this.gameObject);
+            //Instantiate(CutIngredient);
+            //CutIngredient.transform.position = Cupboard.transform.position;
+            //CutIngredient.transform.SetParent(Cupboard.transform);
+            //Destroy(this.gameObject);
         } 
     }
 
@@ -112,16 +112,16 @@ public class IngredientTest : MonoBehaviour
             Debug.Log("Ingredient in pot");
 
             //Test code to test out recipes
-            Ingredient ingredient = GetComponent<Ingredient>();
+            //Ingredient ingredient = GetComponent<Ingredient>();
             Recipe recipe = null;
             if (Character != null)
                 recipe = Character.GetComponent<Recipe>();
-            if (ingredient != null && recipe != null)
+            /*if (ingredient != null && recipe != null)
             {
-                bool was_correct = recipe.AddIngredient(ingredient);
-                if (was_correct)
-                    Destroy(ingredient.gameObject,2.5f);
-            }
+                bool was_correct = true;//recipe.AddIngredient(ingredient);
+                if (was_correct){}
+                    //Destroy(ingredient.gameObject,2.5f);
+            }*/
         }
 
         if (CupboardTest != null && CupboardTest.GetComponent<DoubleCupboard>().Spot1 == false)
