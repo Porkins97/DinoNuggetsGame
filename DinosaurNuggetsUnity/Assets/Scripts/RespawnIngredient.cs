@@ -12,10 +12,13 @@ public class RespawnIngredient : MonoBehaviour
     float y;
     float z;
     public float Timer = 0f;
+
+    Collider col;
     // Start is called before the first frame update
     void Start()
     {
         ThisGameObject = this.gameObject;
+        col = GetComponent<Collider>();
         if (ThisGameObject.transform.childCount > 0)
         {
             Ingredient = ThisGameObject.transform.GetChild(0).gameObject;
@@ -57,11 +60,11 @@ public class RespawnIngredient : MonoBehaviour
         NewIngredient.GetComponent<Rigidbody>().useGravity = true;
         Ingredient = NewIngredient.gameObject;
     }
-    private void OnCollisionExit(Collision collision)
-    {
-        if((collision.gameObject.tag == "Ingredient") && (collision.gameObject.transform.parent == this.gameObject))
-        {
-            Spawn();
-        }
-    }
+    //private void OnCollisionExit(Collision collision)
+    //{
+      //  if((collision.gameObject.tag == "Ingredient") && collision.gameObject.transform.parent != ThisGameObject)
+        //{
+          //  Spawn();
+        //}
+    //}
 }
