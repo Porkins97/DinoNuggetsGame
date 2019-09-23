@@ -15,17 +15,19 @@ public class Stove_Collider : MonoBehaviour
     {
         if (col.tag == "Utensil")
         {
-            /* //IngredientType iType = IngredientType();
-            if((int)iType < 50)
+            if (col.GetComponent<BeingUsed>().beingUsed == false)
             {
-                //Utensil
-                stoveScript.Placed(col.gameObject);
-                
-            }else if((int)iType >= 50)
-            {
-                
+                IngredientType iType = col.GetComponent<GameType>().iType;
+                if((int)iType < 50)
+                {
+                    //Utensil
+                    stoveScript.Placed(col.gameObject);
+                    
+                }else if((int)iType >= 50)
+                {
+                    
+                }
             }
-*/
             
         }
     }
@@ -35,7 +37,7 @@ public class Stove_Collider : MonoBehaviour
         {
             if (col.GetComponent<BeingUsed>().beingUsed == false)
             {
-                IngredientType iType = col.GetComponent<GameType>().GetComponent<IngredientType>();
+                IngredientType iType = col.GetComponent<GameType>().iType;
 
                 if((int)iType < 50)
                 {

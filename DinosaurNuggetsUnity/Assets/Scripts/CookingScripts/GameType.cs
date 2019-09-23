@@ -31,7 +31,7 @@ public enum IngredientType
 
 public class GameType : MonoBehaviour
 {
-    public IngredientType type;
+    public IngredientType iType;
     public void AttemptAddToRecipe(Recipe r)
     {
         //r.AddIngredient(this);
