@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6396888887496788285}
   - component: {fileID: 2419097471842866602}
   - component: {fileID: 5180457760107230718}
+  - component: {fileID: 8480202997189002148}
   m_Layer: 11
   m_Name: Ingredient_Bread_001
   m_TagString: Ingredient
@@ -109,3 +110,16 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -4548727101508622366, guid: 6d2ba91358a355549a74311b1faa5c3b, type: 3}
+--- !u!114 &8480202997189002148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4682202654358765025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8560b6c91bfed4789568902439cd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beingUsed: 0
