@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Omelette
   m_EditorClassIdentifier: 
   ingredients:
-  - {fileID: 7011493206116273044, guid: 5969b8389dd2a0c4fb9110e330ec3146, type: 3}
-  - {fileID: 6164678057872477304, guid: 85319b7adbfa45d40b31f75ba5ef8db2, type: 3}
-  - {fileID: 2269540474065574567, guid: a23b39882e9be1645b86756f8b32f1d8, type: 3}
-  - {fileID: 2999031713807822612, guid: 16836f4eb4e0d9e44ba061c10d5a6d16, type: 3}
+  - {fileID: 11400000, guid: 067d56985cbad2e40b78669e5d579003, type: 2}
+  - {fileID: 11400000, guid: ba990b268e5809a45abb6b7d9cdf6131, type: 2}
+  - {fileID: 11400000, guid: 34362718ec1d54a479c162ef56922ca4, type: 2}
+  - {fileID: 11400000, guid: afcf26eb562f3434fbd192a95cfd1b3b, type: 2}
   meal: {fileID: 3199765989478032274, guid: 3420755163229d14eadea7d95af0f56a, type: 3}

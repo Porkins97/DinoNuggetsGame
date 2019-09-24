@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DinoNuggets
   m_EditorClassIdentifier: 
   ingredients:
-  - {fileID: 2870125672551433267, guid: de50850ba0628d54e8ba38afb1267413, type: 3}
-  - {fileID: 7011493206116273044, guid: 5969b8389dd2a0c4fb9110e330ec3146, type: 3}
-  - {fileID: 7531801113949621296, guid: 60b8ee4f5536dab469d39af16800f113, type: 3}
+  - {fileID: 11400000, guid: a0a5e535f01dcdd4289dcc114ba7c3cd, type: 2}
+  - {fileID: 11400000, guid: 067d56985cbad2e40b78669e5d579003, type: 2}
+  - {fileID: 11400000, guid: 70738437aeaf7304e9b47e5d7a3cbfaf, type: 2}
   meal: {fileID: 7196087531302336310, guid: aff7b186abfae5f43a83fc9ea3eb76bf, type: 3}
