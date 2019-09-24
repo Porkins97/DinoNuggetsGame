@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class PickupScript : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class PickupScript : MonoBehaviour
             RightHand_Object = obj;
             RightHand = hand;
         }
-        else if(hand.name == "LeftHand" && LeftHand_Carrying == false)
+        if(hand.name == "LeftHand" && LeftHand_Carrying == false)
         {
             LeftHand_Hover = true;
             LeftHand_Object = obj;
@@ -39,7 +40,7 @@ public class PickupScript : MonoBehaviour
             RightHand_Object = null;
             RightHand = null;
         }
-        else if(hand.name == "LeftHand" && LeftHand_Carrying == false)
+        if(hand.name == "LeftHand" && LeftHand_Carrying == false)
         {
             LeftHand_Hover = false;
             LeftHand_Object = null;
@@ -47,15 +48,17 @@ public class PickupScript : MonoBehaviour
         }
     }
 
-    private void  Update()
+    private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(1))
         {
             if(RightHand_Hover && RightHand_Object != null && !RightHand_Carrying) 
             {
                 RightHand_Object.GetComponent<Rigidbody>().isKinematic = true;
+
                 RightHand_Object.transform.SetParent(RightHand.transform);
                 RightHand_Object.transform.localPosition = new Vector3(0, 0, 0);
+
                 RightHand_Carrying = true;
                 RightHand_Object.GetComponent<BeingUsed>().beingUsed = true;
             }
@@ -64,22 +67,29 @@ public class PickupScript : MonoBehaviour
         {
             if(RightHand_Object != null && RightHand_Carrying)
             {
+                //Set Rigidbody back
                 RightHand_Object.GetComponent<Rigidbody>().isKinematic = false;
-                RightHand_Object.transform.SetParent(null);
+                
+                //Remove the sources
+                RightHand_Object.transform.SetParent(RightHand_Object.GetComponent<BeingUsed>().initialParent);
+
+                //Make sure all things are now gotten rid of.
                 RightHand_Carrying = false;
                 RightHand_Object.GetComponent<BeingUsed>().beingUsed = false;
             }
         }
         
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(0))
         {
             if (LeftHand_Hover && LeftHand_Object != null && !LeftHand_Carrying)
             {
                 LeftHand_Object.GetComponent<Rigidbody>().isKinematic = true;
+
                 LeftHand_Object.transform.SetParent(LeftHand.transform);
                 LeftHand_Object.transform.localPosition = new Vector3(0, 0, 0);
+
                 LeftHand_Carrying = true;
-                RightHand_Object.GetComponent<BeingUsed>().beingUsed = true;
+                LeftHand_Object.GetComponent<BeingUsed>().beingUsed = true;
             }
         }
         else
@@ -87,9 +97,9 @@ public class PickupScript : MonoBehaviour
             if(LeftHand_Object != null && LeftHand_Carrying)
             {
                 LeftHand_Object.GetComponent<Rigidbody>().isKinematic = false;
-                LeftHand_Object.transform.SetParent(null);
+                LeftHand_Object.transform.SetParent(RightHand_Object.GetComponent<BeingUsed>().initialParent);
                 LeftHand_Carrying = false;
-                RightHand_Object.GetComponent<BeingUsed>().beingUsed = false;
+                LeftHand_Object.GetComponent<BeingUsed>().beingUsed = false;
             }
         }
     }

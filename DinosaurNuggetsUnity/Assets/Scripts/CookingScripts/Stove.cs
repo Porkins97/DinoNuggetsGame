@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Stove : MonoBehaviour
 {
-    public Transform stoveTopA_Loc = null;
+    [SerializeField] private GameObject firePrefab;
+    [SerializeField] private Transform stoveTopA_Loc = null;
+    //[HideInInspector]
     public bool stoveTopA_Used = false;
+    
     private GameObject stoveAGameObject = null;
 
     public void Placed(GameObject objectPlaced)
@@ -28,6 +31,29 @@ public class Stove : MonoBehaviour
             stoveAGameObject.GetComponent<BeingUsed>().onStove = false;
             stoveAGameObject = null;
             stoveTopA_Used = false;
+        }
+    }
+
+    public void Burn(GameObject objectPlaced)
+    {
+        if(objectPlaced.GetComponent<BeingUsed>().Burnable == true)
+        {
+            IEnumerator coroutine = Burning(2.0f, objectPlaced);
+            Placed(objectPlaced);
+            objectPlaced.GetComponent<BeingUsed>().Locked = true;
+            StartCoroutine(coroutine);
+        }
+    }
+
+    private IEnumerator Burning(float waitTime, GameObject destroyObj)
+    {
+        GameObject fire = Instantiate(firePrefab, destroyObj.transform);
+        while (true)
+        {
+            yield return new WaitForSeconds(waitTime);
+            Removed(destroyObj);
+            Destroy(fire);
+            Destroy(destroyObj);
         }
     }
 }

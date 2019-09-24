@@ -16,10 +16,20 @@ public class HandCollisions : MonoBehaviour
     {
         if(col.tag == "Ingredient" || col.tag == "Utensil")
         {
-           //if (col.GetComponent<BeingUsed>().beingUsed == false)
-           //{
+           if (col.GetComponent<BeingUsed>().beingUsed == false && col.GetComponent<BeingUsed>().Locked == false)
+           {
                 pickupScript.PickItUp(gameObject, col.gameObject);
-           //}
+           }
+        }
+    }
+    void OnTriggerStay (Collider col) 
+    {
+        if(col.tag == "Ingredient" || col.tag == "Utensil")
+        {
+           if (col.GetComponent<BeingUsed>().beingUsed == false && col.GetComponent<BeingUsed>().Locked == false)
+           {
+                pickupScript.PickItUp(gameObject, col.gameObject);
+           }
         }
     }
     void OnTriggerExit(Collider col)

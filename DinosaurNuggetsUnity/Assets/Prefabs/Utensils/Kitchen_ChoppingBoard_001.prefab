@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 7160688579454292349}
   - component: {fileID: 2163107630440966987}
   - component: {fileID: 5564319963878332338}
-  - component: {fileID: 8725917390440252432}
   - component: {fileID: 4644082612977499148}
   - component: {fileID: 4644082612977499149}
   - component: {fileID: 651418590}
   - component: {fileID: 8018613604544895841}
+  - component: {fileID: 6959808246799516086}
   m_Layer: 11
   m_Name: Kitchen_ChoppingBoard_001
   m_TagString: Utensil
@@ -82,28 +82,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8725917390440252432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6126225395924018030}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74dc92ec0d146c341a153be093e930c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ThisItemIsBeingCarried: 0
-  HeldLeft: 0
-  HeldRight: 0
-  WhichHand: 0
-  HandLeft: {fileID: 0}
-  HandRight: {fileID: 0}
-  Name: {fileID: 0}
-  Character: {fileID: 0}
-  colLeftHand: {fileID: 0}
-  colRightHand: {fileID: 0}
 --- !u!54 &4644082612977499148
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -158,5 +136,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8560b6c91bfed4789568902439cd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beingUsed: 1
-  type: 3
+  GameType: 2
+  initialParent: {fileID: 0}
+  beingUsed: 0
+  onStove: 0
+  Burnable: 1
+  Locked: 0
+--- !u!1773428102 &6959808246799516086
+ParentConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6126225395924018030}
+  m_Enabled: 1
+  m_Weight: 1
+  m_TranslationAtRest: {x: -1.127, y: 0.46, z: 1.917}
+  m_RotationAtRest: {x: 0, y: 90, z: 0}
+  m_TranslationOffsets: []
+  m_RotationOffsets: []
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_IsContraintActive: 0
+  m_IsLocked: 0
+  m_Sources: []
