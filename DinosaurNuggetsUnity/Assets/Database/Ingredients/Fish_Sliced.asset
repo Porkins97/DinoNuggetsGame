@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb8749476c4c47b40bd8b654c0a56219, type: 3}
+  m_Name: Fish_Sliced
+  m_EditorClassIdentifier: 
+  ingredientName: Fish_Sliced
+  ingredientPrefab: {fileID: 8902914029581274528, guid: e5c857892758d8e4fb6f8e8e8f799b4c,
+    type: 3}
+  texture: {fileID: 2800000, guid: 7594b221fd875ad47ab462f88052aa7e, type: 3}
+  type: 59

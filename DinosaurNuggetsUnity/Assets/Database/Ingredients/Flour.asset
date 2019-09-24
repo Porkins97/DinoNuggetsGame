@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb8749476c4c47b40bd8b654c0a56219, type: 3}
+  m_Name: Flour
+  m_EditorClassIdentifier: 
+  ingredientName: Flour
+  ingredientPrefab: {fileID: 7531801113949621296, guid: 60b8ee4f5536dab469d39af16800f113,
+    type: 3}
+  texture: {fileID: 2800000, guid: d1e91686ed407b243ad40bea9e0523c9, type: 3}
+  type: 52
