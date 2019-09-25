@@ -29,19 +29,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.37924716, y: 0.08095282, z: 0.3383908}
   m_Center: {x: 0.025699988, y: 0.03784606, z: -0.011861518}
---- !u!114 &2716978760199351907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8306103852994637129}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a30156b4db513194c9e6ef5d191919cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itype: 4
 --- !u!114 &5984462336010610494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,9 +41,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8560b6c91bfed4789568902439cd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameType: 54
+  initialParent: {fileID: 0}
   beingUsed: 0
   onStove: 0
-  type: 0
+  Burnable: 0
+  Locked: 0
 --- !u!1001 &28385422605349952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79,25 +69,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ingredient
       objectReference: {fileID: 0}
-    - target: {fileID: -5721622735811418004, guid: 107022a7297f5af4d8e98e9e48af8193,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 107022a7297f5af4d8e98e9e48af8193,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.2777433
+      value: -6.5063176
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 107022a7297f5af4d8e98e9e48af8193,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0011541999
+      value: -0.107741475
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 107022a7297f5af4d8e98e9e48af8193,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.626721
+      value: 5.378449
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 107022a7297f5af4d8e98e9e48af8193,
         type: 3}
@@ -107,7 +92,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 107022a7297f5af4d8e98e9e48af8193,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9596187
+      value: -0.47964066
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 107022a7297f5af4d8e98e9e48af8193,
         type: 3}
@@ -117,7 +102,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 107022a7297f5af4d8e98e9e48af8193,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.28130433
+      value: 0.877465
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 107022a7297f5af4d8e98e9e48af8193,
         type: 3}
@@ -142,28 +127,33 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 107022a7297f5af4d8e98e9e48af8193,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.154422
+      value: 1.3326907
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 107022a7297f5af4d8e98e9e48af8193,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.1544212
+      value: 1.3326883
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 107022a7297f5af4d8e98e9e48af8193,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.154422
+      value: 1.3326907
+      objectReference: {fileID: 0}
+    - target: {fileID: 730657329560496722, guid: 107022a7297f5af4d8e98e9e48af8193,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5721622735811418004, guid: 107022a7297f5af4d8e98e9e48af8193,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -2272300132363663288, guid: 107022a7297f5af4d8e98e9e48af8193,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e1f95d211130ea643b043e3c1f15a47f, type: 2}
-    - target: {fileID: 730657329560496722, guid: 107022a7297f5af4d8e98e9e48af8193,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 9091550289849228288, guid: 107022a7297f5af4d8e98e9e48af8193,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

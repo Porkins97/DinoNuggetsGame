@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 4644082612977499149}
   - component: {fileID: 651418590}
   - component: {fileID: 8018613604544895841}
-  - component: {fileID: 6959808246799516086}
   m_Layer: 11
   m_Name: Kitchen_ChoppingBoard_001
   m_TagString: Utensil
@@ -142,25 +141,3 @@ MonoBehaviour:
   onStove: 0
   Burnable: 1
   Locked: 0
---- !u!1773428102 &6959808246799516086
-ParentConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6126225395924018030}
-  m_Enabled: 1
-  m_Weight: 1
-  m_TranslationAtRest: {x: -1.127, y: 0.46, z: 1.917}
-  m_RotationAtRest: {x: 0, y: 90, z: 0}
-  m_TranslationOffsets: []
-  m_RotationOffsets: []
-  m_AffectTranslationX: 1
-  m_AffectTranslationY: 1
-  m_AffectTranslationZ: 1
-  m_AffectRotationX: 1
-  m_AffectRotationY: 1
-  m_AffectRotationZ: 1
-  m_IsContraintActive: 0
-  m_IsLocked: 0
-  m_Sources: []

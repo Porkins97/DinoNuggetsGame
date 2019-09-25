@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Final Scenes/SelectLevel.unity
     guid: 4bc878f18f33690408334baf0d4ecc0f
   - enabled: 1
-    path: Assets/Scenes/Final Scenes/Indoor Level.unity
+    path: Assets/Scenes/Final Scenes/Indoor_Level.unity
     guid: cf44671750e8d7b4dafff3ef6e32ed55
   - enabled: 1
     path: Assets/Scenes/Final Scenes/OutdoorLevel.unity

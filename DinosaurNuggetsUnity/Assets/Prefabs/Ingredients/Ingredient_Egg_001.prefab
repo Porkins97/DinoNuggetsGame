@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4117482946300968183}
   - component: {fileID: 76022263279819966}
   - component: {fileID: 356550910910571247}
-  - component: {fileID: 8104263277683111549}
   - component: {fileID: 4142342844201446875}
   - component: {fileID: 2071830725}
   m_Layer: 11
@@ -31,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7011493206116273044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1544244, y: 1.1544212, z: 1.1544244}
+  m_LocalScale: {x: 1.3326923, y: 1.3326883, z: 1.3326923}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -97,19 +96,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8104263277683111549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7011493206116273044}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a30156b4db513194c9e6ef5d191919cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itype: 10
 --- !u!114 &4142342844201446875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,9 +108,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8560b6c91bfed4789568902439cd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameType: 60
+  initialParent: {fileID: 0}
   beingUsed: 0
   onStove: 0
-  type: 0
+  Burnable: 0
+  Locked: 0
 --- !u!64 &2071830725
 MeshCollider:
   m_ObjectHideFlags: 0

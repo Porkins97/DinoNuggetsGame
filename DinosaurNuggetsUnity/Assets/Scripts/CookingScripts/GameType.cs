@@ -8,6 +8,8 @@ public enum IngredientType
     Pot = 0,
     Pan = 1,
     Cutting_Board = 2,
+    Knife_A = 3,
+    Knife_Butcher = 4,
     //-----------------------
     Bread_Whole = 50,
     Bread_Sliced = 51,

@@ -12,6 +12,7 @@ public class SManager : MonoBehaviour
     public GameObject Player1;
     public GameObject Player2;
     public Texture2D checkmarkUI;
+    public int seed;
     
     //-------------
 
@@ -37,8 +38,9 @@ public class SManager : MonoBehaviour
         {
             mealList.Add((SO_Recipes)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(strPath), typeof(SO_Recipes)));
         }
-        
-        SO_Recipes currentRecipe = mealList[1];
+        int recipeRand = (int)UnityEngine.Random.Range(0, mealList.Count-1);
+
+        SO_Recipes currentRecipe = mealList[recipeRand];
 
         UI.SetActive(true);
         MealToUIStarter(currentRecipe);
@@ -88,6 +90,7 @@ public class SManager : MonoBehaviour
             UICheckboxElement.GetComponent<RectTransform>().sizeDelta = new Vector2(par.GetComponent<RectTransform>().rect.width, par.GetComponent<RectTransform>().rect.height);
             image.texture = checkmarkUI;
             UICheckboxElement.layer = LayerMask.NameToLayer("UI");
+            UIIngredientsFinished++;
         }
     }
 
@@ -147,7 +150,7 @@ public class SManager : MonoBehaviour
         Debug.Log(item);
         FinishUIImages(ingredient);
         Destroy(item);
-        UIIngredientsFinished++;
+        
     }
     
 }

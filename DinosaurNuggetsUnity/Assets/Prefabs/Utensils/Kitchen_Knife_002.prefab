@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7270697828130499199}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: transform2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3896074379340513295}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 6940684652756525816}
   - component: {fileID: 2127513371783078646}
   - component: {fileID: 7062237419682494743}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pCylinder1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 8678423892988238447}
   - component: {fileID: 2944486141755822896}
   - component: {fileID: 9172516412472559466}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pCube4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 735494742737520031}
   - component: {fileID: 6178349147810559033}
   - component: {fileID: 2684323780907647133}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pCube1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 5643696615993715771}
   - component: {fileID: 5629825285633948476}
   - component: {fileID: 6011605588591354990}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pCube3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6089869462872541429}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pCube4 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,12 +414,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7771098688376925772}
-  - component: {fileID: 1222610007159089075}
   - component: {fileID: 614625912013381243}
   - component: {fileID: 614625912013381244}
-  m_Layer: 0
+  - component: {fileID: 8636192585273921646}
+  m_Layer: 11
   m_Name: Kitchen_Knife_002
-  m_TagString: Knife
+  m_TagString: Utensil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -440,28 +440,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1222610007159089075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6738269932185918559}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74dc92ec0d146c341a153be093e930c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ThisItemIsBeingCarried: 0
-  HeldLeft: 0
-  HeldRight: 0
-  WhichHand: 0
-  HandLeft: {fileID: 0}
-  HandRight: {fileID: 0}
-  Name: {fileID: 0}
-  Character: {fileID: 0}
-  colLeftHand: {fileID: 0}
-  colRightHand: {fileID: 0}
 --- !u!54 &614625912013381243
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -491,6 +469,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6279311, y: 0.028254747, z: 0.095061064}
   m_Center: {x: -0.0011701584, y: -0.0017557144, z: -0.06522071}
+--- !u!114 &8636192585273921646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6738269932185918559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8560b6c91bfed4789568902439cd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameType: 3
+  initialParent: {fileID: 0}
+  beingUsed: 0
+  onStove: 0
+  Burnable: 0
+  Locked: 0
 --- !u!1 &7367679257745050103
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,7 +498,7 @@ GameObject:
   - component: {fileID: 4866503746954169664}
   - component: {fileID: 7062078657462296164}
   - component: {fileID: 5546185562983287539}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -577,7 +573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7503566539975894485}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: pCube2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -608,7 +604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4930566133137751741}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: transform1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

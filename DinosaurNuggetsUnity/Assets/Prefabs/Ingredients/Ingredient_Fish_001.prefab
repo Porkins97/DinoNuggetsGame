@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 759328496848417445}
   - component: {fileID: 2800464701568086505}
   - component: {fileID: 9114326637790794786}
-  - component: {fileID: 709875365950180815}
   - component: {fileID: 3419932848301086759}
   m_Layer: 11
   m_Name: Ingredient_Fish_001
@@ -31,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 205806625118321836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1544223, y: 1.1544212, z: 1.1544223}
+  m_LocalScale: {x: 1.3326893, y: 1.3326883, z: 1.3326893}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -110,19 +109,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &709875365950180815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205806625118321836}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a30156b4db513194c9e6ef5d191919cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itype: 8
 --- !u!114 &3419932848301086759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +121,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8560b6c91bfed4789568902439cd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameType: 58
+  initialParent: {fileID: 0}
   beingUsed: 0
   onStove: 0
-  type: 0
+  Burnable: 0
+  Locked: 0

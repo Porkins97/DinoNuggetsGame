@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7091316500761419090}
   - component: {fileID: 7482180727389362500}
   - component: {fileID: 8221908382349211553}
-  - component: {fileID: 4764309966172115016}
   - component: {fileID: 1210944093636754228}
   m_Layer: 11
   m_Name: Ingredient_Chicken_001
@@ -30,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2870125672551433267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1544219, y: 1.1544212, z: 1.1544219}
+  m_LocalScale: {x: 1.3326898, y: 1.3326883, z: 1.3326898}
   m_Children:
   - {fileID: 6923902760480365861}
   m_Father: {fileID: 0}
@@ -103,19 +102,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4764309966172115016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2870125672551433267}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a30156b4db513194c9e6ef5d191919cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itype: 15
 --- !u!114 &1210944093636754228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,9 +114,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8560b6c91bfed4789568902439cd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameType: 65
+  initialParent: {fileID: 0}
   beingUsed: 0
   onStove: 0
-  type: 0
+  Burnable: 0
+  Locked: 0
 --- !u!1 &4969389292337160862
 GameObject:
   m_ObjectHideFlags: 0

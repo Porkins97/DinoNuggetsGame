@@ -1,109 +1,8 @@
 fileFormatVersion: 2
-guid: 5c3c7b738f150d24580a899dc44a788a
-labels:
-- Scenery
+guid: ba6c55ca8ede65140a8fd62fb74a710c
 ModelImporter:
   serializedVersion: 25
-  internalIDToNameTable:
-  - first:
-      1: 100000
-    second: //RootNode
-  - first:
-      1: 100002
-    second: pCube1
-  - first:
-      1: 100004
-    second: pCube2
-  - first:
-      1: 100006
-    second: pCylinder1
-  - first:
-      1: 100008
-    second: pCylinder2
-  - first:
-      1: 100010
-    second: pCylinder3
-  - first:
-      1: 100012
-    second: pCylinder4
-  - first:
-      4: 400000
-    second: //RootNode
-  - first:
-      4: 400002
-    second: pCube1
-  - first:
-      4: 400004
-    second: pCube2
-  - first:
-      4: 400006
-    second: pCylinder1
-  - first:
-      4: 400008
-    second: pCylinder2
-  - first:
-      4: 400010
-    second: pCylinder3
-  - first:
-      4: 400012
-    second: pCylinder4
-  - first:
-      21: 2100000
-    second: lambert1
-  - first:
-      23: 2300000
-    second: pCube1
-  - first:
-      23: 2300002
-    second: pCube2
-  - first:
-      23: 2300004
-    second: pCylinder1
-  - first:
-      23: 2300006
-    second: pCylinder2
-  - first:
-      23: 2300008
-    second: pCylinder3
-  - first:
-      23: 2300010
-    second: pCylinder4
-  - first:
-      33: 3300000
-    second: pCube1
-  - first:
-      33: 3300002
-    second: pCube2
-  - first:
-      33: 3300004
-    second: pCylinder1
-  - first:
-      33: 3300006
-    second: pCylinder2
-  - first:
-      33: 3300008
-    second: pCylinder3
-  - first:
-      33: 3300010
-    second: pCylinder4
-  - first:
-      43: 4300000
-    second: pCylinder1
-  - first:
-      43: 4300002
-    second: pCylinder2
-  - first:
-      43: 4300004
-    second: pCylinder3
-  - first:
-      43: 4300006
-    second: pCylinder4
-  - first:
-      43: 4300008
-    second: pCube1
-  - first:
-      43: 4300010
-    second: pCube2
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -132,16 +31,16 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 11
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
+    importCameras: 1
     importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -181,7 +80,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.11
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
