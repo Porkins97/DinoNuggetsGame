@@ -5,64 +5,73 @@ using UnityEngine;
 public class Stove_Collider : MonoBehaviour
 {
     [SerializeField] private Stove stoveScript;
-    
+    [SerializeField] private SManager sManager;
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.GetComponent<BeingUsed>().beingUsed == false)
+        if(col.tag == "Utensil" || col.tag == "Ingredient")
         {
-            IngredientType iType = col.GetComponent<BeingUsed>().GameType;
-            if((int)iType < 50)
+            if (col.GetComponent<BeingUsed>().beingUsed == false)
             {
-                //Utensil
-                if(col.GetComponent<BeingUsed>().Burnable == true)
+                IngredientType iType = col.GetComponent<BeingUsed>().GameType;                
+                if((int)iType < 50)
                 {
-                    stoveScript.Burn(col.gameObject);
-                }
-                else
-                {
-                    stoveScript.Placed(col.gameObject);
-                }
+                    //Utensil
+                    if(col.GetComponent<BeingUsed>().Burnable == true)
+                    {
+                        stoveScript.Burn(col.gameObject);
+                    }
+                    else
+                    {
+                        stoveScript.Placed(col.gameObject);
+                    }
 
-            }
-            else if((int)iType >= 50)
-            {
-                //Ingredients
-                stoveScript.gameObject.GetComponent<CurrentRecipe>().runThrough(col.gameObject);
+                }
+                else if((int)iType >= 50)
+                {
+                    //Ingredients
+                    sManager.runThrough(col.gameObject);
+                }
             }
         }
     }
     void OnTriggerStay(Collider col)
     {
-        if (col.GetComponent<BeingUsed>().beingUsed == false)
+        if(col.tag == "Utensil" || col.tag == "Ingredient")
         {
-            IngredientType iType = col.GetComponent<BeingUsed>().GameType;
+            if (col.GetComponent<BeingUsed>().beingUsed == false)
+            {
+                IngredientType iType = col.GetComponent<BeingUsed>().GameType;
 
-            if((int)iType < 50)
-            {
-                //Utensil
-                if(col.GetComponent<BeingUsed>().Burnable == true)
+                if((int)iType < 50)
                 {
-                    stoveScript.Placed(col.gameObject);
-                    stoveScript.Burn(col.gameObject);
-                }
-                else
+                    //Utensil
+                    if(col.GetComponent<BeingUsed>().Burnable == true)
+                    {
+                        stoveScript.Placed(col.gameObject);
+                        stoveScript.Burn(col.gameObject);
+                    }
+                    else
+                    {
+                        stoveScript.Placed(col.gameObject);
+                    }
+                        
+                }else if((int)iType >= 50)
                 {
-                    stoveScript.Placed(col.gameObject);
+                    //Ingredients
+                    sManager.runThrough(col.gameObject);
                 }
-                    
-            }else if((int)iType >= 50)
-            {
-                    
             }
         }
     }
     void OnTriggerExit(Collider col)
     {
-        if (col.GetComponent<BeingUsed>().beingUsed == true)
+        if(col.tag == "Utensil" || col.tag == "Ingredient")
         {
-            stoveScript.Removed(col.gameObject);
+            if (col.GetComponent<BeingUsed>().beingUsed == true)
+            {
+                stoveScript.Removed(col.gameObject);
+            }
         }
-        
     }
 }

@@ -13,11 +13,10 @@ GameObject:
   - component: {fileID: 523491804694113915}
   - component: {fileID: 3068433216300161915}
   - component: {fileID: 3656590782065182562}
-  - component: {fileID: 4151357990837048608}
   - component: {fileID: 7120869164806909172}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Ingredient_Tomato_Sliced_001
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,8 +91,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.22726376, y: 0.06169, z: 0.35485786}
-  m_Center: {x: 0, y: 0.029560411, z: -0.07742893}
+  m_Size: {x: 0.27271652, y: 0.07402801, z: 0.42582944}
+  m_Center: {x: 0, y: 0.035472494, z: -0.092914715}
 --- !u!54 &3656590782065182562
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -110,19 +109,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4151357990837048608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2269540474065574567}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a30156b4db513194c9e6ef5d191919cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itype: 12
 --- !u!114 &7120869164806909172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +121,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8560b6c91bfed4789568902439cd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameType: 62
+  initialParent: {fileID: 0}
   beingUsed: 0
   onStove: 0
-  type: 0
+  Burnable: 0
+  Locked: 0

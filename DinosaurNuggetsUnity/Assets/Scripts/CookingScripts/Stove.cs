@@ -12,12 +12,6 @@ public class Stove : MonoBehaviour
     public bool stoveTopA_Used = false;
     
     private GameObject stoveAGameObject = null;
-    private CurrentRecipe currentRecipe;
-
-    void Start()
-    {
-        currentRecipe = sManager.gameObject.GetComponent<CurrentRecipe>();
-    }
 
     public void Placed(GameObject objectPlaced)
     {

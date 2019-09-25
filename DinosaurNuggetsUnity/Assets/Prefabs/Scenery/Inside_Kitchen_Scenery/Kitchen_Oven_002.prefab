@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stoveScript: {fileID: 2118863002}
+  sManager: {fileID: 0}
 --- !u!1 &5160091934101147431
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6840960392768578546}
   - component: {fileID: 6840960392768578545}
   - component: {fileID: 7126666249842990471}
-  - component: {fileID: 2128333978}
   m_Layer: 11
   m_Name: Cookware_Pot_PF
   m_TagString: Utensil
@@ -144,25 +143,3 @@ MonoBehaviour:
   onStove: 0
   Burnable: 0
   Locked: 0
---- !u!1773428102 &2128333978
-ParentConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1542592511382244446}
-  m_Enabled: 1
-  m_Weight: 1
-  m_TranslationAtRest: {x: -0.395, y: 0.44, z: 1.892}
-  m_RotationAtRest: {x: 0, y: 90, z: 0}
-  m_TranslationOffsets: []
-  m_RotationOffsets: []
-  m_AffectTranslationX: 1
-  m_AffectTranslationY: 1
-  m_AffectTranslationZ: 1
-  m_AffectRotationX: 1
-  m_AffectRotationY: 1
-  m_AffectRotationZ: 1
-  m_IsContraintActive: 0
-  m_IsLocked: 0
-  m_Sources: []
