@@ -11,19 +11,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 4e54c354acdc8b449b3a74ce66c771a3
-  - enabled: 0
-    path: Assets/Scenes/DinoNuggetsPrototypeScene2.unity
-    guid: dc622b334a47e6145b3324eeec78f950
   - enabled: 1
     path: Assets/Scenes/Final Scenes/Controls.unity
     guid: 4b2be84eaadc2e4469e8f8a2f8621998
+  - enabled: 1
+    path: Assets/Scenes/Final Scenes/SelectLevel.unity
+    guid: 4bc878f18f33690408334baf0d4ecc0f
   - enabled: 1
     path: Assets/Scenes/Final Scenes/Indoor Level.unity
     guid: cf44671750e8d7b4dafff3ef6e32ed55
   - enabled: 1
     path: Assets/Scenes/Final Scenes/OutdoorLevel.unity
     guid: 9457119b9a2d34048825071ef5a761fb
-  - enabled: 1
+  - enabled: 0
+    path: Assets/Scenes/DinoNuggetsPrototypeScene2.unity
+    guid: dc622b334a47e6145b3324eeec78f950
+  - enabled: 0
     path: Assets/Scenes/Final Scenes/Select Level.unity
     guid: 86f452284bf14fb4480179f773262abb
   m_configObjects: {}
