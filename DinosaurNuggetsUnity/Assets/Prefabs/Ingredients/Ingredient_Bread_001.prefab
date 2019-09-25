@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2419097471842866602}
   - component: {fileID: 5180457760107230718}
   - component: {fileID: 8480202997189002148}
-  - component: {fileID: 4553207051530937093}
   m_Layer: 11
   m_Name: Ingredient_Bread_001
   m_TagString: Ingredient
@@ -123,31 +122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8560b6c91bfed4789568902439cd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameType: 0
+  GameType: 50
   initialParent: {fileID: 0}
   beingUsed: 0
   onStove: 0
   Burnable: 1
   Locked: 0
---- !u!1773428102 &4553207051530937093
-ParentConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4682202654358765025}
-  m_Enabled: 1
-  m_Weight: 1
-  m_TranslationAtRest: {x: 0.449, y: 0.44, z: 1.867}
-  m_RotationAtRest: {x: 0, y: 0, z: 0}
-  m_TranslationOffsets: []
-  m_RotationOffsets: []
-  m_AffectTranslationX: 1
-  m_AffectTranslationY: 1
-  m_AffectTranslationZ: 1
-  m_AffectRotationX: 1
-  m_AffectRotationY: 1
-  m_AffectRotationZ: 1
-  m_IsContraintActive: 0
-  m_IsLocked: 0
-  m_Sources: []

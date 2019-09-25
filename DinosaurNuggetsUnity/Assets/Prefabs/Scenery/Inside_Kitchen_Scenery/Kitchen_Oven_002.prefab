@@ -197,6 +197,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d18e4a9957f6c42ac2fcf89c8b4e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sManager: {fileID: 0}
+  firePrefab: {fileID: 3048342401589599679, guid: 39d704348f9c59446b3dda5191936c53,
+    type: 3}
   stoveTopA_Loc: {fileID: 2798879530024552687}
   stoveTopA_Used: 0
 --- !u!1 &8884954333271065780

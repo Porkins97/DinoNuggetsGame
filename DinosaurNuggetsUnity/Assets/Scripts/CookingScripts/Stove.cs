@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class Stove : MonoBehaviour
 {
+    [SerializeField] private SManager sManager;
     [SerializeField] private GameObject firePrefab;
     [SerializeField] private Transform stoveTopA_Loc = null;
+    
     //[HideInInspector]
     public bool stoveTopA_Used = false;
     
     private GameObject stoveAGameObject = null;
+    private CurrentRecipe currentRecipe;
+
+    void Start()
+    {
+        currentRecipe = sManager.gameObject.GetComponent<CurrentRecipe>();
+    }
 
     public void Placed(GameObject objectPlaced)
     {
