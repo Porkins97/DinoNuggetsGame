@@ -97,7 +97,7 @@ public class PickupScript : MonoBehaviour
             if(LeftHand_Object != null && LeftHand_Carrying)
             {
                 LeftHand_Object.GetComponent<Rigidbody>().isKinematic = false;
-                LeftHand_Object.transform.SetParent(RightHand_Object.GetComponent<BeingUsed>().initialParent);
+                LeftHand_Object.transform.SetParent(LeftHand_Object.GetComponent<BeingUsed>().initialParent);
                 LeftHand_Carrying = false;
                 LeftHand_Object.GetComponent<BeingUsed>().beingUsed = false;
             }

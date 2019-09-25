@@ -5,7 +5,7 @@ using UnityEngine;
 public class BeingUsed : MonoBehaviour
 {
     [SerializeField] public IngredientType GameType;
-    [HideInInspector] public Transform initialParent;
+    public Transform initialParent;
     public bool beingUsed = false;
     public bool onStove = false;
     public bool Burnable = false;
