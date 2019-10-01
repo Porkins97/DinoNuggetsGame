@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2222792131522895580}
   - component: {fileID: 2061582528058253721}
   m_Layer: 0
-  m_Name: Sofa
+  m_Name: Kitchen_Sofa_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,7 +131,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 01dfae76d42457b4a9b6a46158be8687, type: 2}
+      objectReference: {fileID: 2100000, guid: 2c20c491bcfe2d04a9d4a7a9e51cd385, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57bb90683fd576b428cf7825b47f9bdf, type: 3}
 --- !u!1 &5947854063690172842 stripped

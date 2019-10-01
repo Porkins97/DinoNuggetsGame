@@ -39,7 +39,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2270033975750617797}
-  m_Mesh: {fileID: 4716719917043098182, guid: eae91da892f162443831f5be78b3efb5, type: 3}
+  m_Mesh: {fileID: 1832167319304561132, guid: eae91da892f162443831f5be78b3efb5, type: 3}
 --- !u!23 &9083666350749628575
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c13d7828f267de428184d361b57ca4f, type: 2}
+  - {fileID: 2100000, guid: f720055263b2b824ea9763fca8880b78, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 339918919812097957}
   - component: {fileID: 4314626820065787369}
   m_Layer: 0
-  m_Name: Stool
+  m_Name: Kitchen_Stool_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

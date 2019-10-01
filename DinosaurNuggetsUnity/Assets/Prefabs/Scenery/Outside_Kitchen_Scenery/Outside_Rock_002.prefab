@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 95492539766158187}
-  - component: {fileID: 4911726504695019672}
+  - component: {fileID: 5294679481838364457}
   m_Layer: 0
   m_Name: Outside_Rock_002
   m_TagString: Untagged
@@ -32,8 +32,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4911726504695019672
-BoxCollider:
+--- !u!64 &5294679481838364457
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -42,9 +42,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.68620324, y: 0.3071214, z: 0.6771078}
-  m_Center: {x: -0.0022739172, y: 0.1484316, z: 0.0022740364}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -2428264800438792328, guid: 015f096573aeb1a48b612d61ad7ae295, type: 3}
 --- !u!1 &7260696649901741256
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,7 +103,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7b6f5b091dec38349b67cf5cfb9a3303, type: 2}
+  - {fileID: 2100000, guid: 0c0e074995caf9b459f55d41be9c7379, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 798463985792905989}
   - component: {fileID: 5651456838306715649}
   m_Layer: 0
-  m_Name: Outside_Bench
+  m_Name: Outside_Bench_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9cdae5db6b76fe847845e9c464577438, type: 2}
+  - {fileID: 2100000, guid: 0c0e074995caf9b459f55d41be9c7379, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
