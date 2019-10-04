@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1359004225676700822}
   - component: {fileID: 5536657891095691310}
   - component: {fileID: 759328496848417445}
-  - component: {fileID: 2800464701568086505}
   - component: {fileID: 9114326637790794786}
   - component: {fileID: 3419932848301086759}
+  - component: {fileID: 4126180722121166435}
   m_Layer: 11
   m_Name: Ingredient_Fish_001
   m_TagString: Ingredient
@@ -80,19 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &2800464701568086505
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205806625118321836}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5503048, y: 0.0707815, z: 0.20138824}
-  m_Center: {x: -0.055627972, y: 0.03539075, z: 0}
 --- !u!54 &9114326637790794786
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,3 +114,17 @@ MonoBehaviour:
   onStove: 0
   Burnable: 0
   Locked: 0
+--- !u!64 &4126180722121166435
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205806625118321836}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 2586148439552901436, guid: 167037ce4550e3f41ae1cb5a04f48faf, type: 3}

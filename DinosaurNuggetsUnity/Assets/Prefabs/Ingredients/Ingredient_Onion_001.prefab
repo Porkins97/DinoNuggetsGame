@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8618824715579584344}
   - component: {fileID: 3089496158875112951}
   - component: {fileID: 3070912267762317515}
-  - component: {fileID: 658365335163530708}
   - component: {fileID: 100711348556957842}
   - component: {fileID: 7270219039457814378}
+  - component: {fileID: 1710051871053031072}
   m_Layer: 11
   m_Name: Ingredient_Onion_001
   m_TagString: Ingredient
@@ -81,19 +81,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &658365335163530708
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362492218953947609}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.24, y: 0.46823564, z: 0.23999998}
-  m_Center: {x: 0, y: 0.23370959, z: 0.0000000037252903}
 --- !u!54 &100711348556957842
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128,3 +115,17 @@ MonoBehaviour:
   onStove: 0
   Burnable: 0
   Locked: 0
+--- !u!64 &1710051871053031072
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362492218953947609}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 3209097409963520316, guid: c1c70ed3eefb9464785093416baa304d, type: 3}

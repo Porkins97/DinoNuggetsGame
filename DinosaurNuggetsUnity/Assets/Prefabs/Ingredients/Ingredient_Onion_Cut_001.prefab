@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 8690191730251301457}
   - component: {fileID: 415111720481437799}
   - component: {fileID: 6268531854147470494}
-  - component: {fileID: 8874587463509881246}
   - component: {fileID: 7134630307961384327}
   - component: {fileID: 7503291229612998597}
   - component: {fileID: 4553250230985063387}
+  - component: {fileID: 4013083366100687240}
   m_Layer: 0
   m_Name: Ingredient_Onion_Cut_001
   m_TagString: Untagged
@@ -81,19 +81,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &8874587463509881246
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5675268419012554818}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.22726376, y: 0.06169, z: 0.35485786}
-  m_Center: {x: 0, y: 0.029560411, z: -0.07742893}
 --- !u!54 &7134630307961384327
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -122,7 +109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a30156b4db513194c9e6ef5d191919cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itype: 6
 --- !u!114 &4553250230985063387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +121,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8560b6c91bfed4789568902439cd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameType: 0
+  initialParent: {fileID: 0}
   beingUsed: 0
   onStove: 0
-  type: 0
+  Burnable: 0
+  Locked: 0
+--- !u!64 &4013083366100687240
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5675268419012554818}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -3411150430421803554, guid: 4e3a9c31f62fa484a9d53c0652d45875, type: 3}

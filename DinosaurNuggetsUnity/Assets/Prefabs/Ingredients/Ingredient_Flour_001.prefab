@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3117277841837595984}
   - component: {fileID: 475345290262950570}
   - component: {fileID: 6838024200474987478}
-  - component: {fileID: 1179158790571526222}
   - component: {fileID: 2019549335570037428}
   - component: {fileID: 8089237462915355448}
+  - component: {fileID: 2228886192202819717}
   m_Layer: 11
   m_Name: Ingredient_Flour_001
   m_TagString: Ingredient
@@ -80,19 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1179158790571526222
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7531801113949621296}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.16858888, y: 0.4540931, z: 0.32591674}
-  m_Center: {x: 0.0049559996, y: 0.22704655, z: 0.00025719404}
 --- !u!54 &2019549335570037428
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,3 +114,17 @@ MonoBehaviour:
   onStove: 0
   Burnable: 0
   Locked: 0
+--- !u!64 &2228886192202819717
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531801113949621296}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -4108693947968218266, guid: 64cdb10f39bc6c342a53cfa8dd1277ae, type: 3}

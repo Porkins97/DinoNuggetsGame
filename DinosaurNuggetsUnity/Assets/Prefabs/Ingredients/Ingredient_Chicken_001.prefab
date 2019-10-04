@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8942597514423198159}
   - component: {fileID: 7091316500761419090}
-  - component: {fileID: 7482180727389362500}
   - component: {fileID: 8221908382349211553}
   - component: {fileID: 1210944093636754228}
+  - component: {fileID: 1541703099672910841}
   m_Layer: 11
   m_Name: Ingredient_Chicken_001
   m_TagString: Ingredient
@@ -73,19 +73,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7482180727389362500
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2870125672551433267}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.30227548, y: 0.297241, z: 0.651901}
-  m_Center: {x: -0.017642297, y: 0.1486205, z: -0.1449963}
 --- !u!54 &8221908382349211553
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -120,6 +107,20 @@ MonoBehaviour:
   onStove: 0
   Burnable: 0
   Locked: 0
+--- !u!64 &1541703099672910841
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2870125672551433267}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -9048729508149555849, guid: 188c00d23b219a443ab911ce5ffe31b3, type: 3}
 --- !u!1 &4969389292337160862
 GameObject:
   m_ObjectHideFlags: 0

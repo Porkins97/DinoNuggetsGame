@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1049534831664384403}
-  - component: {fileID: 3070482303780158509}
   - component: {fileID: 3485146096717491546}
   - component: {fileID: 3138103081446083133}
+  - component: {fileID: 7605023164479368098}
+  - component: {fileID: 2614215766647440005}
   m_Layer: 11
   m_Name: Ingredient_Tomato_001
   m_TagString: Ingredient
@@ -27,26 +28,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4092623649492155264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06271553, y: -0.19755563, z: -2.8551192}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 825386840187148921}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3070482303780158509
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4092623649492155264}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.2289829, y: 0.2468181, z: 0.2291956}
-  m_Center: {x: 0.0002668202, y: -0.00060774386, z: -0.0011188984}
 --- !u!54 &3485146096717491546
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -81,6 +69,34 @@ MonoBehaviour:
   onStove: 0
   Burnable: 0
   Locked: 0
+--- !u!64 &7605023164479368098
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4092623649492155264}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -1340541719380434750, guid: 06ec56ba4c4d5be43a17dcf1b90ccd0c, type: 3}
+--- !u!64 &2614215766647440005
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4092623649492155264}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -1340541719380434750, guid: 06ec56ba4c4d5be43a17dcf1b90ccd0c, type: 3}
 --- !u!1 &8629521551446798236
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8629521551446798236}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000000007152557, y: -0.12335809, z: -0.0011921453}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1049534831664384403}

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2964598708867049652}
   - component: {fileID: 6088682453270336130}
   - component: {fileID: 523491804694113915}
-  - component: {fileID: 3068433216300161915}
   - component: {fileID: 3656590782065182562}
   - component: {fileID: 7120869164806909172}
+  - component: {fileID: 5770988840748582453}
   m_Layer: 11
   m_Name: Ingredient_Tomato_Sliced_001
   m_TagString: Ingredient
@@ -80,19 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &3068433216300161915
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2269540474065574567}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.27271652, y: 0.07402801, z: 0.42582944}
-  m_Center: {x: 0, y: 0.035472494, z: -0.092914715}
 --- !u!54 &3656590782065182562
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,3 +114,17 @@ MonoBehaviour:
   onStove: 0
   Burnable: 0
   Locked: 0
+--- !u!64 &5770988840748582453
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2269540474065574567}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -3411150430421803554, guid: 4e3a9c31f62fa484a9d53c0652d45875, type: 3}

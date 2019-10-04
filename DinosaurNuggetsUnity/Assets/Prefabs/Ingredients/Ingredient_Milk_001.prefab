@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 385285524705317499}
   - component: {fileID: 785923163006698276}
   - component: {fileID: 1138689965459398587}
-  - component: {fileID: 1053744346310302031}
   - component: {fileID: 6555881931126840016}
+  - component: {fileID: 3458553011920765174}
   m_Layer: 11
   m_Name: Ingredient_Milk_001
   m_TagString: Ingredient
@@ -97,19 +97,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1053744346310302031
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6164678057872477304}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.13, y: 0.29442337, z: 0.13}
-  m_Center: {x: 0.0003099814, y: 0.14721169, z: 0.00012411922}
 --- !u!114 &6555881931126840016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,3 +115,17 @@ MonoBehaviour:
   onStove: 0
   Burnable: 0
   Locked: 0
+--- !u!64 &3458553011920765174
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6164678057872477304}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 8516121289494834350, guid: 79a5005ab80f3784ea20e089fe91de84, type: 3}

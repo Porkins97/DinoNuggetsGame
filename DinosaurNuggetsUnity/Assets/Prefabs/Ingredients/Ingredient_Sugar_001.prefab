@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8972035117710085561}
   - component: {fileID: 5861749155908198979}
   - component: {fileID: 658742768877411135}
-  - component: {fileID: 5160262490773657767}
   - component: {fileID: 5460395344776571485}
   - component: {fileID: 2847233000495088593}
+  - component: {fileID: 6678314500773529279}
   m_Layer: 11
   m_Name: Ingredient_Sugar_001
   m_TagString: Ingredient
@@ -80,19 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5160262490773657767
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4559768162505481433}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.16858888, y: 0.4540931, z: 0.32591674}
-  m_Center: {x: 0.0049559996, y: 0.22704655, z: 0.00025719404}
 --- !u!54 &5460395344776571485
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,3 +114,17 @@ MonoBehaviour:
   onStove: 0
   Burnable: 0
   Locked: 0
+--- !u!64 &6678314500773529279
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4559768162505481433}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -4108693947968218266, guid: 64cdb10f39bc6c342a53cfa8dd1277ae, type: 3}
