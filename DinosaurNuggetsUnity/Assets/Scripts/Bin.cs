@@ -35,11 +35,11 @@ public class Bin : MonoBehaviour
             Ingredient = collision.gameObject;
             IngredientRigidBody = Ingredient.GetComponent<Rigidbody>();
 
-            if(Ingredient.GetComponent<PickupTest>().ThisItemIsBeingCarried == true)
+            /*if(Ingredient.GetComponent<PickupTest>().ThisItemIsBeingCarried == true)
             {
                 Debug.Log("This Item is being carried");
                 Ingredient.GetComponent<PickupTest>().Drop();
-            }
+            }*/
             IngredientRigidBody.isKinematic = false;
             Ingredient.GetComponent<Collider>().enabled = false;
             Ingredient.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
