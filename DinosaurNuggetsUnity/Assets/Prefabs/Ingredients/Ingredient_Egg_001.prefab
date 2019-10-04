@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8560b6c91bfed4789568902439cd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameType: 60
+  GameType: 57
   initialParent: {fileID: 0}
   beingUsed: 0
   onStove: 0

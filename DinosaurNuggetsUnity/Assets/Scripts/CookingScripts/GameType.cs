@@ -12,23 +12,26 @@ public enum IngredientType
     Knife_Butcher = 4,
     //-----------------------
     Bread_Whole = 50,
-    Bread_Sliced = 51,
-    Flour = 52,
-    Milk = 53,
-    Lettuce = 54,
-    Onion_Whole = 55,
-    Onion_Sliced = 56,
-    Steak = 57,
-    Fish_Whole = 58,
-    Fish_Sliced = 59,
-    Egg = 60,
-    Tomato_Whole = 61,
-    Tomato_Sliced = 62,
-    Cheese = 63,
-    Brocolli = 64,
-    Chicken = 65,
-    Mushroom = 66,
-    Mushroom_Sliced = 67
+    Flour = 51,
+    Milk = 52,
+    Lettuce = 53,
+    Onion_Whole = 54,
+    Steak = 55,
+    Fish_Whole = 56,
+    Egg = 57,
+    Tomato_Whole = 58,
+    Cheese = 59,
+    Brocolli = 60,
+    Chicken = 61,
+    Mushroom = 62,
+    Strawberry = 63,
+    Sugar = 64,
+    //----------------------
+    Bread_Sliced = 100,
+    Onion_Sliced = 101,
+    Fish_Sliced = 102,
+    Tomato_Sliced = 103,
+    Mushroom_Sliced = 104
 }
 
 public class GameType : MonoBehaviour

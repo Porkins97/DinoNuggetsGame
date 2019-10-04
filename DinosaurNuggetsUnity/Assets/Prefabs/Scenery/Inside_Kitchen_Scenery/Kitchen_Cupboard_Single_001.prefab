@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5329421015829932009}
   - component: {fileID: 4278936012508511850}
+  - component: {fileID: 9068660105760182973}
   m_Layer: 0
   m_Name: CuttingSpot
   m_TagString: Untagged
@@ -45,7 +46,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ingredient: {fileID: 0}
   NewIngredient: {fileID: 0}
-  Timer: 0
+--- !u!135 &9068660105760182973
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6469927319184760307}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6833722742993934361
 GameObject:
   m_ObjectHideFlags: 0
