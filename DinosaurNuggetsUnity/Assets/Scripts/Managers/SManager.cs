@@ -79,8 +79,6 @@ public class SManager : MonoBehaviour
 
     public void FinishUIImages(SO_Ingredients currentIngredient)
     {
-        if(currentIngredient == currentIngredientList[UIIngredientsFinished])
-        {
             Transform par = UIIngredients[UIIngredientsFinished].transform;
             GameObject UICheckboxElement = new GameObject();
             UICheckboxElement.transform.SetParent(par, false);
@@ -91,7 +89,6 @@ public class SManager : MonoBehaviour
             image.texture = checkmarkUI;
             UICheckboxElement.layer = LayerMask.NameToLayer("UI");
             UIIngredientsFinished++;
-        }
     }
 
 
@@ -99,7 +96,11 @@ public class SManager : MonoBehaviour
     {
         IngredientType currentItem = item.GetComponent<BeingUsed>().GameType;
         SO_Ingredients ingredient = ingredientList.Find(x => x.type == currentItem);
-        CorrectIngredient(ingredient, item);
+        if(ingredient == currentIngredientList[UIIngredientsFinished])
+        {
+            CorrectIngredient(ingredient, item);
+        }
+        
         
 
         switch (currentItem)
@@ -149,8 +150,7 @@ public class SManager : MonoBehaviour
         Debug.Log(ingredient);
         Debug.Log(item);
         FinishUIImages(ingredient);
-        //Destroy(item);
-        
+        Destroy(item);
     }
     
 }
