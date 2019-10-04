@@ -149,7 +149,7 @@ public class SManager : MonoBehaviour
         Debug.Log(ingredient);
         Debug.Log(item);
         FinishUIImages(ingredient);
-        Destroy(item);
+        //Destroy(item);
         
     }
     
