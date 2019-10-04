@@ -29,4 +29,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Final Scenes/Select Level.unity
     guid: 86f452284bf14fb4480179f773262abb
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: c333e68d875d41e499d2f9fc3688f5ee,
+      type: 2}

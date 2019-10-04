@@ -601,8 +601,9 @@ GameObject:
   - component: {fileID: 8907060620977180552}
   - component: {fileID: 8907060620977180567}
   - component: {fileID: 8907060620977180566}
-  - component: {fileID: 1215334073}
-  - component: {fileID: 1215334074}
+  - component: {fileID: 1711647134}
+  - component: {fileID: 1711647126}
+  - component: {fileID: 8329597597693549523}
   m_Layer: 9
   m_Name: Character_Main_01
   m_TagString: Untagged
@@ -694,50 +695,122 @@ MonoBehaviour:
   allowPlayerRotation: 0
   rightArm: {fileID: 8714139270431558574}
   leftArm: {fileID: 6995479963222895000}
---- !u!114 &1215334073
+  CIM: {fileID: 0}
+--- !u!114 &1711647134
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629889763687028381}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9808f4bcbb5b0f94daf001180646031a, type: 3}
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iterations: 20
-  Target: {fileID: 389358336}
-  Pole: {fileID: 1375394694}
-  weight: 1
-  DistError: 0.01
-  UpVector: {x: 0, y: 1, z: 0}
-  ikSystems: 2
-  A_Joint: {fileID: 6995479963222895000}
-  B_Joint: {fileID: 2071103697975904809}
-  C_Joint: {fileID: 7985724999658804297}
---- !u!114 &1215334074
+  m_Actions: {fileID: -944628639613478452, guid: 5a7d48a3b060eb5489f0ecc1e195707b,
+    type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.InputSystem.PlayerInput+DeviceLostEvent, Unity.InputSystem,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.InputSystem.PlayerInput+DeviceRegainedEvent, Unity.InputSystem,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.InputSystem.PlayerInput+ActionEvent, Unity.InputSystem,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_ActionId: 57e10736-e23d-43a6-a55e-baf40f142751
+    m_ActionName: Player/LeftHand[/XInputControllerWindows/leftTrigger,/XInputControllerWindows/leftTrigger,/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.InputSystem.PlayerInput+ActionEvent, Unity.InputSystem,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_ActionId: db8c2117-c683-4617-9858-0c7eaa732150
+    m_ActionName: Player/RightHand[/XInputControllerWindows/rightTrigger,/XInputControllerWindows/rightTrigger,/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.InputSystem.PlayerInput+ActionEvent, Unity.InputSystem,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_ActionId: 98b8a0f7-d89a-4c5c-9fd0-92d3f64ae720
+    m_ActionName: Player/Move[/XInputControllerWindows/leftStick,/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.InputSystem.PlayerInput+ActionEvent, Unity.InputSystem,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_ActionId: 0ff17543-f65e-4f7a-9e24-31ef0c8cc021
+    m_ActionName: Player/Arms[/XInputControllerWindows/rightStick,/XInputControllerWindows/rightStick,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: 2b5224c5-1e5b-4a87-a3f2-b25fc4a4a43c
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &1711647126
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629889763687028381}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9808f4bcbb5b0f94daf001180646031a, type: 3}
+  m_Script: {fileID: 11500000, guid: 7aa2838410ba08540b33fa27d75fb529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iterations: 20
-  Target: {fileID: 0}
-  Pole: {fileID: 0}
-  weight: 0
-  DistError: 0.01
-  UpVector: {x: 0, y: 1, z: 0}
-  ikSystems: 0
-  A_Joint: {fileID: 0}
-  B_Joint: {fileID: 0}
-  C_Joint: {fileID: 0}
+--- !u!114 &8329597597693549523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629889763687028381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NotificationBehavior: 0
+  m_MaxPlayerCount: 2
+  m_AllowJoining: 1
+  m_JoinBehavior: 2
+  m_PlayerJoinedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.InputSystem.PlayerInputManager+PlayerJoinedEvent, Unity.InputSystem,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_PlayerLeftEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.InputSystem.PlayerInputManager+PlayerLeftEvent, Unity.InputSystem,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_JoinAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+    m_Reference: {fileID: 0}
+  m_PlayerPrefab: {fileID: 0}
+  m_SplitScreen: 0
+  m_MaintainAspectRatioInSplitScreen: 0
+  m_FixedNumberOfSplitScreens: -1
+  m_SplitScreenRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1 &677308967448589824
 GameObject:
   m_ObjectHideFlags: 0

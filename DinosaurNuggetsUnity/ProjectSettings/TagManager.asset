@@ -12,6 +12,7 @@ TagManager:
   - Knife
   - Utensil
   - BackgroundEnvironment
+  - Manager
   layers:
   - Default
   - TransparentFX

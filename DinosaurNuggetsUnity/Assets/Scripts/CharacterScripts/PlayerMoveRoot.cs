@@ -1,43 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DinoNuggets.CustomInputManager;
 
 public class PlayerMoveRoot : MonoBehaviour
 {
+    
+    [Header("Player Speeds")]
     [SerializeField]private float desiredRotationSpeed = 0.2f;
     [SerializeField]private float allowPlayerRotation = 0.0f;
-    [SerializeField]private Transform rightArm;
-    [SerializeField]private Transform leftArm;
+    [Header("Arm transforms")]
+    [SerializeField]private Transform rightArm = null;
+    [SerializeField]private Transform leftArm = null;
 
-    private CharacterController _controller;
-    private Animator _anim;
+    private CharacterController _controller = null;
+    private Animator _anim = null;
+    [SerializeField] private CustomInputManager CIM = null;
     
-    private PlayerControls _controls;
-    private Vector2 _move;
-    private Vector2 _armMove;
-
-    void Awake()
-    {
-        _controls = new PlayerControls();
-        //_controls.Gameplay.Grow.performed += ctx => Grow();
-        _controls.Gameplay.Move.performed += ctx => _move = ctx.ReadValue<Vector2>();
-        _controls.Gameplay.Move.canceled += ctx => _move = Vector2.zero;
-
-        _controls.Gameplay.Arms.performed += ctx => _armMove = ctx.ReadValue<Vector2>();
-        _controls.Gameplay.Arms.canceled += ctx => _armMove = Vector2.zero;
-    }
-    void OnEnable()
-    {
-        _controls.Gameplay.Enable();
-    }
-    void OnDisable()
-    {
-        _controls.Gameplay.Disable();
-    }
     void Start()
     {
         _anim = this.GetComponent<Animator>();
         _controller = this.GetComponent<CharacterController>();
+        CIM = this.GetComponent<CustomInputManager>();
     }
 
     void Update()
@@ -48,7 +32,7 @@ public class PlayerMoveRoot : MonoBehaviour
 
     void LateUpdate()
     {
-        if(_armMove.x > 0.5)
+        if(CIM.dinoArmMove.x > 0.5)
         {
             rightArm.rotation = Quaternion.Euler(80f, rightArm.rotation.y, rightArm.rotation.z);
         }
@@ -69,8 +53,8 @@ public class PlayerMoveRoot : MonoBehaviour
     void InputMagnitude()
     {
         //Calulate Input Vectors
-        float h = _move.x;
-        float v = _move.y;
+        float h = CIM.dinoMove.x;
+        float v = CIM.dinoMove.y;
 
         //Calculate Input Magnitude
         float speed = new Vector2(h, v).sqrMagnitude;
