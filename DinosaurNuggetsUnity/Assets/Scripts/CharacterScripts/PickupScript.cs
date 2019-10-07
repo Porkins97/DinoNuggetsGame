@@ -55,7 +55,7 @@ public class PickupScript : MonoBehaviour
             if(RightHand_Hover && RightHand_Object != null && !RightHand_Carrying) 
             {
                 RightHand_Object.GetComponent<Rigidbody>().isKinematic = true;
-
+                RightHand_Object.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
                 RightHand_Object.transform.SetParent(RightHand.transform);
                 RightHand_Object.transform.localPosition = new Vector3(0, 0, 0);
 
@@ -84,7 +84,7 @@ public class PickupScript : MonoBehaviour
             if (LeftHand_Hover && LeftHand_Object != null && !LeftHand_Carrying)
             {
                 LeftHand_Object.GetComponent<Rigidbody>().isKinematic = true;
-
+                LeftHand_Object.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
                 LeftHand_Object.transform.SetParent(LeftHand.transform);
                 LeftHand_Object.transform.localPosition = new Vector3(0, 0, 0);
 
