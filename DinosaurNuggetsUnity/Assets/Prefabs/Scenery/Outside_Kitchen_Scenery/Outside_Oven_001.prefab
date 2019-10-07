@@ -38,7 +38,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122473588915799740}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
@@ -463,6 +463,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Outside_Fire_Rock
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 8b244fb34e1c0c545a3d362865d0e074,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c0e074995caf9b459f55d41be9c7379, type: 2}
     - target: {fileID: -4216859302048453862, guid: 8b244fb34e1c0c545a3d362865d0e074,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -518,11 +523,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -1504981713932161579, guid: 8b244fb34e1c0c545a3d362865d0e074,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0c0e074995caf9b459f55d41be9c7379, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b244fb34e1c0c545a3d362865d0e074, type: 3}
 --- !u!1 &122473588915799740 stripped
