@@ -16,4 +16,4 @@ MonoBehaviour:
   ingredientPrefab: {fileID: 5675268419012554818, guid: 67fa86f3ca4786d48a472d99d408668b,
     type: 3}
   texture: {fileID: 2800000, guid: a3235ff13c9164a47b0e9b68eed97262, type: 3}
-  type: 56
+  type: 101
