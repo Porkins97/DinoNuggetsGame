@@ -15,13 +15,14 @@ public class PlayerMoveRoot : MonoBehaviour
 
     private CharacterController _controller = null;
     private Animator _anim = null;
-    [SerializeField] private CustomInputManager CIM = null;
+    private CustomInputManager CIM;
     
     void Start()
     {
-        _anim = this.GetComponent<Animator>();
-        _controller = this.GetComponent<CharacterController>();
-        CIM = this.GetComponent<CustomInputManager>();
+        _anim = GetComponent<Animator>();
+        _controller = GetComponent<CharacterController>();
+        CIM = GetComponent<CustomInputManager>();
+        Debug.Log(CIM);
     }
 
     void Update()
