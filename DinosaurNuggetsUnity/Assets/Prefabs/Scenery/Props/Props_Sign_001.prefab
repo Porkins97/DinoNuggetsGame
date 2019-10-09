@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6643981633579869665}
   - component: {fileID: 2409193422468440023}
   - component: {fileID: 8238110440890802990}
+  - component: {fileID: 1279186215}
   m_Layer: 0
   m_Name: Props_Sign_001
   m_TagString: Untagged
@@ -25,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7669475962197219314}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.302, y: 1.269, z: -5.12}
-  m_LocalScale: {x: 17.614, y: 17.614, z: 17.614}
+  m_LocalScale: {x: 22.616379, y: 22.616379, z: 22.616379}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -57,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2447394082346052692, guid: 70d83452646b1b443beeabf51f6f8f14, type: 3}
+  - {fileID: 2100000, guid: 7140e70cfca7b7849a88fe44a4bfd3c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -77,3 +78,15 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1279186215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7669475962197219314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba20fc1d85ce55c42b9173fd21dee5f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

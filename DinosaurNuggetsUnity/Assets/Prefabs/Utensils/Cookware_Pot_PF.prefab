@@ -143,3 +143,5 @@ MonoBehaviour:
   onStove: 0
   Burnable: 0
   Locked: 0
+  initPosition: 0
+  rbd: {fileID: 0}
