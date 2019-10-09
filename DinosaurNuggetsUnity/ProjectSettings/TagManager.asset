@@ -13,6 +13,7 @@ TagManager:
   - Utensil
   - BackgroundEnvironment
   - Manager
+  - Wearable
   layers:
   - Default
   - TransparentFX
