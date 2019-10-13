@@ -83,7 +83,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     - _rX: 0
-    - _rY: 156
+    - _rY: 0
     - _rZ: 0
     m_Colors:
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
