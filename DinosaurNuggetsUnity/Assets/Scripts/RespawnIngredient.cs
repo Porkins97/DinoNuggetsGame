@@ -30,7 +30,7 @@ public class RespawnIngredient : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(ThisGameObject.transform.position, 0.1f);
         for(int i = 0; i <colliders.Length; i++)
         {
-            if(colliders[i].gameObject.tag == "Ingredient")
+            if(colliders[i].gameObject.tag == "Ingredient" || colliders[i].gameObject.tag == "Utensil")
             {
                 Debug.Log(colliders[i]);
                 collidingWithIngredient = true;
@@ -47,6 +47,8 @@ public class RespawnIngredient : MonoBehaviour
             NewIngredient.GetComponent<Collider>().enabled = true;
             NewIngredient.GetComponent<Rigidbody>().useGravity = true;
             NewIngredient.GetComponent<BeingUsed>().beingUsed = false;
+            NewIngredient.transform.localScale = new Vector3(1f, 1f, 1f);
+            //reset other stats here
             Ingredient = NewIngredient;
             collidingWithIngredient = false;
             waitingToSpawn = false;
@@ -56,7 +58,7 @@ public class RespawnIngredient : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Ingredient" && Ingredient == null)
+        if ((other.gameObject.tag == "Ingredient" || other.gameObject.tag == "Utensil") && Ingredient == null)
         {
             if(ResetBool)
                 Ingredient = other.gameObject;
@@ -73,7 +75,7 @@ public class RespawnIngredient : MonoBehaviour
         }
         else
         {
-            if(other.gameObject.tag == "Ingredient" && waitingToSpawn)
+            if(other.gameObject.tag == "Ingredient" || other.gameObject.tag == "Utensil" && waitingToSpawn)
             {
                 collidingWithIngredient = false;
                 StartCoroutine(Respawn());
