@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class ApplyHat : MonoBehaviour
 {
-    int hatNum;
+    public int hatNum;
     public HatType hat;
     public GameObject[] hats;
     public bool randomHat;
+    public Transform hatLocator;
+    GameObject appliedHat;
 
-    void Start()
+    private void Start()
+    {
+        PassHatnum(0);
+    }
+
+    public void SelectHat()
     {
         if (randomHat == true)
         {
@@ -20,9 +27,18 @@ public class ApplyHat : MonoBehaviour
         {
             if (hats[i].GetComponent<DinoCustomise>().hatType == hat)
             {
-                GameObject appliedHat = Instantiate(hats[i], this.gameObject.transform);
-                appliedHat.transform.parent = this.gameObject.transform;
+                appliedHat = Instantiate(hats[i], hatLocator.gameObject.transform);
+                appliedHat.transform.parent = hatLocator.gameObject.transform;
             }
         }
+    }
+
+    public void PassHatnum(int num)
+    {
+        hatNum = num;
+        if (appliedHat != null)
+            Destroy(appliedHat);
+        hat = (HatType)hatNum;
+        SelectHat();
     }
 }
