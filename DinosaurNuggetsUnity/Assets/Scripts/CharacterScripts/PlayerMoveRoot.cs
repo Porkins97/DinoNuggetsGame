@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
-using DinoNuggets.CustomInputManager;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Users;
+using UnityEngine.InputSystem.UI;
 
 public class PlayerMoveRoot : MonoBehaviour
 {
@@ -13,16 +16,64 @@ public class PlayerMoveRoot : MonoBehaviour
     [SerializeField]private Transform rightArm = null;
     [SerializeField]private Transform leftArm = null;
 
+    [Header("User Settings")]
+    [SerializeField] private int gamePadId = 0;
+    [SerializeField] private InputSystemUIInputModule uiInput = null;
+    [SerializeField] private DinoSceneManager _sceneManager = null;
+    [SerializeField] private UnityEvent PauseEvent = null;
+
+    //Private Variables
     private CharacterController _controller = null;
     private Animator _anim = null;
-    private CustomInputManager CIM;
+
+    private InputActionMap _actions;
+    private InputActionMap _UI;
+
+    private Vector2 dinoMove;
+    private Vector2 dinoArmMove;
+    //private bool dinoRightHand;
+    //private bool dinoLeftHand;
+
+    void Awake()
+    {
+        InputActionAsset input = Instantiate(uiInput.actionsAsset);
+
+        _actions = input.FindActionMap("Player");
+        _UI = input.FindActionMap("UI");
+
+        InputUser currentUser = InputUser.PerformPairingWithDevice(Gamepad.all[gamePadId]);
+        currentUser.AssociateActionsWithUser(input);
+        
+        _sceneManager.allUsers.Add(new UserInputs(currentUser, _UI, _actions));
+
+
+        InputAction movement = _actions.FindAction("Movement");
+        InputAction pause = _actions.FindAction("Pause Menu");
+        InputAction unPause = _UI.FindAction("Pause Menu");
+        
+        movement.performed += ctx => dinoMove = ctx.ReadValue<Vector2>();
+        movement.canceled += ctx => dinoMove = Vector2.zero;
+
+        pause.performed += ctx => PauseEvent.Invoke();
+        unPause.performed += ctx => PauseEvent.Invoke();
+    }
+
+    public void OnEnable()
+    {
+        _actions.Enable();
+        _UI.Disable();
+    }
+
+    public void OnDisable()
+    {
+        _actions.Disable();
+        _UI.Disable();
+    }
     
     void Start()
     {
         _anim = GetComponent<Animator>();
         _controller = GetComponent<CharacterController>();
-        CIM = GetComponent<CustomInputManager>();
-        Debug.Log(CIM);
     }
 
     void Update()
@@ -33,7 +84,7 @@ public class PlayerMoveRoot : MonoBehaviour
 
     void LateUpdate()
     {
-        if(CIM.dinoArmMove.x > 0.5)
+        if(dinoArmMove.x > 0.5)
         {
             rightArm.rotation = Quaternion.Euler(80f, rightArm.rotation.y, rightArm.rotation.z);
         }
@@ -54,8 +105,8 @@ public class PlayerMoveRoot : MonoBehaviour
     void InputMagnitude()
     {
         //Calulate Input Vectors
-        float h = CIM.dinoMove.x;
-        float v = CIM.dinoMove.y;
+        float h = dinoMove.x;
+        float v = dinoMove.y;
 
         //Calculate Input Magnitude
         float speed = new Vector2(h, v).sqrMagnitude;
