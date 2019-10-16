@@ -5,7 +5,7 @@ using UnityEngine;
 public class Stove_Collider : MonoBehaviour
 {
     [SerializeField] private Stove stoveScript;
-    [SerializeField] private SManager sManager;
+    [SerializeField] private DinoSceneManager sManager;
 
     void OnTriggerEnter(Collider col)
     {

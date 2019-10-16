@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
@@ -13,6 +14,6 @@ public class Menu : MonoBehaviour
     }
     public void changescene(string Game)
     {
-        Application.LoadLevel (Game);
+        SceneManager.LoadScene(Game);
     }
 }

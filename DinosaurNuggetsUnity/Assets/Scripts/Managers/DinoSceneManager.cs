@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Users;
 
-public class SManager : MonoBehaviour
+public class DinoSceneManager : MonoBehaviour
 {
     
     [Header("UI Settings")]
@@ -12,7 +14,13 @@ public class SManager : MonoBehaviour
     public GameObject Player1;
     public GameObject Player2;
     public Texture2D checkmarkUI;
+    public Canvas pauseCanvas = null;
+    public Canvas gameCanvas = null;
     public int seed;
+
+    [Header("User Settings")]
+    [SerializeField] public List<UserInputs> allUsers = new List<UserInputs>();
+    private bool gamePaused = false;
     
     //-------------
 
@@ -25,8 +33,15 @@ public class SManager : MonoBehaviour
     public List<SO_Recipes> mealList;
 
 
-    void Start()
+    void Awake()
     {
+
+
+
+        pauseCanvas.enabled = false;
+        gameCanvas.enabled = true;
+
+        //Ingredients start.
         ingredientList = new List<SO_Ingredients>();
         mealList = new List<SO_Recipes>();
         
@@ -38,13 +53,48 @@ public class SManager : MonoBehaviour
         {
             mealList.Add((SO_Recipes)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(strPath), typeof(SO_Recipes)));
         }
-        int recipeRand = (int)UnityEngine.Random.Range(0, mealList.Count-1);
 
-        SO_Recipes currentRecipe = mealList[recipeRand];
-
+        SO_Recipes currentRecipe = mealList[(int)UnityEngine.Random.Range(0, mealList.Count-1)];
         UI.SetActive(true);
         MealToUIStarter(currentRecipe);
     }
+
+    public void PauseGame()
+    {
+        if (!gamePaused)
+        {
+            Time.timeScale = 0f;
+            gamePaused = true;
+            Debug.Log("Paused");
+            gameCanvas.enabled = false;
+            pauseCanvas.enabled = true;
+            foreach(UserInputs _inputs in allUsers)
+            {
+                _inputs.current_Actions.Disable();
+                _inputs.current_UI.Enable();
+            }
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            gamePaused = false;
+            Debug.Log("UnPaused");
+            pauseCanvas.enabled = false;
+            gameCanvas.enabled = true;
+            foreach (UserInputs _inputs in allUsers)
+            {
+                _inputs.current_Actions.Enable();
+                _inputs.current_UI.Disable();
+            }
+        }
+    }
+
+
+
+#region UIHelpers
+    //-----------------------------------------------------------------------------
+    //UI Helpers
+    //-----------------------------------------------------------------------------
 
     private void MealToUIStarter(SO_Recipes currentRecipe)
     {
@@ -91,6 +141,9 @@ public class SManager : MonoBehaviour
             UIIngredientsFinished++;
     }
 
+    //-----------------------------------------------------------------------------
+    //Ingredient Checkers
+    //-----------------------------------------------------------------------------
 
     public void runThrough(GameObject item)
     {
@@ -105,5 +158,6 @@ public class SManager : MonoBehaviour
         FinishUIImages(ingredient);
         Destroy(item);
     }
+#endregion
     
 }

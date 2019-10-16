@@ -601,9 +601,6 @@ GameObject:
   - component: {fileID: 8907060620977180552}
   - component: {fileID: 8907060620977180567}
   - component: {fileID: 8907060620977180566}
-  - component: {fileID: 1711647126}
-  - component: {fileID: 1215334074}
-  - component: {fileID: 5780632114196744183}
   m_Layer: 9
   m_Name: Character_Main_01
   m_TagString: Untagged
@@ -695,54 +692,15 @@ MonoBehaviour:
   allowPlayerRotation: 0
   rightArm: {fileID: 8714139270431558574}
   leftArm: {fileID: 6995479963222895000}
---- !u!114 &1711647126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 629889763687028381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aa2838410ba08540b33fa27d75fb529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dinoMove: {x: 0, y: 0}
-  dinoArmMove: {x: 0, y: 0}
-  dinoRightHand: 0
-  dinoLeftHand: 0
---- !u!114 &1215334074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 629889763687028381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 0f1e1922a3702c64a82260064a9cfa76,
-    type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
+  gamePadId: 0
+  uiInput: {fileID: 0}
+  _sceneManager: {fileID: 0}
+  PauseEvent:
     m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.InputSystem.PlayerInput+DeviceLostEvent, Unity.InputSystem,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.InputSystem.PlayerInput+DeviceRegainedEvent, Unity.InputSystem,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_ActionEvents:
-  - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1711647126}
-        m_MethodName: dinoMoveFunc
-        m_Mode: 0
+      - m_Target: {fileID: 0}
+        m_MethodName: PauseGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -751,62 +709,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.InputSystem.PlayerInput+ActionEvent, Unity.InputSystem,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    m_ActionId: 09b8b97f-b67c-4325-8bb7-0618889b63dc
-    m_ActionName: Player/Movement[/XInputControllerWindows/leftStick,/XInputControllerWindows/leftStick]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: 136a9c8b-eb9e-48ca-ad43-e7a7e4bad92d
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!114 &5780632114196744183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 629889763687028381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_NotificationBehavior: 0
-  m_MaxPlayerCount: -1
-  m_AllowJoining: 1
-  m_JoinBehavior: 0
-  m_PlayerJoinedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.InputSystem.PlayerInputManager+PlayerJoinedEvent, Unity.InputSystem,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_PlayerLeftEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.InputSystem.PlayerInputManager+PlayerLeftEvent, Unity.InputSystem,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_JoinAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: 
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-    m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 0}
-  m_SplitScreen: 0
-  m_MaintainAspectRatioInSplitScreen: 0
-  m_FixedNumberOfSplitScreens: -1
-  m_SplitScreenRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &677308967448589824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,7 +914,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4cfc6fcb65031174aa1a7e0f87c56759, type: 2}
+  - {fileID: 2100000, guid: 21f4245c57a23b547882c904339bde51, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3395,7 +3299,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b573aeef7f3df84686bf46d8b898edf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hatCheck: {fileID: 0}
   hat: 2
   hats: []
   randomHat: 1

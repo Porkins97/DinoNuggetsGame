@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Stove : MonoBehaviour
 {
-    [SerializeField] private SManager sManager;
+    [SerializeField] private DinoSceneManager sManager;
     [SerializeField] private GameObject firePrefab;
     [SerializeField] private Transform stoveTopA_Loc = null;
     
