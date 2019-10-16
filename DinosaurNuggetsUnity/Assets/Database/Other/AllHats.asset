@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4c08364279e75c4381c58380533f225, type: 3}
+  m_Name: AllHats
+  m_EditorClassIdentifier: 
+  hats:
+  - title: Cowboy
+    hatPrefab: {fileID: -927199367670048503, guid: 7c2c65b76bf0f0442919e3641391eb5b,
+      type: 3}
+    hatType: 1
+  - title: Crown
+    hatPrefab: {fileID: -927199367670048503, guid: 86dbb5fb7f71b0148bc97e2dbd4336ff,
+      type: 3}
+    hatType: 2
+  - title: Helicopter
+    hatPrefab: {fileID: -927199367670048503, guid: dc700b57a8ec0354a999e3ed4f924a72,
+      type: 3}
+    hatType: 3
+  - title: Small Russian
+    hatPrefab: {fileID: -927199367670048503, guid: 5280ece96a7858646be972badf0e3181,
+      type: 3}
+    hatType: 4
+  - title: Large Russian
+    hatPrefab: {fileID: -927199367670048503, guid: 994b3584848272643a341cd968de6d69,
+      type: 3}
+    hatType: 5
+  - title: Shark
+    hatPrefab: {fileID: -927199367670048503, guid: b41b8faeb8621ee40bec41d0df3d3791,
+      type: 3}
+    hatType: 6
+  - title: Snapback
+    hatPrefab: {fileID: -927199367670048503, guid: d41a4b6227f1a2b478a38964424f5224,
+      type: 3}
+    hatType: 7
+  - title: Space Helmet
+    hatPrefab: {fileID: -927199367670048503, guid: 824c2417d2af5bc45be2c7597ae75e8b,
+      type: 3}
+    hatType: 8
+  - title: Small Tophat
+    hatPrefab: {fileID: -927199367670048503, guid: 285fa46892c775a4ca1ab6b4d99357aa,
+      type: 3}
+    hatType: 9
+  - title: Large Tophat
+    hatPrefab: {fileID: -927199367670048503, guid: 5229ac0afd9cc1c4a9a3a6a0001ed650,
+      type: 3}
+    hatType: 10
+  - title: Chef
+    hatPrefab: {fileID: -927199367670048503, guid: 92b73d7e46a7c0844bd7edd39f320b8d,
+      type: 3}
+    hatType: 11
+  - title: Party
+    hatPrefab: {fileID: -927199367670048503, guid: 644a83c1dc2f7174881fb8cab21f13e4,
+      type: 3}
+    hatType: 12
+  - title: None
+    hatPrefab: {fileID: 0}
+    hatType: 0

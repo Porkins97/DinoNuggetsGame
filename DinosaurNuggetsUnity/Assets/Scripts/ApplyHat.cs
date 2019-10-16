@@ -41,4 +41,12 @@ public class ApplyHat : MonoBehaviour
         hat = (HatType)hatNum;
         SelectHat();
     }
+
+    public void PassNewHat(HatType _hat)
+    {
+        if (appliedHat != null)
+            Destroy(appliedHat);
+        hat = _hat;
+        SelectHat();
+    }
 }
