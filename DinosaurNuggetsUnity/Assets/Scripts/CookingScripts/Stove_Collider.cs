@@ -7,6 +7,12 @@ public class Stove_Collider : MonoBehaviour
     [SerializeField] private Stove stoveScript;
     [SerializeField] private DinoSceneManager sManager;
 
+    void Start()
+    {
+        if(sManager == null)
+            sManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<DinoSceneManager>();
+    }
+
     void OnTriggerEnter(Collider col)
     {
         if(col.tag == "Utensil" || col.tag == "Ingredient")

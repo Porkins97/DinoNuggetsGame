@@ -20,6 +20,22 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "LeftHandGrab",
+                    "type": "Button",
+                    "id": "3cf8a516-28f6-43ea-a0b9-569848119e67",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "RightHandGrab",
+                    "type": "Button",
+                    "id": "a7792344-1c3b-48e5-b230-d9e016d44585",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -97,6 +113,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pause Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7069ee58-6b63-4a18-b410-c8682f5c947f",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftHandGrab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c7967c39-1973-462b-ae71-145cff4bdd95",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightHandGrab",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

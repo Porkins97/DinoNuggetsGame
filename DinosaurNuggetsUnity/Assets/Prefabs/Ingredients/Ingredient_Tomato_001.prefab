@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3485146096717491546}
   - component: {fileID: 3138103081446083133}
   - component: {fileID: 7605023164479368098}
-  - component: {fileID: 2614215766647440005}
   m_Layer: 11
   m_Name: Ingredient_Tomato_001
   m_TagString: Ingredient
@@ -64,26 +63,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameType: 58
+  Burnable: 0
   initialParent: {fileID: 0}
   beingUsed: 0
   onStove: 0
-  Burnable: 0
   Locked: 0
+  initPosition: 0
+  rbd: {fileID: 0}
 --- !u!64 &7605023164479368098
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4092623649492155264}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -1340541719380434750, guid: 06ec56ba4c4d5be43a17dcf1b90ccd0c, type: 3}
---- !u!64 &2614215766647440005
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -69,9 +69,15 @@ public class RespawnIngredient : MonoBehaviour
                 iRotation = other.gameObject.transform;
                 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 iType = other.gameObject.GetComponent<BeingUsed>().GameType;
-                SO_Ingredients foundIngredient = dinoSceneManager.ingredientList.Find(x => x.type == iType);
-                Ingredient = foundIngredient.ingredientPrefab;
-                
+                if(other.gameObject.tag == "Ingredient")
+                {
+                    SO_Ingredients foundIngredient = dinoSceneManager.ingredientList.Find(x => x.type == iType);
+                    Ingredient = foundIngredient.ingredientPrefab;
+                }
+                else{
+                    SO_Utensils foundUtensil = dinoSceneManager.utensilList.Find(x => x.type == iType);
+                    Ingredient = foundUtensil.utensilPrefab; 
+                }
             }
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
 
+[RequireComponent(typeof(PlayerMoveRoot)), RequireComponent(typeof(CharacterController)), RequireComponent(typeof(Animator))]
 public class PickupScript : MonoBehaviour
 {
     public bool RightHand_Carrying = false;
@@ -14,6 +15,13 @@ public class PickupScript : MonoBehaviour
     private GameObject LeftHand_Object;
     private GameObject RightHand;
     private GameObject LeftHand;
+
+    private PlayerMoveRoot playerMoveRoot;
+
+    void Start()
+    {
+        playerMoveRoot = GetComponent<PlayerMoveRoot>();
+    }
 
 
     public void PickItUp(GameObject hand, GameObject obj)
@@ -50,7 +58,7 @@ public class PickupScript : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(1))
+        if (playerMoveRoot.dinoRightHand)// (Input.GetMouseButton(1))
         {
             if(RightHand_Hover && RightHand_Object != null && !RightHand_Carrying) 
             {
@@ -79,7 +87,7 @@ public class PickupScript : MonoBehaviour
             }
         }
         
-        if (Input.GetMouseButton(0))
+        if (playerMoveRoot.dinoLeftHand) // (Input.GetMouseButton(0))
         {
             if (LeftHand_Hover && LeftHand_Object != null && !LeftHand_Carrying)
             {

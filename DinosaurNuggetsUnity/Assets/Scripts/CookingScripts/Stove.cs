@@ -8,10 +8,15 @@ public class Stove : MonoBehaviour
     [SerializeField] private GameObject firePrefab;
     [SerializeField] private Transform stoveTopA_Loc = null;
     
-    //[HideInInspector]
+    [HideInInspector]
     public bool stoveTopA_Used = false;
-    
     private GameObject stoveAGameObject = null;
+
+    public void Start()
+    {
+        if(sManager == null)
+            sManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<DinoSceneManager>();
+    }
 
     public void Placed(GameObject objectPlaced)
     {

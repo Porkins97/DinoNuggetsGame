@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-[System.Serializable]
+﻿[System.Serializable]
 public enum IngredientType
 {
     Pot = 0,
@@ -34,10 +30,20 @@ public enum IngredientType
     Mushroom_Sliced = 104
 }
 
-public class GameType : MonoBehaviour
+[System.Serializable]
+public enum HatType
 {
-    public void AttemptAddToRecipe(Recipe r)
-    {
-        //r.AddIngredient(this);
-    }
+    Cowboy,
+    Crown,
+    Chef,
+    Party,
+    Helicopter,
+    SmallRussian,
+    LargeRussian,
+    Shark,
+    Snapback,
+    SpaceHelmet,
+    SmallTophat,
+    LargeTophat,
+    None
 }

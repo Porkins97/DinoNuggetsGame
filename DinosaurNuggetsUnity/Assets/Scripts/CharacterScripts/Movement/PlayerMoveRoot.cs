@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
 using UnityEngine.InputSystem.UI;
 
+[RequireComponent(typeof(PickupScript)), RequireComponent(typeof(CharacterController)), RequireComponent(typeof(Animator))]
 public class PlayerMoveRoot : MonoBehaviour
 {
     
@@ -31,8 +32,8 @@ public class PlayerMoveRoot : MonoBehaviour
 
     private Vector2 dinoMove;
     private Vector2 dinoArmMove;
-    //private bool dinoRightHand;
-    //private bool dinoLeftHand;
+    public bool dinoRightHand;
+    public bool dinoLeftHand;
 
     void Awake()
     {
@@ -48,14 +49,39 @@ public class PlayerMoveRoot : MonoBehaviour
 
 
         InputAction movement = _actions.FindAction("Movement");
+        InputAction leftHandGrab = _actions.FindAction("LeftHandGrab");
+        InputAction rightHandGrab = _actions.FindAction("RightHandGrab");
         InputAction pause = _actions.FindAction("Pause Menu");
+
         InputAction unPause = _UI.FindAction("Pause Menu");
         
         movement.performed += ctx => dinoMove = ctx.ReadValue<Vector2>();
         movement.canceled += ctx => dinoMove = Vector2.zero;
 
+        leftHandGrab.performed += LeftHand;
+        leftHandGrab.canceled += LeftHand;
+
+        rightHandGrab.performed += RightHand;
+        rightHandGrab.canceled += RightHand;
+
         pause.performed += ctx => PauseEvent.Invoke();
         unPause.performed += ctx => PauseEvent.Invoke();
+    }
+    public void LeftHand(InputAction.CallbackContext ctx)
+    {
+        float p = ctx.ReadValue<float>();
+        if(p > 0)
+            dinoLeftHand = true;
+        else
+            dinoLeftHand = false;
+    }
+    public void RightHand(InputAction.CallbackContext ctx)
+    {
+        float p = ctx.ReadValue<float>();
+        if(p > 0)
+            dinoRightHand = true;
+        else
+            dinoRightHand = false;
     }
 
     public void OnEnable()

@@ -1,0 +1,88 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent(typeof(Camera))]
+public class DinoCameraManager : MonoBehaviour
+{
+    public List<Transform> targets;
+    public Vector3 offset;
+    public float smoothTime = 0.5f;
+    public float minZoom = 40f;
+    public float maxZoom = 10f;
+
+
+    private Vector3 initOffset;
+    private Vector3 velocity;
+    private Camera cam;
+
+    void Start()
+    {
+        initOffset = transform.position;
+        cam = GetComponent<Camera>();
+    }
+
+
+    private void LateUpdate()
+    {
+        if(targets.Count == 0)
+            return;
+        
+        Move();
+        Zoom();
+    }
+
+    private void Move () 
+    {
+        Vector3 centrePoint = GetCentrePoint();
+        Vector3 newPos = centrePoint + offset + initOffset;
+        transform.position = Vector3.SmoothDamp(transform.position, newPos, ref velocity, smoothTime);
+    }
+
+    private void Zoom () 
+    {
+        float newZoom = Mathf.Lerp(maxZoom, minZoom, Remap(GetGreatestDistance(), 0f, 10f, 0f, 1f));
+        cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, newZoom, Time.deltaTime);
+    }
+
+    //https://forum.unity.com/threads/re-map-a-number-from-one-range-to-another.119437/
+     public float Remap (float from, float fromMin, float fromMax, float toMin,  float toMax)
+    {
+        var fromAbs  =  from - fromMin;
+        var fromMaxAbs = fromMax - fromMin;      
+       
+        var normal = fromAbs / fromMaxAbs;
+ 
+        var toMaxAbs = toMax - toMin;
+        var toAbs = toMaxAbs * normal;
+ 
+        var to = toAbs + toMin;
+       
+        return to;
+    }
+
+    private float GetGreatestDistance()
+    {
+        var bounds = new Bounds(targets[0].position, Vector3.zero);
+        for(int i = 0; i < targets.Count; i++)
+        {
+            bounds.Encapsulate(targets[i].position);
+        }
+        return bounds.size.x;
+    }
+
+    Vector3 GetCentrePoint()
+    {
+        if (targets.Count == 1)
+        {
+            return targets[0].position;
+        }
+
+        var bounds = new Bounds(targets[0].position, Vector3.zero);
+        for(int i = 0; i < targets.Count; i++)
+        {
+            bounds.Encapsulate(targets[i].position);
+        }
+        return bounds.center;
+    }
+}

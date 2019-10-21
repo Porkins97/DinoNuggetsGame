@@ -5,13 +5,13 @@ using UnityEngine;
 public class BeingUsed : MonoBehaviour
 {
     [SerializeField] public IngredientType GameType;
-    public Transform initialParent;
-    public bool beingUsed = false;
-    public bool onStove = false;
-    public bool Burnable = false;
-    public bool Locked = false;
-    public bool initPosition;
-    public Rigidbody rbd;
+    [SerializeField] public bool Burnable = false;
+    [HideInInspector] public Transform initialParent;
+    [HideInInspector] public bool beingUsed = false;
+    [HideInInspector] public bool onStove = false;
+    [HideInInspector] public bool Locked = false;
+    [HideInInspector] public bool initPosition;
+    [HideInInspector] public Rigidbody rbd;
 
     private void Start()
     {

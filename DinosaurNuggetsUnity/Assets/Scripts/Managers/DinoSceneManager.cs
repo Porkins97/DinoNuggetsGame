@@ -26,10 +26,12 @@ public class DinoSceneManager : MonoBehaviour
 
     private string ingredientPath = "Assets/Database/Ingredients";
     private string mealPath = "Assets/Database/Meals";
+    private string utensilPath = "Assets/Database/Utensils";
     public List<GameObject> UIIngredients;
     public int UIIngredientsFinished;
     public List<SO_Ingredients> currentIngredientList;
     public List<SO_Ingredients> ingredientList;
+    public List<SO_Utensils> utensilList;
     public List<SO_Recipes> mealList;
 
 
@@ -44,6 +46,7 @@ public class DinoSceneManager : MonoBehaviour
         //Ingredients start.
         ingredientList = new List<SO_Ingredients>();
         mealList = new List<SO_Recipes>();
+        utensilList = new List<SO_Utensils>();
         
         foreach (string strPath in AssetDatabase.FindAssets("t:SO_Ingredients", new[] { ingredientPath }))
         {
@@ -52,6 +55,10 @@ public class DinoSceneManager : MonoBehaviour
         foreach (string strPath in AssetDatabase.FindAssets("t:SO_Recipes", new[] { mealPath }))
         {
             mealList.Add((SO_Recipes)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(strPath), typeof(SO_Recipes)));
+        }
+        foreach (string strPath in AssetDatabase.FindAssets("t:SO_Utensils", new[] { utensilPath }))
+        {
+            utensilList.Add((SO_Utensils)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(strPath), typeof(SO_Utensils)));
         }
 
         SO_Recipes currentRecipe = mealList[(int)UnityEngine.Random.Range(0, mealList.Count-1)];
