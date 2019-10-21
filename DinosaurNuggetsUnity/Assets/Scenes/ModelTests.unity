@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18002358, g: 0.22540072, b: 0.30675927, a: 1}
+  m_IndirectSpecularColor: {r: 0.18002322, g: 0.22540005, b: 0.306758, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1603,9 +1603,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b573aeef7f3df84686bf46d8b898edf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hatNum: 0
   hat: 0
   hats: []
   randomHat: 0
+  hatLocator: {fileID: 0}
+  customisationDataJSON: customisationdata.json
+  cd:
+    whichHatPlayerOne: 0
 --- !u!4 &1235627791
 Transform:
   m_ObjectHideFlags: 0
@@ -4935,6 +4940,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3282940921490431006, guid: 6b1ca4471ba614a46b9b6d901f9c7845,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 267cbbe95c1e82a40a8d2f88e45ed61f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b1ca4471ba614a46b9b6d901f9c7845, type: 3}
 --- !u!1001 &6500138610656992506
@@ -5779,11 +5789,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
-    - target: {fileID: 8750702035799904212, guid: 92abadda66705074d83a9a629223b738,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8750702035825878734, guid: 92abadda66705074d83a9a629223b738,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5837,6 +5842,11 @@ PrefabInstance:
     - target: {fileID: 8750702035825878734, guid: 92abadda66705074d83a9a629223b738,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750702035799904212, guid: 92abadda66705074d83a9a629223b738,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8750702035252894156, guid: 92abadda66705074d83a9a629223b738,

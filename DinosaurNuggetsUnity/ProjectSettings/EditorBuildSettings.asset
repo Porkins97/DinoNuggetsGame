@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 4e54c354acdc8b449b3a74ce66c771a3
+    path: Assets/Scenes/Final Scenes/Menu.unity
+    guid: 8893333395629274ab6961e3feaefe34
   - enabled: 1
     path: Assets/Scenes/Final Scenes/Controls.unity
     guid: 4b2be84eaadc2e4469e8f8a2f8621998
@@ -27,8 +30,11 @@ EditorBuildSettings:
     path: Assets/Scenes/DinoNuggetsPrototypeScene2.unity
     guid: dc622b334a47e6145b3324eeec78f950
   - enabled: 0
-    path: Assets/Scenes/Final Scenes/Select Level.unity
-    guid: 86f452284bf14fb4480179f773262abb
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Final Scenes/Customise.unity
+    guid: 4b3279e8a75eb4c499a20338a3dca77f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c333e68d875d41e499d2f9fc3688f5ee,
       type: 2}

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO; 
 
 public class ApplyHat : MonoBehaviour
 {
@@ -10,10 +11,20 @@ public class ApplyHat : MonoBehaviour
     public bool randomHat;
     public Transform hatLocator;
     GameObject appliedHat;
+    public string customisationDataJSON = "customisationdata.json";
+    public CustomisationData cd;
 
     private void Start()
     {
-        PassHatnum(0);
+        if(randomHat != true)
+        {
+            int l = LoadData();
+            PassHatnum(l);
+        }
+        else
+        {
+            PassHatnum(0);
+        }
     }
 
     public void SelectHat()
@@ -29,6 +40,8 @@ public class ApplyHat : MonoBehaviour
             {
                 appliedHat = Instantiate(hats[i], hatLocator.gameObject.transform);
                 appliedHat.transform.parent = hatLocator.gameObject.transform;
+                cd.whichHatPlayerOne = i;
+                SavaData();
             }
         }
     }
@@ -48,5 +61,33 @@ public class ApplyHat : MonoBehaviour
             Destroy(appliedHat);
         hat = _hat;
         SelectHat();
+    }
+
+    public void SavaData()
+    {
+        Debug.Log("Saving");
+        string dataAsJson = JsonUtility.ToJson(cd);
+        Debug.Log(dataAsJson);
+        string filePath = Application.streamingAssetsPath + "/" + customisationDataJSON;
+        File.WriteAllText(filePath, dataAsJson);
+    }
+
+    public int LoadData()
+    {
+        string filePath = Application.streamingAssetsPath + "/" + customisationDataJSON;
+        if (File.Exists(filePath))
+        {
+            string dataAsJson = File.ReadAllText(filePath);
+            CustomisationData cData = JsonUtility.FromJson<CustomisationData>(dataAsJson);
+            int l = cData.whichHatPlayerOne;
+            //int i = cData.whichHatPlayerTwo; if this is player2
+            return (l);
+        }
+        else
+        {
+            Debug.Log("Data Doesn't Exist");
+            return(0);
+        }
+        
     }
 }

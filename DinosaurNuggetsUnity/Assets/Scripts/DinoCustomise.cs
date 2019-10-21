@@ -5,9 +5,10 @@ using UnityEngine;
 [System.Serializable]
 public enum HatType
 {
-    None,
     Cowboy,
     Crown,
+    Chef,
+    Party,
     Helicopter,
     SmallRussian,
     LargeRussian,
@@ -16,8 +17,7 @@ public enum HatType
     SpaceHelmet,
     SmallTophat,
     LargeTophat,
-    Chef,
-    Party
+    None
 }
 
 
