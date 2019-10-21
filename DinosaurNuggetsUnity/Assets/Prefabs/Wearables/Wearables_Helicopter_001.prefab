@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 1921191677881999556}
   - component: {fileID: 3290554111535436624}
   - component: {fileID: 3752755894464550783}
+  - component: {fileID: 5100191116011801663}
   m_Layer: 0
   m_Name: Blade
   m_TagString: Untagged
@@ -180,7 +181,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a3fa9fab0bbf047429c68d855860426f, type: 2}
+  - {fileID: 2100000, guid: 49a9837e28ed8f74c8b829c974c31ffd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -200,3 +201,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5100191116011801663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8086228192248104558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66cbdd65faef7004f9e42814096fc09b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 50
+  val: 0
