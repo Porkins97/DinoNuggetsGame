@@ -14,6 +14,7 @@ TagManager:
   - BackgroundEnvironment
   - Manager
   - Wearable
+  - Flame
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Dino
   - HandCollisions
   - IngredientsUtensils
-  - 
+  - Fire
   - 
   - 
   - 
