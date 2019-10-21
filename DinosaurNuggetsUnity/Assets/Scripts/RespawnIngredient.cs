@@ -8,6 +8,7 @@ public class RespawnIngredient : MonoBehaviour
     private GameObject ThisGameObject;
     public GameObject NewIngredient;
     private Transform ThisPosition;
+    private Transform iRotation;
     private float Timer = 3.5f;
     float ResetTime = 1f;
     Collider col;
@@ -15,9 +16,13 @@ public class RespawnIngredient : MonoBehaviour
     bool dontSpawn = false;
     bool collidingWithIngredient = false;
     bool waitingToSpawn = false;
+    //public SO_Ingredients _soIngredients;
+    public IngredientType iType;
+    public DinoSceneManager dinoSceneManager;
 
     void Start()
     {
+        dinoSceneManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<DinoSceneManager>();//FindObjectOfType<GameManager>().GetComponent<DinoSceneManager>();
         ThisGameObject = this.gameObject;
         ThisPosition = ThisGameObject.transform;
         col = GetComponent<Collider>();
@@ -43,13 +48,12 @@ public class RespawnIngredient : MonoBehaviour
             NewIngredient = Instantiate(Ingredient, ThisPosition);
             //NewIngredient.transform.SetParent(ThisGameObject.transform);
             NewIngredient.transform.position = ThisGameObject.transform.position;
-            NewIngredient.transform.rotation = Quaternion.Euler(0,0,0);
+            NewIngredient.transform.rotation = iRotation.transform.rotation;
             NewIngredient.GetComponent<Collider>().enabled = true;
             NewIngredient.GetComponent<Rigidbody>().useGravity = true;
             NewIngredient.GetComponent<BeingUsed>().beingUsed = false;
             NewIngredient.transform.localScale = new Vector3(1f, 1f, 1f);
-            //reset other stats here
-            Ingredient = NewIngredient;
+            //Ingredient = NewIngredient;
             collidingWithIngredient = false;
             waitingToSpawn = false;
         }
@@ -61,7 +65,14 @@ public class RespawnIngredient : MonoBehaviour
         if ((other.gameObject.tag == "Ingredient" || other.gameObject.tag == "Utensil") && Ingredient == null)
         {
             if(ResetBool)
-                Ingredient = other.gameObject;
+            {
+                iRotation = other.gameObject.transform;
+                /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                iType = other.gameObject.GetComponent<BeingUsed>().GameType;
+                SO_Ingredients foundIngredient = dinoSceneManager.ingredientList.Find(x => x.type == iType);
+                Ingredient = foundIngredient.ingredientPrefab;
+                
+            }
         }
     }
    

@@ -47,6 +47,8 @@ MonoBehaviour:
   Player1: {fileID: 0}
   Player2: {fileID: 0}
   checkmarkUI: {fileID: 2800000, guid: 2dbe0670ec42349489c1fb9706e497f2, type: 3}
+  pauseCanvas: {fileID: 0}
+  gameCanvas: {fileID: 0}
   seed: 4
   UIIngredients: []
   UIIngredientsFinished: 0

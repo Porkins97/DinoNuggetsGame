@@ -667,6 +667,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ingredient: {fileID: 0}
   NewIngredient: {fileID: 0}
+  _soIngredients: {fileID: 0}
+  iType: 0
+  dinoSceneManager: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!135 &1889190908543418174
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -726,6 +730,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ingredient: {fileID: 0}
   NewIngredient: {fileID: 0}
+  _soIngredients: {fileID: 0}
+  iType: 0
+  dinoSceneManager: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!135 &3389776161320948992
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -785,6 +793,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ingredient: {fileID: 0}
   NewIngredient: {fileID: 0}
+  _soIngredients: {fileID: 0}
+  iType: 0
+  dinoSceneManager: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!135 &8894373370217223292
 SphereCollider:
   m_ObjectHideFlags: 0
