@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Users;
+using UnityEngine.InputSystem.UI;
 
 public class DinoSceneManager : MonoBehaviour
 {
@@ -19,6 +18,7 @@ public class DinoSceneManager : MonoBehaviour
     public int seed;
 
     [Header("User Settings")]
+    [SerializeField] private InputSystemUIInputModule uiInput = null;
     [SerializeField] public List<UserInputs> allUsers = new List<UserInputs>();
     private bool gamePaused = false;
     
@@ -64,6 +64,8 @@ public class DinoSceneManager : MonoBehaviour
         SO_Recipes currentRecipe = mealList[(int)UnityEngine.Random.Range(0, mealList.Count-1)];
         UI.SetActive(true);
         MealToUIStarter(currentRecipe);
+
+        uiInput.actionsAsset.Disable();
     }
 
     public void PauseGame()
@@ -78,7 +80,8 @@ public class DinoSceneManager : MonoBehaviour
             foreach(UserInputs _inputs in allUsers)
             {
                 _inputs.current_Actions.Disable();
-                _inputs.current_UI.Enable();
+               // _inputs.current_UI.Enable();
+                uiInput.actionsAsset.Enable();
             }
         }
         else
@@ -91,7 +94,8 @@ public class DinoSceneManager : MonoBehaviour
             foreach (UserInputs _inputs in allUsers)
             {
                 _inputs.current_Actions.Enable();
-                _inputs.current_UI.Disable();
+                //_inputs.current_UI.Disable();
+                uiInput.actionsAsset.Disable();
             }
         }
     }
@@ -154,7 +158,7 @@ public class DinoSceneManager : MonoBehaviour
 
     public void runThrough(GameObject item)
     {
-        IngredientType currentItem = item.GetComponent<BeingUsed>().GameType;
+        IngredientType currentItem = item.GetComponent<ItemAttributes>().GameType;
         SO_Ingredients ingredient = ingredientList.Find(x => x.type == currentItem);
         if(ingredient == currentIngredientList[UIIngredientsFinished])
             CorrectIngredient(ingredient, item);
@@ -168,3 +172,4 @@ public class DinoSceneManager : MonoBehaviour
 #endregion
     
 }
+

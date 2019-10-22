@@ -51,7 +51,7 @@ public class RespawnIngredient : MonoBehaviour
             NewIngredient.transform.rotation = iRotation.transform.rotation;
             NewIngredient.GetComponent<Collider>().enabled = true;
             NewIngredient.GetComponent<Rigidbody>().useGravity = true;
-            NewIngredient.GetComponent<BeingUsed>().beingUsed = false;
+            NewIngredient.GetComponent<ItemAttributes>().beingUsed = false;
             NewIngredient.transform.localScale = new Vector3(1f, 1f, 1f);
             //Ingredient = NewIngredient;
             collidingWithIngredient = false;
@@ -68,7 +68,7 @@ public class RespawnIngredient : MonoBehaviour
             {
                 iRotation = other.gameObject.transform;
                 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                iType = other.gameObject.GetComponent<BeingUsed>().GameType;
+                iType = other.gameObject.GetComponent<ItemAttributes>().GameType;
                 if(other.gameObject.tag == "Ingredient")
                 {
                     SO_Ingredients foundIngredient = dinoSceneManager.ingredientList.Find(x => x.type == iType);
