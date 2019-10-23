@@ -46,14 +46,12 @@ public class RespawnIngredient : MonoBehaviour
         if(!collidingWithIngredient)
         {
             NewIngredient = Instantiate(Ingredient, ThisPosition);
-            //NewIngredient.transform.SetParent(ThisGameObject.transform);
             NewIngredient.transform.position = ThisGameObject.transform.position;
             NewIngredient.transform.rotation = iRotation.transform.rotation;
             NewIngredient.GetComponent<Collider>().enabled = true;
             NewIngredient.GetComponent<Rigidbody>().useGravity = true;
             NewIngredient.GetComponent<BeingUsed>().beingUsed = false;
             NewIngredient.transform.localScale = new Vector3(1f, 1f, 1f);
-            //Ingredient = NewIngredient;
             collidingWithIngredient = false;
             waitingToSpawn = false;
         }
@@ -92,7 +90,7 @@ public class RespawnIngredient : MonoBehaviour
         }
         else
         {
-            if(other.gameObject.tag == "Ingredient" || other.gameObject.tag == "Utensil" && waitingToSpawn)
+            if((other.gameObject.tag == "Ingredient" || other.gameObject.tag == "Utensil") && waitingToSpawn)
             {
                 collidingWithIngredient = false;
                 StartCoroutine(Respawn());

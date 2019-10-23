@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class FireTest : MonoBehaviour
 {
     Vector3 position;
-    public bool Automatic; // automatically ignite set number of cubes (there is a chance that they are the same, need to update)(numberOfFlames)
-    public bool GenISpawn; //changes how it generates, either randomly or via "growth"
     public GameObject prefab;
     public GameObject Empty;
     public int numberOfFlames; // the number of flames automatically ignited on start
@@ -65,14 +63,6 @@ public class FireTest : MonoBehaviour
             Debug.Log("Error: number of flames must be less than max squares");
             numberOfFlames = numberOfFlames / 10;
             Debug.Log("Number of flames has been reset to " + numberOfFlames);
-        }
-
-        if (Automatic == true)
-        {
-            for(int i = 0; i<numberOfFlames; i++)
-            {
-                neighbours[Random.Range(0, xsize), Random.Range(0, ysize)].GetComponent<Flame>().Ignite();
-            }
         }
     }
 }

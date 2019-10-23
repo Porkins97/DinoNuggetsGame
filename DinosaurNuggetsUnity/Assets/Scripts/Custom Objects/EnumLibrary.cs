@@ -6,6 +6,7 @@ public enum IngredientType
     Cutting_Board = 2,
     Knife_A = 3,
     Knife_Butcher = 4,
+    Fire_Extinguisher = 5,
     //-----------------------
     Bread_Whole = 50,
     Flour = 51,

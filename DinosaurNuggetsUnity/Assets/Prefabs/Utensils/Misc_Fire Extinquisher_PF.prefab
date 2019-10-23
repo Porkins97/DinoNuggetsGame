@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8873480056213904917}
   - component: {fileID: 5728001037295545499}
   - component: {fileID: 8272412813210675792}
+  - component: {fileID: 6176841778767320583}
   m_Layer: 11
   m_Name: Misc_Fire Extinquisher_PF
   m_TagString: Utensil
@@ -123,9 +124,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8560b6c91bfed4789568902439cd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameType: 0
+  GameType: 5
+  Burnable: 0
   initialParent: {fileID: 0}
   beingUsed: 0
   onStove: 0
-  Burnable: 0
   Locked: 0
+  initPosition: 0
+  rbd: {fileID: 0}
+--- !u!136 &6176841778767320583
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5185625315204844899}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.18061453
+  m_Height: 0.6423685
+  m_Direction: 0
+  m_Center: {x: 0.53, y: 0.44, z: 0}

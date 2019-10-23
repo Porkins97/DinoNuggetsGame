@@ -5,20 +5,18 @@ using UnityEngine.UI;
 
 public class Flame : MonoBehaviour
 {
+    //[SerializeField] public IngredientType GameType;
     int maxX, maxY, x, y;
 
     public bool OnFire = false;
-    public bool[] ya;
     public GameObject[] localNeighbours = new GameObject[4];
     public GameObject gridSpawn;
     private GameObject[,] neighbours;
     public GameObject prefab;
     public float waitTime;
-    
     private bool Ignited = false;
-
-    public Text numCubeText;
-
+    IngredientType cuttingBoard = IngredientType.Cutting_Board;
+    IngredientType fireExtinguisher = IngredientType.Fire_Extinguisher;
     void Reset()
     {
         for (int i = 0; i<localNeighbours.Length; i++)
@@ -30,10 +28,10 @@ public class Flame : MonoBehaviour
     void Start() 
     {
         waitTime = waitTime + Random.Range(-2,2);
-        if (this.gameObject.name == "Flame.433")
+        /*if (this.gameObject.name == "Flame.433")
         {
             OnFire = true;
-        }
+        }*/
     }
 
     void FixedUpdate()
@@ -73,22 +71,6 @@ public class Flame : MonoBehaviour
         {
             localNeighbours[3] = neighbours[x - 1, y];
         }
-
-        /*
-         neighbour 1 = (x, y+1)
-            if y == max, neighbour 1 doesn't exist
-         neighbour 2 = (x, y-1)
-            if y = 0, neighbour 2 doesn't exist
-         neighbour 3 = (x+1, y)
-            if x = max, neighbour 3 doesn't exist
-         neighbour 4 = (x-1, y)
-            if x = 0, neighbour 4 doesn't exist
-
-         For each neighbour that != null, and is not on fire already, Ingite()
-         Call each neighbour Flame() script and check Flame().OnFire = false;
-         Change OnFire = true and start the ignition process.
-         Random time between 1 and 5 seconds spawn a game object. Once spawned, calle Ignite() on neighbours.
-         */
     }
 
     public void Ignite()
@@ -102,11 +84,7 @@ public class Flame : MonoBehaviour
         {
             if (localNeighbours[i] != false && localNeighbours[i].GetComponent<Flame>().OnFire == false)
             {
-                //Collider[] colliders = Physics.OverlapSphere(localNeighbours[i].transform.position, 0.4f);
-                //if (colliders.Length == 0)
-                //{
                     StartCoroutine(Hold(i));      
-                //}
             }
         }
     }
@@ -115,5 +93,32 @@ public class Flame : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         localNeighbours[i].GetComponent<Flame>().OnFire = true;
+    }
+    public IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(waitTime);
+        Ignite();
+    }
+
+    private void OnTriggerEnter(Collider other)  //update this to check how long it was in the area
+                                                 //if it has been area for x.time, Ignite(), rather than ignite no matter how long
+    {
+        if(other.gameObject.tag == "Utensil")
+        {
+            if(other.gameObject.GetComponent<BeingUsed>().GameType == cuttingBoard)
+            {
+                if(other.gameObject.transform.childCount >2)
+                {   
+                    StartCoroutine(Wait());
+                }
+            }
+            if(other.gameObject.GetComponent<BeingUsed>().GameType == fireExtinguisher)
+            {
+                if(this.gameObject.transform.childCount > 0)
+                {
+                    OnFire = false;
+                }
+            }
+        }
     }
 }

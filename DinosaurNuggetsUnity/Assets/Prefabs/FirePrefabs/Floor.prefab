@@ -46,15 +46,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbb18d2a2d78bc4439bdc0540d2c2ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Automatic: 1
-  GenISpawn: 0
   prefab: {fileID: 2984470009308399723, guid: b1a33a2c26cd56140a76792f1cc54045, type: 3}
   Empty: {fileID: 5932991123988014450, guid: 1ae553dd2cfc3c34cad84135a46fd3b9, type: 3}
   numberOfFlames: 3
   height: 0.5
   flame: {fileID: 2984470009308399723, guid: b1a33a2c26cd56140a76792f1cc54045, type: 3}
-  xsize: 28
-  ysize: 28
+  xsize: 18
+  ysize: 11
   flameSize: 0.4
 --- !u!33 &4024503145963058938
 MeshFilter:
