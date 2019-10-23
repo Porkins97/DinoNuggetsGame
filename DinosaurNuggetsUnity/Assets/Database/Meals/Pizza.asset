@@ -16,6 +16,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 70738437aeaf7304e9b47e5d7a3cbfaf, type: 2}
   - {fileID: 11400000, guid: ba990b268e5809a45abb6b7d9cdf6131, type: 2}
   - {fileID: 11400000, guid: afcf26eb562f3434fbd192a95cfd1b3b, type: 2}
-  - {fileID: 11400000, guid: 2fa4b94e48fdab246ba71e8e99eae901, type: 2}
-  - {fileID: 11400000, guid: 793d1d41f47ff124d8fe3ef37fd6e4ac, type: 2}
+  - {fileID: 11400000, guid: 34362718ec1d54a479c162ef56922ca4, type: 2}
+  - {fileID: 11400000, guid: 925f59b5c146668458933f43087cd61d, type: 2}
   meal: {fileID: 3232894389660559838, guid: e492b71520b28924ab787d49c0276214, type: 3}

@@ -24,8 +24,8 @@ public class Stove : MonoBehaviour
         {
             stoveAGameObject = objectPlaced;
             objectPlaced.GetComponent<Rigidbody>().isKinematic = true;
-            objectPlaced.GetComponent<BeingUsed>().beingUsed = true;
-            objectPlaced.GetComponent<BeingUsed>().onStove = true;
+            objectPlaced.GetComponent<ItemAttributes>().beingUsed = true;
+            objectPlaced.GetComponent<ItemAttributes>().onStove = true;
             objectPlaced.transform.position = stoveTopA_Loc.position;
             objectPlaced.transform.rotation = Quaternion.identity;
             stoveTopA_Used = true;
@@ -35,7 +35,7 @@ public class Stove : MonoBehaviour
     {
         if(objectPlaced == stoveAGameObject)
         {
-            stoveAGameObject.GetComponent<BeingUsed>().onStove = false;
+            stoveAGameObject.GetComponent<ItemAttributes>().onStove = false;
             stoveAGameObject = null;
             stoveTopA_Used = false;
         }
@@ -43,11 +43,11 @@ public class Stove : MonoBehaviour
 
     public void Burn(GameObject objectPlaced)
     {
-        if(objectPlaced.GetComponent<BeingUsed>().Burnable == true)
+        if(objectPlaced.GetComponent<ItemAttributes>().Burnable == true)
         {
             IEnumerator coroutine = Burning(2.0f, objectPlaced);
             Placed(objectPlaced);
-            objectPlaced.GetComponent<BeingUsed>().Locked = true;
+            objectPlaced.GetComponent<ItemAttributes>().Locked = true;
             StartCoroutine(coroutine);
         }
     }

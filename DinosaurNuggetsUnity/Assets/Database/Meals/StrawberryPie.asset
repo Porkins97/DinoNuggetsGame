@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 236708ad3c6f90b44992d04da9a85074, type: 3}
+  m_Name: StrawberryPie
+  m_EditorClassIdentifier: 
+  ingredients:
+  - {fileID: 11400000, guid: c277691eb7c9d434c8c50b6038e35e59, type: 2}
+  - {fileID: 11400000, guid: 1986ae48dca76f246bda99cae6418a24, type: 2}
+  - {fileID: 11400000, guid: ba990b268e5809a45abb6b7d9cdf6131, type: 2}
+  - {fileID: 11400000, guid: 067d56985cbad2e40b78669e5d579003, type: 2}
+  - {fileID: 11400000, guid: 02da0e35a08c7024290123e4110445c7, type: 2}
+  meal: {fileID: 0}

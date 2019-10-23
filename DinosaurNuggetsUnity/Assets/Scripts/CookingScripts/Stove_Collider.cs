@@ -17,13 +17,13 @@ public class Stove_Collider : MonoBehaviour
     {
         if(col.tag == "Utensil" || col.tag == "Ingredient")
         {
-            if (col.GetComponent<BeingUsed>().beingUsed == false)
+            if (col.GetComponent<ItemAttributes>().beingUsed == false)
             {
-                IngredientType iType = col.GetComponent<BeingUsed>().GameType;                
+                IngredientType iType = col.GetComponent<ItemAttributes>().GameType;                
                 if((int)iType < 50)
                 {
                     //Utensil
-                    if(col.GetComponent<BeingUsed>().Burnable == true)
+                    if(col.GetComponent<ItemAttributes>().Burnable == true)
                     {
                         stoveScript.Burn(col.gameObject);
                     }
@@ -45,14 +45,14 @@ public class Stove_Collider : MonoBehaviour
     {
         if(col.tag == "Utensil" || col.tag == "Ingredient")
         {
-            if (col.GetComponent<BeingUsed>().beingUsed == false)
+            if (col.GetComponent<ItemAttributes>().beingUsed == false)
             {
-                IngredientType iType = col.GetComponent<BeingUsed>().GameType;
+                IngredientType iType = col.GetComponent<ItemAttributes>().GameType;
 
                 if((int)iType < 50)
                 {
                     //Utensil
-                    if(col.GetComponent<BeingUsed>().Burnable == true)
+                    if(col.GetComponent<ItemAttributes>().Burnable == true)
                     {
                         stoveScript.Placed(col.gameObject);
                         stoveScript.Burn(col.gameObject);
@@ -74,7 +74,7 @@ public class Stove_Collider : MonoBehaviour
     {
         if(col.tag == "Utensil" || col.tag == "Ingredient")
         {
-            if (col.GetComponent<BeingUsed>().beingUsed == true)
+            if (col.GetComponent<ItemAttributes>().beingUsed == true)
             {
                 stoveScript.Removed(col.gameObject);
             }

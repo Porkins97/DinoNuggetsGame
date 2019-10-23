@@ -6,19 +6,20 @@ using UnityEngine.Events;
 public class HandCollisions : MonoBehaviour
 {
     private Collider currentCollider;
-    public PickupScript pickupScript;
+    private PickupScript pickupScript;
     void Start()
     {
         currentCollider = gameObject.GetComponent<Collider>();
+        pickupScript = GetComponentInParent<PickupScript>();
     }
 
     void OnTriggerEnter (Collider col) 
     {
         if(col.tag == "Ingredient" || col.tag == "Utensil")
         {
-           if (col.GetComponent<BeingUsed>().beingUsed == false && col.GetComponent<BeingUsed>().Locked == false)
+           if (col.GetComponent<ItemAttributes>().beingUsed == false)
            {
-                pickupScript.PickItUp(gameObject, col.gameObject);
+                pickupScript.PickItUp(gameObject, col.gameObject, col.GetComponent<ItemAttributes>().Locked);
            }
         }
     }
@@ -26,9 +27,9 @@ public class HandCollisions : MonoBehaviour
     {
         if(col.tag == "Ingredient" || col.tag == "Utensil")
         {
-           if (col.GetComponent<BeingUsed>().beingUsed == false && col.GetComponent<BeingUsed>().Locked == false)
+           if (col.GetComponent<ItemAttributes>().beingUsed == false)
            {
-                pickupScript.PickItUp(gameObject, col.gameObject);
+                pickupScript.PickItUp(gameObject, col.gameObject, col.GetComponent<ItemAttributes>().Locked);
            }
         }
     }
@@ -36,7 +37,7 @@ public class HandCollisions : MonoBehaviour
     {
         if(col.tag == "Ingredient" || col.tag == "Utensil")
         {
-            pickupScript.PickItUpExit(gameObject, col.gameObject);
+            pickupScript.PickItUpExit(gameObject);
         }
     }
 }
