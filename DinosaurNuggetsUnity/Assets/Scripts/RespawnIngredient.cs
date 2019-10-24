@@ -12,11 +12,10 @@ public class RespawnIngredient : MonoBehaviour
     private float Timer = 3.5f;
     float ResetTime = 1f;
     Collider col;
-    bool ResetBool = true;
+    public bool ResetBool = true;
     bool dontSpawn = false;
     bool collidingWithIngredient = false;
     bool waitingToSpawn = false;
-    //public SO_Ingredients _soIngredients;
     public IngredientType iType;
     public DinoSceneManager dinoSceneManager;
 
@@ -64,15 +63,19 @@ public class RespawnIngredient : MonoBehaviour
         {
             if(ResetBool)
             {
+                Debug.Log("Stage0");
                 iRotation = other.gameObject.transform;
                 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 iType = other.gameObject.GetComponent<ItemAttributes>().GameType;
+                Debug.Log("Stage1");
                 if(other.gameObject.tag == "Ingredient")
                 {
+                    Debug.Log("Stage2a");
                     SO_Ingredients foundIngredient = dinoSceneManager.ingredientList.Find(x => x.type == iType);
                     Ingredient = foundIngredient.ingredientPrefab;
                 }
                 else{
+                    Debug.Log("Stage2b");
                     SO_Utensils foundUtensil = dinoSceneManager.utensilList.Find(x => x.type == iType);
                     Ingredient = foundUtensil.utensilPrefab; 
                 }

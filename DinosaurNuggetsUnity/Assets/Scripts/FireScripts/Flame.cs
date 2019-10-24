@@ -105,14 +105,14 @@ public class Flame : MonoBehaviour
     {
         if(other.gameObject.tag == "Utensil")
         {
-            if(other.gameObject.GetComponent<BeingUsed>().GameType == cuttingBoard)
+            if(other.gameObject.GetComponent<ItemAttributes>().GameType == cuttingBoard)
             {
                 if(other.gameObject.transform.childCount >2)
                 {   
                     StartCoroutine(Wait());
                 }
             }
-            if(other.gameObject.GetComponent<BeingUsed>().GameType == fireExtinguisher)
+            if(other.gameObject.GetComponent<ItemAttributes>().GameType == fireExtinguisher)
             {
                 if(this.gameObject.transform.childCount > 0)
                 {
