@@ -14,8 +14,10 @@ public class Stove : MonoBehaviour
 
     public void Start()
     {
-        if(sManager == null)
+        if (sManager == null)
+        {
             sManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<DinoSceneManager>();
+        }
     }
 
     public void Placed(GameObject objectPlaced)
@@ -24,7 +26,6 @@ public class Stove : MonoBehaviour
         {
             stoveAGameObject = objectPlaced;
             objectPlaced.GetComponent<Rigidbody>().isKinematic = true;
-            objectPlaced.GetComponent<ItemAttributes>().beingUsed = true;
             objectPlaced.GetComponent<ItemAttributes>().onStove = true;
             objectPlaced.transform.position = stoveTopA_Loc.position;
             objectPlaced.transform.rotation = Quaternion.identity;
@@ -35,32 +36,44 @@ public class Stove : MonoBehaviour
     {
         if(objectPlaced == stoveAGameObject)
         {
+            
             stoveAGameObject.GetComponent<ItemAttributes>().onStove = false;
             stoveAGameObject = null;
             stoveTopA_Used = false;
         }
+        
     }
 
     public void Burn(GameObject objectPlaced)
     {
-        if(objectPlaced.GetComponent<ItemAttributes>().Burnable == true)
+        if (objectPlaced.GetComponent<ItemAttributes>().Burnable == true)
         {
-            IEnumerator coroutine = Burning(2.0f, objectPlaced);
-            Placed(objectPlaced);
-            objectPlaced.GetComponent<ItemAttributes>().Locked = true;
-            StartCoroutine(coroutine);
+            if(objectPlaced.GetComponent<ItemAttributes>().currentlyBurning == false)
+            {
+                objectPlaced.GetComponent<ItemAttributes>().currentlyBurning = true;
+                IEnumerator coroutine = Burning(4.0f, objectPlaced);
+                Placed(objectPlaced);
+                objectPlaced.GetComponent<ItemAttributes>().Locked = true;
+                StartCoroutine(coroutine);
+
+            }
+            
         }
     }
 
     private IEnumerator Burning(float waitTime, GameObject destroyObj)
     {
+
         GameObject fire = Instantiate(firePrefab, destroyObj.transform);
         while (true)
         {
             yield return new WaitForSeconds(waitTime);
-            Removed(destroyObj);
+            
             Destroy(fire);
             Destroy(destroyObj);
+            stoveAGameObject = null;
+            stoveTopA_Used = false;
+            yield return null;
         }
     }
 }

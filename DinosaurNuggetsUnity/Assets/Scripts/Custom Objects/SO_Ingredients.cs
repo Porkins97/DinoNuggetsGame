@@ -10,4 +10,6 @@ public class SO_Ingredients : ScriptableObject
     public GameObject ingredientPrefab;
     public Texture2D texture;
     public IngredientType type;
+    public bool Spawnable = true;
+    public SO_Ingredients unslicedVersion;
 }

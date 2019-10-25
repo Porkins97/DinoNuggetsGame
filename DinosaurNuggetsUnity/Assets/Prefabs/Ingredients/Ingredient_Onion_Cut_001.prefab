@@ -12,12 +12,11 @@ GameObject:
   - component: {fileID: 415111720481437799}
   - component: {fileID: 6268531854147470494}
   - component: {fileID: 7134630307961384327}
-  - component: {fileID: 7503291229612998597}
   - component: {fileID: 4553250230985063387}
   - component: {fileID: 4013083366100687240}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Ingredient_Onion_Cut_001
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,18 +96,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7503291229612998597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5675268419012554818}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a30156b4db513194c9e6ef5d191919cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4553250230985063387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,11 +109,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameType: 101
-  initialParent: {fileID: 0}
-  beingUsed: 0
-  onStove: 0
   Burnable: 0
   Locked: 0
+  unlockTime: 3
+  initialParent: {fileID: 0}
+  wasLocked: 0
+  beingUsed: 0
+  onStove: 0
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!64 &4013083366100687240

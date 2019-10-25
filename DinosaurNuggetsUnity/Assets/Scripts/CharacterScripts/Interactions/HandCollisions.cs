@@ -19,7 +19,7 @@ public class HandCollisions : MonoBehaviour
         {
            if (col.GetComponent<ItemAttributes>().beingUsed == false)
            {
-                pickupScript.PickItUp(gameObject, col.gameObject, col.GetComponent<ItemAttributes>().Locked);
+                pickupScript.PickItUp(gameObject, col.gameObject, col.GetComponent<ItemAttributes>().Locked, col.GetComponent<ItemAttributes>().unlockTime);
            }
         }
     }
@@ -29,7 +29,7 @@ public class HandCollisions : MonoBehaviour
         {
            if (col.GetComponent<ItemAttributes>().beingUsed == false)
            {
-                pickupScript.PickItUp(gameObject, col.gameObject, col.GetComponent<ItemAttributes>().Locked);
+                pickupScript.PickItUp(gameObject, col.gameObject, col.GetComponent<ItemAttributes>().Locked, col.GetComponent<ItemAttributes>().unlockTime);
            }
         }
     }

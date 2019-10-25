@@ -32,14 +32,14 @@ namespace DinoInputSystems
         private void Awake()
         {
             InputActionAsset input = Instantiate(uiInput.actionsAsset);
-
+           
             _actions = input.FindActionMap("Player");
             _UI = input.FindActionMap("UI");
 
             InputUser currentUser = InputUser.PerformPairingWithDevice(Gamepad.all[gamePadId]);
             currentUser.AssociateActionsWithUser(input);
 
-            _sceneManager.allUsers.Add(new UserInputs(currentUser, _UI, _actions));
+            _sceneManager.allUsers.Add(new UserInputs(currentUser, _UI, _actions, input));
 
 
             InputAction movement = _actions.FindAction("Movement");
@@ -58,8 +58,12 @@ namespace DinoInputSystems
             rightHandGrab.performed += RightHand;
             rightHandGrab.canceled += RightHand;
 
-            pause.performed += ctx => PauseEvent.Invoke();
-            unPause.performed += ctx => PauseEvent.Invoke();
+
+            pause.performed += ctx => Pause(gamePadId);
+            unPause.performed += ctx => Pause(gamePadId);
+
+            pause.performed += ctx => { _sceneManager.userPaused = gamePadId; PauseEvent.Invoke(); };
+            unPause.performed += ctx => { _sceneManager.userPaused = gamePadId; PauseEvent.Invoke(); };
         }
         
         private void OnEnable()
@@ -72,6 +76,12 @@ namespace DinoInputSystems
         {
             _actions.Disable();
             _UI.Disable();
+        }
+
+        private void Pause(int currentUser)
+        {
+            _sceneManager.userPaused = currentUser;
+            PauseEvent.Invoke();
         }
 
         private void LeftHand(InputAction.CallbackContext ctx)

@@ -4,6 +4,9 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem.UI;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Users;
+using System.Linq;
 
 public class DinoSceneManager : MonoBehaviour
 {
@@ -20,8 +23,14 @@ public class DinoSceneManager : MonoBehaviour
     [Header("User Settings")]
     [SerializeField] private InputSystemUIInputModule uiInput = null;
     [SerializeField] public List<UserInputs> allUsers = new List<UserInputs>();
-    private bool gamePaused = false;
+
+    [Header("Spawn Settings")]
+    [SerializeField] private Transform SpawnTransform = null;
     
+    private bool gamePaused = false;
+    public int userPaused = 0;
+    private InputActionAsset defaultAsset;
+
     //-------------
 
     private string ingredientPath = "Assets/Database/Ingredients";
@@ -37,9 +46,6 @@ public class DinoSceneManager : MonoBehaviour
 
     void Awake()
     {
-
-
-
         pauseCanvas.enabled = false;
         gameCanvas.enabled = true;
 
@@ -62,10 +68,15 @@ public class DinoSceneManager : MonoBehaviour
         }
 
         SO_Recipes currentRecipe = mealList[(int)UnityEngine.Random.Range(0, mealList.Count-1)];
+        
+
         UI.SetActive(true);
         MealToUIStarter(currentRecipe);
 
-        uiInput.actionsAsset.Disable();
+        //SpawnItems(currentRecipe);
+
+        defaultAsset = uiInput.actionsAsset;
+        uiInput.DisableAllActions();
     }
 
     public void PauseGame()
@@ -80,9 +91,9 @@ public class DinoSceneManager : MonoBehaviour
             foreach(UserInputs _inputs in allUsers)
             {
                 _inputs.current_Actions.Disable();
-               // _inputs.current_UI.Enable();
-                uiInput.actionsAsset.Enable();
+                _inputs.current_UI.Enable();
             }
+            uiInput.actionsAsset = allUsers[userPaused].current_Asset;
         }
         else
         {
@@ -94,15 +105,78 @@ public class DinoSceneManager : MonoBehaviour
             foreach (UserInputs _inputs in allUsers)
             {
                 _inputs.current_Actions.Enable();
-                //_inputs.current_UI.Disable();
-                uiInput.actionsAsset.Disable();
+                _inputs.current_UI.Disable();
+                uiInput.actionsAsset = defaultAsset;
             }
         }
     }
 
 
+    //-----------------------------------------------------------------------------
+    //Spawn Helpers
+    //-----------------------------------------------------------------------------
 
-#region UIHelpers
+    private void SpawnItems(SO_Recipes currentRecipe)
+    {
+        //Make our listed ingredients. Needed ingredients are those in the meal, and we make sure the left over spaces are filled.
+        List<SO_Ingredients> neededIngredients = currentRecipe.ingredients;
+        List<SO_Ingredients> leftIngredients = ingredientList;
+
+        //Grab all spawner objects.
+        List<GameObject> Spawners = new List<GameObject>();
+        Spawners.AddRange(GameObject.FindGameObjectsWithTag("ItemRespawner"));
+
+        //Randomize the order of our spawners, so its different <= May not be working?
+        Spawners.OrderBy(x => (new System.Random().Next()));
+
+        //Find all ingredients in the ingredient list, and remove any duplicates.
+        for (int ii = 0; ii < neededIngredients.Count; ii++)
+        {
+            if(neededIngredients[ii].Spawnable == false)
+            {
+                neededIngredients[ii] = neededIngredients[ii].unslicedVersion;
+            }
+            SO_Ingredients foundIngredient = leftIngredients.Find(x => x == neededIngredients[ii]);
+            leftIngredients.Remove(foundIngredient);
+        }
+
+        for (int ii = 0; ii < leftIngredients.Count; ii++)
+        {
+            if (leftIngredients[ii].Spawnable == false)
+            {
+                leftIngredients.RemoveAt(ii);
+            }
+        }
+        
+        //Remove final Duplicates
+        neededIngredients = neededIngredients.Distinct().ToList();
+        leftIngredients = leftIngredients.Distinct().ToList();
+
+        for (int ii = 0; ii < neededIngredients.Count; ii++)
+        {
+            if(Spawners.Count != 0)
+            {
+                GameObject spawnPoint = Spawners[0];
+                Instantiate(neededIngredients[ii].ingredientPrefab, spawnPoint.transform.position, Quaternion.identity, SpawnTransform);
+                Spawners.Remove(spawnPoint);
+            }
+        }
+
+        for (int ii = 0; ii < leftIngredients.Count; ii++)
+        {
+            if (Spawners.Count != 0)
+            {
+                GameObject spawnPoint = Spawners[0];
+                Instantiate(leftIngredients[ii].ingredientPrefab, spawnPoint.transform.position, Quaternion.identity, SpawnTransform);
+                Spawners.Remove(spawnPoint);
+            }
+        }
+
+
+    }
+
+
+    #region UIHelpers
     //-----------------------------------------------------------------------------
     //UI Helpers
     //-----------------------------------------------------------------------------
@@ -169,7 +243,27 @@ public class DinoSceneManager : MonoBehaviour
         FinishUIImages(ingredient);
         Destroy(item);
     }
-#endregion
-    
+    #endregion
+
+
+
+
 }
 
+public class UserInputs
+{
+    public InputUser currentUser;
+    public InputActionAsset current_Asset;
+    public InputActionMap current_UI;
+    public InputActionMap current_Actions;
+
+
+    public UserInputs(InputUser _currentUser, InputActionMap _current_UI, InputActionMap _current_Actions, InputActionAsset _current_Asset)
+    {
+        this.currentUser = _currentUser;
+        this.current_UI = _current_UI;
+        this.current_Actions = _current_Actions;
+        this.current_Asset = _current_Asset;
+
+    }
+}

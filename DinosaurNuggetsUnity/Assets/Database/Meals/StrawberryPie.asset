@@ -18,4 +18,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ba990b268e5809a45abb6b7d9cdf6131, type: 2}
   - {fileID: 11400000, guid: 067d56985cbad2e40b78669e5d579003, type: 2}
   - {fileID: 11400000, guid: 02da0e35a08c7024290123e4110445c7, type: 2}
-  meal: {fileID: 0}
+  meal: {fileID: 1731191156552522784, guid: 362e0bc6013704a46a37b71ccef2c278, type: 3}

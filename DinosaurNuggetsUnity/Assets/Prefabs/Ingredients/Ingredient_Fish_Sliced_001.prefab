@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 1340933572115896708}
   - component: {fileID: 2714783638369719399}
   - component: {fileID: 233453106091249103}
-  - component: {fileID: 3907738982319010713}
   - component: {fileID: 8714781444418290780}
   - component: {fileID: 8721403887925124221}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Ingredient_Fish_Sliced_001
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
@@ -97,18 +96,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3907738982319010713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8902914029581274528}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a30156b4db513194c9e6ef5d191919cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8714781444418290780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,11 +109,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameType: 102
-  initialParent: {fileID: 0}
-  beingUsed: 0
-  onStove: 0
   Burnable: 0
   Locked: 0
+  unlockTime: 3
+  initialParent: {fileID: 0}
+  wasLocked: 0
+  beingUsed: 0
+  onStove: 0
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!64 &8721403887925124221

@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class Stove_Collider : MonoBehaviour
 {
-    [SerializeField] private Stove stoveScript;
-    [SerializeField] private DinoSceneManager sManager;
+    private Stove stoveScript;
+    private DinoSceneManager sManager;
 
     void Start()
     {
-        if(sManager == null)
+        if (sManager == null)
+        {
             sManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<DinoSceneManager>();
+        }
+        if(stoveScript == null)
+        {
+            stoveScript = GetComponentInParent<Stove>();
+        }
+        
+
     }
 
     void OnTriggerEnter(Collider col)
@@ -43,26 +51,25 @@ public class Stove_Collider : MonoBehaviour
     }
     void OnTriggerStay(Collider col)
     {
-        if(col.tag == "Utensil" || col.tag == "Ingredient")
+        if (col.tag == "Utensil" || col.tag == "Ingredient")
         {
             if (col.GetComponent<ItemAttributes>().beingUsed == false)
             {
                 IngredientType iType = col.GetComponent<ItemAttributes>().GameType;
-
-                if((int)iType < 50)
+                if ((int)iType < 50)
                 {
                     //Utensil
-                    if(col.GetComponent<ItemAttributes>().Burnable == true)
+                    if (col.GetComponent<ItemAttributes>().Burnable == true)
                     {
-                        stoveScript.Placed(col.gameObject);
                         stoveScript.Burn(col.gameObject);
                     }
                     else
                     {
                         stoveScript.Placed(col.gameObject);
                     }
-                        
-                }else if((int)iType >= 50)
+
+                }
+                else if ((int)iType >= 50)
                 {
                     //Ingredients
                     sManager.runThrough(col.gameObject);

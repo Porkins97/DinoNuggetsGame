@@ -11,15 +11,19 @@ public class DinoCameraManager : MonoBehaviour
     public float minZoom = 40f;
     public float maxZoom = 10f;
 
+    public Vector3 minMove = new Vector3();
 
     private Vector3 initOffset;
     private Vector3 velocity;
     private Camera cam;
 
+    private Bounds bound;
+
     void Start()
     {
         initOffset = transform.position;
         cam = GetComponent<Camera>();
+        
     }
 
 
@@ -34,9 +38,22 @@ public class DinoCameraManager : MonoBehaviour
 
     private void Move () 
     {
-        Vector3 centrePoint = GetCentrePoint();
+        bound = new Bounds(initOffset, minMove);
+
+        Vector3 centrePoint = GetCentrePoint2();
         Vector3 newPos = centrePoint + offset + initOffset;
+
+        newPos = new Vector3(Mathf.Clamp(newPos.x, bound.min.x, bound.max.x),
+                                                        Mathf.Clamp(newPos.y, bound.min.y, bound.max.y),
+                                                        Mathf.Clamp(newPos.z, bound.min.z, bound.max.z));
+
         transform.position = Vector3.SmoothDamp(transform.position, newPos, ref velocity, smoothTime);
+
+        /*
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, bound.min.x, bound.max.x),
+                                                        Mathf.Clamp(transform.position.y, bound.min.y, bound.max.y),
+                                                        Mathf.Clamp(transform.position.z, bound.min.z, bound.max.z));
+                                                        */
     }
 
     private void Zoom () 
@@ -69,6 +86,13 @@ public class DinoCameraManager : MonoBehaviour
             bounds.Encapsulate(targets[i].position);
         }
         return bounds.size.x;
+    }
+
+    Vector3 GetCentrePoint2()
+    {
+        Vector3 placement = targets[0].position - targets[1].position;
+        placement = placement * -0.5f;
+        return placement;
     }
 
     Vector3 GetCentrePoint()
