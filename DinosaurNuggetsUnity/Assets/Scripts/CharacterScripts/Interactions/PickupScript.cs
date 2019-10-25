@@ -8,30 +8,47 @@ public class PickupScript : MonoBehaviour
 {
 
     //Private Variables
-    private bool RightHand_Carrying = false;
-    private bool LeftHand_Carrying = false;
-    private bool RightHand_Hover = false;
-    private bool LeftHand_Hover = false;
+    [SerializeField] private bool RightHand_Carrying = false;
+    [SerializeField] private bool LeftHand_Carrying = false;
+    [SerializeField] private bool RightHand_Hover = false;
+    [SerializeField] private bool LeftHand_Hover = false;
 
-    private bool RightHand_Object_Locked = false;
-    private bool LeftHand_Object_Locked = false;
-    private float RightHand_Object_unlockTime = 0f;
-    private float LeftHand_Object_unlockTime = 0f;
+    [SerializeField] private bool RightHand_Object_Locked = false;
+    [SerializeField] private bool LeftHand_Object_Locked = false;
+    [SerializeField] private float RightHand_Object_unlockTime = 0f;
+    [SerializeField] private float LeftHand_Object_unlockTime = 0f;
 
-    private GameObject RightHand_Object;
-    private GameObject LeftHand_Object;
-    private GameObject RightHand;
-    private GameObject LeftHand;
+    [SerializeField] private GameObject RightHand_Object;
+    [SerializeField] private GameObject LeftHand_Object;
+    [SerializeField] private GameObject RightHand;
+    [SerializeField] private GameObject LeftHand;
+
+    public List<GameObject> AllItems = new List<GameObject>();
 
     private DinoInputSystem _DIS;
+    private DinoSceneManager _DSM;
 
     //Inherited variables
     private bool dinoRightHand { get { return _DIS.dinoRightHand; } }
     private bool dinoLeftHand { get { return _DIS.dinoLeftHand; } }
+    private bool dinoAction { get { return _DIS.dinoAction; } }
+
+    private enum Hand { right, left }
+
+
+
+
+
+
+
 
     void Start()
     {
         _DIS = GetComponent<DinoInputSystem>();
+        if (_DSM == null)
+        {
+            _DSM = GameObject.FindGameObjectWithTag("Manager").GetComponent<DinoSceneManager>();
+        }
     }
 
     public void PickItUp(GameObject hand, GameObject obj, bool locked, float _unlockTime)
@@ -74,12 +91,14 @@ public class PickupScript : MonoBehaviour
     {
         if (dinoRightHand)
         {
-            if (RightHand_Object_Locked)
+            IEnumerator coRoutine = Countdown(RightHand_Object_unlockTime, 0, RightHand_Object);
+            if (RightHand_Object_Locked )
             {
-                StartCoroutine(Countdown(RightHand_Object_unlockTime, 0, RightHand_Object));
+                StartCoroutine(coRoutine);
             }
             else
             {
+                StopCoroutine(coRoutine);
                 PickUpItem(ref RightHand, ref RightHand_Carrying, ref RightHand_Object, RightHand_Hover);
             }
         }
@@ -98,8 +117,6 @@ public class PickupScript : MonoBehaviour
             else
             {
                 StopCoroutine(coRoutine);
-                //try { StopCoroutine(coRoutine); } catch (System.Exception) { }
-                                
                 PickUpItem(ref LeftHand, ref LeftHand_Carrying, ref LeftHand_Object, LeftHand_Hover);
             }
         }
@@ -107,13 +124,103 @@ public class PickupScript : MonoBehaviour
         {
             DropItem(ref LeftHand_Carrying, ref LeftHand_Object);
         }
+
+        if (dinoAction)
+        {
+            if(RightHand_Object != null)
+            {
+                CutObjects(RightHand_Object, Hand.right);
+            }
+            else if(LeftHand_Object != null)
+            {
+                CutObjects(LeftHand_Object, Hand.left);
+            }
+        }
     }
+
+    private void CutObjects(GameObject obj, Hand hand)
+    {
+        ItemAttributes item = obj.GetComponent<ItemAttributes>();
+        if(item == null || (int)item.GameType < 50 || (int)item.GameType > 99 || item.onCuttingBoard == false)
+        {
+            return;
+        }
+        SO_Ingredients foundIngredient = _DSM.ingredientList.Find(x => x.type == obj.GetComponent<ItemAttributes>().GameType);
+        if(foundIngredient.slicedVersion == null)
+        {
+            return;
+        }
+
+        StartCoroutine(CuttingRoutine(1.0f, hand, obj));
+
+    }
+
+    IEnumerator CuttingRoutine(float timeTaken, Hand hand, GameObject obj)
+    {
+        float currentTime = 0f;
+
+        if(hand == Hand.right) //If RightHand
+        {
+            bool cut = true;
+            while (currentTime < timeTaken)
+            {
+                if (!dinoAction || !RightHand_Hover || obj == null)
+                {
+                    cut = false;
+                    Debug.Log("Lifted Up Button!!");
+                    break;
+                }
+                currentTime += Time.deltaTime;
+                yield return null;
+            }
+            if (cut && obj != null)
+            {
+                CutAndDestroy(obj);
+                Debug.Log("Right");
+
+                
+            }
+        }
+        else //If LeftHand
+        {
+            bool cut = true;
+            while (currentTime < timeTaken)
+            {
+                if (!dinoAction || !LeftHand_Hover || obj == null)
+                {
+                    cut = false;
+                    Debug.Log("Lifted Up Button!!");
+                    break;
+                }
+                currentTime += Time.deltaTime;
+                yield return null;
+            }
+            if (cut && obj != null)
+            {
+                CutAndDestroy(obj);
+                Debug.Log("Left");
+               
+            }
+        }
+    }
+    private void CutAndDestroy(GameObject obj)
+    {
+        IngredientType type = obj.GetComponent<ItemAttributes>().GameType;
+        SO_Ingredients foundIngredient = _DSM.ingredientList.Find(x => x.type == type);
+        GameObject Instance = Instantiate(foundIngredient.slicedVersion.ingredientPrefab, obj.transform.position, obj.transform.rotation, _DSM.SpawnTransform);
+        Debug.Log(Instance.name);
+        obj.GetComponent<ItemAttributes>().currentCuttingBoard.GetComponent<CuttingBoard>().Removed(obj);
+        AllItems.Remove(obj);
+        Destroy(obj);
+        Debug.Log("Cut!!");
+    }
+
+
 
     private void PickUpItem(ref GameObject hand, ref bool carrying, ref GameObject obj, bool hovering)
     {
         if (hovering && obj != null && !carrying)
         {
-            Debug.Log(obj.name);
             //Set Rigidbody off - Turn on Kinematic and set contraints to none.
             obj.GetComponent<Rigidbody>().isKinematic = true;
             obj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
@@ -160,9 +267,7 @@ public class PickupScript : MonoBehaviour
                     obj.GetComponent<ItemAttributes>().LoadingUI.SetActive(true);
                     obj.GetComponent<ItemAttributes>().unlockImage.fillAmount = Locking / seconds;
                 }
-
-                yield return null;
-                
+                                
                 if (!dinoRightHand || !RightHand_Hover || obj == null)
                 {
                     locked = true;
@@ -173,6 +278,7 @@ public class PickupScript : MonoBehaviour
                     }
                     break;
                 }
+                yield return null;
             }
             if(locked == false)
             {
@@ -198,8 +304,7 @@ public class PickupScript : MonoBehaviour
                     obj.GetComponent<ItemAttributes>().LoadingUI.SetActive(true);
                     obj.GetComponent<ItemAttributes>().unlockImage.fillAmount = Locking / seconds;
                 }
-                yield return null;
-
+               
                 if (!dinoLeftHand || !LeftHand_Hover || obj == null)
                 {
                     locked = true;
@@ -209,7 +314,8 @@ public class PickupScript : MonoBehaviour
                         obj.GetComponent<ItemAttributes>().unlockImage.fillAmount = 0;
                     }
                     break;
-                }                
+                }
+                yield return null;
             }
             if (locked == false)
             {

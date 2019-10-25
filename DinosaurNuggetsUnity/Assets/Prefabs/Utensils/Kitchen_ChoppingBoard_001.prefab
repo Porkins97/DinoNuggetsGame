@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3562811931272527917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 671746388383804169}
+  m_Layer: 11
+  m_Name: CuttingTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &671746388383804169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3562811931272527917}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.02, y: 0.04, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7160688579454292349}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6126225395924018030
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,9 +42,10 @@ GameObject:
   - component: {fileID: 2163107630440966987}
   - component: {fileID: 5564319963878332338}
   - component: {fileID: 4644082612977499148}
-  - component: {fileID: 4644082612977499149}
+  - component: {fileID: 1165966163866418310}
   - component: {fileID: 651418590}
   - component: {fileID: 8018613604544895841}
+  - component: {fileID: 6519463952144966151}
   m_Layer: 11
   m_Name: Kitchen_ChoppingBoard_001
   m_TagString: Utensil
@@ -34,6 +65,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4645681621560797539}
+  - {fileID: 671746388383804169}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -98,8 +130,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &4644082612977499149
-BoxCollider:
+--- !u!64 &1165966163866418310
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -108,9 +140,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.33621168, y: 0.04, z: 0.48}
-  m_Center: {x: 0.009893142, y: 0.02, z: 0}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4068373912626513877, guid: 0e55063a212f38440bbfd036d498b14b, type: 3}
 --- !u!65 &651418590
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -143,11 +176,28 @@ MonoBehaviour:
   unlockImage: {fileID: 4645681621489585981}
   LoadingUI: {fileID: 0}
   initialParent: {fileID: 0}
+  currentlyBurning: 0
   wasLocked: 0
   beingUsed: 0
   onStove: 0
+  onCuttingBoard: 0
   initPosition: 0
   rbd: {fileID: 0}
+--- !u!114 &6519463952144966151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6126225395924018030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ef8753027be8145a1e1c63a37ebce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cuttingBoardLocation: {fileID: 671746388383804169}
+  cuttingBoardObject: {fileID: 0}
+  cuttingBoardUsed: 0
 --- !u!1001 &494679237003717198
 PrefabInstance:
   m_ObjectHideFlags: 0

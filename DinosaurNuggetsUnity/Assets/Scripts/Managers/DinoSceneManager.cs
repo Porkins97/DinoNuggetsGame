@@ -25,7 +25,7 @@ public class DinoSceneManager : MonoBehaviour
     [SerializeField] public List<UserInputs> allUsers = new List<UserInputs>();
 
     [Header("Spawn Settings")]
-    [SerializeField] private Transform SpawnTransform = null;
+    [SerializeField] public Transform SpawnTransform = null;
     
     private bool gamePaused = false;
     public int userPaused = 0;

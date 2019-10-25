@@ -12,4 +12,5 @@ public class SO_Ingredients : ScriptableObject
     public IngredientType type;
     public bool Spawnable = true;
     public SO_Ingredients unslicedVersion;
+    public SO_Ingredients slicedVersion;
 }

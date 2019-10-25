@@ -25,6 +25,7 @@ namespace DinoInputSystems
         internal Vector2 dinoArmMove;
         internal bool dinoRightHand;
         internal bool dinoLeftHand;
+        internal bool dinoAction;
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /// Required for input system
@@ -45,6 +46,7 @@ namespace DinoInputSystems
             InputAction movement = _actions.FindAction("Movement");
             InputAction leftHandGrab = _actions.FindAction("LeftHandGrab");
             InputAction rightHandGrab = _actions.FindAction("RightHandGrab");
+            InputAction dinoActionPress = _actions.FindAction("DinoAction");
             InputAction pause = _actions.FindAction("Pause Menu");
 
             InputAction unPause = _UI.FindAction("Pause Menu");
@@ -58,6 +60,8 @@ namespace DinoInputSystems
             rightHandGrab.performed += RightHand;
             rightHandGrab.canceled += RightHand;
 
+            dinoActionPress.performed += dinoActionPressed;
+            dinoActionPress.canceled += dinoActionPressed;
 
             pause.performed += ctx => Pause(gamePadId);
             unPause.performed += ctx => Pause(gamePadId);
@@ -100,6 +104,15 @@ namespace DinoInputSystems
                 dinoRightHand = true;
             else
                 dinoRightHand = false;
+        }
+
+        private void dinoActionPressed(InputAction.CallbackContext ctx)
+        {
+            float p = ctx.ReadValue<float>();
+            if (p > 0)
+                dinoAction = true;
+            else
+                dinoAction = false;
         }
 
     }

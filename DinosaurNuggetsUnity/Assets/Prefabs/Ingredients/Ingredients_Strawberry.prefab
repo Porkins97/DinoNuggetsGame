@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2036479189376609010}
   - component: {fileID: 6996343908314353860}
   - component: {fileID: 3613163280224250941}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Ingredients_Strawberry_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 1248788784821902928}
   - component: {fileID: 3935778834369512699}
   - component: {fileID: 3101116552105762836}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Ingredients_Strawberry
   m_TagString: Ingredient
   m_Icon: {fileID: 0}
@@ -141,11 +141,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameType: 63
-  initialParent: {fileID: 0}
-  beingUsed: 0
-  onStove: 0
   Burnable: 0
   Locked: 0
+  unlockTime: 3
+  unlockImage: {fileID: 0}
+  LoadingUI: {fileID: 0}
+  initialParent: {fileID: 0}
+  currentlyBurning: 0
+  wasLocked: 0
+  beingUsed: 0
+  onStove: 0
+  onCuttingBoard: 0
+  initPosition: 0
+  rbd: {fileID: 0}
 --- !u!64 &3101116552105762836
 MeshCollider:
   m_ObjectHideFlags: 0

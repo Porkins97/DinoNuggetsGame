@@ -18,6 +18,8 @@ public class ItemAttributes : MonoBehaviour
     [HideInInspector] public bool wasLocked = false;
     [HideInInspector] public bool beingUsed = false;
     [HideInInspector] public bool onStove = false;
+    [HideInInspector] public bool onCuttingBoard = false;
+    [HideInInspector] public Transform currentCuttingBoard = null;
     [HideInInspector] public bool initPosition;
     [HideInInspector] public Rigidbody rbd;
 
@@ -30,4 +32,5 @@ public class ItemAttributes : MonoBehaviour
         if(Locked)
             LoadingUI = transform.GetChild(0).gameObject;
     }
+
 }

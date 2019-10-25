@@ -17,3 +17,6 @@ MonoBehaviour:
     type: 3}
   texture: {fileID: 2800000, guid: 7594b221fd875ad47ab462f88052aa7e, type: 3}
   type: 56
+  Spawnable: 1
+  unslicedVersion: {fileID: 0}
+  slicedVersion: {fileID: 11400000, guid: 925f59b5c146668458933f43087cd61d, type: 2}

@@ -1,30 +1,47 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
+[ExecuteInEditMode]
 public class CharacterSettings : MonoBehaviour
-{   
-    [System.Serializable]
-    public enum CharacterColour
-    {
-        Blue,
-        Red
-    }
-    [System.Serializable]
-    public enum CharacterHat
-    {
+{
+    [SerializeField] private HatType currentHat = HatType.Chef;
+    [SerializeField] private CharacterColour characterColour = CharacterColour.Blue;
+    [SerializeField] private GameObject _matObj = null;
 
+    private SO_ColourSettings dinoSettings = null;
+    private string dinoSettingsPath = "Assets/Database/PlayerSettings";
+    private Material _mat = null;
+
+    private void Start()
+    {
+        UpdateSettings();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void UpdateSettings()
     {
-        
+        foreach (string strPath in AssetDatabase.FindAssets("t:SO_ColourSettings", new[] { dinoSettingsPath }))
+        {
+            dinoSettings = (SO_ColourSettings)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(strPath), typeof(SO_ColourSettings));
+        }
+
+        switch (characterColour)
+        {
+            case CharacterColour.Blue:
+                _mat = dinoSettings.colourSettings.Find(x => x.characterColour == CharacterColour.Blue)._mat;
+                break;
+            case CharacterColour.Red:
+                _mat = dinoSettings.colourSettings.Find(x => x.characterColour == CharacterColour.Red)._mat;
+                break;
+        }
+
+        _matObj.GetComponentInChildren<SkinnedMeshRenderer>().material = _mat;
     }
 }
