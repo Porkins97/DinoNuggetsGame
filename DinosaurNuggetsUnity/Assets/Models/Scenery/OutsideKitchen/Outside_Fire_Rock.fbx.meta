@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 8b244fb34e1c0c545a3d362865d0e074
+labels:
+- Scenery
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
@@ -80,7 +82,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.25
+    globalScale: 25
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

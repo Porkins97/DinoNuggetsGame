@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 0f9a4c541d88b3a4da1536f9539ef471
+labels:
+- Scenery
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []

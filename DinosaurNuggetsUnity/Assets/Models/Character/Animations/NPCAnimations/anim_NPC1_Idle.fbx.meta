@@ -5,7 +5,7 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: 2262775695247460730
-    second: EatingIdle
+    second: NPC1_Idle
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -16,7 +16,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
-    optimizeGameObjects: 0
+    optimizeGameObjects: 1
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -31,11 +31,12 @@ ModelImporter:
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
-    extraExposedTransformPaths: []
+    extraExposedTransformPaths:
+    - NPC_DinoMesh
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: EatingIdle
+      name: NPC1_Idle
       takeName: EatingIdle
       internalID: 2262775695247460730
       firstFrame: 1

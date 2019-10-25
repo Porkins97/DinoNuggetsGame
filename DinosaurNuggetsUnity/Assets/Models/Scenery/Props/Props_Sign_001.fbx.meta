@@ -1,5 +1,8 @@
 fileFormatVersion: 2
 guid: 70d83452646b1b443beeabf51f6f8f14
+labels:
+- Prop
+- Scenery
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []

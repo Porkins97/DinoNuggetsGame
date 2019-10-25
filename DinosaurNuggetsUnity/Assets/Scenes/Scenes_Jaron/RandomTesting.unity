@@ -466,6 +466,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!54 &92923928
@@ -839,6 +840,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!54 &169947534
@@ -961,6 +963,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!64 &181802081
@@ -1147,6 +1150,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!54 &236244516
@@ -1575,6 +1579,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!54 &323010904
@@ -2058,6 +2063,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!64 &501625550
@@ -2312,6 +2318,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!54 &545519248
@@ -2594,6 +2601,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!65 &594092769
@@ -2757,6 +2765,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!54 &628391700
@@ -2956,6 +2965,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!65 &726616569
@@ -3125,6 +3135,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!54 &793402581
@@ -3355,6 +3366,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!64 &828032428
@@ -3505,6 +3517,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!54 &872335456
@@ -4124,6 +4137,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!65 &1051630204
@@ -4610,6 +4624,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!54 &1116666280
@@ -4931,6 +4946,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!54 &1191425918
@@ -5595,6 +5611,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!54 &1407494630
@@ -5811,6 +5828,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!54 &1439013883
@@ -6052,6 +6070,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!65 &1524595395
@@ -6892,6 +6911,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!65 &1722786515
@@ -7056,6 +7076,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!54 &1791533069
@@ -7192,6 +7213,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!54 &1792801350
@@ -7813,6 +7835,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!54 &2005059128
@@ -8474,6 +8497,7 @@ MonoBehaviour:
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
+  currentCuttingBoard: {fileID: 0}
   initPosition: 0
   rbd: {fileID: 0}
 --- !u!54 &2096859393
@@ -8754,6 +8778,75 @@ Canvas:
     type: 3}
   m_PrefabInstance: {fileID: 1922478511}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &957289105387311007
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9108834024356178492, guid: e72b1f9275b178a49a63235f45071cdc,
+        type: 3}
+      propertyPath: m_Name
+      value: NPCEatingIdle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202305801446430767, guid: e72b1f9275b178a49a63235f45071cdc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202305801446430767, guid: e72b1f9275b178a49a63235f45071cdc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202305801446430767, guid: e72b1f9275b178a49a63235f45071cdc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202305801446430767, guid: e72b1f9275b178a49a63235f45071cdc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202305801446430767, guid: e72b1f9275b178a49a63235f45071cdc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202305801446430767, guid: e72b1f9275b178a49a63235f45071cdc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202305801446430767, guid: e72b1f9275b178a49a63235f45071cdc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202305801446430767, guid: e72b1f9275b178a49a63235f45071cdc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202305801446430767, guid: e72b1f9275b178a49a63235f45071cdc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202305801446430767, guid: e72b1f9275b178a49a63235f45071cdc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202305801446430767, guid: e72b1f9275b178a49a63235f45071cdc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e72b1f9275b178a49a63235f45071cdc, type: 3}
 --- !u!1001 &1931627939357692387
 PrefabInstance:
   m_ObjectHideFlags: 0

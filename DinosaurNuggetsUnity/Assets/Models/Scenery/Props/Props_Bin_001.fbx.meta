@@ -1,6 +1,7 @@
 fileFormatVersion: 2
 guid: d6ff1505fc5eb154f87bace354b9412f
 labels:
+- Prop
 - Scenery
 ModelImporter:
   serializedVersion: 25
