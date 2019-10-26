@@ -8,20 +8,20 @@ public class PickupScript : MonoBehaviour
 {
 
     //Private Variables
-    [SerializeField] private bool RightHand_Carrying = false;
-    [SerializeField] private bool LeftHand_Carrying = false;
-    [SerializeField] private bool RightHand_Hover = false;
-    [SerializeField] private bool LeftHand_Hover = false;
+    private bool RightHand_Carrying = false;
+    private bool LeftHand_Carrying = false;
+    private bool RightHand_Hover = false;
+    private bool LeftHand_Hover = false;
 
-    [SerializeField] private bool RightHand_Object_Locked = false;
-    [SerializeField] private bool LeftHand_Object_Locked = false;
-    [SerializeField] private float RightHand_Object_unlockTime = 0f;
-    [SerializeField] private float LeftHand_Object_unlockTime = 0f;
+    private bool RightHand_Object_Locked = false;
+    private bool LeftHand_Object_Locked = false;
+    private float RightHand_Object_unlockTime = 0f;
+    private float LeftHand_Object_unlockTime = 0f;
 
-    [SerializeField] private GameObject RightHand_Object;
-    [SerializeField] private GameObject LeftHand_Object;
-    [SerializeField] private GameObject RightHand;
-    [SerializeField] private GameObject LeftHand;
+    private GameObject RightHand_Object;
+    private GameObject LeftHand_Object;
+    private GameObject RightHand;
+    private GameObject LeftHand;
 
     public List<GameObject> AllItems = new List<GameObject>();
 

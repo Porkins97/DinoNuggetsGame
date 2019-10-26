@@ -7,18 +7,26 @@ using UnityEngine.InputSystem.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
 using System.Linq;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class DinoSceneManager : MonoBehaviour
 {
-    
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// Main user Settings.
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     [Header("UI Settings")]
-    public GameObject UI;
-    public GameObject Player1;
-    public GameObject Player2;
-    public Texture2D checkmarkUI;
-    public Canvas pauseCanvas = null;
-    public Canvas gameCanvas = null;
-    public int seed;
+    [SerializeField] private GameObject UI;
+    [SerializeField] private GameObject Player1;
+    [SerializeField] private GameObject Player2;
+    [SerializeField] private Texture2D checkmarkUI;
+    [SerializeField] private Canvas gameCanvas = null;
+    [SerializeField] private Canvas pauseCanvas = null;
+    [SerializeField] private GameObject pauseButtonSelected = null;
+    
+    [SerializeField] private int seed;
+
 
     [Header("User Settings")]
     [SerializeField] private InputSystemUIInputModule uiInput = null;
@@ -31,21 +39,36 @@ public class DinoSceneManager : MonoBehaviour
     public int userPaused = 0;
     private InputActionAsset defaultAsset;
 
-    //-------------
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// Main user Settings.
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    private EventSystem eventSystem;
+
+
+
 
     private string ingredientPath = "Assets/Database/Ingredients";
     private string mealPath = "Assets/Database/Meals";
     private string utensilPath = "Assets/Database/Utensils";
-    public List<GameObject> UIIngredients;
-    public int UIIngredientsFinished;
-    public List<SO_Ingredients> currentIngredientList;
-    public List<SO_Ingredients> ingredientList;
-    public List<SO_Utensils> utensilList;
-    public List<SO_Recipes> mealList;
+    private List<GameObject> UIIngredients;
+    private int UIIngredientsFinished;
+    [HideInInspector] public List<SO_Ingredients> currentIngredientList;
+    [HideInInspector] public List<SO_Ingredients> ingredientList;
+    [HideInInspector] public List<SO_Utensils> utensilList;
+    [HideInInspector] public List<SO_Recipes> mealList;
 
 
     void Awake()
     {
+        UI.SetActive(true);
+        pauseCanvas.gameObject.SetActive(true);
+        gameCanvas.gameObject.SetActive(true);
+
+        eventSystem = uiInput.GetComponent<EventSystem>();
+
+
         pauseCanvas.enabled = false;
         gameCanvas.enabled = true;
 
@@ -69,8 +92,6 @@ public class DinoSceneManager : MonoBehaviour
 
         SO_Recipes currentRecipe = mealList[(int)UnityEngine.Random.Range(0, mealList.Count-1)];
         
-
-        UI.SetActive(true);
         MealToUIStarter(currentRecipe);
 
         //SpawnItems(currentRecipe);
@@ -84,21 +105,22 @@ public class DinoSceneManager : MonoBehaviour
         if (!gamePaused)
         {
             Time.timeScale = 0f;
-            gamePaused = true;
             Debug.Log("Paused");
             gameCanvas.enabled = false;
             pauseCanvas.enabled = true;
-            foreach(UserInputs _inputs in allUsers)
+
+            //eventSystem.firstSelectedGameObject = pauseButtonSelected;
+            foreach (UserInputs _inputs in allUsers)
             {
                 _inputs.current_Actions.Disable();
                 _inputs.current_UI.Enable();
             }
             uiInput.actionsAsset = allUsers[userPaused].current_Asset;
+            gamePaused = true;
         }
         else
         {
             Time.timeScale = 1f;
-            gamePaused = false;
             Debug.Log("UnPaused");
             pauseCanvas.enabled = false;
             gameCanvas.enabled = true;
@@ -108,9 +130,26 @@ public class DinoSceneManager : MonoBehaviour
                 _inputs.current_UI.Disable();
                 uiInput.actionsAsset = defaultAsset;
             }
+            gamePaused = false;
         }
+        
     }
 
+    private void SetUIAgain(InputActionAsset userAsset)
+    {
+        uiInput.submit.Set(userAsset.FindActionMap("UI").FindAction("Submit"));
+        uiInput.move.Set(userAsset.FindActionMap("UI").FindAction("Navigate"));
+        uiInput.cancel.Set(userAsset.FindActionMap("UI").FindAction("Cancel"));
+    }
+
+
+
+    
+    public void TimeUp()
+    {
+        SceneManager.LoadScene("TimesUp");
+    }
+    
 
     //-----------------------------------------------------------------------------
     //Spawn Helpers

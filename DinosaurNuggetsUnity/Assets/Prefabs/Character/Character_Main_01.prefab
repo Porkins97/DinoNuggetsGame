@@ -683,6 +683,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e5400e3eeec6a4baf3698cf910dbca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RightHand_Carrying: 0
+  LeftHand_Carrying: 0
+  RightHand_Hover: 0
+  LeftHand_Hover: 0
+  RightHand_Object_Locked: 0
+  LeftHand_Object_Locked: 0
+  RightHand_Object_unlockTime: 0
+  LeftHand_Object_unlockTime: 0
+  RightHand_Object: {fileID: 0}
+  LeftHand_Object: {fileID: 0}
+  RightHand: {fileID: 0}
+  LeftHand: {fileID: 0}
+  AllItems: []
 --- !u!114 &304880448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -744,7 +757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHat: 0
   characterColour: 0
-  dinoSettings: {fileID: 11400000, guid: 76d10a785a1e7794bb8287271d3902f3, type: 2}
+  _matObj: {fileID: 1085144225327695607}
 --- !u!1 &677308967448589824
 GameObject:
   m_ObjectHideFlags: 0

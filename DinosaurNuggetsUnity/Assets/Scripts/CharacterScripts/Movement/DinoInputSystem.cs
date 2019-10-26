@@ -62,10 +62,7 @@ namespace DinoInputSystems
 
             dinoActionPress.performed += dinoActionPressed;
             dinoActionPress.canceled += dinoActionPressed;
-
-            pause.performed += ctx => Pause(gamePadId);
-            unPause.performed += ctx => Pause(gamePadId);
-
+            
             pause.performed += ctx => { _sceneManager.userPaused = gamePadId; PauseEvent.Invoke(); };
             unPause.performed += ctx => { _sceneManager.userPaused = gamePadId; PauseEvent.Invoke(); };
         }
@@ -81,13 +78,7 @@ namespace DinoInputSystems
             _actions.Disable();
             _UI.Disable();
         }
-
-        private void Pause(int currentUser)
-        {
-            _sceneManager.userPaused = currentUser;
-            PauseEvent.Invoke();
-        }
-
+        
         private void LeftHand(InputAction.CallbackContext ctx)
         {
             float p = ctx.ReadValue<float>();
