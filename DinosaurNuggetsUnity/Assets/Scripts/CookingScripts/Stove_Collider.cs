@@ -41,11 +41,6 @@ public class Stove_Collider : MonoBehaviour
                     }
 
                 }
-                else if((int)iType >= 50)
-                {
-                    //Ingredients
-                    sManager.runThrough(col.gameObject);
-                }
             }
         }
     }
@@ -68,11 +63,6 @@ public class Stove_Collider : MonoBehaviour
                         stoveScript.Placed(col.gameObject);
                     }
 
-                }
-                else if ((int)iType >= 50)
-                {
-                    //Ingredients
-                    sManager.runThrough(col.gameObject);
                 }
             }
         }

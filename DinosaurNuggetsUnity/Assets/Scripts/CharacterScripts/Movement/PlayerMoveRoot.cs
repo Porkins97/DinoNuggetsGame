@@ -45,7 +45,7 @@ public class PlayerMoveRoot : MonoBehaviour
         InputUser currentUser = InputUser.PerformPairingWithDevice(Gamepad.all[gamePadId]);
         currentUser.AssociateActionsWithUser(input);
         
-        _sceneManager.allUsers.Add(new UserInputs(currentUser, _UI, _actions, input));
+        //_sceneManager.allUsers.Add(new UserInputs(currentUser, _UI, _actions, input, this.gameObject));
 
 
         InputAction movement = _actions.FindAction("Movement");

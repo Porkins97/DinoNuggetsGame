@@ -12,16 +12,18 @@ public class ItemAttributes : MonoBehaviour
     [SerializeField] public float unlockTime = 3.0f;
     [SerializeField] public Image unlockImage = null;
 
-    [HideInInspector] public GameObject LoadingUI;
-    [HideInInspector] public Transform initialParent;
+    
     [HideInInspector] public bool currentlyBurning = false;
     [HideInInspector] public bool wasLocked = false;
     [HideInInspector] public bool beingUsed = false;
     [HideInInspector] public bool onStove = false;
     [HideInInspector] public bool onCuttingBoard = false;
-    [HideInInspector] public Transform currentCuttingBoard = null;
     [HideInInspector] public bool initPosition;
+    [HideInInspector] public Transform currentCuttingBoard = null;
+    [HideInInspector] public Transform initialParent;
+    [HideInInspector] public GameObject LoadingUI;
     [HideInInspector] public Rigidbody rbd;
+    [HideInInspector] public Players lastPlayer;
 
     private void Start()
     {

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2549826696442571971}
   - component: {fileID: 2549826696442571968}
+  - component: {fileID: 1888574762}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Manager
@@ -47,11 +48,45 @@ MonoBehaviour:
   Player1: {fileID: 0}
   Player2: {fileID: 0}
   checkmarkUI: {fileID: 2800000, guid: 2dbe0670ec42349489c1fb9706e497f2, type: 3}
-  pauseCanvas: {fileID: 0}
   gameCanvas: {fileID: 0}
+  pauseCanvas: {fileID: 0}
+  pauseButtonSelected: {fileID: 0}
   seed: 4
-  UIIngredients: []
-  UIIngredientsFinished: 0
+  uiInput: {fileID: 0}
+  SpawnTransform: {fileID: 0}
+  userPaused: 0
+  DinoPlayer1:
+    player: 0
+    playerRecipe: {fileID: 0}
+    playerIngredientList: []
+    playerUIIngredients: []
+    playerObj: {fileID: 0}
+    dinoPlayer: {fileID: 0}
+    playerRecipeDone: 0
+  DinoPlayer2:
+    player: 1
+    playerRecipe: {fileID: 0}
+    playerIngredientList: []
+    playerUIIngredients: []
+    playerObj: {fileID: 0}
+    dinoPlayer: {fileID: 0}
+    playerRecipeDone: 0
   currentIngredientList: []
   ingredientList: []
+  utensilList: []
   mealList: []
+--- !u!114 &1888574762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2549826696442571970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d82fdbe87c865b49b82ef87d67671d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeMinutes: 0
+  timeSeconds: 10
+  _timerText: {fileID: 0}

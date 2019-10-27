@@ -16,6 +16,8 @@ TagManager:
   - Wearable
   - Flame
   - ItemRespawner
+  - Player1
+  - Player2
   layers:
   - Default
   - TransparentFX

@@ -12,10 +12,13 @@ namespace DinoInputSystems
         //Serialized variables
         [Header("User Settings")]
         [SerializeField] private int gamePadId = 0;
+        [SerializeField] internal Players currentPlayer;
+        [Header("Manager Settings")]
         [SerializeField] private InputSystemUIInputModule uiInput = null;
         [SerializeField] private DinoSceneManager _sceneManager = null;
         [SerializeField] private UnityEvent PauseEvent = null;
         
+
         //Private variables
         private InputActionMap _actions;
         private InputActionMap _UI;
@@ -26,6 +29,8 @@ namespace DinoInputSystems
         internal bool dinoRightHand;
         internal bool dinoLeftHand;
         internal bool dinoAction;
+
+        
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /// Required for input system
@@ -40,7 +45,7 @@ namespace DinoInputSystems
             InputUser currentUser = InputUser.PerformPairingWithDevice(Gamepad.all[gamePadId]);
             currentUser.AssociateActionsWithUser(input);
 
-            _sceneManager.allUsers.Add(new UserInputs(currentUser, _UI, _actions, input));
+            _sceneManager.allUsers.Add(new UserInputs(currentUser, _UI, _actions, input, this.gameObject, currentPlayer));
 
 
             InputAction movement = _actions.FindAction("Movement");
@@ -66,6 +71,11 @@ namespace DinoInputSystems
             pause.performed += ctx => { _sceneManager.userPaused = gamePadId; PauseEvent.Invoke(); };
             unPause.performed += ctx => { _sceneManager.userPaused = gamePadId; PauseEvent.Invoke(); };
         }
+
+
+
+
+
         
         private void OnEnable()
         {

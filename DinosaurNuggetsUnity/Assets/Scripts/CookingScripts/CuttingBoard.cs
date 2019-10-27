@@ -5,8 +5,9 @@ using UnityEngine;
 public class CuttingBoard : MonoBehaviour
 {
     [SerializeField] private Transform cuttingBoardLocation = null;
-    [SerializeField] private GameObject cuttingBoardObject = null;
-    [SerializeField] public bool cuttingBoardUsed = false;
+    [SerializeField] public GameObject cuttingCloudPrefab = null;
+    [HideInInspector] private GameObject cuttingBoardObject = null;
+    [HideInInspector] public bool cuttingBoardUsed = false;
 
     private DinoSceneManager sManager = null;
     private ItemAttributes attribs = null;
@@ -63,7 +64,7 @@ public class CuttingBoard : MonoBehaviour
             objectPlaced.GetComponent<ItemAttributes>().onCuttingBoard = true;
             objectPlaced.GetComponent<ItemAttributes>().currentCuttingBoard = transform;
             objectPlaced.transform.position = cuttingBoardLocation.position;
-            objectPlaced.transform.rotation = Quaternion.identity;
+            objectPlaced.transform.rotation = cuttingBoardLocation.rotation;
             
             cuttingBoardUsed = true;
         }
