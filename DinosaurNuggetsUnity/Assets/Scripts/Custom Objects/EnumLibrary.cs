@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 [System.Serializable]
 public enum IngredientType
@@ -56,6 +57,41 @@ public enum CharacterColour
 {
     Blue,
     Red
+}
+
+public enum Players
+{
+    Player1, Player2
+}
+
+[System.Serializable]
+public struct DinoPlayerSettings
+{
+    public Players player;
+    public SO_Recipes playerRecipe;
+    public List<SO_Ingredients> playerIngredientList;
+    public List<GameObject> playerUIIngredients;
+    public GameObject playerObj;
+    public GameObject dinoPlayer;
+    public int playerRecipeDone;
+   
+
+    public DinoPlayerSettings(Players _player,
+                            SO_Recipes _playerRecipe,
+                            List<GameObject> _playerUIIngredients,
+                            List<SO_Ingredients> _playerIngredientList,
+                            GameObject _playerObj,
+                            GameObject _dinoPlayer,
+                            int _playerRecipeDone = 0)
+    {
+        player = _player;
+        playerRecipe = _playerRecipe;
+        playerObj = _playerObj;
+        playerRecipeDone = _playerRecipeDone;
+        playerIngredientList = _playerIngredientList;
+        playerUIIngredients = _playerUIIngredients;
+        dinoPlayer = _dinoPlayer;
+}
 }
 
 public static class EnumLibrary

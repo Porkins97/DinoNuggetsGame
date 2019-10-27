@@ -6,8 +6,11 @@ using DinoInputSystems;
 [RequireComponent(typeof(DinoInputSystem))]
 public class PickupScript : MonoBehaviour
 {
+    // Public variables
+    [SerializeField] public List<GameObject> AllItems = new List<GameObject>();
 
-    //Private Variables
+    // Private Variables
+    // // Hand objects
     private bool RightHand_Carrying = false;
     private bool LeftHand_Carrying = false;
     private bool RightHand_Hover = false;
@@ -23,25 +26,22 @@ public class PickupScript : MonoBehaviour
     private GameObject RightHand;
     private GameObject LeftHand;
 
-    public List<GameObject> AllItems = new List<GameObject>();
-
+    // // Extra UI helpers
+    private GameObject loadingBar;
+    
+    // // Scene Managers and Input System
     private DinoInputSystem _DIS;
     private DinoSceneManager _DSM;
 
-    //Inherited variables
+    // Inherited variables
     private bool dinoRightHand { get { return _DIS.dinoRightHand; } }
     private bool dinoLeftHand { get { return _DIS.dinoLeftHand; } }
     private bool dinoAction { get { return _DIS.dinoAction; } }
+    private Players currentPlayer {get { return _DIS.currentPlayer; } }
 
+    // Quick enum helper <-- expand upon this, make it public, and assign hands to it and so on.
     private enum Hand { right, left }
-
-
-
-
-
-
-
-
+    
     void Start()
     {
         _DIS = GetComponent<DinoInputSystem>();
@@ -162,12 +162,20 @@ public class PickupScript : MonoBehaviour
         if(hand == Hand.right) //If RightHand
         {
             bool cut = true;
+            bool cloud = false;
+            GameObject cloudPrefab = null;
             while (currentTime < timeTaken)
             {
+                if (cloud == false)
+                {
+                    cloudPrefab = Instantiate(obj.GetComponent<ItemAttributes>().currentCuttingBoard.GetComponent<CuttingBoard>().cuttingCloudPrefab, obj.transform.position, obj.transform.rotation, obj.transform);
+                    cloud = true;
+                }
+
                 if (!dinoAction || !RightHand_Hover || obj == null)
                 {
                     cut = false;
-                    Debug.Log("Lifted Up Button!!");
+                    Destroy(cloudPrefab);
                     break;
                 }
                 currentTime += Time.deltaTime;
@@ -176,20 +184,24 @@ public class PickupScript : MonoBehaviour
             if (cut && obj != null)
             {
                 CutAndDestroy(obj);
-                Debug.Log("Right");
-
-                
             }
         }
         else //If LeftHand
         {
             bool cut = true;
+            bool cloud = false;
+            GameObject cloudPrefab = null;
             while (currentTime < timeTaken)
             {
+                if (cloud == false)
+                {
+                    cloudPrefab = Instantiate(obj.GetComponent<ItemAttributes>().currentCuttingBoard.GetComponent<CuttingBoard>().cuttingCloudPrefab, obj.transform.position, obj.transform.rotation, obj.transform);
+                    cloud = true;
+                }
                 if (!dinoAction || !LeftHand_Hover || obj == null)
                 {
                     cut = false;
-                    Debug.Log("Lifted Up Button!!");
+                    Destroy(cloudPrefab);
                     break;
                 }
                 currentTime += Time.deltaTime;
@@ -198,7 +210,6 @@ public class PickupScript : MonoBehaviour
             if (cut && obj != null)
             {
                 CutAndDestroy(obj);
-                Debug.Log("Left");
                
             }
         }
@@ -212,7 +223,6 @@ public class PickupScript : MonoBehaviour
         obj.GetComponent<ItemAttributes>().currentCuttingBoard.GetComponent<CuttingBoard>().Removed(obj);
         AllItems.Remove(obj);
         Destroy(obj);
-        Debug.Log("Cut!!");
     }
 
 
@@ -248,6 +258,7 @@ public class PickupScript : MonoBehaviour
             //Make sure all things are now gotten rid of.
             carrying = false;
             obj.GetComponent<ItemAttributes>().beingUsed = false;
+            obj.GetComponent<ItemAttributes>().lastPlayer = currentPlayer;
         }
     }
     

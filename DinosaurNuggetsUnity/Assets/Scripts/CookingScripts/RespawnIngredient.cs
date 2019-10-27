@@ -9,7 +9,7 @@ public class RespawnIngredient : MonoBehaviour
     public GameObject NewIngredient;
     private Transform ThisPosition;
     private Transform iRotation;
-    private float Timer = 3.5f;
+    private float Timer = 1.5f;
     float ResetTime = 1f;
     Collider col;
     public bool ResetBool = true;
@@ -85,19 +85,24 @@ public class RespawnIngredient : MonoBehaviour
    
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject == Ingredient)
+        Debug.Log("Exit1");
+        Debug.Log(other.gameObject);
+        Debug.Log(Ingredient);
+        if (other.gameObject == Ingredient.gameObject)
         {
+            Debug.Log("Exit2");
             if (!dontSpawn)
             {
+                Debug.Log("Exit3");
                 StartCoroutine(Respawn());
             }
             dontSpawn = true;
         }
         else
         {
-            Debug.Log("EEAS");
             if ((other.gameObject.tag == "Ingredient" || other.gameObject.tag == "Utensil") && waitingToSpawn)
             {
+                Debug.Log("Exit4");
                 collidingWithIngredient = false;
                 StartCoroutine(Respawn());
             } 

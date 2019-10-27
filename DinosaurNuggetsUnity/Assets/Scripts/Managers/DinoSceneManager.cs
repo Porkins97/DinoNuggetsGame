@@ -24,6 +24,8 @@ public class DinoSceneManager : MonoBehaviour
     [SerializeField] private Canvas gameCanvas = null;
     [SerializeField] private Canvas pauseCanvas = null;
     [SerializeField] private GameObject pauseButtonSelected = null;
+
+    
     
     [SerializeField] private int seed;
 
@@ -45,9 +47,8 @@ public class DinoSceneManager : MonoBehaviour
 
 
     private EventSystem eventSystem;
-
-
-
+    [SerializeField] public DinoPlayerSettings DinoPlayer1;
+    [SerializeField] public DinoPlayerSettings DinoPlayer2;
 
     private string ingredientPath = "Assets/Database/Ingredients";
     private string mealPath = "Assets/Database/Meals";
@@ -67,7 +68,7 @@ public class DinoSceneManager : MonoBehaviour
         gameCanvas.gameObject.SetActive(true);
 
         eventSystem = uiInput.GetComponent<EventSystem>();
-
+        defaultAsset = uiInput.actionsAsset;
 
         pauseCanvas.enabled = false;
         gameCanvas.enabled = true;
@@ -90,13 +91,29 @@ public class DinoSceneManager : MonoBehaviour
             utensilList.Add((SO_Utensils)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(strPath), typeof(SO_Utensils)));
         }
 
-        SO_Recipes currentRecipe = mealList[(int)UnityEngine.Random.Range(0, mealList.Count-1)];
+        //SO_Recipes currentRecipe = mealList[(int)UnityEngine.Random.Range(0, mealList.Count-1)];
+        SO_Recipes currentRecipe = mealList[1];
+        foreach(UserInputs input in allUsers)
+        {
+            if (input.player == Players.Player1)
+            {
+                DinoPlayer1 = new DinoPlayerSettings(Players.Player1, currentRecipe, new List<GameObject>(), new List<SO_Ingredients>(), Player1, input.playerObj, 0);
+            }
+            else if (input.player == Players.Player2)
+            {
+                DinoPlayer2 = new DinoPlayerSettings(Players.Player2, currentRecipe, new List<GameObject>(), new List<SO_Ingredients>(), Player2, input.playerObj, 0);
+            }
+        }
         
-        MealToUIStarter(currentRecipe);
+        MealToUIStarter(DinoPlayer1, DinoPlayer2, currentRecipe);
 
         //SpawnItems(currentRecipe);
 
-        defaultAsset = uiInput.actionsAsset;
+        
+    }
+
+    private void Start()
+    {
         uiInput.DisableAllActions();
     }
 
@@ -108,14 +125,12 @@ public class DinoSceneManager : MonoBehaviour
             Debug.Log("Paused");
             gameCanvas.enabled = false;
             pauseCanvas.enabled = true;
-
-            //eventSystem.firstSelectedGameObject = pauseButtonSelected;
             foreach (UserInputs _inputs in allUsers)
             {
                 _inputs.current_Actions.Disable();
                 _inputs.current_UI.Enable();
+                uiInput.EnableAllActions();
             }
-            uiInput.actionsAsset = allUsers[userPaused].current_Asset;
             gamePaused = true;
         }
         else
@@ -128,20 +143,24 @@ public class DinoSceneManager : MonoBehaviour
             {
                 _inputs.current_Actions.Enable();
                 _inputs.current_UI.Disable();
-                uiInput.actionsAsset = defaultAsset;
+                uiInput.DisableAllActions();
             }
             gamePaused = false;
         }
         
     }
+    
+
 
     private void SetUIAgain(InputActionAsset userAsset)
     {
         uiInput.submit.Set(userAsset.FindActionMap("UI").FindAction("Submit"));
+        Debug.Log(userAsset.FindActionMap("UI").FindAction("Submit"));
+        Debug.Log(uiInput.submit.action);
         uiInput.move.Set(userAsset.FindActionMap("UI").FindAction("Navigate"));
         uiInput.cancel.Set(userAsset.FindActionMap("UI").FindAction("Cancel"));
     }
-
+    
 
 
     
@@ -149,12 +168,13 @@ public class DinoSceneManager : MonoBehaviour
     {
         SceneManager.LoadScene("TimesUp");
     }
-    
+
 
     //-----------------------------------------------------------------------------
     //Spawn Helpers
     //-----------------------------------------------------------------------------
 
+    #region SpawnHelpers
     private void SpawnItems(SO_Recipes currentRecipe)
     {
         //Make our listed ingredients. Needed ingredients are those in the meal, and we make sure the left over spaces are filled.
@@ -213,33 +233,34 @@ public class DinoSceneManager : MonoBehaviour
 
 
     }
+#endregion
 
 
-    #region UIHelpers
     //-----------------------------------------------------------------------------
     //UI Helpers
     //-----------------------------------------------------------------------------
 
-    private void MealToUIStarter(SO_Recipes currentRecipe)
-    {
-        UIIngredients = new List<GameObject>();
-        currentIngredientList = new List<SO_Ingredients>();
-        UIIngredientsFinished = 0;
+    #region UIHelpers
 
+
+    private void MealToUIStarter(DinoPlayerSettings _player1Settings, DinoPlayerSettings _player2Settings, SO_Recipes currentRecipe)
+    {
         foreach (SO_Ingredients ingredient in currentRecipe.ingredients)
         {
-            if(ingredient != null)
+            if (ingredient != null)
             {
                 string name = String.Format("Ingredient_{0}", ingredient.ingredientName);
-                CreateUIImages(name, Player1.transform, ingredient.texture, ingredient);
+                CreateUIImages(name, _player1Settings.playerObj.transform, ingredient.texture, ingredient, _player1Settings);
+                CreateUIImages(name, _player2Settings.playerObj.transform, ingredient.texture, ingredient, _player2Settings);
             }
         }
     }
 
-    private void CreateUIImages(string ingredientName, Transform Player, Texture2D tex2D, SO_Ingredients ingredient)
+    private void CreateUIImages(string ingredientName, Transform Player, Texture2D tex2D, SO_Ingredients ingredient, DinoPlayerSettings _player)
     {
         Transform par = Player.transform.Find(String.Format("{0}_Ingredients", Player.name));
         GameObject UIImage = new GameObject();
+            
         UIImage.transform.SetParent(par, false);
         UIImage.name = ingredientName;
         UIImage.AddComponent<CanvasRenderer>();
@@ -247,41 +268,40 @@ public class DinoSceneManager : MonoBehaviour
         image.texture = tex2D;
         UIImage.layer = LayerMask.NameToLayer("UI");
 
-        UIIngredients.Add(UIImage);
-        currentIngredientList.Add(ingredient);
+        _player.playerUIIngredients.Add(UIImage);
+        _player.playerIngredientList.Add(ingredient);
     }
 
-    public void FinishUIImages(SO_Ingredients currentIngredient)
+
+    
+    public void FinishUIImages(SO_Ingredients currentIngredient, DinoPlayerSettings _player)
     {
-            Transform par = UIIngredients[UIIngredientsFinished].transform;
+            Transform par = _player.playerUIIngredients[_player.playerRecipeDone].transform;
             GameObject UICheckboxElement = new GameObject();
             UICheckboxElement.transform.SetParent(par, false);
-            UICheckboxElement.name = String.Format("{0}_Checked", UIIngredients[UIIngredientsFinished].name);
+            UICheckboxElement.name = String.Format("{0}_Checked", _player.playerUIIngredients[_player.playerRecipeDone].name);
             UICheckboxElement.AddComponent<CanvasRenderer>();
             RawImage image = UICheckboxElement.AddComponent<RawImage>();
             UICheckboxElement.GetComponent<RectTransform>().sizeDelta = new Vector2(par.GetComponent<RectTransform>().rect.width, par.GetComponent<RectTransform>().rect.height);
             image.texture = checkmarkUI;
             UICheckboxElement.layer = LayerMask.NameToLayer("UI");
-            UIIngredientsFinished++;
     }
-
-    //-----------------------------------------------------------------------------
-    //Ingredient Checkers
-    //-----------------------------------------------------------------------------
-
-    public void runThrough(GameObject item)
+    /*
+    public void FinishUIImages(SO_Ingredients currentIngredient, DinoPlayerSettings _player)
     {
-        IngredientType currentItem = item.GetComponent<ItemAttributes>().GameType;
-        SO_Ingredients ingredient = ingredientList.Find(x => x.type == currentItem);
-        if(ingredient == currentIngredientList[UIIngredientsFinished])
-            CorrectIngredient(ingredient, item);
+        Transform par = _player.playerUIIngredients[_player.playerRecipeDone].transform;
+        Transform par = UIIngredients[UIIngredientsFinished].transform;
+        GameObject UICheckboxElement = new GameObject();
+        UICheckboxElement.transform.SetParent(par, false);
+        UICheckboxElement.name = String.Format("{0}_Checked", UIIngredients[UIIngredientsFinished].name);
+        UICheckboxElement.AddComponent<CanvasRenderer>();
+        RawImage image = UICheckboxElement.AddComponent<RawImage>();
+        UICheckboxElement.GetComponent<RectTransform>().sizeDelta = new Vector2(par.GetComponent<RectTransform>().rect.width, par.GetComponent<RectTransform>().rect.height);
+        image.texture = checkmarkUI;
+        UICheckboxElement.layer = LayerMask.NameToLayer("UI");
+        UIIngredientsFinished++;
     }
-
-    private void CorrectIngredient(SO_Ingredients ingredient, GameObject item)
-    {
-        FinishUIImages(ingredient);
-        Destroy(item);
-    }
+    */
     #endregion
 
 
@@ -295,14 +315,17 @@ public class UserInputs
     public InputActionAsset current_Asset;
     public InputActionMap current_UI;
     public InputActionMap current_Actions;
+    public GameObject playerObj;
+    public Players player;
 
 
-    public UserInputs(InputUser _currentUser, InputActionMap _current_UI, InputActionMap _current_Actions, InputActionAsset _current_Asset)
-    {
+    public UserInputs(InputUser _currentUser, InputActionMap _current_UI, InputActionMap _current_Actions, InputActionAsset _current_Asset, GameObject _playerObj, Players _player)
+    { 
         this.currentUser = _currentUser;
         this.current_UI = _current_UI;
         this.current_Actions = _current_Actions;
         this.current_Asset = _current_Asset;
-
+        this.playerObj = _playerObj;
+        this.player = _player;
     }
 }

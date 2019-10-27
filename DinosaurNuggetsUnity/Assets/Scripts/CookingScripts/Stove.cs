@@ -4,19 +4,26 @@ using UnityEngine;
 
 public class Stove : MonoBehaviour
 {
-    [SerializeField] private DinoSceneManager sManager;
-    [SerializeField] private GameObject firePrefab;
+    // Serializes variables
+    [SerializeField] private GameObject firePrefab = null;
+    [SerializeField] private Transform fireLocation = null;
     [SerializeField] private Transform stoveTopA_Loc = null;
-    
-    [HideInInspector]
-    public bool stoveTopA_Used = false;
-    private GameObject stoveAGameObject = null;
+    [SerializeField] private bool OutDoorStove = false;
+
+
+    // Public variables
+    [HideInInspector] public bool stoveTopA_Used = false;
+    [HideInInspector] public GameObject stoveAGameObject = null;
+
+    // Private variables
+    private GameObject fireInstance = null;
+    private DinoSceneManager _DSM = null;
 
     public void Start()
     {
-        if (sManager == null)
+        if (_DSM == null)
         {
-            sManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<DinoSceneManager>();
+            _DSM = GameObject.FindGameObjectWithTag("Manager").GetComponent<DinoSceneManager>();
         }
     }
 
@@ -27,19 +34,35 @@ public class Stove : MonoBehaviour
             stoveAGameObject = objectPlaced;
             objectPlaced.GetComponent<Rigidbody>().isKinematic = true;
             objectPlaced.GetComponent<ItemAttributes>().onStove = true;
+            objectPlaced.GetComponent<PotCooking>().enabled = true;
+            objectPlaced.GetComponent<PotCooking>().currentCol.enabled = true;
+            if (objectPlaced.GetComponent<ItemAttributes>().wasLocked == true)
+            {
+                objectPlaced.GetComponent<ItemAttributes>().Locked = true;
+            }
             objectPlaced.transform.position = stoveTopA_Loc.position;
             objectPlaced.transform.rotation = Quaternion.identity;
             stoveTopA_Used = true;
+            if (fireInstance == null && OutDoorStove == true)
+            {
+                fireInstance = Instantiate(firePrefab, fireLocation.position, fireLocation.rotation, fireLocation);
+            }
         }
     }
     public void Removed(GameObject objectPlaced)
     {
         if(objectPlaced == stoveAGameObject)
         {
-            
             stoveAGameObject.GetComponent<ItemAttributes>().onStove = false;
+            objectPlaced.GetComponent<PotCooking>().enabled = false;
+            objectPlaced.GetComponent<CapsuleCollider>().enabled = false;
             stoveAGameObject = null;
             stoveTopA_Used = false;
+            if (fireInstance != null)
+            {
+                Destroy(fireInstance);
+                fireInstance = null;
+            }
         }
         
     }
@@ -55,7 +78,6 @@ public class Stove : MonoBehaviour
                 Placed(objectPlaced);
                 objectPlaced.GetComponent<ItemAttributes>().Locked = true;
                 StartCoroutine(coroutine);
-
             }
             
         }
