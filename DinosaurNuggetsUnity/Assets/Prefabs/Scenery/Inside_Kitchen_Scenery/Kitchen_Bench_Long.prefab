@@ -193,6 +193,9 @@ MonoBehaviour:
   Ingredient: {fileID: 0}
   NewIngredient: {fileID: 0}
   ResetBool: 1
+  dontSpawn: 0
+  collidingWithIngredient: 0
+  waitingToSpawn: 0
   iType: 0
   dinoSceneManager: {fileID: 0}
 --- !u!135 &1889190908543418174
@@ -268,6 +271,9 @@ MonoBehaviour:
   Ingredient: {fileID: 0}
   NewIngredient: {fileID: 0}
   ResetBool: 1
+  dontSpawn: 0
+  collidingWithIngredient: 0
+  waitingToSpawn: 0
   iType: 0
   dinoSceneManager: {fileID: 0}
 --- !u!135 &3389776161320948992
@@ -343,6 +349,9 @@ MonoBehaviour:
   Ingredient: {fileID: 0}
   NewIngredient: {fileID: 0}
   ResetBool: 1
+  dontSpawn: 0
+  collidingWithIngredient: 0
+  waitingToSpawn: 0
   iType: 0
   dinoSceneManager: {fileID: 0}
 --- !u!135 &2935564785939587660
@@ -483,6 +492,9 @@ MonoBehaviour:
   Ingredient: {fileID: 0}
   NewIngredient: {fileID: 0}
   ResetBool: 1
+  dontSpawn: 0
+  collidingWithIngredient: 0
+  waitingToSpawn: 0
   iType: 0
   dinoSceneManager: {fileID: 0}
 --- !u!135 &5489136811135314533
@@ -558,6 +570,9 @@ MonoBehaviour:
   Ingredient: {fileID: 0}
   NewIngredient: {fileID: 0}
   ResetBool: 1
+  dontSpawn: 0
+  collidingWithIngredient: 0
+  waitingToSpawn: 0
   iType: 0
   dinoSceneManager: {fileID: 0}
 --- !u!135 &8894373370217223292

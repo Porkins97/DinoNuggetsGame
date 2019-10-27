@@ -5,33 +5,32 @@ using UnityEngine;
 public class RespawnIngredient : MonoBehaviour
 {
     public GameObject Ingredient;
-    private GameObject ThisGameObject;
     public GameObject NewIngredient;
-    private Transform ThisPosition;
     private Transform iRotation;
     private float Timer = 1.5f;
     float ResetTime = 1f;
     Collider col;
     public bool ResetBool = true;
-    bool dontSpawn = false;
-    bool collidingWithIngredient = false;
-    bool waitingToSpawn = false;
+    public bool dontSpawn = false;
+    public bool collidingWithIngredient = false;
+    public bool waitingToSpawn = false;
     public IngredientType iType;
     public DinoSceneManager dinoSceneManager;
+    Collider[] colliders;
 
     void Start()
     {
         dinoSceneManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<DinoSceneManager>();//FindObjectOfType<GameManager>().GetComponent<DinoSceneManager>();
-        ThisGameObject = this.gameObject;
-        ThisPosition = ThisGameObject.transform;
         col = GetComponent<Collider>();
         StartCoroutine(Reset());
     }
 
     private void Spawn()
     {
+        Debug.Log("Spawning");
         //add check here "if colliding with other ingredients
-        Collider[] colliders = Physics.OverlapSphere(ThisGameObject.transform.position, 0.1f);
+        colliders = Physics.OverlapSphere(this.gameObject.transform.position, 0.1f);
+        Debug.Log(colliders.Length);
         for(int i = 0; i <colliders.Length; i++)
         {
             if(colliders[i].gameObject.tag == "Ingredient" || colliders[i].gameObject.tag == "Utensil")
@@ -44,8 +43,7 @@ public class RespawnIngredient : MonoBehaviour
     
         if(!collidingWithIngredient)
         {
-            NewIngredient = Instantiate(Ingredient, ThisPosition);
-            NewIngredient.transform.position = ThisGameObject.transform.position;
+            NewIngredient = Instantiate(Ingredient, this.gameObject.transform);
             NewIngredient.transform.rotation = iRotation.transform.rotation;
             NewIngredient.GetComponent<Collider>().enabled = true;
             NewIngredient.GetComponent<Rigidbody>().useGravity = true;
@@ -72,11 +70,13 @@ public class RespawnIngredient : MonoBehaviour
                 {
                     //Debug.Log("Stage2a");
                     SO_Ingredients foundIngredient = dinoSceneManager.ingredientList.Find(x => x.type == iType);
+                    Debug.Log("Found Ingredient = " + foundIngredient);
                     Ingredient = foundIngredient.ingredientPrefab;
                 }
                 else{
                     //Debug.Log("Stage2b");
                     SO_Utensils foundUtensil = dinoSceneManager.utensilList.Find(x => x.type == iType);
+                    Debug.Log("Found Utensil = " + foundUtensil);
                     Ingredient = foundUtensil.utensilPrefab; 
                 }
             }
@@ -100,7 +100,7 @@ public class RespawnIngredient : MonoBehaviour
         }
         else
         {
-            if ((other.gameObject.tag == "Ingredient" || other.gameObject.tag == "Utensil") && waitingToSpawn)
+            if ((other.gameObject.tag == "Ingredient" || other.gameObject.tag == "Utensil"))// && waitingToSpawn)
             {
                 Debug.Log("Exit4");
                 collidingWithIngredient = false;
