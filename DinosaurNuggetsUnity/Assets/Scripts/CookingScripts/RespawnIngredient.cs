@@ -100,7 +100,7 @@ public class RespawnIngredient : MonoBehaviour
         }
         else
         {
-            if ((other.gameObject.tag == "Ingredient" || other.gameObject.tag == "Utensil") && waitingToSpawn)
+            if ((other.gameObject.tag == "Ingredient" || other.gameObject.tag == "Utensil"))// && waitingToSpawn)
             {
                 Debug.Log("Exit4");
                 collidingWithIngredient = false;
