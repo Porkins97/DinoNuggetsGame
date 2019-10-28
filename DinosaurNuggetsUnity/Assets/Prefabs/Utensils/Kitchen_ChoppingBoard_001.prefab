@@ -174,15 +174,17 @@ MonoBehaviour:
   Locked: 1
   unlockTime: 3
   unlockImage: {fileID: 4645681621489585981}
-  LoadingUI: {fileID: 0}
-  initialParent: {fileID: 0}
   currentlyBurning: 0
   wasLocked: 0
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
   initPosition: 0
+  currentCuttingBoard: {fileID: 0}
+  initialParent: {fileID: 0}
+  LoadingUI: {fileID: 0}
   rbd: {fileID: 0}
+  lastPlayer: 0
 --- !u!114 &6519463952144966151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,7 +198,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cuttingBoardLocation: {fileID: 671746388383804169}
-  cuttingBoardObject: {fileID: 0}
+  cuttingCloudPrefab: {fileID: 5125551703711422654, guid: 8435cbc1a55750e4ea3b283560b2c758,
+    type: 3}
   cuttingBoardUsed: 0
 --- !u!1001 &494679237003717198
 PrefabInstance:
