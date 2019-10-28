@@ -51,8 +51,7 @@ public class RespawnIngredient : MonoBehaviour
             NewIngredient.transform.localScale = new Vector3(1f, 1f, 1f);
             collidingWithIngredient = false;
             waitingToSpawn = false;
-        }
-        
+        } 
     }
 
     private void OnTriggerEnter(Collider other)
@@ -98,7 +97,7 @@ public class RespawnIngredient : MonoBehaviour
             }
             dontSpawn = true;
         }
-        else
+        /*else
         {
             if ((other.gameObject.tag == "Ingredient" || other.gameObject.tag == "Utensil"))// && waitingToSpawn)
             {
@@ -106,7 +105,7 @@ public class RespawnIngredient : MonoBehaviour
                 collidingWithIngredient = false;
                 StartCoroutine(Respawn());
             } 
-        }
+        }*/
     }
 
     private IEnumerator Reset()

@@ -6,14 +6,13 @@ using UnityEngine.UI;
 public class FireTest : MonoBehaviour
 {
     Vector3 position;
-    public GameObject prefab;
     public GameObject Empty;
     public int numberOfFlames; // the number of flames automatically ignited on start
 
     int numSquare = 0;
     public float height;
     public GameObject[,] neighbours;
-    public GameObject flame;
+    GameObject flame;
     public int xsize, ysize;
     public float flameSize;
 

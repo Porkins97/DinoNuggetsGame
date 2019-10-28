@@ -50,7 +50,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  gridSpawn: {fileID: 0}
+  gridSpawn: {fileID: 7365698527590537521, guid: 2ecc983eae0531d41be48f8774ea7b2a,
+    type: 3}
   prefab: {fileID: 3048342401589599679, guid: 974056acbd2fb22459cf5706ebed9201, type: 3}
   waitTime: 5.5
 --- !u!65 &2032007339533926973
