@@ -395,7 +395,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6738269932185918559}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 0, z: -3}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8678423892988238447}
@@ -452,13 +452,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameType: 3
-  initialParent: {fileID: 0}
-  beingUsed: 0
-  onStove: 0
   Burnable: 0
   Locked: 0
+  unlockTime: 3
+  unlockImage: {fileID: 0}
+  currentlyBurning: 0
+  wasLocked: 0
+  beingUsed: 0
+  onStove: 0
+  onCuttingBoard: 0
   initPosition: 0
+  currentCuttingBoard: {fileID: 0}
+  initialParent: {fileID: 0}
+  LoadingUI: {fileID: 0}
   rbd: {fileID: 0}
+  lastPlayer: 0
 --- !u!1 &7367679257745050103
 GameObject:
   m_ObjectHideFlags: 0

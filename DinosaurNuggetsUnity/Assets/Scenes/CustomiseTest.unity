@@ -262,9 +262,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 168918207}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b9f993bdae9c574a886d9ac3b94df3d, type: 3}
+  m_Script: {fileID: 11500000, guid: 6258ab144a63aec4aab4a464a725fc43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 775783148}
+  - {fileID: 722118718}
+  - {fileID: 1877413031}
+  - {fileID: 836079258}
+  - {fileID: 1284860586}
+  - {fileID: 719237947}
+  - {fileID: 1187908531}
+  - {fileID: 1488212039}
+  - {fileID: 589443006}
+  - {fileID: 807179767}
+  - {fileID: 983218662}
+  - {fileID: 1261256321}
+  - {fileID: 475368337}
+  dino: {fileID: 1943775032}
 --- !u!1 &412403286
 GameObject:
   m_ObjectHideFlags: 0
@@ -3094,6 +3109,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920959048}
   m_CullTransparentMesh: 0
+--- !u!1 &1941481858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4438915523211710839, guid: 9d6061e90ade7364ca8790e72c334a02,
+    type: 3}
+  m_PrefabInstance: {fileID: 933189351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1943775032 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 629889763687028381, guid: 9d6061e90ade7364ca8790e72c334a02,
@@ -3422,7 +3443,7 @@ MonoBehaviour:
   - {fileID: 983218662}
   - {fileID: 1261256321}
   - {fileID: 475368337}
-  dino: {fileID: 1943775032}
+  dino: {fileID: 1941481858}
 --- !u!114 &2079222242
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -18,6 +18,7 @@ TagManager:
   - ItemRespawner
   - Player1
   - Player2
+  - Bench
   layers:
   - Default
   - TransparentFX

@@ -16,6 +16,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &5095101371368082048
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4807630029287183367}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -4548727101508622366, guid: 6d2ba91358a355549a74311b1faa5c3b, type: 3}
 --- !u!114 &6217105866510031571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33,29 +47,17 @@ MonoBehaviour:
   Locked: 0
   unlockTime: 3
   unlockImage: {fileID: 0}
-  LoadingUI: {fileID: 0}
-  initialParent: {fileID: 0}
   currentlyBurning: 0
   wasLocked: 0
   beingUsed: 0
   onStove: 0
   onCuttingBoard: 0
   initPosition: 0
+  currentCuttingBoard: {fileID: 0}
+  initialParent: {fileID: 0}
+  LoadingUI: {fileID: 0}
   rbd: {fileID: 0}
---- !u!64 &5095101371368082048
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4807630029287183367}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -4548727101508622366, guid: 6d2ba91358a355549a74311b1faa5c3b, type: 3}
+  lastPlayer: 0
 --- !u!1001 &3574115499621387534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -116,17 +118,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 34b3f693f3ef0a84bbd4686bd121af2c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.438
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 34b3f693f3ef0a84bbd4686bd121af2c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.43967038
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 34b3f693f3ef0a84bbd4686bd121af2c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.852
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 34b3f693f3ef0a84bbd4686bd121af2c,
         type: 3}

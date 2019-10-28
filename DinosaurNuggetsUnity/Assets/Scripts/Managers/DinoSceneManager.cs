@@ -91,8 +91,8 @@ public class DinoSceneManager : MonoBehaviour
             utensilList.Add((SO_Utensils)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(strPath), typeof(SO_Utensils)));
         }
 
-        //SO_Recipes currentRecipe = mealList[(int)UnityEngine.Random.Range(0, mealList.Count-1)];
-        SO_Recipes currentRecipe = mealList[1];
+        SO_Recipes currentRecipe = mealList[(int)UnityEngine.Random.Range(0, mealList.Count-1)];
+        //SO_Recipes currentRecipe = mealList[1];
         foreach(UserInputs input in allUsers)
         {
             if (input.player == Players.Player1)

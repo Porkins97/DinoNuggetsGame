@@ -6,7 +6,7 @@ public class RespawnIngredient : MonoBehaviour
 {
     public GameObject Ingredient;
     public GameObject NewIngredient;
-    private Transform iRotation;
+    public Transform iRotation;
     private float Timer = 1.5f;
     float ResetTime = 1f;
     Collider col;
@@ -43,12 +43,12 @@ public class RespawnIngredient : MonoBehaviour
     
         if(!collidingWithIngredient)
         {
-            NewIngredient = Instantiate(Ingredient, this.gameObject.transform);
+            NewIngredient = Instantiate(Ingredient, iRotation.position, iRotation.rotation, iRotation.parent);
             NewIngredient.transform.rotation = iRotation.transform.rotation;
             NewIngredient.GetComponent<Collider>().enabled = true;
             NewIngredient.GetComponent<Rigidbody>().useGravity = true;
             NewIngredient.GetComponent<ItemAttributes>().beingUsed = false;
-            NewIngredient.transform.localScale = new Vector3(1f, 1f, 1f);
+            NewIngredient.transform.localScale = iRotation.transform.localScale;
             collidingWithIngredient = false;
             waitingToSpawn = false;
         } 
@@ -97,7 +97,7 @@ public class RespawnIngredient : MonoBehaviour
             }
             dontSpawn = true;
         }
-        /*else
+        else
         {
             if ((other.gameObject.tag == "Ingredient" || other.gameObject.tag == "Utensil"))// && waitingToSpawn)
             {
@@ -105,7 +105,7 @@ public class RespawnIngredient : MonoBehaviour
                 collidingWithIngredient = false;
                 StartCoroutine(Respawn());
             } 
-        }*/
+        }
     }
 
     private IEnumerator Reset()

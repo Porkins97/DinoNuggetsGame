@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 140328466}
-  - component: {fileID: 4954223701939542929}
+  - component: {fileID: 6801264546835441375}
   m_Layer: 0
   m_Name: Kitchen_Bench_Long
   m_TagString: Cupboard
@@ -29,31 +29,36 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 943179530}
-  - {fileID: 5671910478451926673}
   - {fileID: 5092833327036120673}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4954223701939542929
+--- !u!114 &6801264546835441375
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140328465}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4df98acf8af273408f4f1709d50feb0, type: 3}
+  m_Script: {fileID: 11500000, guid: 32714fd5e255b54448fe1f44df3f4027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountOfSpawns: 0
-  ingredientA: 50
-  ingredientB: 60
-  ingredientC: 59
-  currentlySpawned: []
-  twoSpawns: {fileID: 5092833327036120673}
-  threeSpawns: {fileID: 5671910478451926673}
-  ingredientsParents: {fileID: 0}
+  spawnParent: {fileID: 0}
+  SpawnPointA: {fileID: 0}
+  SpawnPointB: {fileID: 0}
+  IngredA_Pos: {x: 0, y: 0, z: 0}
+  IngredB_Pos: {x: 0, y: 0, z: 0}
+  IngredA_Rot: {x: 0, y: 0, z: 0, w: 0}
+  IngredB_Rot: {x: 0, y: 0, z: 0, w: 0}
+  IngredientA: 0
+  IngredientB: 0
+  _DSM: {fileID: 0}
+  PointAList: []
+  PointBList: []
+  initialSpawnA: 0
+  initialSpawnB: 0
 --- !u!1 &943179529
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,162 +150,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6789876, y: 0.48, z: 1.5349634}
   m_Center: {x: -0.00010386109, y: 0.24, z: 0}
---- !u!1 &206397814637349882
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2464070520040116536}
-  - component: {fileID: 6384030686585724263}
-  - component: {fileID: 1889190908543418174}
-  - component: {fileID: 5873029168496318614}
-  m_Layer: 11
-  m_Name: CuttingSpot3
-  m_TagString: ItemRespawner
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2464070520040116536
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206397814637349882}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.48, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5671910478451926673}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6384030686585724263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206397814637349882}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b78184fdc4c81f409560657c4ad7152, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Ingredient: {fileID: 0}
-  NewIngredient: {fileID: 0}
-  ResetBool: 1
-  dontSpawn: 0
-  collidingWithIngredient: 0
-  waitingToSpawn: 0
-  iType: 0
-  dinoSceneManager: {fileID: 0}
---- !u!135 &1889190908543418174
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206397814637349882}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.2
-  m_Center: {x: 0, y: 0.1, z: 0}
---- !u!114 &5873029168496318614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206397814637349882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46071150395eba249b348be710289a18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &325833883027425000
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7480869649481352862}
-  - component: {fileID: 4381205707850584311}
-  - component: {fileID: 3389776161320948992}
-  - component: {fileID: 2804865968011210473}
-  m_Layer: 11
-  m_Name: CuttingSpot1
-  m_TagString: ItemRespawner
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7480869649481352862
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 325833883027425000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.48, z: -0.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5671910478451926673}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4381205707850584311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 325833883027425000}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b78184fdc4c81f409560657c4ad7152, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Ingredient: {fileID: 0}
-  NewIngredient: {fileID: 0}
-  ResetBool: 1
-  dontSpawn: 0
-  collidingWithIngredient: 0
-  waitingToSpawn: 0
-  iType: 0
-  dinoSceneManager: {fileID: 0}
---- !u!135 &3389776161320948992
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 325833883027425000}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.2
-  m_Center: {x: 0, y: 0.1, z: 0}
---- !u!114 &2804865968011210473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 325833883027425000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46071150395eba249b348be710289a18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1622721695215570731
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,9 +159,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7064398440139929685}
-  - component: {fileID: 7377020185412052662}
   - component: {fileID: 2935564785939587660}
-  - component: {fileID: 1989900636366639759}
+  - component: {fileID: 2123827822181044430}
   m_Layer: 11
   m_Name: CuttingSpot2
   m_TagString: ItemRespawner
@@ -328,32 +176,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622721695215570731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.48, z: 0.35}
+  m_LocalPosition: {x: 0, y: 0.42, z: 0.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5092833327036120673}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7377020185412052662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1622721695215570731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b78184fdc4c81f409560657c4ad7152, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Ingredient: {fileID: 0}
-  NewIngredient: {fileID: 0}
-  ResetBool: 1
-  dontSpawn: 0
-  collidingWithIngredient: 0
-  waitingToSpawn: 0
-  iType: 0
-  dinoSceneManager: {fileID: 0}
 --- !u!135 &2935564785939587660
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -367,51 +195,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.2
   m_Center: {x: 0, y: 0.1, z: 0}
---- !u!114 &1989900636366639759
+--- !u!114 &2123827822181044430
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622721695215570731}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46071150395eba249b348be710289a18, type: 3}
+  m_Script: {fileID: 11500000, guid: 80c82bb8891b9ac4ba9752490c83357b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2141845914296850630
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5671910478451926673}
-  m_Layer: 0
-  m_Name: CuttingSpots_3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &5671910478451926673
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2141845914296850630}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 7480869649481352862}
-  - {fileID: 8211386757816418091}
-  - {fileID: 2464070520040116536}
-  m_Father: {fileID: 140328466}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  respawn: {fileID: 6801264546835441375}
+  role: 1
 --- !u!1 &4745306633233464961
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,13 +233,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4745306633233464961}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1820340150105365572}
   - {fileID: 7064398440139929685}
   m_Father: {fileID: 140328466}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6443658602720412539
 GameObject:
@@ -453,9 +250,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1820340150105365572}
-  - component: {fileID: 7743167237384816157}
   - component: {fileID: 5489136811135314533}
-  - component: {fileID: 7332410390212033086}
+  - component: {fileID: 8331803570084851031}
   m_Layer: 11
   m_Name: CuttingSpot1
   m_TagString: ItemRespawner
@@ -471,32 +267,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6443658602720412539}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.48, z: -0.35}
+  m_LocalPosition: {x: 0, y: 0.42, z: -0.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5092833327036120673}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7743167237384816157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6443658602720412539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b78184fdc4c81f409560657c4ad7152, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Ingredient: {fileID: 0}
-  NewIngredient: {fileID: 0}
-  ResetBool: 1
-  dontSpawn: 0
-  collidingWithIngredient: 0
-  waitingToSpawn: 0
-  iType: 0
-  dinoSceneManager: {fileID: 0}
 --- !u!135 &5489136811135314533
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -510,93 +286,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.2
   m_Center: {x: 0, y: 0.1, z: 0}
---- !u!114 &7332410390212033086
+--- !u!114 &8331803570084851031
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6443658602720412539}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46071150395eba249b348be710289a18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &8342774184344919343
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8211386757816418091}
-  - component: {fileID: 7556717668003615256}
-  - component: {fileID: 8894373370217223292}
-  - component: {fileID: 3779036950442924368}
-  m_Layer: 11
-  m_Name: CuttingSpot2
-  m_TagString: ItemRespawner
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8211386757816418091
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8342774184344919343}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.48, z: 0.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5671910478451926673}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7556717668003615256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8342774184344919343}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b78184fdc4c81f409560657c4ad7152, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Ingredient: {fileID: 0}
-  NewIngredient: {fileID: 0}
-  ResetBool: 1
-  dontSpawn: 0
-  collidingWithIngredient: 0
-  waitingToSpawn: 0
-  iType: 0
-  dinoSceneManager: {fileID: 0}
---- !u!135 &8894373370217223292
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8342774184344919343}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.2
-  m_Center: {x: 0, y: 0.1, z: 0}
---- !u!114 &3779036950442924368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8342774184344919343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46071150395eba249b348be710289a18, type: 3}
+  m_Script: {fileID: 11500000, guid: 80c82bb8891b9ac4ba9752490c83357b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawn: {fileID: 6801264546835441375}
+  role: 0

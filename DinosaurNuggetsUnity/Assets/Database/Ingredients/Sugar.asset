@@ -15,5 +15,8 @@ MonoBehaviour:
   ingredientName: Sugar
   ingredientPrefab: {fileID: 4559768162505481433, guid: 137c6d8cd12e7604cb5de551eb2e15ee,
     type: 3}
-  texture: {fileID: 2800000, guid: 098069ad6e2cbf0489fe4d808402934d, type: 3}
+  texture: {fileID: 2800000, guid: 8d13b68bcd28ba34e9a68bbdf425e34b, type: 3}
   type: 64
+  Spawnable: 1
+  unslicedVersion: {fileID: 0}
+  slicedVersion: {fileID: 0}

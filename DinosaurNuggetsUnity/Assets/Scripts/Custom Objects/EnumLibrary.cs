@@ -64,6 +64,11 @@ public enum Players
     Player1, Player2
 }
 
+public enum SpawnRole
+{ 
+    SpawnA,  SpawnB 
+}
+
 [System.Serializable]
 public struct DinoPlayerSettings
 {
