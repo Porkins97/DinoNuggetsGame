@@ -286,26 +286,25 @@ public class DinoSceneManager : MonoBehaviour
             image.texture = checkmarkUI;
             UICheckboxElement.layer = LayerMask.NameToLayer("UI");
     }
-    /*
-    public void FinishUIImages(SO_Ingredients currentIngredient, DinoPlayerSettings _player)
-    {
-        Transform par = _player.playerUIIngredients[_player.playerRecipeDone].transform;
-        Transform par = UIIngredients[UIIngredientsFinished].transform;
-        GameObject UICheckboxElement = new GameObject();
-        UICheckboxElement.transform.SetParent(par, false);
-        UICheckboxElement.name = String.Format("{0}_Checked", UIIngredients[UIIngredientsFinished].name);
-        UICheckboxElement.AddComponent<CanvasRenderer>();
-        RawImage image = UICheckboxElement.AddComponent<RawImage>();
-        UICheckboxElement.GetComponent<RectTransform>().sizeDelta = new Vector2(par.GetComponent<RectTransform>().rect.width, par.GetComponent<RectTransform>().rect.height);
-        image.texture = checkmarkUI;
-        UICheckboxElement.layer = LayerMask.NameToLayer("UI");
-        UIIngredientsFinished++;
-    }
-    */
+
     #endregion
 
 
 
+
+
+    #region WinnerChecks
+
+    public void CheckIfWon(DinoPlayerSettings _player)
+    {
+        if(_player.playerRecipeDone == _player.playerRecipe.ingredients.Count)
+        {
+            SceneManager.LoadScene("WinScreen");
+        }
+        
+    }
+
+    #endregion
 
 }
 

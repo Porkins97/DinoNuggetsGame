@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Final Scenes/OutdoorLevel.unity
     guid: 9457119b9a2d34048825071ef5a761fb
   - enabled: 1
-    path: Assets/Scenes/Final Scenes/P1Win.unity
+    path: Assets/Scenes/Final Scenes/WinScreen.unity
     guid: ac44dde7fe1374743820736aede9f7f9
   - enabled: 1
     path: Assets/Scenes/Final Scenes/P2Win.unity
