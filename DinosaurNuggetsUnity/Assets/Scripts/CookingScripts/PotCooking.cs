@@ -43,6 +43,7 @@ public class PotCooking : MonoBehaviour
             _DSM.FinishUIImages(ingredient, player);
             Destroy(obj);
             player.playerRecipeDone++;
+            _DSM.CheckIfWon(player);
         }
     }
 
