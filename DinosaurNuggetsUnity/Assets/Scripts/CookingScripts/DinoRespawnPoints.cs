@@ -53,6 +53,7 @@ public class DinoRespawnPoints : MonoBehaviour
                 respawn.PointBList.Remove(col.gameObject);
             }
             respawn.SpawnItems(role);
+            GetComponent<Collider>().enabled = false;
         }
     }
 }

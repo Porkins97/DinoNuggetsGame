@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnParent: {fileID: 0}
-  SpawnPointA: {fileID: 0}
-  SpawnPointB: {fileID: 0}
+  SpawnPointA: {fileID: 5489136811135314533}
+  SpawnPointB: {fileID: 2935564785939587660}
   IngredA_Pos: {x: 0, y: 0, z: 0}
   IngredB_Pos: {x: 0, y: 0, z: 0}
   IngredA_Rot: {x: 0, y: 0, z: 0, w: 0}

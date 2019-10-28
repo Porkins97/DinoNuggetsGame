@@ -32,7 +32,8 @@ public class DinoRespawn : MonoBehaviour
     }
 
     public void SpawnItems(SpawnRole role)
-    {            
+    {   
+        Debug.Log("Spawn Items called");         
         StartCoroutine(Respawn(role));
     }
     
@@ -41,20 +42,18 @@ public class DinoRespawn : MonoBehaviour
         //StopAllCoroutines();
         if(role == SpawnRole.SpawnA)
         {
+            SpawnPointA.enabled = true;
             SO_Ingredients ingredA = _DSM.ingredientList.Find(x => x.type == IngredientA);
             GameObject NewIngredient = Instantiate(ingredA.ingredientPrefab, IngredA_Pos, IngredA_Rot, spawnParent); 
             Reset(ref NewIngredient);
         }
         if(role == SpawnRole.SpawnB)
         {
+            SpawnPointA.enabled = true;
             SO_Ingredients ingredB = _DSM.ingredientList.Find(x => x.type == IngredientB);
             GameObject NewIngredient = Instantiate(ingredB.ingredientPrefab, IngredB_Pos, IngredB_Rot, spawnParent);
             Reset(ref NewIngredient);
         }
-        //NewIngredient.GetComponent<Collider>().enabled = true;
-        //NewIngredient.GetComponent<Rigidbody>().useGravity = true;
-        //NewIngredient.GetComponent<ItemAttributes>().beingUsed = false;
-       // NewIngredient.transform.localScale = iRotation.transform.localScale;
     }
 
     public void Reset(ref GameObject obj)
