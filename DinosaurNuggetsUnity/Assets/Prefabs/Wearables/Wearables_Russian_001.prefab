@@ -91,3 +91,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hatType: 6
+  dinoColour: {fileID: 0}

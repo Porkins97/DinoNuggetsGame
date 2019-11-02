@@ -37,19 +37,20 @@ public enum IngredientType
 [System.Serializable]
 public enum HatType
 {
-    Cowboy,
-    Crown,
+    None,
     Chef,
-    Party,
+    Crown,
+    Cowboy,
     Helicopter,
-    SmallRussian,
+    Party,
+    //SmallRussian,
     LargeRussian,
     Shark,
     Snapback,
     SpaceHelmet,
     SmallTophat,
     LargeTophat,
-    None
+    
 }
 
 [System.Serializable]

@@ -683,18 +683,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e5400e3eeec6a4baf3698cf910dbca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RightHand_Carrying: 0
-  LeftHand_Carrying: 0
-  RightHand_Hover: 0
-  LeftHand_Hover: 0
-  RightHand_Object_Locked: 0
-  LeftHand_Object_Locked: 0
-  RightHand_Object_unlockTime: 0
-  LeftHand_Object_unlockTime: 0
-  RightHand_Object: {fileID: 0}
-  LeftHand_Object: {fileID: 0}
-  RightHand: {fileID: 0}
-  LeftHand: {fileID: 0}
   AllItems: []
 --- !u!114 &304880448
 MonoBehaviour:
@@ -725,6 +713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gamePadId: 0
+  currentPlayer: 0
   uiInput: {fileID: 0}
   _sceneManager: {fileID: 0}
   PauseEvent:
@@ -3312,6 +3301,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3709048199566345533}
+  - component: {fileID: 5225881399376603770}
   m_Layer: 9
   m_Name: HatLocator
   m_TagString: Untagged
@@ -3333,6 +3323,39 @@ Transform:
   m_Father: {fileID: 6806799199590587720}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -25.683, y: -90.234, z: 2.035}
+--- !u!114 &5225881399376603770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4438915523211710839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b573aeef7f3df84686bf46d8b898edf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hatNum: 0
+  hat: 0
+  hats:
+  - {fileID: 1815697881486453157, guid: 5b273410612a075419ea23ddd0687293, type: 3}
+  - {fileID: 6329100235451426163, guid: 0e3aa01ce565ce14fb0e35d194f513fc, type: 3}
+  - {fileID: 5142761043521008789, guid: 83f57054844047d47bdaf353ca017e19, type: 3}
+  - {fileID: 2883074275938280274, guid: 1f8bf1b60af13bd45947082142cef633, type: 3}
+  - {fileID: 7182315532312882483, guid: 7e6a6b418ca99d544bd407f559ea0a5f, type: 3}
+  - {fileID: 3462772166086520257, guid: c71fdba403ca7b64db680425d9db39ad, type: 3}
+  - {fileID: 7508647912079121550, guid: 705b95324d8d7f449ac243c17f15c64d, type: 3}
+  - {fileID: 4133535920473620264, guid: 6b1ca4471ba614a46b9b6d901f9c7845, type: 3}
+  - {fileID: 2671852303793303245, guid: 7e6ad10ea482106478c43939c8cb87a2, type: 3}
+  - {fileID: 1526769802360188536, guid: 07c9dbb5c06c4d74b807045b613daeb8, type: 3}
+  - {fileID: 4545323850002451628, guid: e05c6966fce603f4ebfa4d7959da3ade, type: 3}
+  - {fileID: 7360870439873864166, guid: ad26570d5147987409598af524761106, type: 3}
+  randomHat: 0
+  customisationDataJSON: customisationdata.json
+  cd:
+    whichHatPlayerOne: 0
+    whichHatPlayerTwo: 0
+  thisPlayer: 1
 --- !u!1 &4449353171743876981
 GameObject:
   m_ObjectHideFlags: 0

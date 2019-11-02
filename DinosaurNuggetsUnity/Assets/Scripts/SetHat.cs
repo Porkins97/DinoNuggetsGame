@@ -10,18 +10,18 @@ public class SetHat : MonoBehaviour
     ApplyHat applyhat;
     public GameObject dino;
 
-    public void GetButton()
+    private void Start() 
     {
-        for (int i = 0; i < buttons.Length; i++)
+        for(int i = 0; i < buttons.Length; i++)
         {
             int index = new int();
             index = i;
             buttons[i].onClick.AddListener(delegate { OnSelect(index); });
         }
     }
-    private void OnSelect(int index = 0)
+    private void OnSelect(int index)
     {
-        Debug.Log(index);
+        Debug.Log("button == " + index);
         dino.GetComponent<ApplyHat>().PassHatnum(index);
     }
 }

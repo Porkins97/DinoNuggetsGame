@@ -9,24 +9,30 @@ public class ApplyHat : MonoBehaviour
     public HatType hat;
     public GameObject[] hats;
     public bool randomHat;
-    public Transform hatLocator;
+    Transform hatLocator;
     GameObject appliedHat;
+    public GameObject otherPlayer;
     public string customisationDataJSON = "customisationdata.json";
     public CustomisationData cd;
-
+    public SaveData saveData;
+    public int thisPlayer;
+    public int p1, p2;
     private void Start()
     {
+        hatLocator = this.gameObject.transform;
         if(randomHat != true)
         {
-            int l = LoadData();
-            PassHatnum(l);
+            Debug.Log("New Scene");
+            Debug.Log(cd.whichHatPlayerOne);
+            Debug.Log(cd.whichHatPlayerTwo);
+            int s = LoadData();
+            PassHatnum(s);
         }
         else
         {
             PassHatnum(0);
         }
     }
-
     public void SelectHat()
     {
         if (randomHat == true)
@@ -40,12 +46,23 @@ public class ApplyHat : MonoBehaviour
             {
                 appliedHat = Instantiate(hats[i], hatLocator.gameObject.transform);
                 appliedHat.transform.parent = hatLocator.gameObject.transform;
-                cd.whichHatPlayerOne = i;
-                SavaData();
+                
+                if(thisPlayer ==1)
+                {
+                    p1 = i;
+                    cd.whichHatPlayerOne = i; 
+                    cd.whichHatPlayerTwo = otherPlayer.GetComponent<ApplyHat>().p2;
+                }
+                else
+                {
+                    p2 = i;
+                    cd.whichHatPlayerTwo = i; 
+                    cd.whichHatPlayerOne = otherPlayer.GetComponent<ApplyHat>().p1;
+                }
+                saveData.GetNum(thisPlayer, i);
             }
         }
     }
-
     public void PassHatnum(int num)
     {
         hatNum = num;
@@ -54,22 +71,12 @@ public class ApplyHat : MonoBehaviour
         hat = (HatType)hatNum;
         SelectHat();
     }
-
     public void PassNewHat(HatType _hat)
     {
-        if (appliedHat != null)
+        /*if (appliedHat != null)
             Destroy(appliedHat);
         hat = _hat;
-        SelectHat();
-    }
-
-    public void SavaData()
-    {
-        Debug.Log("Saving");
-        string dataAsJson = JsonUtility.ToJson(cd);
-        Debug.Log(dataAsJson);
-        string filePath = Application.streamingAssetsPath + "/" + customisationDataJSON;
-        File.WriteAllText(filePath, dataAsJson);
+        SelectHat();*/
     }
 
     public int LoadData()
@@ -78,10 +85,27 @@ public class ApplyHat : MonoBehaviour
         if (File.Exists(filePath))
         {
             string dataAsJson = File.ReadAllText(filePath);
-            CustomisationData cData = JsonUtility.FromJson<CustomisationData>(dataAsJson);
-            int l = cData.whichHatPlayerOne;
-            //int i = cData.whichHatPlayerTwo; if this is player2
-            return (l);
+            cd = JsonUtility.FromJson<CustomisationData>(dataAsJson);
+            Debug.Log(cd.whichHatPlayerOne);
+            Debug.Log(cd.whichHatPlayerTwo);
+            p1 = cd.whichHatPlayerOne;
+            p2 = cd.whichHatPlayerTwo;
+            Debug.Log(cd.whichHatPlayerOne);
+            Debug.Log(cd.whichHatPlayerTwo);
+            if(thisPlayer ==1)
+            {
+                Debug.Log(p1);
+                Debug.Log(p2);
+                int l = p1;
+                return(l);
+            }
+            else
+            {
+                Debug.Log(p1);
+                Debug.Log(p2);
+                int l =p2;
+                return(l);
+            }
         }
         else
         {

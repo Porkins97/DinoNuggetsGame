@@ -119,7 +119,6 @@ public class Flame : MonoBehaviour
     private void OnTriggerEnter(Collider other)  //update this to check how long it was in the area
                                                  //if it has been area for x.time, Ignite(), rather than ignite no matter how long
     {
-        Debug.Log(other.gameObject.name);
         if(other.gameObject.tag == "Utensil")
         {
             if(other.gameObject.GetComponent<ItemAttributes>().GameType == cuttingBoard)
@@ -140,7 +139,6 @@ public class Flame : MonoBehaviour
         }
         if(other.gameObject.name == "BenchMesh")
         {
-            Debug.Log("Moving");
             Vector3 newPos  = this.gameObject.transform.position;
             this.gameObject.transform.position = newPos + Vector3.up * 0.4f;
         }

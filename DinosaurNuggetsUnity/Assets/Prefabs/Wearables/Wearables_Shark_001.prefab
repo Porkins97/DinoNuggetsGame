@@ -278,3 +278,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hatType: 7
+  dinoColour: {fileID: 0}

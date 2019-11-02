@@ -3115,6 +3115,47 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 933189351}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1941481859 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3709048199566345533, guid: 9d6061e90ade7364ca8790e72c334a02,
+    type: 3}
+  m_PrefabInstance: {fileID: 933189351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1941481860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941481858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b573aeef7f3df84686bf46d8b898edf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hatNum: 0
+  hat: 0
+  hats:
+  - {fileID: 2883074275938280274, guid: 1f8bf1b60af13bd45947082142cef633, type: 3}
+  - {fileID: 5142761043521008789, guid: 83f57054844047d47bdaf353ca017e19, type: 3}
+  - {fileID: 6329100235451426163, guid: 0e3aa01ce565ce14fb0e35d194f513fc, type: 3}
+  - {fileID: 3462772166086520257, guid: c71fdba403ca7b64db680425d9db39ad, type: 3}
+  - {fileID: 7182315532312882483, guid: 7e6a6b418ca99d544bd407f559ea0a5f, type: 3}
+  - {fileID: 7508647912079121550, guid: 705b95324d8d7f449ac243c17f15c64d, type: 3}
+  - {fileID: 1437277680607271749, guid: 5b4a0df7676349547867974bed4a4aa2, type: 3}
+  - {fileID: 4133535920473620264, guid: 6b1ca4471ba614a46b9b6d901f9c7845, type: 3}
+  - {fileID: 2671852303793303245, guid: 7e6ad10ea482106478c43939c8cb87a2, type: 3}
+  - {fileID: 1526769802360188536, guid: 07c9dbb5c06c4d74b807045b613daeb8, type: 3}
+  - {fileID: 4545323850002451628, guid: e05c6966fce603f4ebfa4d7959da3ade, type: 3}
+  - {fileID: 7360870439873864166, guid: ad26570d5147987409598af524761106, type: 3}
+  - {fileID: 1815697881486453157, guid: 5b273410612a075419ea23ddd0687293, type: 3}
+  randomHat: 0
+  hatLocator: {fileID: 1941481859}
+  customisationDataJSON: customisationdata.json
+  cd:
+    whichHatPlayerOne: 0
+    whichHatPlayerTwo: 0
+  thisPlayer: 0
 --- !u!1 &1943775032 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 629889763687028381, guid: 9d6061e90ade7364ca8790e72c334a02,
