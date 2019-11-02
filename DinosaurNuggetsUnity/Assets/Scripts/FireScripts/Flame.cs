@@ -7,16 +7,15 @@ public class Flame : MonoBehaviour
 {
     //[SerializeField] public IngredientType GameType;
     int maxX, maxY, x, y;
-
     public bool OnFire = false;
     public GameObject[] localNeighbours = new GameObject[4];
     public GameObject gridSpawn;
     private GameObject[,] neighbours;
     public GameObject prefab;
     public float waitTime;
-    private bool Ignited = false;
     IngredientType cuttingBoard = IngredientType.Cutting_Board;
     IngredientType fireExtinguisher = IngredientType.Fire_Extinguisher;
+    GameObject Fire;
     void Reset()
     {
         for (int i = 0; i<localNeighbours.Length; i++)
@@ -28,18 +27,8 @@ public class Flame : MonoBehaviour
     void Start() 
     {
         waitTime = waitTime + Random.Range(-2,2);
-        /*if (this.gameObject.name == "Flame.433")
-        {
-            OnFire = true;
-        }*/
-    }
-
-    void FixedUpdate()
-    {
-        if(OnFire == true && Ignited == false)
-        {
-            Ignite();
-        }
+        //Vector3 newPos  = this.gameObject.transform.position;
+        //this.gameObject.transform.position = newPos + Vector3.up * 0.4f;
     }
 
     public void SetNeighboursArray(ref GameObject[,] n, int i, int j, int xm, int ym)
@@ -75,34 +64,62 @@ public class Flame : MonoBehaviour
 
     public void Ignite()
     {
-        Ignited = true;
-        GameObject Cube = Instantiate(prefab, this.gameObject.transform.position, Quaternion.identity);
-        Cube.transform.parent = this.gameObject.transform;
-        
+        if(Fire == null)
+        {
+            Fire = Instantiate(prefab, this.gameObject.transform.position, Quaternion.identity);
+            Fire.transform.parent = this.gameObject.transform;
+        }
+        else
+        {
+            Fire.SetActive(true);
+        }
+        Spread();
+    }
 
+    public IEnumerator Hold(int i)
+    {
+        yield return new WaitForSeconds(waitTime);
+        localNeighbours[i].GetComponent<Flame>().Ignite();
+    }
+    public IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(3.5f);
+        Ignite();
+    }
+
+    public IEnumerator Extinguish()
+    {
+        yield return new WaitForSeconds(0.15f);
+        Fire.SetActive(false);
+        StopAllCoroutines();
+    }
+    public IEnumerator Check()
+    {
+        yield return new WaitForSeconds(5f);
+        if(OnFire)
+        {
+            Spread();
+        }
+    }
+    void Spread()
+    {
         for (int i = 0; i<localNeighbours.Length; i++)
         {
             if (localNeighbours[i] != false && localNeighbours[i].GetComponent<Flame>().OnFire == false)
             {
                     StartCoroutine(Hold(i));      
             }
+            else
+            {
+                StartCoroutine(Check());
+            }
         }
-    }
-
-    public IEnumerator Hold(int i)
-    {
-        yield return new WaitForSeconds(waitTime);
-        localNeighbours[i].GetComponent<Flame>().OnFire = true;
-    }
-    public IEnumerator Wait()
-    {
-        yield return new WaitForSeconds(waitTime);
-        Ignite();
     }
 
     private void OnTriggerEnter(Collider other)  //update this to check how long it was in the area
                                                  //if it has been area for x.time, Ignite(), rather than ignite no matter how long
     {
+        Debug.Log(other.gameObject.name);
         if(other.gameObject.tag == "Utensil")
         {
             if(other.gameObject.GetComponent<ItemAttributes>().GameType == cuttingBoard)
@@ -112,13 +129,20 @@ public class Flame : MonoBehaviour
                     StartCoroutine(Wait());
                 }
             }
-            if(other.gameObject.GetComponent<ItemAttributes>().GameType == fireExtinguisher)
+            if(other.gameObject.GetComponent<ItemAttributes>().GameType == fireExtinguisher);
             {
-                if(this.gameObject.transform.childCount > 0)
+                if(other.gameObject.GetComponent<ItemAttributes>().beingUsed == true && transform.childCount > 0)
                 {
                     OnFire = false;
+                    StartCoroutine(Extinguish());
                 }
             }
+        }
+        if(other.gameObject.name == "BenchMesh")
+        {
+            Debug.Log("Moving");
+            Vector3 newPos  = this.gameObject.transform.position;
+            this.gameObject.transform.position = newPos + Vector3.up * 0.4f;
         }
     }
 }

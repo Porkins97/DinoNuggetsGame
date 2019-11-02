@@ -339,7 +339,5 @@ public class PickupScript : MonoBehaviour
                 }
             }
         }
-       
-
     }
 }
