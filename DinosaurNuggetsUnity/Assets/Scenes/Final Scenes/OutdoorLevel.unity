@@ -7067,6 +7067,11 @@ PrefabInstance:
       propertyPath: _sceneManager
       value: 
       objectReference: {fileID: 2053053188}
+    - target: {fileID: 5225881399376603770, guid: 9d6061e90ade7364ca8790e72c334a02,
+        type: 3}
+      propertyPath: randomHat
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
 --- !u!4 &483982174 stripped
@@ -21846,6 +21851,16 @@ PrefabInstance:
       propertyPath: PauseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PauseGame
       objectReference: {fileID: 0}
+    - target: {fileID: 5225881399376603770, guid: 9d6061e90ade7364ca8790e72c334a02,
+        type: 3}
+      propertyPath: thisPlayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225881399376603770, guid: 9d6061e90ade7364ca8790e72c334a02,
+        type: 3}
+      propertyPath: randomHat
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1358334123381718131, guid: 9d6061e90ade7364ca8790e72c334a02,
         type: 3}
       propertyPath: characterColour
@@ -27774,6 +27789,16 @@ PrefabInstance:
     - target: {fileID: 254787752979181699, guid: 5edccbba1e6663f429fa9218fb06e21e,
         type: 3}
       propertyPath: dinoSceneManager
+      value: 
+      objectReference: {fileID: 2053053188}
+    - target: {fileID: 9088577264795621234, guid: 5edccbba1e6663f429fa9218fb06e21e,
+        type: 3}
+      propertyPath: spawnParent
+      value: 
+      objectReference: {fileID: 283599347}
+    - target: {fileID: 9088577264795621234, guid: 5edccbba1e6663f429fa9218fb06e21e,
+        type: 3}
+      propertyPath: _DSM
       value: 
       objectReference: {fileID: 2053053188}
     m_RemovedComponents: []

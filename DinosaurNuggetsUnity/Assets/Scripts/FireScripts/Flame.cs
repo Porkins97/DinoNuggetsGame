@@ -61,9 +61,9 @@ public class Flame : MonoBehaviour
             localNeighbours[3] = neighbours[x - 1, y];
         }
     }
-
     public void Ignite()
     {
+        OnFire = true;
         if(Fire == null)
         {
             Fire = Instantiate(prefab, this.gameObject.transform.position, Quaternion.identity);
@@ -111,7 +111,7 @@ public class Flame : MonoBehaviour
             }
             else
             {
-                StartCoroutine(Check());
+                //StartCoroutine(Check());
             }
         }
     }
@@ -137,8 +137,9 @@ public class Flame : MonoBehaviour
                 }
             }
         }
-        if(other.gameObject.name == "BenchMesh")
+        if(other.gameObject.tag == "Cupboard")
         {
+            Debug.Log("Moving");
             Vector3 newPos  = this.gameObject.transform.position;
             this.gameObject.transform.position = newPos + Vector3.up * 0.4f;
         }

@@ -22,9 +22,6 @@ public class ApplyHat : MonoBehaviour
         hatLocator = this.gameObject.transform;
         if(randomHat != true)
         {
-            Debug.Log("New Scene");
-            Debug.Log(cd.whichHatPlayerOne);
-            Debug.Log(cd.whichHatPlayerTwo);
             int s = LoadData();
             PassHatnum(s);
         }
@@ -86,23 +83,15 @@ public class ApplyHat : MonoBehaviour
         {
             string dataAsJson = File.ReadAllText(filePath);
             cd = JsonUtility.FromJson<CustomisationData>(dataAsJson);
-            Debug.Log(cd.whichHatPlayerOne);
-            Debug.Log(cd.whichHatPlayerTwo);
             p1 = cd.whichHatPlayerOne;
             p2 = cd.whichHatPlayerTwo;
-            Debug.Log(cd.whichHatPlayerOne);
-            Debug.Log(cd.whichHatPlayerTwo);
             if(thisPlayer ==1)
             {
-                Debug.Log(p1);
-                Debug.Log(p2);
                 int l = p1;
                 return(l);
             }
             else
             {
-                Debug.Log(p1);
-                Debug.Log(p2);
                 int l =p2;
                 return(l);
             }

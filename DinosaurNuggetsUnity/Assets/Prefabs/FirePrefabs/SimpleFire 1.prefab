@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 3048342401589599664}
   - component: {fileID: 3048342401589599665}
   - component: {fileID: 3048342401589599678}
-  - component: {fileID: -6437528001974417351}
+  - component: {fileID: 2891152562513085320}
+  - component: {fileID: -5620929557700473557}
   m_Layer: 12
   m_Name: SimpleFire 1
   m_TagString: Untagged
@@ -26,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3048342401589599679}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.005, z: -0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &3048342401589599665
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4753,7 +4754,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &-6437528001974417351
+--- !u!114 &2891152562513085320
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4762,12 +4763,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 3048342401589599679}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a48148d870c9f494aa0bdbd44adc60df, type: 3}
+  m_Script: {fileID: 11500000, guid: 6416705e6cc391d4681dfc2246c42c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSize: 0.4
-  growFactor: 0.5
-  waitTime: 2
-  gridSpawn: {fileID: 4024503145963058937, guid: ad6c1a9749bec694681c045eeaaef071,
-    type: 3}
-  flameSize: 0.4
+  parent: {fileID: 0}
+  flame: {fileID: 0}
+--- !u!65 &-5620929557700473557
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3048342401589599679}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
