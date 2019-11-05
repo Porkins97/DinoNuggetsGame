@@ -7,6 +7,8 @@ public class RespawnIngredient : MonoBehaviour
     public GameObject Ingredient;
     public GameObject NewIngredient;
     public Transform iRotation;
+    public Vector3 iPosition;
+    public Transform iParent;
     private float Timer = 1.5f;
     float ResetTime = 1f;
     Collider col;
@@ -17,12 +19,14 @@ public class RespawnIngredient : MonoBehaviour
     public IngredientType iType;
     public DinoSceneManager dinoSceneManager;
     Collider[] colliders;
+    
 
     void Start()
     {
         dinoSceneManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<DinoSceneManager>();//FindObjectOfType<GameManager>().GetComponent<DinoSceneManager>();
         col = GetComponent<Collider>();
         StartCoroutine(Reset());
+        InvokeRepeating("CheckForCollision", 2.0f, 5.0f);
     }
 
     private void Spawn()
@@ -43,8 +47,9 @@ public class RespawnIngredient : MonoBehaviour
     
         if(!collidingWithIngredient)
         {
-            NewIngredient = Instantiate(Ingredient, iRotation.position, iRotation.rotation, iRotation.parent);
-            NewIngredient.transform.rotation = iRotation.transform.rotation;
+            Quaternion target = Quaternion.Euler(0,0,0);
+            NewIngredient = Instantiate(Ingredient, iPosition, target, iParent);          
+            //NewIngredient.transform.rotation = target;
             NewIngredient.GetComponent<Collider>().enabled = true;
             NewIngredient.GetComponent<Rigidbody>().useGravity = true;
             NewIngredient.GetComponent<ItemAttributes>().beingUsed = false;
@@ -52,6 +57,10 @@ public class RespawnIngredient : MonoBehaviour
             collidingWithIngredient = false;
             waitingToSpawn = false;
         } 
+        else
+        {
+            StartCoroutine(Respawn());
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -62,6 +71,7 @@ public class RespawnIngredient : MonoBehaviour
             {
                 //Debug.Log("Stage0");
                 iRotation = other.gameObject.transform;
+                iPosition = new Vector3(other.gameObject.transform.position.x,other.gameObject.transform.position.y,other.gameObject.transform.position.z);
                 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 iType = other.gameObject.GetComponent<ItemAttributes>().GameType;
                 //Debug.Log("Stage1");
@@ -119,6 +129,15 @@ public class RespawnIngredient : MonoBehaviour
         yield return new WaitForSeconds(Timer);
         Spawn();
         dontSpawn = false;
+    }
+    private void CheckForCollision()
+    {
+        Collider[] cols = Physics.OverlapSphere(transform.position, 0.4f);
+        if(cols.Length <= 1)
+        {
+            dontSpawn = false;
+            Spawn();
+        }
     }
 }
 //only respawns ingredients atm

@@ -48,7 +48,7 @@ public class Timer : MonoBehaviour
             {
                 countingDown = false;
             }
-            _timerText.text = string.Format("{0:00} : {1:00}", Mathf.Floor(timeMinutes), Mathf.Floor(timeSeconds));
+            _timerText.text = string.Format("{0} : {1:00}", Mathf.Floor(timeMinutes), Mathf.Floor(timeSeconds));
             yield return null;
         }
         if (!countingDown)
