@@ -61,6 +61,8 @@ MonoBehaviour:
   Ingredient: {fileID: 0}
   NewIngredient: {fileID: 0}
   iRotation: {fileID: 0}
+  iPosition: {x: 0, y: 0, z: 0}
+  iParent: {fileID: 0}
   ResetBool: 1
   dontSpawn: 0
   collidingWithIngredient: 0
@@ -136,7 +138,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4418012660071006486}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32714fd5e255b54448fe1f44df3f4027, type: 3}
   m_Name: 
@@ -216,6 +218,8 @@ MonoBehaviour:
   Ingredient: {fileID: 0}
   NewIngredient: {fileID: 0}
   iRotation: {fileID: 0}
+  iPosition: {x: 0, y: 0, z: 0}
+  iParent: {fileID: 0}
   ResetBool: 1
   dontSpawn: 0
   collidingWithIngredient: 0

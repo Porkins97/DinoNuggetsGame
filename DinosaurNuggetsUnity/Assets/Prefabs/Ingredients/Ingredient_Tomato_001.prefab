@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3485146096717491546}
   - component: {fileID: 3138103081446083133}
   - component: {fileID: 7605023164479368098}
+  - component: {fileID: 2870909430405771413}
+  - component: {fileID: 382595939295541878}
   m_Layer: 11
   m_Name: Ingredient_Tomato_001
   m_TagString: Ingredient
@@ -91,3 +93,49 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -1340541719380434750, guid: 06ec56ba4c4d5be43a17dcf1b90ccd0c, type: 3}
+--- !u!33 &2870909430405771413
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4092623649492155264}
+  m_Mesh: {fileID: -1340541719380434750, guid: 06ec56ba4c4d5be43a17dcf1b90ccd0c, type: 3}
+--- !u!23 &382595939295541878
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4092623649492155264}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b59bf19f691e7ff48a9fd3a484667980, type: 2}
+  - {fileID: 2100000, guid: e1f95d211130ea643b043e3c1f15a47f, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0

@@ -15,7 +15,8 @@ MonoBehaviour:
   ingredientName: Fish_Sliced
   ingredientPrefab: {fileID: 8902914029581274528, guid: e5c857892758d8e4fb6f8e8e8f799b4c,
     type: 3}
-  texture: {fileID: 2800000, guid: 7594b221fd875ad47ab462f88052aa7e, type: 3}
+  texture: {fileID: 2800000, guid: 9160eff9d9e3b274ea8e3e2980b46087, type: 3}
   type: 102
   Spawnable: 0
   unslicedVersion: {fileID: 11400000, guid: 793d1d41f47ff124d8fe3ef37fd6e4ac, type: 2}
+  slicedVersion: {fileID: 0}

@@ -160,7 +160,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7064398440139929685}
   - component: {fileID: 2935564785939587660}
-  - component: {fileID: 2123827822181044430}
   - component: {fileID: 1485397616602158821}
   m_Layer: 11
   m_Name: CuttingSpot2
@@ -196,20 +195,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.2
   m_Center: {x: 0, y: 0.1, z: 0}
---- !u!114 &2123827822181044430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1622721695215570731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c82bb8891b9ac4ba9752490c83357b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 6801264546835441375}
-  role: 1
 --- !u!114 &1485397616602158821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,7 +260,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1820340150105365572}
   - component: {fileID: 5489136811135314533}
-  - component: {fileID: 8331803570084851031}
   - component: {fileID: 1607358237307459310}
   m_Layer: 11
   m_Name: CuttingSpot1
@@ -311,20 +295,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.2
   m_Center: {x: 0, y: 0.1, z: 0}
---- !u!114 &8331803570084851031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6443658602720412539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c82bb8891b9ac4ba9752490c83357b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 6801264546835441375}
-  role: 0
 --- !u!114 &1607358237307459310
 MonoBehaviour:
   m_ObjectHideFlags: 0

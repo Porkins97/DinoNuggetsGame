@@ -77,7 +77,7 @@ public class RespawnIngredient : MonoBehaviour
                 //Debug.Log("Stage1");
                 if(other.gameObject.tag == "Ingredient")
                 {
-                    //Debug.Log("Stage2a");
+                    Debug.Log("Stage2a");
                     SO_Ingredients foundIngredient = dinoSceneManager.ingredientList.Find(x => x.type == iType);
                     Debug.Log("Found Ingredient = " + foundIngredient);
                     Ingredient = foundIngredient.ingredientPrefab;
