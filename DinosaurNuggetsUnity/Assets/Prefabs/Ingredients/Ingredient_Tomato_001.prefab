@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3485146096717491546}
   - component: {fileID: 3138103081446083133}
   - component: {fileID: 7605023164479368098}
-  - component: {fileID: 1174609807}
-  - component: {fileID: 1174609808}
+  - component: {fileID: 2870909430405771413}
+  - component: {fileID: 382595939295541878}
   m_Layer: 11
   m_Name: Ingredient_Tomato_001
   m_TagString: Ingredient
@@ -93,7 +93,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -1340541719380434750, guid: 06ec56ba4c4d5be43a17dcf1b90ccd0c, type: 3}
---- !u!33 &1174609807
+--- !u!33 &2870909430405771413
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,7 +101,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4092623649492155264}
   m_Mesh: {fileID: -1340541719380434750, guid: 06ec56ba4c4d5be43a17dcf1b90ccd0c, type: 3}
---- !u!23 &1174609808
+--- !u!23 &382595939295541878
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
