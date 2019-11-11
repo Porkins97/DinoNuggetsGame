@@ -3533,16 +3533,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8907060620977180566, guid: 9d6061e90ade7364ca8790e72c334a02,
+    - target: {fileID: 5225881399376603770, guid: 9d6061e90ade7364ca8790e72c334a02,
         type: 3}
-      propertyPath: m_Enabled
-      value: 0
+      propertyPath: otherPlayer
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5795160195373599220, guid: 9d6061e90ade7364ca8790e72c334a02,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 20162e50adc1a1245af05b76991afdf7, type: 2}
+    - target: {fileID: 8907060620977180566, guid: 9d6061e90ade7364ca8790e72c334a02,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1943775041, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
       propertyPath: hats.Array.data[6]
       value: 
@@ -3556,11 +3561,6 @@ PrefabInstance:
     - target: {fileID: 1943775041, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
       propertyPath: hat
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5225881399376603770, guid: 9d6061e90ade7364ca8790e72c334a02,
-        type: 3}
-      propertyPath: otherPlayer
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1943775039, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
