@@ -31,15 +31,15 @@ public class RespawnIngredient : MonoBehaviour
 
     private void Spawn()
     {
-        Debug.Log("Spawning");
+        //Debug.Log("Spawning");
         //add check here "if colliding with other ingredients
         colliders = Physics.OverlapSphere(this.gameObject.transform.position, 0.1f);
-        Debug.Log(colliders.Length);
+        //Debug.Log(colliders.Length);
         for(int i = 0; i <colliders.Length; i++)
         {
             if(colliders[i].gameObject.tag == "Ingredient" || colliders[i].gameObject.tag == "Utensil")
             {
-                Debug.Log(colliders[i]);
+                //Debug.Log(colliders[i]);
                 collidingWithIngredient = true;
                 waitingToSpawn = true;
             }
@@ -77,15 +77,15 @@ public class RespawnIngredient : MonoBehaviour
                 //Debug.Log("Stage1");
                 if(other.gameObject.tag == "Ingredient")
                 {
-                    Debug.Log("Stage2a");
+                    //Debug.Log("Stage2a");
                     SO_Ingredients foundIngredient = dinoSceneManager.ingredientList.Find(x => x.type == iType);
-                    Debug.Log("Found Ingredient = " + foundIngredient);
+                    //Debug.Log("Found Ingredient = " + foundIngredient);
                     Ingredient = foundIngredient.ingredientPrefab;
                 }
                 else{
                     //Debug.Log("Stage2b");
                     SO_Utensils foundUtensil = dinoSceneManager.utensilList.Find(x => x.type == iType);
-                    Debug.Log("Found Utensil = " + foundUtensil);
+                    //Debug.Log("Found Utensil = " + foundUtensil);
                     Ingredient = foundUtensil.utensilPrefab; 
                 }
             }
@@ -94,15 +94,15 @@ public class RespawnIngredient : MonoBehaviour
    
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Exit1");
-        Debug.Log(other.gameObject);
-        Debug.Log(Ingredient);
+        //Debug.Log("Exit1");
+        //Debug.Log(other.gameObject);
+        //Debug.Log(Ingredient);
         if (other.gameObject == Ingredient.gameObject)
         {
-            Debug.Log("Exit2");
+            //Debug.Log("Exit2");
             if (!dontSpawn)
             {
-                Debug.Log("Exit3");
+                //Debug.Log("Exit3");
                 StartCoroutine(Respawn());
             }
             dontSpawn = true;
@@ -111,7 +111,7 @@ public class RespawnIngredient : MonoBehaviour
         {
             if ((other.gameObject.tag == "Ingredient" || other.gameObject.tag == "Utensil"))// && waitingToSpawn)
             {
-                Debug.Log("Exit4");
+                //Debug.Log("Exit4");
                 collidingWithIngredient = false;
                 StartCoroutine(Respawn());
             } 

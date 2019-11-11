@@ -37,9 +37,11 @@ public class Stove_Collider : MonoBehaviour
                     }
                     else
                     {
-                        stoveScript.Placed(col.gameObject);
+                        if(iType == IngredientType.Pot)
+                        {
+                            stoveScript.Placed(col.gameObject);
+                        }
                     }
-
                 }
             }
         }
@@ -60,9 +62,11 @@ public class Stove_Collider : MonoBehaviour
                     }
                     else
                     {
-                        stoveScript.Placed(col.gameObject);
+                        if(iType == IngredientType.Pot)
+                        {
+                            stoveScript.Placed(col.gameObject);
+                        }
                     }
-
                 }
             }
         }

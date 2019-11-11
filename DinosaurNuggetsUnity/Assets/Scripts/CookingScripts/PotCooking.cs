@@ -9,6 +9,7 @@ public class PotCooking : MonoBehaviour
     [SerializeField] public Collider currentCol = null;
     private DinoSceneManager _DSM;
     DinoPlayerSettings player;
+    DinoPlayerSettings player_other;
 
     // Start is called before the first frame update
     void Start()
@@ -21,10 +22,12 @@ public class PotCooking : MonoBehaviour
         if (_currentPlayer == Players.Player1)
         {
             player = _DSM.DinoPlayer1;
+            player_other = _DSM.DinoPlayer2;
         }
         else
         {
             player = _DSM.DinoPlayer2;
+            player_other = _DSM.DinoPlayer1;
         }
     }
 
@@ -33,18 +36,22 @@ public class PotCooking : MonoBehaviour
     {
         IngredientType currentItem = obj.GetComponent<ItemAttributes>().GameType;
         SO_Ingredients ingredient = player.playerRecipe.ingredients.Find(x => x.type == currentItem);
-        //Debug.Log("CurrentItem " + currentItem);
+
+        if (obj.GetComponent<ItemAttributes>().lastPlayer == _currentPlayer)
+        {
+            if (ingredient == player.playerIngredientList[player.playerRecipeDone])
+            {
+                obj.GetComponent<ItemAttributes>().beingUsed = true;
+                player.dinoPlayer.GetComponent<PickupScript>().AllItems.Remove(obj);
+                _DSM.FinishUIImages(ingredient, player);
+                Destroy(obj);
+                player.playerRecipeDone++;
+                _DSM.CheckIfWon(player);
+            }
+        }
         //Debug.Log("CurrentIngredient " + ingredient);
         //Debug.Log("PlayerIngred " + player.playerIngredientList[player.playerRecipeDone]);
-        if (ingredient == player.playerIngredientList[player.playerRecipeDone])
-        {
-            obj.GetComponent<ItemAttributes>().beingUsed = true;
-            player.dinoPlayer.GetComponent<PickupScript>().AllItems.Remove(obj);
-            _DSM.FinishUIImages(ingredient, player);
-            Destroy(obj);
-            player.playerRecipeDone++;
-            _DSM.CheckIfWon(player);
-        }
+       
     }
 
     void OnTriggerEnter(Collider col)
