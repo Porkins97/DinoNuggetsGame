@@ -30237,6 +30237,10 @@ PrefabInstance:
       propertyPath: sManager
       value: 
       objectReference: {fileID: 2053053188}
+    - target: {fileID: 2069043745, guid: 6af4730429e5e0e46a8b1a1c29683d41, type: 3}
+      propertyPath: OutDoorStove
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3300764530285640995, guid: 6af4730429e5e0e46a8b1a1c29683d41,
         type: 3}
       propertyPath: m_Layer
