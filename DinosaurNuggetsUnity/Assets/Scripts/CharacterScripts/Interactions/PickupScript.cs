@@ -243,6 +243,7 @@ public class PickupScript : MonoBehaviour
             //Set the carrying hand to true, and make sure the items attribute is being used.
             carrying = true;
             obj.GetComponent<ItemAttributes>().beingUsed = true;
+            obj.GetComponent<ItemAttributes>().lastPlayer = currentPlayer;
         }
     }
     private void DropItem(ref bool carrying, ref GameObject obj)

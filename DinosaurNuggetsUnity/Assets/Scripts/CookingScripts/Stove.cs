@@ -12,8 +12,8 @@ public class Stove : MonoBehaviour
 
 
     // Public variables
-    [HideInInspector] public bool stoveTopA_Used = false;
-    [HideInInspector] public GameObject stoveAGameObject = null;
+    [SerializeField] public bool stoveTopA_Used = false;
+    [SerializeField] public GameObject stoveAGameObject = null;
 
     // Private variables
     private GameObject fireInstance = null;
@@ -51,11 +51,12 @@ public class Stove : MonoBehaviour
     }
     public void Removed(GameObject objectPlaced)
     {
+        Debug.Log("Removed");
         if(objectPlaced == stoveAGameObject)
         {
             stoveAGameObject.GetComponent<ItemAttributes>().onStove = false;
             objectPlaced.GetComponent<PotCooking>().enabled = false;
-            objectPlaced.GetComponent<CapsuleCollider>().enabled = false;
+            objectPlaced.GetComponent<BoxCollider>().enabled = false;
             stoveAGameObject = null;
             stoveTopA_Used = false;
             if (fireInstance != null)
