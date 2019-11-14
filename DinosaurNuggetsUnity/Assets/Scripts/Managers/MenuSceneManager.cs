@@ -15,7 +15,8 @@ public class MenuSceneManager : MonoBehaviour
 
     void Awake()
     {
-        hats = new List<Hat>();
+        Debug.LogError("Error");
+       /* hats = new List<Hat>();
         foreach (string strPath in AssetDatabase.FindAssets("t:SO_Hats", new[] { hatPath }))
         {
             soHats = ((SO_Hats)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(strPath), typeof(SO_Hats)));
@@ -24,16 +25,16 @@ public class MenuSceneManager : MonoBehaviour
         {
             hats.Add(hat);
             CreateHatMenu2(hat);
-        }
+        }*/
         
 
     }
-    private void CreateHatMenu2(Hat currentHat)
+   /* private void CreateHatMenu2(Hat currentHat)
     {
         Transform par = HatMenuPanel.transform;
         GameObject UIButton = Instantiate(ButtonPrefab, par);
 
         UIButton.GetComponentInChildren<Text>().text = currentHat.title;
         UIButton.GetComponent<Button>().onClick.AddListener(delegate { dino.GetComponent<ApplyHat>().PassNewHat(currentHat.hatType); });
-    }
+    }*/
 }

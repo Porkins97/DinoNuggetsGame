@@ -40,6 +40,8 @@ public class DinoSpawnItems : MonoBehaviour
 
     public void StartingMethods()
     {
+        /*
+        Debug.LogError("DINOSPAWNITEMS");
         CheckForIngredients();
 
         foreach (Transform child in twoSpawns) { SpawnPoints2.Add(child); }
@@ -59,6 +61,7 @@ public class DinoSpawnItems : MonoBehaviour
         {
             utensilList.Add((SO_Utensils)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(strPath), typeof(SO_Utensils)));
         }
+        */
     }
 
     

@@ -60,6 +60,11 @@ public class DinoSceneManager : MonoBehaviour
     [HideInInspector] public List<SO_Utensils> utensilList;
     [HideInInspector] public List<SO_Recipes> mealList;
 
+    public SO_Ingredients[] ingredientArray;
+    public SO_Utensils[] utensilsArray;
+    public SO_Recipes[] recipesArray;
+    
+
 
     void Awake()
     {
@@ -78,6 +83,7 @@ public class DinoSceneManager : MonoBehaviour
         mealList = new List<SO_Recipes>();
         utensilList = new List<SO_Utensils>();
         
+        /*
         foreach (string strPath in AssetDatabase.FindAssets("t:SO_Ingredients", new[] { ingredientPath }))
         {
             ingredientList.Add((SO_Ingredients)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(strPath), typeof(SO_Ingredients)));
@@ -89,6 +95,19 @@ public class DinoSceneManager : MonoBehaviour
         foreach (string strPath in AssetDatabase.FindAssets("t:SO_Utensils", new[] { utensilPath }))
         {
             utensilList.Add((SO_Utensils)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(strPath), typeof(SO_Utensils)));
+        }
+        */
+        foreach (SO_Ingredients ing in ingredientArray)
+        {
+            ingredientList.Add(ing);
+        }
+        foreach (SO_Recipes rec in recipesArray)
+        {
+            mealList.Add(rec);  
+        }
+        foreach (SO_Utensils ut in utensilsArray)
+        {
+            utensilList.Add(ut);
         }
 
         SO_Recipes currentRecipe = mealList[(int)UnityEngine.Random.Range(0, mealList.Count-1)];

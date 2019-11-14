@@ -27,6 +27,7 @@ public class CharacterSettings : MonoBehaviour
 
     private void UpdateSettings()
     {
+        /*
         foreach (string strPath in AssetDatabase.FindAssets("t:SO_ColourSettings", new[] { dinoSettingsPath }))
         {
             dinoSettings = (SO_ColourSettings)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(strPath), typeof(SO_ColourSettings));
@@ -43,5 +44,6 @@ public class CharacterSettings : MonoBehaviour
         }
 
         _matObj.GetComponentInChildren<SkinnedMeshRenderer>().material = _mat;
+        */
     }
 }

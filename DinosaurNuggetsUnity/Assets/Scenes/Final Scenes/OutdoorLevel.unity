@@ -7198,6 +7198,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
+      propertyPath: PauseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2053053188}
+    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
+      propertyPath: PauseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PauseGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
+      propertyPath: uiInput
+      value: 
+      objectReference: {fileID: 1287548894}
+    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
+      propertyPath: _sceneManager
+      value: 
+      objectReference: {fileID: 2053053188}
     - target: {fileID: 5225881399376603770, guid: 9d6061e90ade7364ca8790e72c334a02,
         type: 3}
       propertyPath: randomHat
@@ -7218,22 +7234,6 @@ PrefabInstance:
       propertyPath: saveData
       value: 
       objectReference: {fileID: 2116210633}
-    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
-      propertyPath: PauseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2053053188}
-    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
-      propertyPath: PauseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PauseGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
-      propertyPath: uiInput
-      value: 
-      objectReference: {fileID: 1287548894}
-    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
-      propertyPath: _sceneManager
-      value: 
-      objectReference: {fileID: 2053053188}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
 --- !u!4 &483982174 stripped
@@ -22460,31 +22460,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5225881399376603770, guid: 9d6061e90ade7364ca8790e72c334a02,
-        type: 3}
-      propertyPath: thisPlayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5225881399376603770, guid: 9d6061e90ade7364ca8790e72c334a02,
-        type: 3}
-      propertyPath: randomHat
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5225881399376603770, guid: 9d6061e90ade7364ca8790e72c334a02,
-        type: 3}
-      propertyPath: saveData
-      value: 
-      objectReference: {fileID: 2116210633}
-    - target: {fileID: 5225881399376603770, guid: 9d6061e90ade7364ca8790e72c334a02,
-        type: 3}
-      propertyPath: otherPlayer
-      value: 
-      objectReference: {fileID: 628930894}
     - target: {fileID: 8304923112558758803, guid: 9d6061e90ade7364ca8790e72c334a02,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 21f4245c57a23b547882c904339bde51, type: 2}
+    - target: {fileID: 1358334123381718131, guid: 9d6061e90ade7364ca8790e72c334a02,
+        type: 3}
+      propertyPath: characterColour
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
       propertyPath: currentPlayer
       value: 1
@@ -22509,11 +22494,26 @@ PrefabInstance:
       propertyPath: PauseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PauseGame
       objectReference: {fileID: 0}
-    - target: {fileID: 1358334123381718131, guid: 9d6061e90ade7364ca8790e72c334a02,
+    - target: {fileID: 5225881399376603770, guid: 9d6061e90ade7364ca8790e72c334a02,
         type: 3}
-      propertyPath: characterColour
+      propertyPath: thisPlayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225881399376603770, guid: 9d6061e90ade7364ca8790e72c334a02,
+        type: 3}
+      propertyPath: randomHat
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5225881399376603770, guid: 9d6061e90ade7364ca8790e72c334a02,
+        type: 3}
+      propertyPath: saveData
+      value: 
+      objectReference: {fileID: 2116210633}
+    - target: {fileID: 5225881399376603770, guid: 9d6061e90ade7364ca8790e72c334a02,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 628930894}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
 --- !u!4 &1553349301 stripped
@@ -30203,10 +30203,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1888574762, guid: 96360e12d9cd6a9429a46dd622d1497f, type: 3}
-      propertyPath: timeMinutes
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1888574762, guid: 96360e12d9cd6a9429a46dd622d1497f, type: 3}
       propertyPath: _timerText
