@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6b8d727c47271e0419e915900e1f4dab
+guid: adb0c882cfffa8342986d75392917650
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -11,7 +11,8 @@ TrueTypeFontImporter:
   fontName: Dinosaur Nuggets
   fontNames:
   - Dinosaur Nuggets
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 976e0dd5903cd6f4b913938b2b9ce55e, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

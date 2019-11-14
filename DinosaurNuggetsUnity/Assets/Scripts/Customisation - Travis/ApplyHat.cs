@@ -85,7 +85,7 @@ public class ApplyHat : MonoBehaviour
             cd = JsonUtility.FromJson<CustomisationData>(dataAsJson);
             p1 = cd.whichHatPlayerOne;
             p2 = cd.whichHatPlayerTwo;
-            if(thisPlayer ==1)
+            if(thisPlayer == 1)
             {
                 int l = p1;
                 return(l);
@@ -101,6 +101,5 @@ public class ApplyHat : MonoBehaviour
             Debug.Log("Data Doesn't Exist");
             return(0);
         }
-        
     }
 }

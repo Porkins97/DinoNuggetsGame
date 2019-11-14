@@ -30,6 +30,7 @@ namespace DinoInputSystems
         internal bool dinoLeftHand;
         internal bool dinoAction;
 
+        static float chopping;
         
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -110,6 +111,7 @@ namespace DinoInputSystems
         private void dinoActionPressed(InputAction.CallbackContext ctx)
         {
             float p = ctx.ReadValue<float>();
+            chopping = p;
             if (p > 0)
                 dinoAction = true;
             else

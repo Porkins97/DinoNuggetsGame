@@ -3332,7 +3332,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4438915523211710839}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b573aeef7f3df84686bf46d8b898edf, type: 3}
+  m_Script: {fileID: 11500000, guid: 769ab9d3bf1cceb458e0b03eb1f023e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hatNum: 0
@@ -3351,11 +3351,15 @@ MonoBehaviour:
   - {fileID: 4545323850002451628, guid: e05c6966fce603f4ebfa4d7959da3ade, type: 3}
   - {fileID: 7360870439873864166, guid: ad26570d5147987409598af524761106, type: 3}
   randomHat: 0
+  otherPlayer: {fileID: 0}
   customisationDataJSON: customisationdata.json
   cd:
     whichHatPlayerOne: 0
     whichHatPlayerTwo: 0
+  saveData: {fileID: 0}
   thisPlayer: 1
+  p1: 0
+  p2: 0
 --- !u!1 &4449353171743876981
 GameObject:
   m_ObjectHideFlags: 0

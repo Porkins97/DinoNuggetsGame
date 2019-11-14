@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -663,7 +663,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 243372660}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6258ab144a63aec4aab4a464a725fc43, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f78934a25cc3d0438ceb9b44cd8f026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttons:
@@ -2614,7 +2614,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 941981295}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6258ab144a63aec4aab4a464a725fc43, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f78934a25cc3d0438ceb9b44cd8f026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttons:
@@ -4774,6 +4774,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7360870439873864166, guid: ad26570d5147987409598af524761106,
         type: 3}
+    - target: {fileID: 8304923112558758803, guid: 9d6061e90ade7364ca8790e72c334a02,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 21f4245c57a23b547882c904339bde51, type: 2}
     - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
       propertyPath: currentPlayer
       value: 1
@@ -4783,11 +4788,6 @@ PrefabInstance:
       propertyPath: characterColour
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8304923112558758803, guid: 9d6061e90ade7364ca8790e72c334a02,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 21f4245c57a23b547882c904339bde51, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
 --- !u!1 &1953084276
