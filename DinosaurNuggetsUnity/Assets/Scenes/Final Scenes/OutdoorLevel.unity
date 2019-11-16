@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -8918,17 +8918,17 @@ PrefabInstance:
     - target: {fileID: 8191013524338130800, guid: de355ba4f55529245ae466cb6016dff4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.8109493
+      value: 2.651
       objectReference: {fileID: 0}
     - target: {fileID: 8191013524338130800, guid: de355ba4f55529245ae466cb6016dff4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7188941
+      value: -0.679
       objectReference: {fileID: 0}
     - target: {fileID: 8191013524338130800, guid: de355ba4f55529245ae466cb6016dff4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.247678
+      value: 4.32
       objectReference: {fileID: 0}
     - target: {fileID: 8191013524338130800, guid: de355ba4f55529245ae466cb6016dff4,
         type: 3}
@@ -22460,16 +22460,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8304923112558758803, guid: 9d6061e90ade7364ca8790e72c334a02,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 21f4245c57a23b547882c904339bde51, type: 2}
-    - target: {fileID: 1358334123381718131, guid: 9d6061e90ade7364ca8790e72c334a02,
-        type: 3}
-      propertyPath: characterColour
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
       propertyPath: currentPlayer
       value: 1
@@ -22514,6 +22504,16 @@ PrefabInstance:
       propertyPath: otherPlayer
       value: 
       objectReference: {fileID: 628930894}
+    - target: {fileID: 8304923112558758803, guid: 9d6061e90ade7364ca8790e72c334a02,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 21f4245c57a23b547882c904339bde51, type: 2}
+    - target: {fileID: 1358334123381718131, guid: 9d6061e90ade7364ca8790e72c334a02,
+        type: 3}
+      propertyPath: characterColour
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
 --- !u!4 &1553349301 stripped
@@ -28652,7 +28652,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &1848921213
 AudioSource:
   m_ObjectHideFlags: 0
