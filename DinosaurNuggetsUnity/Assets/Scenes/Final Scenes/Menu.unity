@@ -2496,6 +2496,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 684671578}
+  - component: {fileID: 684671579}
   m_Layer: 0
   m_Name: Main Menu
   m_TagString: Untagged
@@ -2521,6 +2522,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &684671579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684671577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f532b1f360d0c4479f924b3491f2129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &712052084 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 808605915977968253, guid: 19e20feb5ad24c541bf85af9908821a9,
@@ -4339,12 +4352,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 579172822}
-        m_MethodName: 
+      - m_Target: {fileID: 684671579}
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
