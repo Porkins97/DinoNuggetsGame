@@ -239,11 +239,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8191013524338130800}
     m_Modifications:
-    - target: {fileID: 7147758806393616900, guid: 93b46bef1b9ca6a4796bf49e61dff932,
-        type: 3}
-      propertyPath: m_Name
-      value: SteamFX
-      objectReference: {fileID: 0}
     - target: {fileID: 7147758806393616921, guid: 93b46bef1b9ca6a4796bf49e61dff932,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -298,6 +293,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147758806393616900, guid: 93b46bef1b9ca6a4796bf49e61dff932,
+        type: 3}
+      propertyPath: m_Name
+      value: SteamFX
       objectReference: {fileID: 0}
     - target: {fileID: 7147758806393616922, guid: 93b46bef1b9ca6a4796bf49e61dff932,
         type: 3}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2549826696442571971}
   - component: {fileID: 2549826696442571968}
   - component: {fileID: 1888574762}
+  - component: {fileID: 1888574761}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Manager
@@ -101,6 +102,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bd5ebc39332fda249a5b1677320d8dc1, type: 2}
   - {fileID: 11400000, guid: 68a0b951080c3194abef180682ef1f0b, type: 2}
   - {fileID: 11400000, guid: 7f6c1ca2b138f4c448706f031317c42a, type: 2}
+  - {fileID: 11400000, guid: 013ea4f1e562390419a9f908c171086c, type: 2}
   recipesArray:
   - {fileID: 11400000, guid: af4dfb1859ddc1a4fb0f8da35c95ec67, type: 2}
   - {fileID: 11400000, guid: 587673f547cc5e54bb1c6923a5491352, type: 2}
@@ -123,5 +125,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeMinutes: 2
-  timeSeconds: 10
+  timeSeconds: 30
   _timerText: {fileID: 0}
+--- !u!114 &1888574761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2549826696442571970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8bd067a65e63c5489afc852d44132b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customisationDataJSON: customisationdata.json
+  cd:
+    whichHatPlayerOne: 0
+    whichHatPlayerTwo: 0
+  Player1: {fileID: 0}
+  Player2: {fileID: 0}
+  playerOne: 0
+  playerTwo: 0

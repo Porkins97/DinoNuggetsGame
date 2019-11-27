@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -7198,22 +7198,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
-      propertyPath: PauseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2053053188}
-    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
-      propertyPath: PauseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PauseGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
-      propertyPath: uiInput
-      value: 
-      objectReference: {fileID: 1287548894}
-    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
-      propertyPath: _sceneManager
-      value: 
-      objectReference: {fileID: 2053053188}
     - target: {fileID: 5225881399376603770, guid: 9d6061e90ade7364ca8790e72c334a02,
         type: 3}
       propertyPath: randomHat
@@ -7234,6 +7218,22 @@ PrefabInstance:
       propertyPath: saveData
       value: 
       objectReference: {fileID: 2116210633}
+    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
+      propertyPath: PauseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2053053188}
+    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
+      propertyPath: PauseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PauseGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
+      propertyPath: uiInput
+      value: 
+      objectReference: {fileID: 1287548894}
+    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
+      propertyPath: _sceneManager
+      value: 
+      objectReference: {fileID: 2053053188}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
 --- !u!4 &483982174 stripped
@@ -8918,17 +8918,17 @@ PrefabInstance:
     - target: {fileID: 8191013524338130800, guid: de355ba4f55529245ae466cb6016dff4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.651
+      value: 2.807
       objectReference: {fileID: 0}
     - target: {fileID: 8191013524338130800, guid: de355ba4f55529245ae466cb6016dff4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.679
+      value: -0.725
       objectReference: {fileID: 0}
     - target: {fileID: 8191013524338130800, guid: de355ba4f55529245ae466cb6016dff4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.32
+      value: 4.236
       objectReference: {fileID: 0}
     - target: {fileID: 8191013524338130800, guid: de355ba4f55529245ae466cb6016dff4,
         type: 3}
@@ -22460,30 +22460,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
-      propertyPath: currentPlayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
-      propertyPath: gamePadId
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
-      propertyPath: uiInput
-      value: 
-      objectReference: {fileID: 1287548894}
-    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
-      propertyPath: _sceneManager
-      value: 
-      objectReference: {fileID: 2053053188}
-    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
-      propertyPath: PauseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2053053188}
-    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
-      propertyPath: PauseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PauseGame
-      objectReference: {fileID: 0}
     - target: {fileID: 5225881399376603770, guid: 9d6061e90ade7364ca8790e72c334a02,
         type: 3}
       propertyPath: thisPlayer
@@ -22509,6 +22485,30 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 21f4245c57a23b547882c904339bde51, type: 2}
+    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
+      propertyPath: currentPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
+      propertyPath: gamePadId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
+      propertyPath: uiInput
+      value: 
+      objectReference: {fileID: 1287548894}
+    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
+      propertyPath: _sceneManager
+      value: 
+      objectReference: {fileID: 2053053188}
+    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
+      propertyPath: PauseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2053053188}
+    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
+      propertyPath: PauseEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PauseGame
+      objectReference: {fileID: 0}
     - target: {fileID: 1358334123381718131, guid: 9d6061e90ade7364ca8790e72c334a02,
         type: 3}
       propertyPath: characterColour
