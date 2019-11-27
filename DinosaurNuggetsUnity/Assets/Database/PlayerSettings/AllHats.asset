@@ -46,11 +46,11 @@ MonoBehaviour:
       type: 3}
     hatType: 9
   - title: Small Tophat
-    hatPrefab: {fileID: -927199367670048503, guid: 285fa46892c775a4ca1ab6b4d99357aa,
+    hatPrefab: {fileID: 7360870439873864166, guid: ad26570d5147987409598af524761106,
       type: 3}
     hatType: 10
   - title: Large Tophat
-    hatPrefab: {fileID: -927199367670048503, guid: 5229ac0afd9cc1c4a9a3a6a0001ed650,
+    hatPrefab: {fileID: 4545323850002451628, guid: e05c6966fce603f4ebfa4d7959da3ade,
       type: 3}
     hatType: 11
   - title: Chef
