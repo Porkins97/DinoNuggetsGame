@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -784,6 +784,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 587518737816014376, guid: 9acaa1de0feb73d4b92e258e5376740f,
+        type: 3}
+      propertyPath: m_Name
+      value: CuttingSpot
+      objectReference: {fileID: 0}
     - target: {fileID: 1737102609203459122, guid: 9acaa1de0feb73d4b92e258e5376740f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -838,11 +843,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 587518737816014376, guid: 9acaa1de0feb73d4b92e258e5376740f,
-        type: 3}
-      propertyPath: m_Name
-      value: CuttingSpot
       objectReference: {fileID: 0}
     - target: {fileID: 7678443928177126833, guid: 9acaa1de0feb73d4b92e258e5376740f,
         type: 3}
@@ -1813,7 +1813,7 @@ PrefabInstance:
     - target: {fileID: 5225881399376603770, guid: 9d6061e90ade7364ca8790e72c334a02,
         type: 3}
       propertyPath: randomHat
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5225881399376603770, guid: 9d6061e90ade7364ca8790e72c334a02,
         type: 3}
@@ -8713,7 +8713,7 @@ PrefabInstance:
     - target: {fileID: 5225881399376603770, guid: 9d6061e90ade7364ca8790e72c334a02,
         type: 3}
       propertyPath: randomHat
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5225881399376603770, guid: 9d6061e90ade7364ca8790e72c334a02,
         type: 3}
@@ -8787,11 +8787,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7360870439873864166, guid: ad26570d5147987409598af524761106,
         type: 3}
-    - target: {fileID: 8304923112558758803, guid: 9d6061e90ade7364ca8790e72c334a02,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 21f4245c57a23b547882c904339bde51, type: 2}
     - target: {fileID: 8907060620977180566, guid: 9d6061e90ade7364ca8790e72c334a02,
         type: 3}
       propertyPath: uiInput
@@ -8815,6 +8810,19 @@ PrefabInstance:
     - target: {fileID: 8907060620977180566, guid: 9d6061e90ade7364ca8790e72c334a02,
         type: 3}
       propertyPath: gamePadId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943775041, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
+      propertyPath: randomHat
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943775041, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
+      propertyPath: cd.whichHatPlayerTwo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907060620977180567, guid: 9d6061e90ade7364ca8790e72c334a02,
+        type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
@@ -8846,19 +8854,11 @@ PrefabInstance:
       propertyPath: characterColour
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8907060620977180567, guid: 9d6061e90ade7364ca8790e72c334a02,
+    - target: {fileID: 8304923112558758803, guid: 9d6061e90ade7364ca8790e72c334a02,
         type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1943775041, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
-      propertyPath: randomHat
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1943775041, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
-      propertyPath: cd.whichHatPlayerTwo
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 21f4245c57a23b547882c904339bde51, type: 2}
     - target: {fileID: 1797849081531938426, guid: 9d6061e90ade7364ca8790e72c334a02,
         type: 3}
       propertyPath: hats.Array.size
