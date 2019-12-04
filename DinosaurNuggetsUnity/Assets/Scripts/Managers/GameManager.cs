@@ -1,37 +1,19 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
 
-    [Serializable]
-    public class PlayerStuff
-    {
-        public GameObject PlayerName;
-        public GameObject playersPan;
-        public GameObject playersPot;
-        public GameObject playersCuttingBoard;
-        public int playerScore;
-    }
+    public SO_Ingredients[] ingredientArray;
+    public SO_Utensils[] utensilsArray;
+    public SO_Recipes[] recipesArray;
 
-    [SerializeField] public PlayerStuff playerStuff;
-    [SerializeField] Text score;
-
-    // Start is called before the first frame update
-    void Start()
+    public Players playerWon;
+    
+    public void Awake()
     {
-        playerStuff = new PlayerStuff();
-        playerStuff.playerScore = 0;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        score.text = String.Format("Score: {0}", playerStuff.playerScore);
-    }
-    public void UpdateScore()
-    {
-        playerStuff.playerScore++;
+        instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 }

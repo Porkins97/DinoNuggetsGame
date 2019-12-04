@@ -58,8 +58,9 @@ public class DinoSceneManager : MonoBehaviour
     [HideInInspector] public List<SO_Ingredients> currentIngredientList;
     [HideInInspector] public List<SO_Ingredients> ingredientList;
     [HideInInspector] public List<SO_Utensils> utensilList;
-    [HideInInspector] public List<SO_Recipes> mealList;
+    [HideInInspector] public List<SO_Recipes> recipeList;
 
+    public SO_SceneSettings sceneSettings;
     public SO_Ingredients[] ingredientArray;
     public SO_Utensils[] utensilsArray;
     public SO_Recipes[] recipesArray;
@@ -80,38 +81,53 @@ public class DinoSceneManager : MonoBehaviour
 
         //Ingredients start.
         ingredientList = new List<SO_Ingredients>();
-        mealList = new List<SO_Recipes>();
+        recipeList = new List<SO_Recipes>();
         utensilList = new List<SO_Utensils>();
-        
-        /*
-        foreach (string strPath in AssetDatabase.FindAssets("t:SO_Ingredients", new[] { ingredientPath }))
+
+        foreach (SO_Ingredients ingredient in GameManager.instance.ingredientArray)
         {
-            ingredientList.Add((SO_Ingredients)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(strPath), typeof(SO_Ingredients)));
+            ingredientList.Add(ingredient);
         }
-        foreach (string strPath in AssetDatabase.FindAssets("t:SO_Recipes", new[] { mealPath }))
+        foreach (SO_Recipes recipe in GameManager.instance.recipesArray)
         {
-            mealList.Add((SO_Recipes)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(strPath), typeof(SO_Recipes)));
+            recipeList.Add(recipe);
         }
-        foreach (string strPath in AssetDatabase.FindAssets("t:SO_Utensils", new[] { utensilPath }))
+        foreach (SO_Utensils utensil in GameManager.instance.utensilsArray)
         {
-            utensilList.Add((SO_Utensils)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(strPath), typeof(SO_Utensils)));
-        }
-        */
-        foreach (SO_Ingredients ing in ingredientArray)
-        {
-            ingredientList.Add(ing);
-        }
-        foreach (SO_Recipes rec in recipesArray)
-        {
-            mealList.Add(rec);  
-        }
-        foreach (SO_Utensils ut in utensilsArray)
-        {
-            utensilList.Add(ut);
+            utensilList.Add(utensil);
         }
 
-        SO_Recipes currentRecipe = mealList[(int)UnityEngine.Random.Range(0, mealList.Count-1)];
-        //SO_Recipes currentRecipe = mealList[1];
+
+
+        //foreach (string strPath in AssetDatabase.FindAssets("t:SO_Ingredients", new[] { ingredientPath }))
+        //{
+        //    ingredientList.Add((SO_Ingredients)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(strPath), typeof(SO_Ingredients)));
+        //}
+        //foreach (string strPath in AssetDatabase.FindAssets("t:SO_Recipes", new[] { mealPath }))
+        //{
+        //    recipeList.Add((SO_Recipes)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(strPath), typeof(SO_Recipes)));
+        //}
+        //foreach (string strPath in AssetDatabase.FindAssets("t:SO_Utensils", new[] { utensilPath }))
+        //{
+        //    utensilList.Add((SO_Utensils)AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(strPath), typeof(SO_Utensils)));
+        //
+        
+
+        //foreach (SO_Ingredients ing in ingredientArray)
+        //{
+        //    ingredientList.Add(ing);
+        //}
+        //foreach (SO_Recipes rec in recipesArray)
+        //{
+        //    recipeList.Add(rec);  
+        //}
+        //foreach (SO_Utensils ut in utensilsArray)
+        //{
+        //    utensilList.Add(ut);
+        //}
+
+        SO_Recipes currentRecipe = recipeList[(int)UnityEngine.Random.Range(0, recipeList.Count-1)];
+        //SO_Recipes currentRecipe = recipeList[1];
         foreach(UserInputs input in allUsers)
         {
             if (input.player == Players.Player1)
@@ -318,6 +334,7 @@ public class DinoSceneManager : MonoBehaviour
     {
         if(_player.playerRecipeDone == _player.playerRecipe.ingredients.Count)
         {
+            GameManager.instance.playerWon = _player.player;
             SceneManager.LoadScene("WinScreen");
         }
         

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1783692, g: 0.22333588, b: 0.30535787, a: 1}
+  m_IndirectSpecularColor: {r: 0.17836964, g: 0.22333667, b: 0.30535904, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3580,6 +3580,10 @@ PrefabInstance:
       propertyPath: hat
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 304880449, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
+      propertyPath: uiInput
+      value: 
+      objectReference: {fileID: 62586987}
     m_RemovedComponents:
     - {fileID: 1943775039, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9d6061e90ade7364ca8790e72c334a02, type: 3}
@@ -5368,6 +5372,86 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19e20feb5ad24c541bf85af9908821a9, type: 3}
+--- !u!1 &1731207338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1731207340}
+  - component: {fileID: 1731207339}
+  m_Layer: 0
+  m_Name: MainGameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1731207339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731207338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9136430be0f6a419292b402bbe5b1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientArray:
+  - {fileID: 11400000, guid: cbb5e5c1bfe1b8b448cf3489826b77b4, type: 2}
+  - {fileID: 11400000, guid: c277691eb7c9d434c8c50b6038e35e59, type: 2}
+  - {fileID: 11400000, guid: 7e0dac5a852a52f48b37148af9120ee3, type: 2}
+  - {fileID: 11400000, guid: afcf26eb562f3434fbd192a95cfd1b3b, type: 2}
+  - {fileID: 11400000, guid: a0a5e535f01dcdd4289dcc114ba7c3cd, type: 2}
+  - {fileID: 11400000, guid: 067d56985cbad2e40b78669e5d579003, type: 2}
+  - {fileID: 11400000, guid: 793d1d41f47ff124d8fe3ef37fd6e4ac, type: 2}
+  - {fileID: 11400000, guid: 925f59b5c146668458933f43087cd61d, type: 2}
+  - {fileID: 11400000, guid: 70738437aeaf7304e9b47e5d7a3cbfaf, type: 2}
+  - {fileID: 11400000, guid: 1fcebfe6eee4b6a4599d0f63fbe3b79d, type: 2}
+  - {fileID: 11400000, guid: ba990b268e5809a45abb6b7d9cdf6131, type: 2}
+  - {fileID: 11400000, guid: c6a831c75afce70478941d3a3ea8b514, type: 2}
+  - {fileID: 11400000, guid: 0eb2d959cd934d54a947b5f788e84b77, type: 2}
+  - {fileID: 11400000, guid: efd9125fbda5ae94290aebcee81659da, type: 2}
+  - {fileID: 11400000, guid: 39fab63027517144eb599445a8ead81a, type: 2}
+  - {fileID: 11400000, guid: 02da0e35a08c7024290123e4110445c7, type: 2}
+  - {fileID: 11400000, guid: 1986ae48dca76f246bda99cae6418a24, type: 2}
+  - {fileID: 11400000, guid: 2fa4b94e48fdab246ba71e8e99eae901, type: 2}
+  - {fileID: 11400000, guid: 34362718ec1d54a479c162ef56922ca4, type: 2}
+  utensilsArray:
+  - {fileID: 11400000, guid: 147cadb270749d54e9b45ce068fe8750, type: 2}
+  - {fileID: 11400000, guid: 013ea4f1e562390419a9f908c171086c, type: 2}
+  - {fileID: 11400000, guid: bfc257f5cf5475d419dfb6e293879209, type: 2}
+  - {fileID: 11400000, guid: bd5ebc39332fda249a5b1677320d8dc1, type: 2}
+  - {fileID: 11400000, guid: 68a0b951080c3194abef180682ef1f0b, type: 2}
+  - {fileID: 11400000, guid: 7f6c1ca2b138f4c448706f031317c42a, type: 2}
+  recipesArray:
+  - {fileID: 11400000, guid: af4dfb1859ddc1a4fb0f8da35c95ec67, type: 2}
+  - {fileID: 11400000, guid: 587673f547cc5e54bb1c6923a5491352, type: 2}
+  - {fileID: 11400000, guid: 90d36e2221b281441a5eb246a3d807f6, type: 2}
+  - {fileID: 11400000, guid: 1e2a41115dc0bac41a7e70f05a0c3cce, type: 2}
+  - {fileID: 11400000, guid: b6a55e04c0a795647ac01a1f116c5838, type: 2}
+  - {fileID: 11400000, guid: 0700db4b6c035ce498ccf079753a50ea, type: 2}
+  - {fileID: 11400000, guid: f1e17ffe30aaf654b94af52ce8941cb1, type: 2}
+  - {fileID: 11400000, guid: 3a415ac0534b0824b96a6ea502b8045f, type: 2}
+  winPlayers: 0
+--- !u!4 &1731207340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731207338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1753575371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4738065798161015943, guid: a470f918df8759f4fa8f6404da3e4e0a,
@@ -5533,8 +5617,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1934164346}
-  - component: {fileID: 1934164345}
   - component: {fileID: 1934164344}
+  - component: {fileID: 1934164347}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -5638,18 +5722,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1934164345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934164343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d94f0303072910145b511155f8503ce0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1934164346
 Transform:
   m_ObjectHideFlags: 0
@@ -5664,6 +5736,18 @@ Transform:
   m_Father: {fileID: 684671578}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1934164347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934164343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07852004ec9fcae499922489575ac910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1938659073
 PrefabInstance:
   m_ObjectHideFlags: 0

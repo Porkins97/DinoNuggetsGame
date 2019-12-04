@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class CharacterSettings : MonoBehaviour
 {
     [SerializeField] private HatType currentHat = HatType.Chef;
-    [SerializeField] private CharacterColour characterColour = CharacterColour.Blue;
+    [SerializeField] public CharacterColour characterColour = CharacterColour.Blue;
     [SerializeField] private GameObject _matObj = null;
 
     private SO_ColourSettings dinoSettings = null;
